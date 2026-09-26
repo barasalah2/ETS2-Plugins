@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ETS2 Overlay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="overlay">
+    <div id="status">Connecting...</div>
+    <div class="info-row">
+      <label>City:</label>
+      <span id="city">---</span>
+    </div>
+    <div class="info-row">
+      <label>Road:</label>
+      <span id="road">---</span>
+    </div>
+    <div class="info-row">
+      <label>Country:</label>
+      <span id="country">---</span>
+    </div>
+    <div class="info-row speed-row">
+      <label>Speed:</label>
+      <span id="speed">0</span>
+      <span class="unit">km/h</span>
+    </div>
+    <div class="coords" id="coords"></div>
+  </div>
+
+  <script>
+    // Listen for telemetry updates
+    window.telemetry.onUpdate(data => {
+      document.getElementById('city').innerText = data.city || '---';
+      document.getElementById('road').innerText = data.road || '---';
+      document.getElementById('country').innerText = data.country || '---';
+      document.getElementById('speed').innerText = data.speed || '0';
+      
+      // Optional: show coordinates for debugging (small text)
+      const coordsEl = document.getElementById('coords');
+      if (data.coords) {
+        coordsEl.innerText = `[${data.coords}]`;
+        coordsEl.style.display = 'block';
+      }
+    });
+
+    // Listen for status updates
+    window.telemetry.onStatus(status => {
+      document.getElementById('status').innerText = status;
+      // Auto-hide status after a few seconds when connected
+      if (status === 'Connected to ETS2') {
+        setTimeout(() => {
+          document.getElementById('status').style.opacity = '0.5';
+        }, 3000);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+build/
+data/learned.csv
+# never commit your key
+gemini_api_key.txt
+guide_cache.csv
+calibration.ini
+fish_audio_key.txt
+codriver_notes.txt
+codriver_usage.txt
+codriver_requests.txt
+codriver_last.*

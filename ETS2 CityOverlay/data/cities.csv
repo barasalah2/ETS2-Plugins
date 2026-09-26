@@ -1,0 +1,375 @@
+id,name,country,x,z
+a_coruna,A Coruña,Spain,-82022.3,26694.2
+aalborg,Aalborg,Denmark,856.9,-36020.7
+aarhus,Aarhus,Denmark,1296.1,-30707.5
+aberdeen,Aberdeen,United Kingdom,-38846.8,-55290.5
+ajaccio,Ajaccio,France,-10031.6,48600.8
+albacete,Albacete,Spain,-58305.5,58444.9
+alban,Saint-Alban-du-Rhône,France,-25953.7,28966.2
+alesund,Ålesund,Norway,-7676.9,-67180.4
+algeciras,Algeciras,Spain,-79942.6,70261.4
+almaraz,Almaraz,Spain,-74583.7,49516.3
+almeria,Almería,Spain,-63592.1,69241.0
+alta,Alta,Norway,33179.0,-112936.1
+amsterdam,Amsterdam,Netherlands,-19043.0,-11331.2
+ancona,Ancona,Italy,10324.3,39738.2
+andenes,Andenes,Norway,19058.6,-108520.2
+antwerp,Antwerp,Belgium,-21707.2,-5708.2
+argostoli,Argostoli,Greece,41635.1,71501.1
+arvidsjaur,Arvidsjaur,Sweden,26422.9,-84119.1
+athens,Athens,Greece,56247.1,69610.0
+bacau,Bacău,Romania,62137.3,18473.8
+badajoz,Badajoz,Spain,-82524.4,53475.9
+bailen,Bailén,Spain,-69288.5,61685.2
+banja_luka,Banja Luka,Bosnia and Herzegovina,26087.1,33213.2
+barcelona,Barcelona,Spain,-38266.5,48073.4
+bari,Bari,Italy,23804.6,54331.3
+bastia,Bastia,France,-7139.7,44166.2
+bayonne,Bayonne,France,-51735.0,33817.3
+beja,Beja,Portugal,-87970.5,56990.7
+beograd,Belgrade,Serbia,39346.8,32055.2
+bergen,Bergen,Norway,-10371.7,-55797.8
+berlin,Berlin,Germany,9905.9,-9929.0
+bern,Bern,Switzerland,-12304.1,20468.0
+bialystok,Białystok,Poland,44098.3,-15103.5
+bihac,Bihać,Bosnia and Herzegovina,21009.4,32916.0
+bijelo_polje,Bijelo Polje,Montenegro,36468.1,42021.8
+bilbao,Bilbao,Spain,-58108.3,32929.5
+birmingham,Birmingham,United Kingdom,-45951.2,-20443.1
+bitola,Bitola,North Macedonia,45068.9,52764.5
+bodo,Bodø,Norway,14685.2,-93912.2
+bologna,Bologna,Italy,1120.0,33782.8
+bonifacio,Bonifacio,France,-8469.9,52234.8
+bordeaux,Bordeaux,France,-46138.7,27254.3
+borlange,Borlänge,Sweden,17361.7,-54625.9
+bourges,Bourges,France,-31951.9,16255.4
+brasov,Brașov,Romania,58252.2,23532.7
+bratislava,Bratislava,Slovakia,24823.2,14810.9
+bremen,Bremen,Germany,-5545.1,-14272.0
+brest,Brest,France,-56771.5,3849.2
+brno,Brno,Czech Republic,22273.7,8944.8
+brussel,Brussels,Belgium,-22779.4,-2367.5
+bucuresti,Bucharest,Romania,61120.9,31683.5
+budapest,Budapest,Hungary,32367.7,17862.6
+burgas,Burgas,Bulgaria,68297.0,40860.5
+burgos,Burgos,Spain,-61834.1,37706.9
+bystrica,Banská Bystrica,Slovakia,32657.5,10660.4
+cagliari,Cagliari,Italy,-9760.9,64451.8
+calais,Calais,France,-30340.5,-5005.8
+calarasi,Călărași,Romania,66074.5,31237.7
+calvi,Calvi,France,-10036.0,45997.4
+cambridge,Cambridge,United Kingdom,-36822.8,-16139.5
+cardiff,Cardiff,United Kingdom,-54005.4,-14718.6
+carlisle,Carlisle,United Kingdom,-45889.3,-39593.6
+cassino,Cassino,Italy,12293.9,52214.9
+catania,Catania,Italy,16470.7,75032.4
+catanzaro,Catanzaro,Italy,23791.7,66925.8
+cernavoda,Cernavodă,Romania,69579.4,29995.2
+chania,Chania,Greece,58011.3,84890.2
+chios,Chios,Greece,66064.4,66168.9
+ciudad_real,Ciudad Real,Spain,-68446.0,56454.8
+civaux,Civaux,France,-39029.8,18271.8
+clermont,Clermont-Ferrand,France,-30447.6,24678.3
+cluj_napoca,Cluj-Napoca,Romania,50303.2,18257.1
+coimbra,Coimbra,Portugal,-86585.1,44726.8
+constanta,Constanța,Romania,71731.5,30850.7
+cordoba,Córdoba,Spain,-74352.2,61462.9
+corticadas,Cortiçadas de Lavre,Portugal,-88518.9,52658.4
+craiova,Craiova,Romania,51918.4,33208.4
+daugavpils,Daugavpils,Latvia,53075.3,-31925.8
+debrecen,Debrecen,Hungary,41641.5,17463.6
+dijon,Dijon,France,-22470.2,16635.4
+dombas,Dombås,Norway,-270.3,-64886.2
+dortmund,Dortmund,Germany,-11204.6,-6771.9
+dover,Dover,United Kingdom,-33322.1,-7904.5
+dresden,Dresden,Germany,11492.4,-1989.0
+duisburg,Duisburg,Germany,-13801.7,-6486.8
+durres,Durrës,Albania,36191.6,52017.6
+dusseldorf,Düsseldorf,Germany,-13576.9,-4618.8
+edinburgh,Edinburgh,United Kingdom,-44900.9,-47239.8
+edirne,Edirne,Türkiye,65095.9,46809.0
+eindhoven,Eindhoven,Netherlands,-17700.8,-7012.2
+el_ejido,El Ejido,Spain,-67667.4,69066.3
+erfurt,Erfurt,Germany,2484.6,-2260.2
+esbjerg,Esbjerg,Denmark,-4699.6,-27576.0
+evora,Evora,Portugal,-86917.3,54569.3
+falun,Falun,Sweden,18498.5,-56204.4
+faro,Faro,Portugal,-90480.3,62465.6
+felixstowe,Felixstowe,United Kingdom,-31664.7,-13857.3
+fier,Fier,Albania,38262.0,54941.4
+firenze,Florence,Italy,1081.6,38842.8
+frankfurt,Frankfurt am Main,Germany,-5583.7,2497.0
+frederikshv,Frederikshavn,Denmark,2711.6,-38161.6
+galati,Galați,Romania,67046.0,24452.9
+gavle,Gävle,Sweden,23342.8,-56311.6
+gdansk,Gdańsk,Poland,28343.0,-20639.7
+gedser,Gedser,Denmark,6271.0,-22020.5
+geneve,Geneva,Switzerland,-17779.4,23604.6
+genova,Genoa,Italy,-8032.4,35376.0
+gijon,Gijón,Spain,-70228.1,29243.9
+glasgow,Glasgow,United Kingdom,-50384.8,-48491.7
+golfech,Golfech,France,-40395.5,31452.4
+goteborg,Gothenburg,Sweden,7363.6,-40345.3
+granada,Granada,Spain,-70182.1,66081.9
+graz,Graz,Austria,18665.0,20391.7
+grimsby,Grimsby,United Kingdom,-36118.0,-26595.3
+groningen,Groningen,Netherlands,-12840.7,-15769.3
+guarda,Guarda,Portugal,-81792.3,44008.6
+hamar,Hamar,Norway,5055.3,-57719.9
+hamburg,Hamburg,Germany,-1690.1,-16355.6
+hannover,Hanover,Germany,-2003.7,-9085.4
+haparanda,Haparanda,Sweden,37202.9,-86944.4
+helsingborg,Helsingborg,Sweden,9405.1,-29902.6
+helsinki,Helsinki,Finland,44945.2,-55711.6
+heraklion,Heraklion,Greece,66231.7,85645.6
+hirtshals,Hirtshals,Denmark,1425.3,-38893.4
+honningsvag,Honningsvåg,Norway,37581.4,-119999.9
+huelva,Huelva,Spain,-84687.6,62564.2
+hunedoara,Hunedoara,Romania,49016.7,26094.7
+iasi,Iași,Romania,64746.3,14943.7
+innsbruck,Innsbruck,Austria,2510.8,19582.4
+ioannina,Ioannina,Greece,42020.7,61376.9
+istanbul,İstanbul,Türkiye,75753.4,47623.8
+ivalo,Ivalo,Finland,43279.2,-104669.5
+joensuu,Joensuu,Finland,55113.9,-72587.2
+jonkoping,Jönköping,Sweden,14177.1,-39595.7
+jyvaskyla,Jyväskylä,Finland,44465.2,-67217.4
+kajaani,Kajaani,Finland,48135.1,-79079.3
+kalamata,Kalamata,Greece,50617.8,76796.5
+kaliningrad,Kaliningrad,Russia,34365.1,-23201.5
+kalmar,Kalmar,Sweden,20559.4,-33654.6
+kapellskar,Kapellskär,Sweden,28187.4,-50982.8
+karakaj,Karakaj,Bosnia and Herzegovina,34238.1,33679.0
+karesuando,Karesuando,Sweden,32105.1,-102668.2
+karlovo,Karlovo,Bulgaria,58056.3,42037.6
+karlskrona,Karlskrona,Sweden,17145.4,-30882.5
+karlstad,Karlstad,Sweden,13088.1,-48114.1
+kassel,Kassel,Germany,-3420.0,-3747.5
+katowice,Katowice,Poland,30728.7,2438.7
+kaunas,Kaunas,Lithuania,45563.9,-25367.9
+kavala,Kavala,Greece,57735.2,52340.7
+kiel,Kiel,Germany,1137.4,-21609.3
+kiruna,Kiruna,Sweden,27489.5,-98283.9
+klagenfurt,Klagenfurt am Wörthersee,Austria,14047.0,23287.5
+klaipeda,Klaipėda,Lithuania,36342.7,-28739.7
+kobenhavn,Copenhagen,Denmark,7680.8,-28493.5
+kokkola,Kokkola,Finland,36959.2,-74962.6
+koln,Cologne,Germany,-12548.7,-2454.4
+koper,Koper,Slovenia,11233.8,29436.5
+kosice,Košice,Slovakia,39843.8,10474.3
+kotka,Kotka,Finland,50244.9,-58065.8
+kouvola,Kouvola,Finland,48776.1,-60429.1
+kozloduy,Kozloduy,Bulgaria,52658.0,36227.2
+kragujevac,Kragujevac,Serbia,40681.0,36662.5
+krakow,Kraków,Poland,34470.1,3207.6
+kristiansand,Kristiansand,Norway,-4638.4,-42911.6
+kristiansund,Kristiansund,Norway,-2971.2,-70375.3
+kunda,Kunda,Estonia,49785.2,-52324.8
+kuopio,Kuopio,Finland,49161.9,-71814.1
+kuusamo,Kuusamo,Finland,49211.7,-89699.5
+lacq,Lacq,France,-48853.6,35956.5
+lahti,Lahti,Finland,45453.3,-60577.1
+lamia,Lamia,Greece,49740.9,65179.0
+lappeenranta,Lappeenranta,Finland,52577.0,-63412.5
+larissa,Larissa,Greece,49966.2,61971.0
+larochelle,La Rochelle,France,-46575.9,19512.4
+laurent,Saint-Laurent,France,-35649.8,13684.1
+lehavre,Le Havre,France,-37894.3,1495.4
+leipzig,Leipzig,Germany,6994.9,-3597.9
+lemans,Le Mans,France,-39749.9,9698.3
+leon,León,Spain,-70426.3,34796.3
+liege,Liège,Belgium,-17071.7,-1088.3
+liepaja,Liepāja,Latvia,35329.4,-33320.1
+lile_rousse,L'Île-Rousse,France,-8914.8,44656.2
+lille,Lille,France,-26539.5,-2480.4
+lillehammer,Lillehammer,Norway,4353.1,-59233.8
+limoges,Limoges,France,-37417.4,23611.9
+linkoping,Linköping,Sweden,18411.5,-43113.0
+linz,Linz,Austria,13636.3,13905.4
+lisboa,Lisbon,Portugal,-92710.5,50653.3
+liverpool,Liverpool,United Kingdom,-48871.9,-29112.0
+livorno,Livorno,Italy,-2468.4,40181.7
+ljubljana,Ljubljana,Slovenia,15398.0,25945.1
+lleida,Lleida,Spain,-45505.9,45103.7
+lodz,Łódź,Poland,32014.3,-6164.0
+london,London,United Kingdom,-39547.0,-11584.3
+loviisa,Loviisa,Finland,47717.3,-57207.9
+lublin,Lublin,Poland,43244.1,-4125.1
+luga,Luga,Russia,60046.3,-50065.3
+lulea,Lulea,Sweden,32728.5,-86334.0
+luxembourg,Luxembourg,Luxembourg,-16641.1,3508.3
+lyon,Lyon,France,-23878.0,25557.9
+madrid,Madrid,Spain,-65397.8,48701.0
+magdeburg,Magdeburg,Germany,4303.4,-8319.9
+malaga,Málaga,Spain,-73044.3,68809.9
+malmo,Malmö,Sweden,10744.7,-27501.3
+manchester,Manchester,United Kingdom,-45548.8,-27835.1
+mangalia,Mangalia,Romania,71577.6,33310.7
+mannheim,Mannheim,Germany,-7936.9,5981.1
+maribor,Maribor,Slovenia,18694.4,23190.2
+marseille,Marseille,France,-23472.5,39190.7
+mazeikiai,Mažeikiai,Lithuania,39434.3,-32829.8
+mengibar,Mengíbar,Spain,-67815.0,63119.7
+messina,Messina,Italy,18375.7,70964.2
+metz,Metz,France,-16294.6,7443.6
+mikkeli,Mikkeli,Finland,49299.2,-65355.7
+milano,Milan,Italy,-6816.6,29418.6
+mitilini,Mitilini,Greece,66167.5,62154.6
+mo_i_rana,Mo i Rana,Norway,14063.0,-87993.1
+montpellier,Montpellier,France,-30052.5,36107.5
+mostar,Mostar,Bosnia and Herzegovina,28483.7,40985.7
+munchen,Munich,Germany,3756.6,14599.6
+murcia,Murcia,Spain,-56251.8,65082.6
+naantali,Naantali,Finland,35110.1,-56382.5
+nantes,Nantes,France,-47171.1,13141.9
+napoli,Naples,Italy,13318.1,56076.9
+narva,Narva,Estonia,54382.0,-52482.4
+narvik,Narvik,Norway,20956.8,-101087.6
+navia,Navia,Spain,-74862.1,27975.5
+newcastle,Newcastle upon Tyne,United Kingdom,-39778.2,-38807.8
+nice,Nice,France,-15520.5,38186.0
+niksic,Nikšić,Montenegro,33588.1,43318.9
+nis,Niš,Serbia,45301.1,39644.1
+novi_sad,Novi Sad,Serbia,36012.9,29811.2
+novo_mesto,Novo Mesto,Slovenia,16726.7,27559.0
+nurnberg,Nuremberg,Germany,1849.1,6498.6
+nynashamn,Nynäshamn,Sweden,25031.9,-46174.6
+o_barco,O Barco,Spain,-77271.9,34179.8
+odense,Odense,Denmark,1358.8,-26494.2
+olbia,Olbia,Italy,-7015.9,55215.4
+olhao,Olhão,Portugal,-88641.4,62440.7
+olkiluoto,Olkiluoto,Finland,34255.1,-60028.3
+olsztyn,Olsztyn,Poland,34758.5,-17906.1
+orebro,Örebro,Sweden,17087.7,-48394.8
+ornskoldsvik,Örnsköldsvik,Sweden,25429.9,-71073.8
+osijek,Osijek,Croatia,31379.4,28698.6
+oslo,Oslo,Norway,4390.8,-53430.7
+osnabruck,Osnabrück,Germany,-8077.0,-9925.3
+ostersund,Östersund,Sweden,15344.9,-70947.5
+ostrava,Ostrava,Czech Republic,28231.2,5169.0
+oulu,Oulu,Finland,41759.6,-82483.5
+paldiski,Paldiski,Estonia,42569.9,-50032.1
+palermo,Palermo,Italy,8975.9,71112.2
+paluel,Paluel,France,-33608.2,204.8
+pamplona,Pamplona,Spain,-53292.3,37431.5
+panevezys,Panevėžys,Lithuania,46202.2,-29982.9
+paris,Paris,France,-30427.5,6866.1
+parma,Parma,Italy,-2906.6,33934.2
+parnu,Pärnu,Estonia,44626.6,-45257.8
+patras,Patras,Greece,46744.0,70620.7
+pecs,Pécs,Hungary,29039.8,26291.5
+pernik,Pernik,Bulgaria,48398.1,45212.8
+pescara,Pescara,Italy,12898.0,46828.0
+petersburg,Saint Petersburg,Russia,59773.7,-57060.8
+pirdop,Pirdop,Bulgaria,55937.7,42141.0
+pitesti,Pitești,Romania,56247.4,29892.4
+pleven,Pleven,Bulgaria,57594.5,37437.4
+plovdiv,Plovdiv,Bulgaria,58234.7,46149.3
+plymouth,Plymouth,United Kingdom,-60041.5,-7902.4
+podgorica,Podgorica,Montenegro,33960.7,45135.9
+ponte_de_sor,Ponte de Sor,Portugal,-87009.9,50102.1
+pori,Pori,Finland,34862.2,-61727.8
+port_sagunt,Port de Sagunt,Spain,-50526.1,55688.2
+porto,Porto,Portugal,-85324.9,39530.8
+porto_vecchi,Porto-Vecchio,France,-7626.7,50990.0
+poznan,Poznań,Poland,22863.3,-9132.3
+prague,Prague,Czech Republic,14299.6,3958.8
+pristina,Pristina,Kosovo,42461.4,43658.8
+pskov,Pskov,Russia,56968.2,-44022.5
+puertollano,Puertollano,Spain,-69813.0,59054.1
+reims,Reims,France,-24054.9,5660.0
+rennes,Rennes,France,-46539.9,8044.5
+resita,Reșița,Romania,43990.2,29134.5
+rezekne,Rēzekne,Latvia,54953.3,-36095.7
+rhodes,Rhodes,Greece,77441.5,76518.7
+riga,Riga,Latvia,44677.9,-37109.8
+rijeka,Rijeka,Croatia,14366.1,30216.1
+roma,Rome,Italy,6261.1,49479.2
+roscoff,Roscoff,France,-53698.0,3100.3
+rostock,Rostock,Germany,6554.8,-19033.0
+rotterdam,Rotterdam,Netherlands,-19002.7,-9489.2
+rovaniemi,Rovaniemi,Finland,39884.9,-90331.5
+ruse,Ruse,Bulgaria,61453.9,35049.6
+salamanca,Salamanca,Spain,-73476.0,43467.7
+salzburg,Salzburg,Austria,9146.2,16019.5
+sangiovanni,Villa San Giovanni,Italy,19265.7,70669.0
+santander,Santander,Spain,-61881.2,31906.7
+sarajevo,Sarajevo,Bosnia and Herzegovina,30802.3,38326.1
+sassari,Sassari,Italy,-11553.9,55189.4
+setubal,Setúbal,Portugal,-91467.0,54457.4
+sevilla,Seville,Spain,-79726.1,62835.9
+sheffield,Sheffield,United Kingdom,-42688.9,-26707.7
+siauliai,Šiauliai,Lithuania,43188.6,-30523.9
+sines,Sines,Portugal,-91831.5,56448.5
+skelleftea,Skellefteå,Sweden,29686.8,-81216.9
+skopje,Skopje,North Macedonia,43657.2,48210.4
+sodertalje,Södertälje,Sweden,23525.1,-46340.0
+sofia,Sofia,Bulgaria,51154.7,42470.5
+soria,Soria,Spain,-58874.3,42028.1
+sosnovy_bor,Sosnovy Bor,Russia,54949.0,-54534.6
+southampton,Southampton,United Kingdom,-46338.9,-7543.4
+split,Split,Croatia,22114.9,40562.6
+stavanger,Stavanger,Norway,-10560.8,-48096.4
+steinkjer,Steinkjer,Norway,6718.0,-75198.4
+stockholm,Stockholm,Sweden,24699.1,-48078.2
+strasbourg,Strasbourg,France,-10787.1,11178.5
+stuttgart,Stuttgart,Germany,-4736.3,9744.6
+sundsvall,Sundsvall,Sweden,22379.3,-65816.7
+suzzara,Suzzara,Italy,-780.9,32276.7
+svolvaer,Svolvær,Norway,13566.9,-100434.6
+swansea,Swansea,United Kingdom,-56896.1,-16902.1
+szczecin,Szczecin,Poland,15052.5,-15069.9
+szeged,Szeged,Hungary,36880.6,24545.6
+tallinn,Tallinn,Estonia,44388.4,-50888.8
+tampere,Tampere,Finland,40238.7,-62510.9
+taranto,Taranto,Italy,25990.4,58071.3
+targu_mures,Târgu Mureș,Romania,53959.6,20137.1
+tarragona,Tarragona,Spain,-42818.7,49122.0
+tartu,Tartu,Estonia,50947.0,-46428.0
+tekirdag,Tekirdağ,Türkiye,68590.4,49742.7
+terni,Terni,Italy,6716.5,46191.7
+teruel,Teruel,Spain,-53707.2,51355.8
+thessaloniki,Thessaloniki,Greece,51284.1,55600.8
+timisoara,Timișoara,Romania,41402.2,27270.0
+tirana,Tirana,Albania,38274.8,51323.1
+torino,Turin,Italy,-12697.4,30911.9
+tornio,Tornio,Finland,38012.3,-87027.1
+toulouse,Toulouse,France,-39213.9,35645.5
+travemunde,Travemünde,Germany,2955.4,-19569.2
+trelleborg,Trelleborg,Sweden,10808.2,-25907.2
+trieste,Trieste,Italy,10593.7,27546.6
+trikala,Trikala,Greece,46869.9,62392.8
+tromso,Tromsø,Norway,24355.2,-111824.6
+trondheim,Trondheim,Norway,3400.5,-73060.2
+turku,Turku,Finland,36717.7,-56026.1
+tuzla,Tuzla,Bosnia and Herzegovina,32062.5,33967.4
+umea,Umeå,Sweden,28432.4,-75501.2
+uppsala,Uppsala,Sweden,24021.3,-51654.6
+utena,Utena,Lithuania,50778.1,-29560.5
+vaasa,Vaasa,Finland,32998.2,-71037.1
+valencia,Valencia,Spain,-51533.3,57437.1
+valladolid,Valladolid,Spain,-67923.2,40787.6
+valmiera,Valmiera,Latvia,47972.9,-40803.9
+vandellos,Vandellòs,Spain,-45657.7,50422.6
+varna,Varna,Bulgaria,70093.3,36442.1
+vasteraas,Västerås,Sweden,20983.8,-50488.4
+vaxjo,Växjö,Sweden,15965.5,-34790.3
+veli_tarnovo,Veliko Tarnovo,Bulgaria,60763.3,38839.3
+venezia,Venice,Italy,5089.8,30058.8
+ventspils,Ventspils,Latvia,36679.6,-38582.1
+verona,Verona,Italy,39.0,29433.2
+vigo,Vigo,Spain,-84721.5,32580.6
+villarreal,Villarreal,Spain,-49729.6,53663.8
+vilnius,Vilnius,Lithuania,50562.4,-24991.7
+vlore,Vlorë,Albania,36735.8,56975.2
+vyborg,Vyborg,Russia,54465.1,-60241.9
+warszawa,Warsaw,Poland,37444.8,-9456.0
+werlte,Werlte,Germany,-9247.4,-12720.5
+wien,Vienna,Austria,20824.6,13965.9
+winsen,Winsen,Germany,1266.9,-15051.0
+wroclaw,Wrocław,Poland,23502.8,-1971.1
+zadar,Zadar,Croatia,17475.7,36837.4
+zagreb,Zagreb,Croatia,21617.7,26950.1
+zaragoza,Zaragoza,Spain,-50628.3,44023.9
+zenica,Zenica,Bosnia and Herzegovina,28716.7,36196.8
+zurich,Zürich,Switzerland,-8804.3,17578.7

@@ -1,0 +1,77 @@
+{
+  "name": "ets2-overlay",
+  "version": "1.0.0",
+  "description": "ETS2 Telemetry Overlay Plugin - Displays real-time location and speed on transparent overlay",
+  "main": "main.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --publish never",
+    "build:win": "electron-builder --win --publish never",
+    "build:portable": "electron-builder --win portable --publish never",
+    "build:installer": "electron-builder --win nsis --publish never"
+  },
+  "keywords": [
+    "ets2",
+    "telemetry",
+    "overlay",
+    "electron"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.11",
+    "trucksim-telemetry": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "build": {
+    "appId": "com.ets2overlay.app",
+    "productName": "ETS2 Overlay",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "style.css",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "certificateFile": null,
+      "certificatePassword": null,
+      "signingHashAlgorithms": [
+        "sha256"
+      ],
+      "sign": null
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "ETS2 Overlay"
+    },
+    "portable": {
+      "artifactName": "ETS2-Overlay-${version}-portable.exe"
+    }
+  }
+}

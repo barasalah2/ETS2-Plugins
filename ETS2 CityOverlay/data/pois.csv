@@ -1,0 +1,5142 @@
+kind,x,z,label
+fuel,-90223.4,52721.1,Fuel station
+fuel,-90049.4,53136.7,Fuel station
+fuel,-89956.3,58530.0,Fuel station
+fuel,-89811.9,58587.7,Fuel station
+fuel,-89230.4,46317.4,Fuel station
+fuel,-89125.5,46502.6,Fuel station
+fuel,-89030.1,62479.0,Fuel station
+fuel,-89015.7,62410.3,Fuel station
+fuel,-87791.3,57125.7,Fuel station
+fuel,-87765.7,47927.6,Fuel station
+fuel,-87638.2,57211.6,Fuel station
+fuel,-87554.2,48247.3,Fuel station
+fuel,-87448.5,54485.6,Fuel station
+fuel,-86843.8,42706.7,Fuel station
+fuel,-86816.5,42860.7,Fuel station
+fuel,-86665.6,42238.9,Fuel station
+fuel,-86562.8,44290.5,Fuel station
+fuel,-86523.2,44794.5,Fuel station
+fuel,-86212.4,53454.3,Fuel station
+fuel,-86192.0,37710.2,Fuel station
+fuel,-86176.6,53286.3,Fuel station
+fuel,-86112.9,37725.4,Fuel station
+fuel,-85472.6,36058.0,Fuel station
+fuel,-85454.1,40398.7,Fuel station
+fuel,-84318.0,36417.7,Fuel station
+fuel,-84167.3,36545.2,Fuel station
+fuel,-84154.3,53152.8,Fuel station
+fuel,-84115.9,53038.6,Fuel station
+fuel,-83906.7,27118.6,Fuel station
+fuel,-83408.9,42949.4,Fuel station
+fuel,-83327.4,42824.5,Fuel station
+fuel,-83183.9,61887.0,Fuel station
+fuel,-83143.8,47700.8,Fuel station
+fuel,-83065.6,47831.7,Fuel station
+fuel,-82917.5,37683.7,Fuel station
+fuel,-82831.4,37535.4,Fuel station
+fuel,-82609.2,33458.7,Fuel station
+fuel,-82367.1,33602.9,Fuel station
+fuel,-82281.2,54000.8,Fuel station
+fuel,-82134.7,54653.8,Fuel station
+fuel,-81669.1,29007.4,Fuel station
+fuel,-81495.7,29138.9,Fuel station
+fuel,-80868.3,67385.4,Fuel station
+fuel,-80812.5,43276.5,Fuel station
+fuel,-80685.1,69215.8,Fuel station
+fuel,-80416.0,69280.6,Fuel station
+fuel,-80283.4,58400.7,Fuel station
+fuel,-79326.2,62316.9,Fuel station
+fuel,-79187.3,62330.7,Fuel station
+fuel,-78734.7,53819.7,Fuel station
+fuel,-78498.1,69600.5,Fuel station
+fuel,-78126.3,63320.5,Fuel station
+fuel,-78072.5,63178.0,Fuel station
+fuel,-77650.3,30522.2,Fuel station
+fuel,-77541.0,30437.2,Fuel station
+fuel,-77310.4,34239.0,Fuel station
+fuel,-77233.7,68818.2,Fuel station
+fuel,-77190.1,36476.2,Fuel station
+fuel,-77165.7,68674.3,Fuel station
+fuel,-76304.7,53888.3,Fuel station
+fuel,-75136.8,43384.2,Fuel station
+fuel,-74834.0,67148.3,Fuel station
+fuel,-74634.1,54024.7,Fuel station
+fuel,-74576.5,50051.7,Fuel station
+fuel,-74537.6,27952.3,Fuel station
+fuel,-74512.5,46737.8,Fuel station
+fuel,-74438.3,67490.2,Fuel station
+fuel,-74242.1,62014.6,Fuel station
+fuel,-74212.5,60987.4,Fuel station
+fuel,-73696.5,63891.8,Fuel station
+fuel,-73506.9,63827.4,Fuel station
+fuel,-73166.4,44243.8,Fuel station
+fuel,-72718.6,28604.8,Fuel station
+fuel,-72617.3,61220.5,Fuel station
+fuel,-72533.2,36373.1,Fuel station
+fuel,-72342.0,36358.5,Fuel station
+fuel,-72047.7,35460.2,Fuel station
+fuel,-71734.7,67732.1,Fuel station
+fuel,-70986.7,60248.8,Fuel station
+fuel,-70984.3,38970.7,Fuel station
+fuel,-70881.6,39247.4,Fuel station
+fuel,-70534.1,28977.0,Fuel station
+fuel,-70217.3,66162.8,Fuel station
+fuel,-70090.9,49859.0,Fuel station
+fuel,-69959.6,58629.1,Fuel station
+fuel,-69844.3,65811.1,Fuel station
+fuel,-69810.0,29475.3,Fuel station
+fuel,-69761.6,55385.8,Fuel station
+fuel,-69632.8,49766.4,Fuel station
+fuel,-69150.1,65902.6,Fuel station
+fuel,-69043.9,61370.1,Fuel station
+fuel,-68884.1,61567.0,Fuel station
+fuel,-68683.0,44839.7,Fuel station
+fuel,-68523.6,44838.1,Fuel station
+fuel,-68522.0,56727.6,Fuel station
+fuel,-68457.9,65371.6,Fuel station
+fuel,-68181.4,36605.4,Fuel station
+fuel,-68044.5,36550.4,Fuel station
+fuel,-67681.4,69012.4,Fuel station
+fuel,-67435.5,60504.2,Fuel station
+fuel,-67404.8,60575.9,Fuel station
+fuel,-67359.1,30772.8,Fuel station
+fuel,-67165.6,59971.2,Fuel station
+fuel,-66916.9,30668.6,Fuel station
+fuel,-66792.8,40913.9,Fuel station
+fuel,-66771.6,39840.5,Fuel station
+fuel,-66663.1,40732.0,Fuel station
+fuel,-66660.3,41658.8,Fuel station
+fuel,-66654.8,56557.3,Fuel station
+fuel,-66628.6,47857.4,Fuel station
+fuel,-65943.8,51300.9,Fuel station
+fuel,-65883.4,54708.3,Fuel station
+fuel,-65559.9,54784.2,Fuel station
+fuel,-65527.9,51324.5,Fuel station
+fuel,-65433.3,51322.0,Fuel station
+fuel,-65362.5,48880.5,Fuel station
+fuel,-65360.4,48893.7,Fuel station
+fuel,-65158.9,38739.7,Fuel station
+fuel,-64386.0,38955.6,Fuel station
+fuel,-64263.1,69801.9,Fuel station
+fuel,-64041.1,44648.3,Fuel station
+fuel,-63986.3,60598.9,Fuel station
+fuel,-63810.3,44653.4,Fuel station
+fuel,-63689.2,68093.6,Fuel station
+fuel,-63635.0,56391.4,Fuel station
+fuel,-63631.3,41227.0,Fuel station
+fuel,-63616.3,56215.1,Fuel station
+fuel,-63049.7,69815.4,Fuel station
+fuel,-62519.7,70234.8,Fuel station
+fuel,-62446.0,48408.3,Fuel station
+fuel,-62427.7,70293.2,Fuel station
+fuel,-62190.0,47913.2,Fuel station
+fuel,-62073.7,38130.5,Fuel station
+fuel,-61983.8,37308.0,Fuel station
+fuel,-61270.2,68386.0,Fuel station
+fuel,-61188.4,55850.2,Fuel station
+fuel,-61164.2,59492.7,Fuel station
+fuel,-61137.4,56002.5,Fuel station
+fuel,-60512.9,53272.9,Fuel station
+fuel,-60371.1,53313.7,Fuel station
+fuel,-60290.8,38060.9,Fuel station
+fuel,-60259.2,37945.1,Fuel station
+fuel,-60220.8,-7754.9,Fuel station
+fuel,-59117.1,57956.5,Fuel station
+fuel,-59029.4,57610.4,Fuel station
+fuel,-58978.2,57605.6,Fuel station
+fuel,-58732.9,42462.4,Fuel station
+fuel,-58471.9,36026.2,Fuel station
+fuel,-58456.1,33144.2,Fuel station
+fuel,-58443.2,65365.8,Fuel station
+fuel,-58291.7,-8266.2,Fuel station
+fuel,-58282.2,36084.7,Fuel station
+fuel,-57719.5,36932.0,Fuel station
+fuel,-57652.9,37066.8,Fuel station
+fuel,-57634.1,61271.7,Fuel station
+fuel,-57571.8,55616.6,Fuel station
+fuel,-57514.2,34071.9,Fuel station
+fuel,-57463.8,55259.1,Fuel station
+fuel,-57381.1,45236.6,Fuel station
+fuel,-57298.7,45106.2,Fuel station
+fuel,-56978.5,66512.9,Fuel station
+fuel,-56936.5,4007.1,Fuel station
+fuel,-56811.5,-16919.4,Fuel station
+fuel,-56646.6,42575.9,Fuel station
+fuel,-56617.6,42558.4,Fuel station
+fuel,-56529.7,3980.1,Fuel station
+fuel,-56274.7,64807.8,Fuel station
+fuel,-56226.2,63973.5,Fuel station
+fuel,-56205.2,39714.3,Fuel station
+fuel,-56064.0,39663.3,Fuel station
+fuel,-55799.5,45426.3,Fuel station
+fuel,-55506.4,64961.4,Fuel station
+fuel,-55111.5,-19346.9,Fuel station
+fuel,-54583.1,48755.0,Fuel station
+fuel,-54560.1,34356.3,Fuel station
+fuel,-54498.5,34227.2,Fuel station
+fuel,-53796.8,-14486.2,Fuel station
+fuel,-53694.8,38806.5,Fuel station
+fuel,-53643.5,-16121.3,Fuel station
+fuel,-53631.1,3524.1,Fuel station
+fuel,-53404.7,56305.2,Fuel station
+fuel,-53338.5,61854.2,Fuel station
+fuel,-53288.2,43866.4,Fuel station
+fuel,-53137.3,-12279.3,Fuel station
+fuel,-53047.9,37197.1,Fuel station
+fuel,-52987.9,37265.0,Fuel station
+fuel,-52959.1,62808.9,Fuel station
+fuel,-52798.0,62584.8,Fuel station
+fuel,-52722.5,-12384.5,Fuel station
+fuel,-52665.9,53264.7,Fuel station
+fuel,-52589.1,56810.4,Fuel station
+fuel,-52443.7,-7774.2,Fuel station
+fuel,-52329.5,-18540.7,Fuel station
+fuel,-52190.4,-17055.2,Fuel station
+fuel,-51489.8,33876.7,Fuel station
+fuel,-50527.9,60852.3,Fuel station
+fuel,-50398.8,43605.5,Fuel station
+fuel,-50376.4,60759.5,Fuel station
+fuel,-50235.4,-48305.8,Fuel station
+fuel,-50160.1,-21326.0,Fuel station
+fuel,-50142.6,10988.5,Fuel station
+fuel,-49790.4,-26187.7,Fuel station
+fuel,-49739.6,-14715.0,Fuel station
+fuel,-49547.9,-48340.0,Fuel station
+fuel,-49398.5,-24526.0,Fuel station
+fuel,-49218.7,5196.0,Fuel station
+fuel,-49133.5,-15478.5,Fuel station
+fuel,-49107.5,5513.6,Fuel station
+fuel,-49055.8,-18961.3,Fuel station
+fuel,-48863.9,31102.2,Fuel station
+fuel,-48778.0,34927.9,Fuel station
+fuel,-48726.8,-46362.2,Fuel station
+fuel,-48670.9,28639.2,Fuel station
+fuel,-48646.7,-28622.2,Fuel station
+fuel,-48634.6,31298.1,Fuel station
+fuel,-48558.0,34894.8,Fuel station
+fuel,-48433.1,12885.7,Fuel station
+fuel,-48425.2,12932.9,Fuel station
+fuel,-48417.0,6141.1,Fuel station
+fuel,-47998.1,10314.3,Fuel station
+fuel,-47902.4,-13428.5,Fuel station
+fuel,-47753.9,-8362.3,Fuel station
+fuel,-47707.1,28059.9,Fuel station
+fuel,-47677.6,-47270.9,Fuel station
+fuel,-47616.9,28986.6,Fuel station
+fuel,-47414.9,52307.5,Fuel station
+fuel,-47377.1,-42861.0,Fuel station
+fuel,-47307.5,52410.9,Fuel station
+fuel,-47262.4,14805.8,Fuel station
+fuel,-47220.7,26664.4,Fuel station
+fuel,-47200.9,-29913.9,Fuel station
+fuel,-46959.1,19061.3,Fuel station
+fuel,-46658.0,-21375.7,Fuel station
+fuel,-46554.3,-27016.7,Fuel station
+fuel,-46502.2,-7585.5,Fuel station
+fuel,-46478.3,-24392.5,Fuel station
+fuel,-46407.8,18949.2,Fuel station
+fuel,-46180.4,-47272.5,Fuel station
+fuel,-46164.6,-34345.5,Fuel station
+fuel,-46120.3,8675.0,Fuel station
+fuel,-46116.4,-20189.4,Fuel station
+fuel,-46049.9,-34109.2,Fuel station
+fuel,-45952.7,-47241.0,Fuel station
+fuel,-45743.6,-39548.6,Fuel station
+fuel,-45555.8,10243.5,Fuel station
+fuel,-45436.5,-51128.4,Fuel station
+fuel,-45283.1,-16299.4,Fuel station
+fuel,-45265.5,-27805.5,Fuel station
+fuel,-45213.9,25418.9,Fuel station
+fuel,-45033.3,-40631.8,Fuel station
+fuel,-44993.9,-7913.1,Fuel station
+fuel,-44920.2,25472.0,Fuel station
+fuel,-44871.4,-46854.0,Fuel station
+fuel,-44776.1,-29325.3,Fuel station
+fuel,-44702.5,27489.7,Fuel station
+fuel,-44665.0,-34478.1,Fuel station
+fuel,-44614.3,-22319.3,Fuel station
+fuel,-44547.8,27483.7,Fuel station
+fuel,-44473.0,-38976.0,Fuel station
+fuel,-44383.2,-39404.0,Fuel station
+fuel,-44328.3,-53309.4,Fuel station
+fuel,-44268.5,46344.0,Fuel station
+fuel,-44241.9,10755.5,Fuel station
+fuel,-44210.6,46560.0,Fuel station
+fuel,-44190.5,-43684.0,Fuel station
+fuel,-44121.7,-45794.9,Fuel station
+fuel,-44034.9,-20103.6,Fuel station
+fuel,-44018.6,18172.5,Fuel station
+fuel,-43985.2,13758.3,Fuel station
+fuel,-43967.9,20189.1,Fuel station
+fuel,-43869.4,18167.0,Fuel station
+fuel,-43757.1,20387.7,Fuel station
+fuel,-43728.5,-19710.7,Fuel station
+fuel,-43570.8,37567.8,Fuel station
+fuel,-43176.8,-10567.7,Fuel station
+fuel,-42921.2,-51135.4,Fuel station
+fuel,-42878.7,-26590.8,Fuel station
+fuel,-42817.9,-10337.9,Fuel station
+fuel,-42766.0,-21955.3,Fuel station
+fuel,-42648.4,-11566.3,Fuel station
+fuel,-42579.5,-22035.6,Fuel station
+fuel,-42344.7,9246.4,Fuel station
+fuel,-42302.6,23017.5,Fuel station
+fuel,-42212.1,32263.4,Fuel station
+fuel,-42119.8,27191.7,Fuel station
+fuel,-42081.5,3564.2,Fuel station
+fuel,-42032.1,9370.9,Fuel station
+fuel,-42020.1,14916.6,Fuel station
+fuel,-41888.8,-39162.2,Fuel station
+fuel,-41877.0,32232.4,Fuel station
+fuel,-41866.5,3305.4,Fuel station
+fuel,-41773.0,11221.8,Fuel station
+fuel,-41702.9,-26771.4,Fuel station
+fuel,-41656.3,11537.4,Fuel station
+fuel,-41626.2,-33655.1,Fuel station
+fuel,-41468.4,-30087.4,Fuel station
+fuel,-41392.6,-19001.1,Fuel station
+fuel,-41165.8,-16538.5,Fuel station
+fuel,-41151.8,-23098.1,Fuel station
+fuel,-41023.4,-37891.6,Fuel station
+fuel,-40960.0,-12863.8,Fuel station
+fuel,-40878.9,-33058.1,Fuel station
+fuel,-40266.8,-55201.4,Fuel station
+fuel,-40030.4,-41626.1,Fuel station
+fuel,-39850.7,45967.0,Fuel station
+fuel,-39823.9,9927.2,Fuel station
+fuel,-39789.3,-38513.6,Fuel station
+fuel,-39770.1,46205.2,Fuel station
+fuel,-39724.9,5723.5,Fuel station
+fuel,-39697.9,-9639.4,Fuel station
+fuel,-39692.0,9469.7,Fuel station
+fuel,-39552.9,-54003.0,Fuel station
+fuel,-39448.6,-21357.2,Fuel station
+fuel,-39187.3,15951.4,Fuel station
+fuel,-39127.2,16282.5,Fuel station
+fuel,-39107.4,48238.4,Fuel station
+fuel,-39090.6,14035.4,Fuel station
+fuel,-39076.6,-11714.7,Fuel station
+fuel,-38988.3,-54825.2,Fuel station
+fuel,-38913.1,48521.0,Fuel station
+fuel,-38857.9,35577.8,Fuel station
+fuel,-38756.9,20338.6,Fuel station
+fuel,-38693.3,35776.0,Fuel station
+fuel,-38144.8,8619.7,Fuel station
+fuel,-38041.3,11004.6,Fuel station
+fuel,-37975.0,-25143.7,Fuel station
+fuel,-37923.8,-16053.4,Fuel station
+fuel,-37908.9,31587.7,Fuel station
+fuel,-37876.7,11298.1,Fuel station
+fuel,-37859.4,8448.0,Fuel station
+fuel,-37742.3,-16105.2,Fuel station
+fuel,-37638.4,23782.7,Fuel station
+fuel,-37507.5,37881.5,Fuel station
+fuel,-37402.0,23462.2,Fuel station
+fuel,-37325.5,37872.6,Fuel station
+fuel,-37104.9,-14248.8,Fuel station
+fuel,-36956.4,1523.5,Fuel station
+fuel,-36896.7,1355.1,Fuel station
+fuel,-36755.8,-16273.3,Fuel station
+fuel,-36684.6,-6465.4,Fuel station
+fuel,-36629.2,-17211.5,Fuel station
+fuel,-36602.6,20682.5,Fuel station
+fuel,-36580.7,20346.7,Fuel station
+fuel,-36548.5,25841.5,Fuel station
+fuel,-36471.2,-26817.5,Fuel station
+fuel,-36339.1,-12021.3,Fuel station
+fuel,-36315.0,47148.1,Fuel station
+fuel,-36192.3,12666.3,Fuel station
+fuel,-36050.9,-9207.2,Fuel station
+fuel,-36013.5,12376.6,Fuel station
+fuel,-35840.7,4768.1,Fuel station
+fuel,-35755.4,26562.5,Fuel station
+fuel,-35708.8,9949.6,Fuel station
+fuel,-35687.8,4464.0,Fuel station
+fuel,-35108.7,22771.1,Fuel station
+fuel,-34912.0,5055.9,Fuel station
+fuel,-34907.8,4719.4,Fuel station
+fuel,-34818.4,3482.0,Fuel station
+fuel,-34809.4,934.2,Fuel station
+fuel,-34727.7,43961.6,Fuel station
+fuel,-34598.3,43785.4,Fuel station
+fuel,-34299.6,10022.0,Fuel station
+fuel,-34281.3,25261.4,Fuel station
+fuel,-34198.9,1952.2,Fuel station
+fuel,-33882.9,16576.2,Fuel station
+fuel,-33680.2,12151.9,Fuel station
+fuel,-33639.3,14614.5,Fuel station
+fuel,-33459.6,14899.0,Fuel station
+fuel,-33425.7,11019.8,Fuel station
+fuel,-33421.8,-7438.8,Fuel station
+fuel,-33344.5,-13644.8,Fuel station
+fuel,-33233.8,-15143.0,Fuel station
+fuel,-33096.5,38437.3,Fuel station
+fuel,-32950.9,38745.1,Fuel station
+fuel,-32519.7,10902.8,Fuel station
+fuel,-32435.8,10786.2,Fuel station
+fuel,-31955.1,4891.4,Fuel station
+fuel,-31679.3,4662.8,Fuel station
+fuel,-31567.6,-14004.8,Fuel station
+fuel,-31515.1,-1355.0,Fuel station
+fuel,-31497.3,20821.5,Fuel station
+fuel,-31386.8,-1290.4,Fuel station
+fuel,-31240.2,28860.1,Fuel station
+fuel,-31194.1,20967.5,Fuel station
+fuel,-30278.8,24607.0,Fuel station
+fuel,-30206.3,35977.9,Fuel station
+fuel,-30128.5,-4716.9,Fuel station
+fuel,-30061.9,24657.9,Fuel station
+fuel,-29985.2,10271.5,Fuel station
+fuel,-29912.1,11312.2,Fuel station
+fuel,-29832.2,10295.2,Fuel station
+fuel,-29749.5,26745.9,Fuel station
+fuel,-29711.1,35836.1,Fuel station
+fuel,-29521.0,941.0,Fuel station
+fuel,-29472.6,8481.7,Fuel station
+fuel,-29246.3,746.6,Fuel station
+fuel,-29194.7,8284.9,Fuel station
+fuel,-28617.7,26665.5,Fuel station
+fuel,-28608.5,4509.6,Fuel station
+fuel,-28284.6,1484.7,Fuel station
+fuel,-28110.7,-3228.5,Fuel station
+fuel,-27967.9,-3212.6,Fuel station
+fuel,-27808.5,21691.5,Fuel station
+fuel,-27793.5,14215.4,Fuel station
+fuel,-27645.7,35999.1,Fuel station
+fuel,-27311.5,35625.4,Fuel station
+fuel,-26487.3,25174.7,Fuel station
+fuel,-26473.1,751.2,Fuel station
+fuel,-26360.8,-2161.8,Fuel station
+fuel,-26281.2,5996.5,Fuel station
+fuel,-26176.9,25304.7,Fuel station
+fuel,-26175.0,6093.2,Fuel station
+fuel,-25642.6,-5421.0,Fuel station
+fuel,-25637.0,-5430.9,Fuel station
+fuel,-25631.4,-5440.9,Fuel station
+fuel,-25607.3,-5441.5,Fuel station
+fuel,-25550.5,-5611.0,Fuel station
+fuel,-25526.4,-5611.6,Fuel station
+fuel,-25520.8,-5621.6,Fuel station
+fuel,-25515.2,-5631.5,Fuel station
+fuel,-24952.8,37516.4,Fuel station
+fuel,-24926.5,37663.4,Fuel station
+fuel,-24664.6,29775.2,Fuel station
+fuel,-24336.6,30673.9,Fuel station
+fuel,-24330.7,13231.1,Fuel station
+fuel,-24252.4,31003.8,Fuel station
+fuel,-24174.1,24001.7,Fuel station
+fuel,-23976.8,6364.0,Fuel station
+fuel,-23855.9,6258.2,Fuel station
+fuel,-23684.0,-841.8,Fuel station
+fuel,-23681.8,-849.5,Fuel station
+fuel,-23679.2,-856.9,Fuel station
+fuel,-23676.7,-864.5,Fuel station
+fuel,-23669.5,-875.1,Fuel station
+fuel,-23639.1,39224.0,Fuel station
+fuel,-23638.1,-931.9,Fuel station
+fuel,-23636.2,-936.6,Fuel station
+fuel,-23632.0,-951.2,Fuel station
+fuel,-23630.9,-940.4,Fuel station
+fuel,-23629.5,-958.7,Fuel station
+fuel,-23627.0,-966.4,Fuel station
+fuel,-23217.0,-2732.8,Fuel station
+fuel,-23213.4,-2741.3,Fuel station
+fuel,-23084.2,39169.9,Fuel station
+fuel,-23066.6,-2708.0,Fuel station
+fuel,-23009.3,20433.4,Fuel station
+fuel,-22978.5,8882.2,Fuel station
+fuel,-22677.1,-2828.0,Fuel station
+fuel,-22674.6,-2836.6,Fuel station
+fuel,-22536.0,16482.8,Fuel station
+fuel,-22478.8,-6111.3,Fuel station
+fuel,-22415.4,-9345.9,Fuel station
+fuel,-22412.1,-9355.7,Fuel station
+fuel,-22396.5,33393.0,Fuel station
+fuel,-22254.7,25805.9,Fuel station
+fuel,-22159.4,-2513.3,Fuel station
+fuel,-22125.0,-2737.9,Fuel station
+fuel,-22087.3,25867.8,Fuel station
+fuel,-21898.5,-2649.0,Fuel station
+fuel,-21889.7,-2647.2,Fuel station
+fuel,-21880.9,-2645.5,Fuel station
+fuel,-21680.3,27613.5,Fuel station
+fuel,-21667.7,27594.9,Fuel station
+fuel,-21629.2,27522.7,Fuel station
+fuel,-21616.9,27503.9,Fuel station
+fuel,-21504.9,12641.2,Fuel station
+fuel,-21199.9,6984.9,Fuel station
+fuel,-21147.0,9175.7,Fuel station
+fuel,-21106.2,6868.6,Fuel station
+fuel,-20369.7,-13111.8,Fuel station
+fuel,-20362.6,-13106.4,Fuel station
+fuel,-20355.4,-13100.9,Fuel station
+fuel,-20191.3,-6377.7,Fuel station
+fuel,-20186.5,-6368.9,Fuel station
+fuel,-20182.3,-6361.3,Fuel station
+fuel,-20168.7,-6338.5,Fuel station
+fuel,-20167.4,-6328.4,Fuel station
+fuel,-20161.7,-6535.3,Fuel station
+fuel,-20148.0,-6514.4,Fuel station
+fuel,-20143.5,-6506.9,Fuel station
+fuel,-20138.3,-6498.4,Fuel station
+fuel,-20123.0,39305.1,Fuel station
+fuel,-20117.9,35240.5,Fuel station
+fuel,-20081.8,-5186.9,Fuel station
+fuel,-20080.9,-5201.0,Fuel station
+fuel,-20080.2,-5210.6,Fuel station
+fuel,-20004.4,34923.8,Fuel station
+fuel,-19988.6,-5094.1,Fuel station
+fuel,-19988.0,-5103.7,Fuel station
+fuel,-19987.0,-5117.8,Fuel station
+fuel,-19986.6,-5123.7,Fuel station
+fuel,-19776.9,39496.6,Fuel station
+fuel,-19751.9,-2835.3,Fuel station
+fuel,-19746.5,-2842.9,Fuel station
+fuel,-19741.7,-2850.4,Fuel station
+fuel,-19734.8,-2859.1,Fuel station
+fuel,-19700.2,-2963.6,Fuel station
+fuel,-19693.2,-2972.3,Fuel station
+fuel,-19688.5,-2979.8,Fuel station
+fuel,-19683.1,-2987.4,Fuel station
+fuel,-19651.4,77.0,Fuel station
+fuel,-19642.4,67.4,Fuel station
+fuel,-19632.8,61.6,Fuel station
+fuel,-19470.5,-12218.6,Fuel station
+fuel,-19468.3,149.6,Fuel station
+fuel,-19458.5,144.3,Fuel station
+fuel,-19449.2,134.4,Fuel station
+fuel,-19426.5,22950.3,Fuel station
+fuel,-19327.7,-1149.7,Fuel station
+fuel,-19327.6,-1160.3,Fuel station
+fuel,-19327.6,-1140.6,Fuel station
+fuel,-19327.4,-1131.8,Fuel station
+fuel,-19327.2,-1122.3,Fuel station
+fuel,-19255.5,-975.6,Fuel station
+fuel,-19255.3,-986.1,Fuel station
+fuel,-19255.1,-995.2,Fuel station
+fuel,-19254.7,-1003.9,Fuel station
+fuel,-19253.9,-1013.7,Fuel station
+fuel,-19124.7,-12147.8,Fuel station
+fuel,-19017.1,26392.8,Fuel station
+fuel,-18953.0,26496.9,Fuel station
+fuel,-18860.7,12823.5,Fuel station
+fuel,-18831.4,12964.2,Fuel station
+fuel,-18680.4,-9708.4,Fuel station
+fuel,-18676.8,-9688.2,Fuel station
+fuel,-18672.7,-9709.7,Fuel station
+fuel,-18669.1,-9689.6,Fuel station
+fuel,-18373.9,-9676.6,Fuel station
+fuel,-18355.6,-13464.5,Fuel station
+fuel,-18343.1,-13464.9,Fuel station
+fuel,-18334.8,-13465.4,Fuel station
+fuel,-18281.8,-13431.4,Fuel station
+fuel,-18268.7,-13431.9,Fuel station
+fuel,-18258.8,-13432.2,Fuel station
+fuel,-18199.8,18248.3,Fuel station
+fuel,-18194.6,21707.5,Fuel station
+fuel,-18188.6,18391.5,Fuel station
+fuel,-18110.0,-7709.2,Fuel station
+fuel,-18106.3,-7547.0,Fuel station
+fuel,-18103.9,-7701.5,Fuel station
+fuel,-18100.2,-7539.3,Fuel station
+fuel,-18094.2,-7531.7,Fuel station
+fuel,-18089.9,-7690.1,Fuel station
+fuel,-18083.9,-7682.5,Fuel station
+fuel,-18077.9,-7518.8,Fuel station
+fuel,-18077.8,-7674.8,Fuel station
+fuel,-18071.7,-7511.1,Fuel station
+fuel,-17950.2,23490.8,Fuel station
+fuel,-17942.3,23497.7,Fuel station
+fuel,-17839.7,24190.6,Fuel station
+fuel,-17813.6,-7261.6,Fuel station
+fuel,-17806.1,-7265.5,Fuel station
+fuel,-17798.6,-7269.3,Fuel station
+fuel,-17307.1,25454.3,Fuel station
+fuel,-17302.0,25446.9,Fuel station
+fuel,-17182.8,-1203.1,Fuel station
+fuel,-17174.2,2858.8,Fuel station
+fuel,-17170.3,2850.9,Fuel station
+fuel,-17166.4,2842.8,Fuel station
+fuel,-17142.8,2832.9,Fuel station
+fuel,-17139.3,2824.8,Fuel station
+fuel,-17136.9,-597.0,Fuel station
+fuel,-17134.6,-588.4,Fuel station
+fuel,-17127.5,-441.5,Fuel station
+fuel,-17077.8,2769.4,Fuel station
+fuel,-17073.3,2761.7,Fuel station
+fuel,-17060.7,2726.8,Fuel station
+fuel,-17052.6,2723.8,Fuel station
+fuel,-17044.6,2720.7,Fuel station
+fuel,-17039.3,-10975.1,Fuel station
+fuel,-17023.0,-10990.5,Fuel station
+fuel,-17015.9,-10997.5,Fuel station
+fuel,-17008.8,-11004.5,Fuel station
+fuel,-17001.6,-11011.5,Fuel station
+fuel,-16994.5,-11018.5,Fuel station
+fuel,-16988.7,-332.2,Fuel station
+fuel,-16985.8,-340.7,Fuel station
+fuel,-16812.0,-10950.8,Fuel station
+fuel,-16803.7,-10958.9,Fuel station
+fuel,-16795.3,-10967.1,Fuel station
+fuel,-16783.5,-10978.6,Fuel station
+fuel,-16781.0,23090.6,Fuel station
+fuel,-16772.9,23097.2,Fuel station
+fuel,-16642.0,-6104.7,Fuel station
+fuel,-16640.1,-6095.1,Fuel station
+fuel,-16638.1,-6085.5,Fuel station
+fuel,-16632.4,-6076.6,Fuel station
+fuel,-16565.2,-3170.2,Fuel station
+fuel,-16549.0,-3149.0,Fuel station
+fuel,-16543.6,-3156.2,Fuel station
+fuel,-16538.0,-3163.6,Fuel station
+fuel,-16527.8,-3070.0,Fuel station
+fuel,-16520.8,-3064.3,Fuel station
+fuel,-16513.8,-3058.6,Fuel station
+fuel,-16506.8,-3053.0,Fuel station
+fuel,-16454.3,930.5,Fuel station
+fuel,-16433.1,3304.6,Fuel station
+fuel,-16428.4,918.3,Fuel station
+fuel,-16421.0,914.2,Fuel station
+fuel,-16317.8,-8800.4,Fuel station
+fuel,-16316.3,-8812.3,Fuel station
+fuel,-16315.1,-8821.9,Fuel station
+fuel,-16295.5,-6112.0,Fuel station
+fuel,-16291.4,-6103.0,Fuel station
+fuel,-16284.8,-6084.3,Fuel station
+fuel,-16280.9,-6075.7,Fuel station
+fuel,-16277.2,-6067.4,Fuel station
+fuel,-16201.1,-8871.8,Fuel station
+fuel,-16199.9,-8881.3,Fuel station
+fuel,-16197.6,-8898.2,Fuel station
+fuel,-16194.5,7450.0,Fuel station
+fuel,-16187.6,37147.9,Fuel station
+fuel,-16181.4,36650.3,Fuel station
+fuel,-16137.7,5558.4,Fuel station
+fuel,-16128.3,30870.4,Fuel station
+fuel,-16119.8,30877.2,Fuel station
+fuel,-16012.6,5515.3,Fuel station
+fuel,-15990.9,19667.7,Fuel station
+fuel,-15986.7,19678.1,Fuel station
+fuel,-15958.9,30963.0,Fuel station
+fuel,-15950.2,30969.9,Fuel station
+fuel,-15758.5,2795.1,Fuel station
+fuel,-15435.1,-1690.6,Fuel station
+fuel,-15431.6,-1682.3,Fuel station
+fuel,-15430.7,-1808.4,Fuel station
+fuel,-15427.7,-1673.9,Fuel station
+fuel,-15427.3,-1800.3,Fuel station
+fuel,-15424.2,-1665.6,Fuel station
+fuel,-15418.5,-1781.5,Fuel station
+fuel,-15414.8,-1773.1,Fuel station
+fuel,-15320.6,20747.5,Fuel station
+fuel,-15314.8,-12874.5,Fuel station
+fuel,-15313.0,20755.4,Fuel station
+fuel,-15019.5,26331.5,Fuel station
+fuel,-14943.2,-4632.8,Fuel station
+fuel,-14822.9,-4574.3,Fuel station
+fuel,-14747.0,24346.3,Fuel station
+fuel,-14742.8,24353.2,Fuel station
+fuel,-14366.0,-7390.5,Fuel station
+fuel,-14331.7,-15301.4,Fuel station
+fuel,-14325.7,-15294.8,Fuel station
+fuel,-14320.3,-15288.9,Fuel station
+fuel,-14299.5,-15230.8,Fuel station
+fuel,-14294.0,-15224.8,Fuel station
+fuel,-14287.9,-15218.1,Fuel station
+fuel,-14078.1,-7069.0,Fuel station
+fuel,-13983.7,34666.8,Fuel station
+fuel,-13936.9,-12408.1,Fuel station
+fuel,-13933.4,-6302.6,Fuel station
+fuel,-13929.8,-12412.8,Fuel station
+fuel,-13929.2,-12354.2,Fuel station
+fuel,-13928.8,-12349.1,Fuel station
+fuel,-13922.9,-12417.3,Fuel station
+fuel,-13916.7,-6310.5,Fuel station
+fuel,-13882.8,-12387.3,Fuel station
+fuel,-13697.2,-15471.4,Fuel station
+fuel,-13688.5,-15469.3,Fuel station
+fuel,-13682.3,19870.4,Fuel station
+fuel,-13637.0,-4004.6,Fuel station
+fuel,-13186.6,31295.5,Fuel station
+fuel,-12970.4,7054.4,Fuel station
+fuel,-12943.6,9451.9,Fuel station
+fuel,-12847.9,9337.3,Fuel station
+fuel,-12790.1,20163.0,Fuel station
+fuel,-12509.2,-4302.5,Fuel station
+fuel,-12449.9,-1769.8,Fuel station
+fuel,-12445.2,-1777.4,Fuel station
+fuel,-12433.2,-10407.3,Fuel station
+fuel,-12433.0,-10397.0,Fuel station
+fuel,-12432.8,-10387.0,Fuel station
+fuel,-12432.6,-10377.0,Fuel station
+fuel,-12432.5,-10368.4,Fuel station
+fuel,-12304.6,16105.3,Fuel station
+fuel,-12301.6,-15961.0,Fuel station
+fuel,-12298.6,-3174.1,Fuel station
+fuel,-12293.5,-10496.3,Fuel station
+fuel,-12293.3,-10486.3,Fuel station
+fuel,-12293.1,-10476.3,Fuel station
+fuel,-12292.9,-10466.3,Fuel station
+fuel,-12292.7,-10456.3,Fuel station
+fuel,-12015.0,18301.4,Fuel station
+fuel,-11980.9,18327.1,Fuel station
+fuel,-11972.3,18315.3,Fuel station
+fuel,-11964.5,18304.4,Fuel station
+fuel,-11871.7,29295.9,Fuel station
+fuel,-11871.3,-1848.7,Fuel station
+fuel,-11747.3,18125.8,Fuel station
+fuel,-11728.4,18146.0,Fuel station
+fuel,-11627.6,-2269.0,Fuel station
+fuel,-11502.0,20629.2,Fuel station
+fuel,-11415.0,23380.1,Fuel station
+fuel,-11413.0,23371.4,Fuel station
+fuel,-11377.4,-6155.0,Fuel station
+fuel,-11368.9,-6167.6,Fuel station
+fuel,-11366.6,-6181.4,Fuel station
+fuel,-11334.6,20675.9,Fuel station
+fuel,-11313.4,14166.7,Fuel station
+fuel,-11251.2,-58385.6,Fuel station
+fuel,-11247.7,-58397.9,Fuel station
+fuel,-11236.6,-7256.4,Fuel station
+fuel,-11171.5,55169.9,Fuel station
+fuel,-11085.0,11549.6,Fuel station
+fuel,-10831.1,55373.6,Fuel station
+fuel,-10796.1,35948.6,Fuel station
+fuel,-10779.4,56690.6,Fuel station
+fuel,-10778.2,35842.1,Fuel station
+fuel,-10647.6,-47989.9,Fuel station
+fuel,-10636.0,-6028.5,Fuel station
+fuel,-10631.6,18819.5,Fuel station
+fuel,-10622.8,18813.5,Fuel station
+fuel,-10615.2,18627.1,Fuel station
+fuel,-10613.8,18807.4,Fuel station
+fuel,-10606.5,18621.1,Fuel station
+fuel,-10591.6,-5971.6,Fuel station
+fuel,-10591.3,-5948.4,Fuel station
+fuel,-10509.9,-4064.5,Fuel station
+fuel,-10472.9,-46882.7,Fuel station
+fuel,-10433.5,-55985.1,Fuel station
+fuel,-10349.8,-56249.0,Fuel station
+fuel,-10343.8,48506.8,Fuel station
+fuel,-10213.1,45828.3,Fuel station
+fuel,-10139.9,-15147.5,Fuel station
+fuel,-10135.7,-15157.3,Fuel station
+fuel,-10128.6,-15176.7,Fuel station
+fuel,-10071.4,48521.1,Fuel station
+fuel,-10027.2,45915.5,Fuel station
+fuel,-10025.7,-15193.9,Fuel station
+fuel,-10025.2,63544.3,Fuel station
+fuel,-10022.4,-15201.2,Fuel station
+fuel,-10018.8,-15209.5,Fuel station
+fuel,-10010.8,41.3,Fuel station
+fuel,-9772.2,18382.0,Fuel station
+fuel,-9769.0,188.3,Fuel station
+fuel,-9762.7,2889.3,Fuel station
+fuel,-9683.0,-48890.3,Fuel station
+fuel,-9679.5,18509.8,Fuel station
+fuel,-9416.5,50830.9,Fuel station
+fuel,-9322.0,11831.4,Fuel station
+fuel,-9171.3,-8342.2,Fuel station
+fuel,-9141.8,8408.1,Fuel station
+fuel,-9023.9,63029.5,Fuel station
+fuel,-8825.6,-67263.7,Fuel station
+fuel,-8816.6,-67263.8,Fuel station
+fuel,-8797.7,35340.5,Fuel station
+fuel,-8744.9,55048.7,Fuel station
+fuel,-8697.3,-6021.3,Fuel station
+fuel,-8567.0,-9636.4,Fuel station
+fuel,-8555.9,-65214.8,Fuel station
+fuel,-8512.3,20798.1,Fuel station
+fuel,-8495.4,35091.6,Fuel station
+fuel,-8464.4,17751.9,Fuel station
+fuel,-8396.6,-61815.1,Fuel station
+fuel,-8356.1,-61822.0,Fuel station
+fuel,-8346.5,47635.0,Fuel station
+fuel,-8312.1,-9449.2,Fuel station
+fuel,-8132.0,27140.1,Fuel station
+fuel,-8092.3,51095.5,Fuel station
+fuel,-8029.8,45748.4,Fuel station
+fuel,-7934.7,23673.3,Fuel station
+fuel,-7929.5,27129.2,Fuel station
+fuel,-7924.6,23670.4,Fuel station
+fuel,-7917.1,-371.1,Fuel station
+fuel,-7830.4,23720.4,Fuel station
+fuel,-7827.9,6870.6,Fuel station
+fuel,-7820.3,23717.5,Fuel station
+fuel,-7764.9,-7009.2,Fuel station
+fuel,-7695.6,31301.8,Fuel station
+fuel,-7665.0,-67416.5,Fuel station
+fuel,-7665.0,-67407.5,Fuel station
+fuel,-7617.7,56960.1,Fuel station
+fuel,-7586.1,57063.5,Fuel station
+fuel,-7498.4,-7215.1,Fuel station
+fuel,-7493.6,31283.9,Fuel station
+fuel,-7454.5,62759.0,Fuel station
+fuel,-7319.1,15568.9,Fuel station
+fuel,-7316.3,59943.8,Fuel station
+fuel,-7293.2,48492.0,Fuel station
+fuel,-7270.5,55436.4,Fuel station
+fuel,-7244.8,44135.1,Fuel station
+fuel,-7205.5,-55024.6,Fuel station
+fuel,-7164.9,15677.8,Fuel station
+fuel,-6991.4,5109.8,Fuel station
+fuel,-6860.7,5178.7,Fuel station
+fuel,-6859.0,55323.1,Fuel station
+fuel,-6783.5,46652.9,Fuel station
+fuel,-6556.8,29420.4,Fuel station
+fuel,-6546.4,29075.1,Fuel station
+fuel,-6507.7,24480.0,Fuel station
+fuel,-6464.1,-67215.8,Fuel station
+fuel,-6433.3,24377.1,Fuel station
+fuel,-6383.1,9600.4,Fuel station
+fuel,-6335.7,2732.4,Fuel station
+fuel,-6235.2,9656.5,Fuel station
+fuel,-6188.1,-13776.8,Fuel station
+fuel,-6044.5,-13781.0,Fuel station
+fuel,-5949.3,-52788.8,Fuel station
+fuel,-5605.1,-14640.9,Fuel station
+fuel,-5567.7,-42790.2,Fuel station
+fuel,-5500.8,36031.5,Fuel station
+fuel,-5484.6,36236.0,Fuel station
+fuel,-5357.9,-43175.2,Fuel station
+fuel,-5297.8,10579.1,Fuel station
+fuel,-5256.8,3778.2,Fuel station
+fuel,-5230.7,-14542.7,Fuel station
+fuel,-5208.6,-14553.6,Fuel station
+fuel,-5150.7,2702.6,Fuel station
+fuel,-5027.9,3590.7,Fuel station
+fuel,-4885.8,11565.7,Fuel station
+fuel,-4732.8,18535.3,Fuel station
+fuel,-4490.3,-27375.2,Fuel station
+fuel,-4358.3,-55832.4,Fuel station
+fuel,-3939.8,-51119.9,Fuel station
+fuel,-3835.4,-35316.5,Fuel station
+fuel,-3826.5,-35317.5,Fuel station
+fuel,-3793.5,-10042.5,Fuel station
+fuel,-3787.9,-4121.5,Fuel station
+fuel,-3774.3,-9888.6,Fuel station
+fuel,-3680.8,18350.2,Fuel station
+fuel,-3611.2,17399.2,Fuel station
+fuel,-3597.1,17399.2,Fuel station
+fuel,-3519.6,17411.3,Fuel station
+fuel,-3463.2,-70583.1,Fuel station
+fuel,-3451.5,-70582.2,Fuel station
+fuel,-3440.0,-70581.2,Fuel station
+fuel,-3421.1,-70594.3,Fuel station
+fuel,-3416.9,-4168.2,Fuel station
+fuel,-3403.8,16588.3,Fuel station
+fuel,-3365.0,32303.6,Fuel station
+fuel,-3336.6,16715.3,Fuel station
+fuel,-3330.4,32513.8,Fuel station
+fuel,-3037.8,-14205.1,Fuel station
+fuel,-2820.3,-14459.9,Fuel station
+fuel,-2724.9,9301.9,Fuel station
+fuel,-2705.2,35238.4,Fuel station
+fuel,-2686.5,610.2,Fuel station
+fuel,-2651.9,34095.8,Fuel station
+fuel,-2636.4,-67677.8,Fuel station
+fuel,-2633.2,-67669.4,Fuel station
+fuel,-2546.9,-67434.7,Fuel station
+fuel,-2543.4,-67426.4,Fuel station
+fuel,-2530.1,36860.9,Fuel station
+fuel,-2487.9,-69419.7,Fuel station
+fuel,-2487.5,-69428.7,Fuel station
+fuel,-2472.0,864.8,Fuel station
+fuel,-2459.6,-56311.7,Fuel station
+fuel,-2381.7,-44184.2,Fuel station
+fuel,-2261.3,40137.1,Fuel station
+fuel,-2187.0,-22376.2,Fuel station
+fuel,-2179.6,40219.8,Fuel station
+fuel,-2128.2,30382.6,Fuel station
+fuel,-2016.8,30561.6,Fuel station
+fuel,-2013.2,-22180.4,Fuel station
+fuel,-1822.5,-55388.8,Fuel station
+fuel,-1732.4,-26377.4,Fuel station
+fuel,-1717.7,-26380.1,Fuel station
+fuel,-1708.9,-26381.7,Fuel station
+fuel,-1700.1,-26383.4,Fuel station
+fuel,-1605.0,-26318.5,Fuel station
+fuel,-1596.1,-26319.8,Fuel station
+fuel,-1587.2,-26321.2,Fuel station
+fuel,-1578.3,-26322.5,Fuel station
+fuel,-1411.3,-3457.4,Fuel station
+fuel,-1409.7,-32698.3,Fuel station
+fuel,-1408.3,-32689.4,Fuel station
+fuel,-1385.7,-32675.1,Fuel station
+fuel,-1385.2,-37020.1,Fuel station
+fuel,-1213.3,43581.8,Fuel station
+fuel,-1153.2,43492.0,Fuel station
+fuel,-1134.4,-16701.9,Fuel station
+fuel,-1029.6,39074.8,Fuel station
+fuel,-990.4,-5967.4,Fuel station
+fuel,-955.2,-5820.1,Fuel station
+fuel,-787.8,-9189.1,Fuel station
+fuel,-750.2,-57027.5,Fuel station
+fuel,-688.1,12374.9,Fuel station
+fuel,-657.4,-11175.5,Fuel station
+fuel,-517.3,31441.5,Fuel station
+fuel,-511.0,-11218.9,Fuel station
+fuel,-453.5,31644.9,Fuel station
+fuel,-401.2,-16636.8,Fuel station
+fuel,-386.6,-16628.6,Fuel station
+fuel,-360.1,12298.6,Fuel station
+fuel,-348.9,32470.2,Fuel station
+fuel,-341.8,-1995.9,Fuel station
+fuel,-275.1,-1958.8,Fuel station
+fuel,-231.6,-64426.1,Fuel station
+fuel,-226.2,-64434.4,Fuel station
+fuel,-213.1,-70689.5,Fuel station
+fuel,-199.1,29662.8,Fuel station
+fuel,-189.8,-64542.2,Fuel station
+fuel,-179.4,-64557.1,Fuel station
+fuel,-125.8,-8947.6,Fuel station
+fuel,186.8,-33623.8,Fuel station
+fuel,188.1,-33613.8,Fuel station
+fuel,189.4,-33603.8,Fuel station
+fuel,201.4,-33614.6,Fuel station
+fuel,210.3,-33615.8,Fuel station
+fuel,303.9,-4419.6,Fuel station
+fuel,349.7,-33661.6,Fuel station
+fuel,364.1,-33663.5,Fuel station
+fuel,372.8,-33664.6,Fuel station
+fuel,388.0,-50315.5,Fuel station
+fuel,391.7,35977.9,Fuel station
+fuel,424.8,-4497.2,Fuel station
+fuel,572.9,35870.3,Fuel station
+fuel,592.4,-52294.6,Fuel station
+fuel,603.2,-47003.7,Fuel station
+fuel,633.2,-21622.9,Fuel station
+fuel,905.2,-36144.3,Fuel station
+fuel,923.5,38898.8,Fuel station
+fuel,991.5,8254.8,Fuel station
+fuel,1021.6,43595.7,Fuel station
+fuel,1085.2,-36159.7,Fuel station
+fuel,1110.1,-37188.3,Fuel station
+fuel,1117.1,-37193.9,Fuel station
+fuel,1185.9,43476.9,Fuel station
+fuel,1188.1,-21669.5,Fuel station
+fuel,1193.2,8233.0,Fuel station
+fuel,1226.7,38817.3,Fuel station
+fuel,1316.4,-26476.5,Fuel station
+fuel,1356.5,-31462.9,Fuel station
+fuel,1408.3,-26233.8,Fuel station
+fuel,1410.3,-26226.1,Fuel station
+fuel,1412.2,-26218.3,Fuel station
+fuel,1421.2,-38773.5,Fuel station
+fuel,1436.1,-26243.2,Fuel station
+fuel,1545.6,12897.1,Fuel station
+fuel,1557.5,-30095.2,Fuel station
+fuel,1557.6,-30104.1,Fuel station
+fuel,1557.7,-30113.1,Fuel station
+fuel,1557.7,-30122.0,Fuel station
+fuel,1613.5,-9057.1,Fuel station
+fuel,1650.1,6461.5,Fuel station
+fuel,1792.8,30630.1,Fuel station
+fuel,1795.1,1784.0,Fuel station
+fuel,1838.7,30524.5,Fuel station
+fuel,1887.9,21255.2,Fuel station
+fuel,2002.4,40000.2,Fuel station
+fuel,2027.6,39799.0,Fuel station
+fuel,2029.2,-9096.1,Fuel station
+fuel,2421.8,6309.4,Fuel station
+fuel,2468.4,13232.1,Fuel station
+fuel,2558.2,-1619.6,Fuel station
+fuel,2595.6,-38108.5,Fuel station
+fuel,2629.3,-2398.7,Fuel station
+fuel,2642.7,32119.9,Fuel station
+fuel,2660.9,31917.9,Fuel station
+fuel,2679.7,-3024.5,Fuel station
+fuel,2761.2,13899.6,Fuel station
+fuel,2809.0,-66977.1,Fuel station
+fuel,2817.8,-66992.0,Fuel station
+fuel,2846.5,48107.4,Fuel station
+fuel,2888.5,22093.7,Fuel station
+fuel,2948.1,47957.9,Fuel station
+fuel,2958.2,19681.8,Fuel station
+fuel,2959.9,19667.1,Fuel station
+fuel,3012.9,21997.3,Fuel station
+fuel,3068.8,19438.3,Fuel station
+fuel,3075.3,-2470.2,Fuel station
+fuel,3084.0,-2481.7,Fuel station
+fuel,3111.6,13695.5,Fuel station
+fuel,3281.0,-4155.8,Fuel station
+fuel,3379.4,8132.4,Fuel station
+fuel,3403.7,34871.6,Fuel station
+fuel,3422.4,-70920.9,Fuel station
+fuel,3428.0,8465.6,Fuel station
+fuel,3428.5,-70886.0,Fuel station
+fuel,3433.0,-70878.2,Fuel station
+fuel,3435.9,-55511.5,Fuel station
+fuel,3439.4,-70867.0,Fuel station
+fuel,3442.1,42826.4,Fuel station
+fuel,3443.8,-70859.2,Fuel station
+fuel,3445.3,-55512.3,Fuel station
+fuel,3448.3,-70851.4,Fuel station
+fuel,3452.8,35191.5,Fuel station
+fuel,3472.2,-19809.4,Fuel station
+fuel,3532.6,-55962.8,Fuel station
+fuel,3532.7,-55953.9,Fuel station
+fuel,3532.9,-55944.9,Fuel station
+fuel,3561.7,42662.6,Fuel station
+fuel,3760.8,13733.6,Fuel station
+fuel,3850.6,-72709.2,Fuel station
+fuel,3895.3,-58292.8,Fuel station
+fuel,3901.1,-58285.9,Fuel station
+fuel,3933.8,-58917.7,Fuel station
+fuel,3940.8,-58912.1,Fuel station
+fuel,3955.2,-58601.1,Fuel station
+fuel,3957.5,-58889.3,Fuel station
+fuel,3972.6,-58608.1,Fuel station
+fuel,3974.5,-58616.8,Fuel station
+fuel,4079.8,-71415.8,Fuel station
+fuel,4084.9,-71423.2,Fuel station
+fuel,4160.5,35857.2,Fuel station
+fuel,4165.5,36070.1,Fuel station
+fuel,4260.5,-8456.8,Fuel station
+fuel,4478.4,-8496.1,Fuel station
+fuel,4487.4,-8496.5,Fuel station
+fuel,4512.8,-17505.0,Fuel station
+fuel,4576.1,-72114.3,Fuel station
+fuel,4587.6,-72114.2,Fuel station
+fuel,4600.1,-72114.1,Fuel station
+fuel,4619.4,-58732.8,Fuel station
+fuel,4628.4,-58733.5,Fuel station
+fuel,4637.3,-8766.4,Fuel station
+fuel,4637.3,-58734.2,Fuel station
+fuel,4667.1,14995.4,Fuel station
+fuel,4673.9,15011.3,Fuel station
+fuel,4675.4,14991.8,Fuel station
+fuel,4682.3,15007.8,Fuel station
+fuel,4816.6,-17641.0,Fuel station
+fuel,4840.9,30020.2,Fuel station
+fuel,4843.8,-14782.1,Fuel station
+fuel,4891.0,-51915.2,Fuel station
+fuel,4933.9,-51801.4,Fuel station
+fuel,5158.3,-14891.1,Fuel station
+fuel,5229.8,14125.9,Fuel station
+fuel,5292.4,-12067.8,Fuel station
+fuel,5349.4,-19529.4,Fuel station
+fuel,5373.1,-57516.2,Fuel station
+fuel,5377.7,-57505.3,Fuel station
+fuel,5378.5,14154.6,Fuel station
+fuel,5389.1,-57502.8,Fuel station
+fuel,5391.3,1495.2,Fuel station
+fuel,5420.3,-19563.9,Fuel station
+fuel,5512.2,16027.3,Fuel station
+fuel,5582.9,15984.1,Fuel station
+fuel,6039.9,18485.3,Fuel station
+fuel,6094.9,9217.0,Fuel station
+fuel,6150.5,-3817.5,Fuel station
+fuel,6172.0,-3833.6,Fuel station
+fuel,6202.5,-22325.5,Fuel station
+fuel,6227.9,9162.6,Fuel station
+fuel,6320.8,49587.9,Fuel station
+fuel,6461.4,-54535.7,Fuel station
+fuel,6470.2,-54537.3,Fuel station
+fuel,6479.0,-54538.8,Fuel station
+fuel,6485.7,51017.9,Fuel station
+fuel,6511.1,50904.5,Fuel station
+fuel,6543.3,-75226.5,Fuel station
+fuel,6547.6,-75234.4,Fuel station
+fuel,6571.4,3171.4,Fuel station
+fuel,6624.8,-54590.8,Fuel station
+fuel,6627.1,50119.2,Fuel station
+fuel,6633.8,-54590.5,Fuel station
+fuel,6642.9,-54571.1,Fuel station
+fuel,6789.3,-50058.8,Fuel station
+fuel,6880.2,-8676.3,Fuel station
+fuel,6927.9,-18847.3,Fuel station
+fuel,6928.3,-3317.7,Fuel station
+fuel,6997.4,-75414.4,Fuel station
+fuel,6998.1,-75405.5,Fuel station
+fuel,7033.2,-20203.5,Fuel station
+fuel,7054.8,-3536.1,Fuel station
+fuel,7097.2,-3898.6,Fuel station
+fuel,7120.5,-647.3,Fuel station
+fuel,7155.0,-8870.9,Fuel station
+fuel,7202.6,-43609.0,Fuel station
+fuel,7371.4,-18836.8,Fuel station
+fuel,7386.2,-27490.6,Fuel station
+fuel,7386.6,-27483.7,Fuel station
+fuel,7422.8,16063.0,Fuel station
+fuel,7455.2,-684.3,Fuel station
+fuel,7479.8,45271.5,Fuel station
+fuel,7485.4,16126.8,Fuel station
+fuel,7682.8,5757.9,Fuel station
+fuel,7689.6,5583.3,Fuel station
+fuel,7753.2,-12457.0,Fuel station
+fuel,7831.8,19184.9,Fuel station
+fuel,7837.1,19083.9,Fuel station
+fuel,7868.8,27695.1,Fuel station
+fuel,7873.1,27803.1,Fuel station
+fuel,7903.6,39165.8,Fuel station
+fuel,7904.1,-6902.0,Fuel station
+fuel,7948.5,38959.8,Fuel station
+fuel,7957.6,-12368.7,Fuel station
+fuel,7976.5,11642.4,Fuel station
+fuel,8034.0,-7212.7,Fuel station
+fuel,8246.6,-37804.8,Fuel station
+fuel,8253.0,-37798.5,Fuel station
+fuel,8257.5,-37664.6,Fuel station
+fuel,8259.4,-37792.2,Fuel station
+fuel,8264.1,-37658.6,Fuel station
+fuel,8265.8,-37785.9,Fuel station
+fuel,8270.8,-37652.5,Fuel station
+fuel,8281.9,-37642.4,Fuel station
+fuel,8288.7,-28060.2,Fuel station
+fuel,8292.1,-28075.4,Fuel station
+fuel,8305.9,-39719.1,Fuel station
+fuel,8434.6,-17524.1,Fuel station
+fuel,8586.3,48762.9,Fuel station
+fuel,8642.8,-28460.8,Fuel station
+fuel,8643.3,-39852.5,Fuel station
+fuel,8769.8,48671.2,Fuel station
+fuel,8801.3,-40871.7,Fuel station
+fuel,8810.3,-40871.2,Fuel station
+fuel,8965.0,39632.8,Fuel station
+fuel,8978.6,71217.7,Fuel station
+fuel,9100.2,22440.0,Fuel station
+fuel,9145.1,22407.4,Fuel station
+fuel,9277.9,-30180.1,Fuel station
+fuel,9349.4,-9432.5,Fuel station
+fuel,9379.5,-29326.5,Fuel station
+fuel,9382.4,-29336.4,Fuel station
+fuel,9385.4,-29346.6,Fuel station
+fuel,9403.0,-29347.5,Fuel station
+fuel,9413.2,-29345.7,Fuel station
+fuel,9471.9,71292.3,Fuel station
+fuel,9472.4,-29335.2,Fuel station
+fuel,9480.9,-29333.7,Fuel station
+fuel,9496.5,15999.9,Fuel station
+fuel,9506.0,-29321.8,Fuel station
+fuel,9507.9,-29331.9,Fuel station
+fuel,9509.7,-29342.2,Fuel station
+fuel,9640.2,14700.2,Fuel station
+fuel,9662.5,-38679.9,Fuel station
+fuel,9667.3,-38687.5,Fuel station
+fuel,9672.0,-38695.0,Fuel station
+fuel,9676.8,-38702.6,Fuel station
+fuel,9682.7,-9799.0,Fuel station
+fuel,9796.8,-38720.6,Fuel station
+fuel,9801.3,-38728.4,Fuel station
+fuel,9805.8,-38736.1,Fuel station
+fuel,9813.3,-38749.0,Fuel station
+fuel,9830.9,9391.6,Fuel station
+fuel,9833.1,15156.9,Fuel station
+fuel,9918.7,-33785.2,Fuel station
+fuel,9927.0,-33783.1,Fuel station
+fuel,9934.9,-33781.4,Fuel station
+fuel,9939.0,-40849.1,Fuel station
+fuel,9961.8,20924.3,Fuel station
+fuel,9962.9,15100.6,Fuel station
+fuel,10023.5,-33806.3,Fuel station
+fuel,10024.8,-33797.4,Fuel station
+fuel,10026.1,-33788.5,Fuel station
+fuel,10130.5,12463.0,Fuel station
+fuel,10131.7,51955.6,Fuel station
+fuel,10152.7,52165.4,Fuel station
+fuel,10198.8,40093.0,Fuel station
+fuel,10272.6,12441.3,Fuel station
+fuel,10408.1,-28660.0,Fuel station
+fuel,10418.0,-9131.6,Fuel station
+fuel,10418.7,-28670.4,Fuel station
+fuel,10425.1,-28676.7,Fuel station
+fuel,10431.5,-28683.0,Fuel station
+fuel,10514.2,-10945.3,Fuel station
+fuel,10522.4,-10931.7,Fuel station
+fuel,10552.0,-28668.5,Fuel station
+fuel,10558.6,-28674.6,Fuel station
+fuel,10565.2,-28680.6,Fuel station
+fuel,10571.8,-28686.7,Fuel station
+fuel,10671.4,72205.0,Fuel station
+fuel,10714.5,72380.5,Fuel station
+fuel,10723.3,-53256.5,Fuel station
+fuel,10912.2,-71561.4,Fuel station
+fuel,10957.1,29643.9,Fuel station
+fuel,10965.3,-1986.2,Fuel station
+fuel,11009.8,-27724.9,Fuel station
+fuel,11040.1,-11221.2,Fuel station
+fuel,11042.6,-26006.6,Fuel station
+fuel,11133.5,-27141.5,Fuel station
+fuel,11501.6,-48859.0,Fuel station
+fuel,11506.9,-2413.8,Fuel station
+fuel,11634.1,-54815.1,Fuel station
+fuel,11638.5,-54822.8,Fuel station
+fuel,11664.0,-6960.8,Fuel station
+fuel,11681.8,-54776.3,Fuel station
+fuel,11692.5,-6985.2,Fuel station
+fuel,11739.2,44572.6,Fuel station
+fuel,11759.3,28729.0,Fuel station
+fuel,11762.7,-32195.2,Fuel station
+fuel,11766.8,-32203.2,Fuel station
+fuel,11779.1,-32222.1,Fuel station
+fuel,11815.3,28642.6,Fuel station
+fuel,11828.0,44634.3,Fuel station
+fuel,11899.2,-42310.7,Fuel station
+fuel,11904.8,-6926.3,Fuel station
+fuel,11933.1,48161.3,Fuel station
+fuel,11933.3,-6950.7,Fuel station
+fuel,12063.9,-80320.9,Fuel station
+fuel,12069.9,-80317.0,Fuel station
+fuel,12070.8,-80288.0,Fuel station
+fuel,12077.1,-80281.6,Fuel station
+fuel,12095.6,-1926.8,Fuel station
+fuel,12189.5,-430.8,Fuel station
+fuel,12230.9,-71936.0,Fuel station
+fuel,12239.3,-71930.7,Fuel station
+fuel,12333.0,-437.5,Fuel station
+fuel,12520.1,22464.1,Fuel station
+fuel,12524.4,55686.7,Fuel station
+fuel,12544.6,52617.7,Fuel station
+fuel,12712.2,46783.0,Fuel station
+fuel,12748.1,-56156.6,Fuel station
+fuel,12753.9,-56163.5,Fuel station
+fuel,12883.6,-83477.7,Fuel station
+fuel,13132.2,-27089.1,Fuel station
+fuel,13172.8,-45007.0,Fuel station
+fuel,13313.8,-48271.4,Fuel station
+fuel,13321.0,-48279.8,Fuel station
+fuel,13328.1,-48288.2,Fuel station
+fuel,13337.9,-48276.6,Fuel station
+fuel,13346.1,-48233.3,Fuel station
+fuel,13351.3,-48240.6,Fuel station
+fuel,13364.2,15864.4,Fuel station
+fuel,13429.2,56580.5,Fuel station
+fuel,13503.0,15889.9,Fuel station
+fuel,13616.8,-100768.6,Fuel station
+fuel,13620.7,26921.0,Fuel station
+fuel,13641.2,-100769.2,Fuel station
+fuel,13649.6,-100765.9,Fuel station
+fuel,13663.5,27020.8,Fuel station
+fuel,13694.5,-100718.0,Fuel station
+fuel,13696.0,-100689.9,Fuel station
+fuel,13702.6,-100683.5,Fuel station
+fuel,13703.3,-100697.5,Fuel station
+fuel,13709.9,-100691.2,Fuel station
+fuel,13744.2,-100749.3,Fuel station
+fuel,13758.1,-49153.8,Fuel station
+fuel,13760.0,-37225.6,Fuel station
+fuel,13760.3,-37234.6,Fuel station
+fuel,13761.7,-49162.0,Fuel station
+fuel,13765.2,-49170.2,Fuel station
+fuel,13797.4,-37435.1,Fuel station
+fuel,13803.7,-47946.0,Fuel station
+fuel,13803.8,-37428.8,Fuel station
+fuel,13826.3,13821.8,Fuel station
+fuel,13835.2,-37455.8,Fuel station
+fuel,13910.7,-48063.5,Fuel station
+fuel,13913.1,56156.5,Fuel station
+fuel,13960.5,-47818.9,Fuel station
+fuel,13994.6,-14313.5,Fuel station
+fuel,14029.8,-8674.1,Fuel station
+fuel,14059.8,23565.8,Fuel station
+fuel,14067.8,-8812.7,Fuel station
+fuel,14162.5,-87435.6,Fuel station
+fuel,14167.2,-87443.3,Fuel station
+fuel,14172.0,-87450.9,Fuel station
+fuel,14192.3,-87463.4,Fuel station
+fuel,14297.3,29730.3,Fuel station
+fuel,14303.0,29723.3,Fuel station
+fuel,14308.7,29716.4,Fuel station
+fuel,14315.3,-39653.7,Fuel station
+fuel,14421.2,15000.1,Fuel station
+fuel,14422.7,29715.3,Fuel station
+fuel,14428.5,29708.5,Fuel station
+fuel,14434.3,29701.6,Fuel station
+fuel,14468.6,-29875.1,Fuel station
+fuel,14481.1,23199.7,Fuel station
+fuel,14516.5,-87691.2,Fuel station
+fuel,14519.9,3594.1,Fuel station
+fuel,14525.3,-87689.1,Fuel station
+fuel,14534.0,-87686.9,Fuel station
+fuel,14548.3,-87655.6,Fuel station
+fuel,14568.5,23276.6,Fuel station
+fuel,14595.2,74572.3,Fuel station
+fuel,14612.7,74776.6,Fuel station
+fuel,14684.2,-71058.8,Fuel station
+fuel,14692.9,-71065.1,Fuel station
+fuel,14697.4,-2566.9,Fuel station
+fuel,14764.8,14701.9,Fuel station
+fuel,14770.4,14727.2,Fuel station
+fuel,14811.2,-2654.7,Fuel station
+fuel,14811.3,13583.4,Fuel station
+fuel,14971.7,48849.6,Fuel station
+fuel,14991.5,49053.8,Fuel station
+fuel,15082.2,-14929.0,Fuel station
+fuel,15099.1,-94434.1,Fuel station
+fuel,15124.0,2776.7,Fuel station
+fuel,15171.3,-93480.3,Fuel station
+fuel,15172.3,-106587.9,Fuel station
+fuel,15174.6,-106608.7,Fuel station
+fuel,15175.7,-93472.0,Fuel station
+fuel,15189.9,-93490.3,Fuel station
+fuel,15194.3,-93481.9,Fuel station
+fuel,15409.1,-34863.3,Fuel station
+fuel,15431.2,-70128.9,Fuel station
+fuel,15529.2,-69806.7,Fuel station
+fuel,15545.9,6395.8,Fuel station
+fuel,15583.2,-42165.2,Fuel station
+fuel,15590.3,-42172.7,Fuel station
+fuel,15597.6,-42180.1,Fuel station
+fuel,15636.7,-42141.8,Fuel station
+fuel,15690.7,-69243.9,Fuel station
+fuel,15694.7,25879.6,Fuel station
+fuel,15724.5,29326.6,Fuel station
+fuel,15730.6,29322.8,Fuel station
+fuel,15751.6,-63692.9,Fuel station
+fuel,15751.7,-63710.5,Fuel station
+fuel,15773.2,-63780.1,Fuel station
+fuel,15784.8,-63780.2,Fuel station
+fuel,15797.6,-63780.0,Fuel station
+fuel,15878.5,18440.1,Fuel station
+fuel,15929.2,25948.6,Fuel station
+fuel,15935.6,-58481.3,Fuel station
+fuel,15943.8,-58377.8,Fuel station
+fuel,15944.5,-58481.7,Fuel station
+fuel,15952.8,-58378.5,Fuel station
+fuel,15987.1,30126.2,Fuel station
+fuel,16034.4,-35061.8,Fuel station
+fuel,16079.6,30286.0,Fuel station
+fuel,16198.1,75036.2,Fuel station
+fuel,16247.1,71277.4,Fuel station
+fuel,16263.3,-106556.5,Fuel station
+fuel,16270.6,71172.0,Fuel station
+fuel,16303.2,-46484.1,Fuel station
+fuel,16379.4,-33131.1,Fuel station
+fuel,16422.3,-98287.5,Fuel station
+fuel,16486.5,-59925.7,Fuel station
+fuel,16489.2,5649.0,Fuel station
+fuel,16549.1,-47272.2,Fuel station
+fuel,16552.4,76057.9,Fuel station
+fuel,16554.3,32046.0,Fuel station
+fuel,16556.3,32057.7,Fuel station
+fuel,16557.8,-47270.8,Fuel station
+fuel,16566.4,-47269.6,Fuel station
+fuel,16595.7,-15557.1,Fuel station
+fuel,16767.8,57382.4,Fuel station
+fuel,16833.6,57543.7,Fuel station
+fuel,16998.6,-30827.9,Fuel station
+fuel,17046.8,-31051.5,Fuel station
+fuel,17184.4,-48492.8,Fuel station
+fuel,17194.7,3548.4,Fuel station
+fuel,17261.1,-53969.3,Fuel station
+fuel,17262.0,36948.1,Fuel station
+fuel,17268.2,-53963.8,Fuel station
+fuel,17275.3,-53958.2,Fuel station
+fuel,17363.6,-72465.7,Fuel station
+fuel,17368.5,3734.8,Fuel station
+fuel,17376.6,-72470.1,Fuel station
+fuel,17381.6,-72477.5,Fuel station
+fuel,17400.0,-91279.9,Fuel station
+fuel,17427.1,-91253.5,Fuel station
+fuel,17553.4,-49363.0,Fuel station
+fuel,17562.3,-49364.5,Fuel station
+fuel,17579.1,-103265.3,Fuel station
+fuel,17626.3,36448.9,Fuel station
+fuel,17668.4,-56577.6,Fuel station
+fuel,17678.4,21557.4,Fuel station
+fuel,17701.5,-56546.2,Fuel station
+fuel,17710.1,-56546.9,Fuel station
+fuel,17719.1,-56547.6,Fuel station
+fuel,17760.2,-33905.8,Fuel station
+fuel,17793.1,31714.7,Fuel station
+fuel,17801.1,31718.8,Fuel station
+fuel,17846.9,31793.9,Fuel station
+fuel,17855.2,31797.5,Fuel station
+fuel,17914.0,26920.4,Fuel station
+fuel,17964.6,-98005.9,Fuel station
+fuel,17984.2,21379.9,Fuel station
+fuel,17997.8,-93380.4,Fuel station
+fuel,18031.2,71427.6,Fuel station
+fuel,18046.4,-54351.5,Fuel station
+fuel,18051.3,-54359.0,Fuel station
+fuel,18060.3,-74267.7,Fuel station
+fuel,18065.8,-74258.1,Fuel station
+fuel,18072.2,-74252.0,Fuel station
+fuel,18386.0,-43217.6,Fuel station
+fuel,18519.8,-48971.5,Fuel station
+fuel,18522.4,-48962.9,Fuel station
+fuel,18524.9,-48954.3,Fuel station
+fuel,18527.5,-48945.7,Fuel station
+fuel,18531.8,-31640.8,Fuel station
+fuel,18559.1,-67178.9,Fuel station
+fuel,18565.3,-67185.9,Fuel station
+fuel,18571.2,-67192.6,Fuel station
+fuel,18574.9,-49104.7,Fuel station
+fuel,18579.7,-49090.5,Fuel station
+fuel,18582.6,-49082.0,Fuel station
+fuel,18585.4,-49073.5,Fuel station
+fuel,18662.6,34241.2,Fuel station
+fuel,18675.0,70865.6,Fuel station
+fuel,18743.7,28910.7,Fuel station
+fuel,18804.8,34210.2,Fuel station
+fuel,18889.6,28951.2,Fuel station
+fuel,18897.2,28946.4,Fuel station
+fuel,18956.4,-107833.8,Fuel station
+fuel,18965.0,-107836.5,Fuel station
+fuel,18986.8,-8849.3,Fuel station
+fuel,18988.9,23175.3,Fuel station
+fuel,18997.1,-55978.1,Fuel station
+fuel,19006.1,-55978.0,Fuel station
+fuel,19073.0,59139.9,Fuel station
+fuel,19136.4,30265.2,Fuel station
+fuel,19142.4,36432.8,Fuel station
+fuel,19143.2,36423.8,Fuel station
+fuel,19143.9,36414.8,Fuel station
+fuel,19145.1,30263.3,Fuel station
+fuel,19173.1,36348.7,Fuel station
+fuel,19174.0,36339.8,Fuel station
+fuel,19174.9,36330.8,Fuel station
+fuel,19211.7,58991.9,Fuel station
+fuel,19213.8,23549.3,Fuel station
+fuel,19257.1,-43226.8,Fuel station
+fuel,19285.7,54152.0,Fuel station
+fuel,19289.2,22518.8,Fuel station
+fuel,19291.6,22507.7,Fuel station
+fuel,19314.5,22400.7,Fuel station
+fuel,19316.2,22389.5,Fuel station
+fuel,19335.0,31902.4,Fuel station
+fuel,19457.4,54259.9,Fuel station
+fuel,19493.8,37672.1,Fuel station
+fuel,19614.8,37666.7,Fuel station
+fuel,19682.4,33651.4,Fuel station
+fuel,19728.3,1467.4,Fuel station
+fuel,19819.7,-76490.3,Fuel station
+fuel,19822.5,-76481.8,Fuel station
+fuel,19852.3,-3019.9,Fuel station
+fuel,19925.5,70790.5,Fuel station
+fuel,20020.8,70151.3,Fuel station
+fuel,20110.9,15071.9,Fuel station
+fuel,20250.8,-34096.1,Fuel station
+fuel,20257.5,15098.0,Fuel station
+fuel,20330.1,27798.3,Fuel station
+fuel,20482.8,27848.0,Fuel station
+fuel,20594.1,14060.9,Fuel station
+fuel,20624.6,-103008.5,Fuel station
+fuel,20699.0,-99499.0,Fuel station
+fuel,20726.6,-19599.0,Fuel station
+fuel,20824.0,-65592.0,Fuel station
+fuel,20826.3,-99360.3,Fuel station
+fuel,20826.9,-99351.3,Fuel station
+fuel,20827.4,-65600.2,Fuel station
+fuel,20868.5,33194.2,Fuel station
+fuel,20901.5,33112.4,Fuel station
+fuel,20909.5,33108.3,Fuel station
+fuel,20955.8,17883.6,Fuel station
+fuel,21005.9,-65426.9,Fuel station
+fuel,21008.1,-65435.6,Fuel station
+fuel,21046.0,-38083.1,Fuel station
+fuel,21145.2,-50484.2,Fuel station
+fuel,21166.1,-99977.3,Fuel station
+fuel,21172.5,16987.8,Fuel station
+fuel,21197.5,-99950.6,Fuel station
+fuel,21200.4,-99959.2,Fuel station
+fuel,21201.4,27092.8,Fuel station
+fuel,21201.9,27101.8,Fuel station
+fuel,21209.2,-99996.2,Fuel station
+fuel,21299.2,-65295.4,Fuel station
+fuel,21306.3,-65261.6,Fuel station
+fuel,21338.8,-80904.1,Fuel station
+fuel,21340.3,-48732.8,Fuel station
+fuel,21344.0,-48747.2,Fuel station
+fuel,21346.3,-48755.9,Fuel station
+fuel,21348.5,-48764.5,Fuel station
+fuel,21366.5,-45182.9,Fuel station
+fuel,21377.0,26956.7,Fuel station
+fuel,21411.9,-45235.3,Fuel station
+fuel,21412.2,-45226.3,Fuel station
+fuel,21415.9,19793.2,Fuel station
+fuel,21430.8,17000.5,Fuel station
+fuel,21438.8,-45371.7,Fuel station
+fuel,21439.2,-45362.7,Fuel station
+fuel,21459.3,-48814.1,Fuel station
+fuel,21461.8,-48822.8,Fuel station
+fuel,21464.4,-48831.4,Fuel station
+fuel,21466.9,-48840.0,Fuel station
+fuel,21484.5,-45415.0,Fuel station
+fuel,21498.4,-88621.7,Fuel station
+fuel,21500.1,57404.4,Fuel station
+fuel,21507.3,-88620.8,Fuel station
+fuel,21508.3,19899.8,Fuel station
+fuel,21561.8,57315.7,Fuel station
+fuel,21575.5,17035.7,Fuel station
+fuel,21600.9,53655.6,Fuel station
+fuel,21609.7,53836.2,Fuel station
+fuel,21652.3,-65324.2,Fuel station
+fuel,21661.3,-65323.6,Fuel station
+fuel,21700.8,-55823.9,Fuel station
+fuel,21725.1,-55823.4,Fuel station
+fuel,21734.1,-55823.5,Fuel station
+fuel,21797.6,34141.7,Fuel station
+fuel,21802.6,34134.2,Fuel station
+fuel,21825.9,4977.3,Fuel station
+fuel,21857.9,-55822.1,Fuel station
+fuel,21866.9,-55822.1,Fuel station
+fuel,21892.5,-55820.2,Fuel station
+fuel,21974.2,9983.6,Fuel station
+fuel,22000.5,67646.5,Fuel station
+fuel,22043.1,-103913.9,Fuel station
+fuel,22052.0,-103914.0,Fuel station
+fuel,22118.6,-57414.8,Fuel station
+fuel,22119.7,-57423.7,Fuel station
+fuel,22122.6,-57403.9,Fuel station
+fuel,22148.6,-103695.8,Fuel station
+fuel,22159.8,-103695.0,Fuel station
+fuel,22171.1,-103694.3,Fuel station
+fuel,22179.3,67546.3,Fuel station
+fuel,22210.5,-103697.2,Fuel station
+fuel,22215.4,11321.8,Fuel station
+fuel,22298.6,34267.0,Fuel station
+fuel,22446.5,-55612.0,Fuel station
+fuel,22452.7,41152.6,Fuel station
+fuel,22455.1,-55614.4,Fuel station
+fuel,22462.7,41153.6,Fuel station
+fuel,22495.0,25952.2,Fuel station
+fuel,22502.9,25952.5,Fuel station
+fuel,22510.9,25952.8,Fuel station
+fuel,22518.7,25953.0,Fuel station
+fuel,22521.2,-83547.1,Fuel station
+fuel,22521.9,-83559.8,Fuel station
+fuel,22540.6,-83621.4,Fuel station
+fuel,22541.0,-83630.3,Fuel station
+fuel,22590.7,26019.2,Fuel station
+fuel,22598.5,26019.5,Fuel station
+fuel,22606.5,26019.8,Fuel station
+fuel,22614.3,26020.0,Fuel station
+fuel,22619.9,-63292.2,Fuel station
+fuel,22652.5,-66950.1,Fuel station
+fuel,22659.5,-66955.7,Fuel station
+fuel,22660.3,20817.6,Fuel station
+fuel,22669.9,-65117.2,Fuel station
+fuel,22675.4,-65123.9,Fuel station
+fuel,22726.1,13621.4,Fuel station
+fuel,22751.9,181.1,Fuel station
+fuel,22817.8,-66595.4,Fuel station
+fuel,22822.9,-66604.4,Fuel station
+fuel,22868.0,23126.2,Fuel station
+fuel,22943.0,23027.7,Fuel station
+fuel,22999.9,-47002.9,Fuel station
+fuel,23007.7,-46998.5,Fuel station
+fuel,23090.4,-11541.8,Fuel station
+fuel,23103.2,-9221.9,Fuel station
+fuel,23235.0,10545.4,Fuel station
+fuel,23239.4,23913.5,Fuel station
+fuel,23262.8,23913.2,Fuel station
+fuel,23346.7,10539.9,Fuel station
+fuel,23372.6,59203.4,Fuel station
+fuel,23402.1,-106668.1,Fuel station
+fuel,23406.3,-106660.2,Fuel station
+fuel,23460.4,-3920.9,Fuel station
+fuel,23557.0,39021.1,Fuel station
+fuel,23653.4,-68024.1,Fuel station
+fuel,23657.0,-68032.3,Fuel station
+fuel,23664.4,-1672.1,Fuel station
+fuel,23688.2,67123.5,Fuel station
+fuel,23719.5,5864.8,Fuel station
+fuel,23770.0,-54240.0,Fuel station
+fuel,23781.2,-54241.9,Fuel station
+fuel,23783.8,16146.2,Fuel station
+fuel,23808.4,55150.7,Fuel station
+fuel,23871.0,67139.4,Fuel station
+fuel,23928.0,-86479.9,Fuel station
+fuel,23928.3,-86470.9,Fuel station
+fuel,23948.4,29121.6,Fuel station
+fuel,23965.7,29094.3,Fuel station
+fuel,23973.7,-51546.2,Fuel station
+fuel,23974.7,29103.1,Fuel station
+fuel,23983.6,29113.4,Fuel station
+fuel,23992.5,29122.4,Fuel station
+fuel,24020.0,-52172.9,Fuel station
+fuel,24025.7,-111799.7,Fuel station
+fuel,24029.0,-52173.0,Fuel station
+fuel,24034.3,-111802.3,Fuel station
+fuel,24111.0,29097.8,Fuel station
+fuel,24119.9,29106.7,Fuel station
+fuel,24128.9,29117.1,Fuel station
+fuel,24137.8,29125.8,Fuel station
+fuel,24147.7,20614.4,Fuel station
+fuel,24154.7,29097.9,Fuel station
+fuel,24170.9,7646.9,Fuel station
+fuel,24259.5,35080.4,Fuel station
+fuel,24263.5,35072.4,Fuel station
+fuel,24445.0,54390.3,Fuel station
+fuel,24544.2,56351.4,Fuel station
+fuel,24654.6,40812.9,Fuel station
+fuel,24674.7,56193.2,Fuel station
+fuel,24697.8,-48101.9,Fuel station
+fuel,24785.5,18306.7,Fuel station
+fuel,24888.3,-111333.7,Fuel station
+fuel,24892.3,-111321.1,Fuel station
+fuel,24897.7,14752.9,Fuel station
+fuel,24899.8,-111316.3,Fuel station
+fuel,24925.9,-70142.3,Fuel station
+fuel,24973.7,11680.7,Fuel station
+fuel,24991.2,32553.5,Fuel station
+fuel,25045.0,-46473.4,Fuel station
+fuel,25309.1,-13851.1,Fuel station
+fuel,25402.7,-110767.9,Fuel station
+fuel,25447.4,-109112.6,Fuel station
+fuel,25492.8,104.2,Fuel station
+fuel,25503.2,-70044.8,Fuel station
+fuel,25505.4,-70053.6,Fuel station
+fuel,25706.3,-107772.8,Fuel station
+fuel,25710.5,-107790.1,Fuel station
+fuel,25715.0,-107797.9,Fuel station
+fuel,25719.5,-107805.7,Fuel station
+fuel,25730.7,24373.2,Fuel station
+fuel,25734.8,-10444.1,Fuel station
+fuel,25788.4,57948.0,Fuel station
+fuel,25809.1,33265.7,Fuel station
+fuel,25822.6,-70469.6,Fuel station
+fuel,25845.6,35863.5,Fuel station
+fuel,25847.8,35854.7,Fuel station
+fuel,25919.6,-71532.4,Fuel station
+fuel,25928.4,-71531.0,Fuel station
+fuel,25931.4,57960.6,Fuel station
+fuel,25955.1,-71511.3,Fuel station
+fuel,25978.2,-8496.3,Fuel station
+fuel,25981.4,-71512.1,Fuel station
+fuel,25990.9,-71303.6,Fuel station
+fuel,25992.0,-71510.4,Fuel station
+fuel,25998.4,-71308.7,Fuel station
+fuel,26003.0,-71508.6,Fuel station
+fuel,26026.6,-71333.2,Fuel station
+fuel,26031.6,-71325.8,Fuel station
+fuel,26047.3,34979.2,Fuel station
+fuel,26124.9,32952.3,Fuel station
+fuel,26176.4,36904.6,Fuel station
+fuel,26182.8,36898.3,Fuel station
+fuel,26199.9,36882.0,Fuel station
+fuel,26332.8,34880.6,Fuel station
+fuel,26341.0,34876.8,Fuel station
+fuel,26349.5,-83558.6,Fuel station
+fuel,26353.9,-83496.9,Fuel station
+fuel,26372.7,33530.5,Fuel station
+fuel,26381.7,33529.9,Fuel station
+fuel,26398.9,-71771.6,Fuel station
+fuel,26399.4,-71780.6,Fuel station
+fuel,26455.5,-21772.9,Fuel station
+fuel,26750.6,-3189.4,Fuel station
+fuel,27281.1,20469.0,Fuel station
+fuel,27282.5,-89548.2,Fuel station
+fuel,27291.2,-89546.1,Fuel station
+fuel,27319.9,10998.2,Fuel station
+fuel,27434.9,22235.2,Fuel station
+fuel,27861.4,-98247.2,Fuel station
+fuel,27970.8,38753.1,Fuel station
+fuel,27977.2,38758.6,Fuel station
+fuel,28008.0,36688.4,Fuel station
+fuel,28008.7,5150.7,Fuel station
+fuel,28013.2,36681.0,Fuel station
+fuel,28015.6,6876.8,Fuel station
+fuel,28056.3,30592.6,Fuel station
+fuel,28067.4,30588.1,Fuel station
+fuel,28078.0,30582.8,Fuel station
+fuel,28079.6,30566.8,Fuel station
+fuel,28091.6,-17361.4,Fuel station
+fuel,28116.9,30387.7,Fuel station
+fuel,28126.0,30410.4,Fuel station
+fuel,28126.6,-20796.0,Fuel station
+fuel,28129.9,30382.6,Fuel station
+fuel,28140.0,30378.4,Fuel station
+fuel,28167.0,-110104.8,Fuel station
+fuel,28352.1,25998.8,Fuel station
+fuel,28520.4,41537.0,Fuel station
+fuel,28615.8,13186.7,Fuel station
+fuel,28665.6,42434.1,Fuel station
+fuel,28674.1,42440.9,Fuel station
+fuel,28679.4,-92859.9,Fuel station
+fuel,28686.6,-92865.4,Fuel station
+fuel,28693.6,-92870.8,Fuel station
+fuel,28791.9,5912.9,Fuel station
+fuel,28845.6,35393.2,Fuel station
+fuel,28849.7,36236.5,Fuel station
+fuel,28853.0,35387.2,Fuel station
+fuel,28875.3,35552.5,Fuel station
+fuel,28909.9,35572.7,Fuel station
+fuel,28975.4,40514.3,Fuel station
+fuel,29078.0,26110.7,Fuel station
+fuel,29101.3,17237.4,Fuel station
+fuel,29133.3,3694.5,Fuel station
+fuel,29280.1,-75863.3,Fuel station
+fuel,29460.6,32969.3,Fuel station
+fuel,29473.2,32963.1,Fuel station
+fuel,29488.2,33294.3,Fuel station
+fuel,29682.6,-81297.8,Fuel station
+fuel,29699.4,-81283.0,Fuel station
+fuel,29701.6,-81274.2,Fuel station
+fuel,29970.6,-80114.6,Fuel station
+fuel,30000.6,37848.3,Fuel station
+fuel,30249.6,33971.3,Fuel station
+fuel,30316.9,-74943.9,Fuel station
+fuel,30324.4,-74949.2,Fuel station
+fuel,30331.9,-74954.3,Fuel station
+fuel,30343.7,-74969.5,Fuel station
+fuel,30359.3,36826.4,Fuel station
+fuel,30525.1,34509.5,Fuel station
+fuel,30571.2,8652.4,Fuel station
+fuel,30577.3,-113039.8,Fuel station
+fuel,30581.0,-97094.5,Fuel station
+fuel,30589.7,-97096.8,Fuel station
+fuel,30590.9,38674.3,Fuel station
+fuel,30591.4,38683.3,Fuel station
+fuel,30592.0,-113068.9,Fuel station
+fuel,30649.6,-10348.0,Fuel station
+fuel,30700.7,33764.5,Fuel station
+fuel,30736.5,2510.5,Fuel station
+fuel,30880.0,29586.1,Fuel station
+fuel,31020.9,26143.2,Fuel station
+fuel,31063.3,19827.2,Fuel station
+fuel,31076.1,44126.0,Fuel station
+fuel,31281.0,28577.4,Fuel station
+fuel,31286.8,28586.0,Fuel station
+fuel,31319.7,377.1,Fuel station
+fuel,31458.5,-82222.8,Fuel station
+fuel,31465.4,-82228.5,Fuel station
+fuel,31504.7,33778.2,Fuel station
+fuel,31583.7,-16925.5,Fuel station
+fuel,31747.2,12327.1,Fuel station
+fuel,31813.8,34094.1,Fuel station
+fuel,31864.6,-86519.4,Fuel station
+fuel,32029.7,43750.8,Fuel station
+fuel,32035.2,15311.1,Fuel station
+fuel,32036.9,43737.5,Fuel station
+fuel,32112.0,-6015.7,Fuel station
+fuel,32179.4,-103116.8,Fuel station
+fuel,32195.6,34073.7,Fuel station
+fuel,32278.6,-86600.1,Fuel station
+fuel,32282.9,30845.9,Fuel station
+fuel,32395.7,-18475.4,Fuel station
+fuel,32403.9,-90928.8,Fuel station
+fuel,32414.7,-113749.2,Fuel station
+fuel,32419.9,-113729.1,Fuel station
+fuel,32663.1,17573.2,Fuel station
+fuel,32705.8,-12581.6,Fuel station
+fuel,32791.1,10783.0,Fuel station
+fuel,32857.9,3010.6,Fuel station
+fuel,32913.3,29371.1,Fuel station
+fuel,32926.9,29394.4,Fuel station
+fuel,32967.3,29407.1,Fuel station
+fuel,32979.8,-21667.5,Fuel station
+fuel,33164.7,4875.2,Fuel station
+fuel,33316.4,-22953.1,Fuel station
+fuel,33366.5,34697.7,Fuel station
+fuel,33392.0,17943.3,Fuel station
+fuel,33400.3,-66142.2,Fuel station
+fuel,33415.9,34719.8,Fuel station
+fuel,33429.2,-66154.5,Fuel station
+fuel,33430.7,-106503.1,Fuel station
+fuel,33446.8,38311.2,Fuel station
+fuel,33454.3,38316.1,Fuel station
+fuel,33478.4,-66080.7,Fuel station
+fuel,33486.3,-66085.1,Fuel station
+fuel,33498.0,44761.7,Fuel station
+fuel,33521.3,25252.4,Fuel station
+fuel,33583.5,-71370.1,Fuel station
+fuel,33685.3,6662.3,Fuel station
+fuel,33935.9,33708.5,Fuel station
+fuel,33948.9,-113605.7,Fuel station
+fuel,33966.7,-113582.7,Fuel station
+fuel,33971.3,-113575.1,Fuel station
+fuel,34003.1,33456.4,Fuel station
+fuel,34012.0,33456.4,Fuel station
+fuel,34049.1,46098.8,Fuel station
+fuel,34061.7,-85106.0,Fuel station
+fuel,34070.7,-85106.2,Fuel station
+fuel,34077.6,45845.1,Fuel station
+fuel,34098.8,-65026.0,Fuel station
+fuel,34220.0,-71596.7,Fuel station
+fuel,34221.2,-71605.6,Fuel station
+fuel,34222.5,-71614.5,Fuel station
+fuel,34233.6,-86958.3,Fuel station
+fuel,34236.6,-86967.0,Fuel station
+fuel,34239.5,-86975.3,Fuel station
+fuel,34307.8,-87908.8,Fuel station
+fuel,34309.9,-87895.0,Fuel station
+fuel,34310.4,20757.5,Fuel station
+fuel,34405.0,33921.8,Fuel station
+fuel,34476.4,-12584.5,Fuel station
+fuel,34490.0,-6052.2,Fuel station
+fuel,34535.3,-8573.8,Fuel station
+fuel,34562.0,-63404.8,Fuel station
+fuel,34607.1,-102313.7,Fuel station
+fuel,34629.6,-61770.4,Fuel station
+fuel,34645.8,-70202.4,Fuel station
+fuel,34653.7,-70206.1,Fuel station
+fuel,34674.6,2982.5,Fuel station
+fuel,34689.1,-69177.7,Fuel station
+fuel,34694.1,-70102.9,Fuel station
+fuel,34702.2,-70106.7,Fuel station
+fuel,34726.8,32647.7,Fuel station
+fuel,34748.8,37439.5,Fuel station
+fuel,34780.8,46063.1,Fuel station
+fuel,34834.4,-22182.4,Fuel station
+fuel,34863.4,30892.9,Fuel station
+fuel,34865.0,30884.1,Fuel station
+fuel,34868.3,24881.8,Fuel station
+fuel,34888.4,-22049.2,Fuel station
+fuel,34898.7,-17699.9,Fuel station
+fuel,35021.0,46060.4,Fuel station
+fuel,35040.0,-60115.8,Fuel station
+fuel,35045.6,3395.5,Fuel station
+fuel,35053.8,-19661.4,Fuel station
+fuel,35191.9,-94102.0,Fuel station
+fuel,35196.9,-94109.5,Fuel station
+fuel,35516.9,-33699.5,Fuel station
+fuel,35566.4,-95865.0,Fuel station
+fuel,35577.8,-95873.4,Fuel station
+fuel,35621.1,-95591.3,Fuel station
+fuel,35730.6,51670.2,Fuel station
+fuel,35734.0,-33836.0,Fuel station
+fuel,35784.5,26888.5,Fuel station
+fuel,35794.8,26913.4,Fuel station
+fuel,35818.5,30083.8,Fuel station
+fuel,35828.4,26772.3,Fuel station
+fuel,35838.7,26797.2,Fuel station
+fuel,35856.4,30091.1,Fuel station
+fuel,35928.0,-4362.3,Fuel station
+fuel,35972.3,29027.9,Fuel station
+fuel,35981.9,42636.9,Fuel station
+fuel,35990.5,29008.0,Fuel station
+fuel,36000.5,47391.4,Fuel station
+fuel,36005.0,47399.1,Fuel station
+fuel,36027.0,47433.2,Fuel station
+fuel,36065.3,-18325.8,Fuel station
+fuel,36079.2,28972.2,Fuel station
+fuel,36085.4,158.8,Fuel station
+fuel,36097.4,28952.3,Fuel station
+fuel,36105.6,-70019.0,Fuel station
+fuel,36111.1,-94981.7,Fuel station
+fuel,36116.6,-94965.6,Fuel station
+fuel,36162.6,-116836.6,Fuel station
+fuel,36193.9,-28767.3,Fuel station
+fuel,36217.4,-32293.2,Fuel station
+fuel,36238.2,-90326.5,Fuel station
+fuel,36251.4,45574.3,Fuel station
+fuel,36263.7,28655.5,Fuel station
+fuel,36269.9,39489.4,Fuel station
+fuel,36438.7,-61684.0,Fuel station
+fuel,36441.6,-36627.9,Fuel station
+fuel,36443.1,41869.3,Fuel station
+fuel,36450.8,41874.0,Fuel station
+fuel,36484.7,29877.7,Fuel station
+fuel,36518.8,29920.1,Fuel station
+fuel,36520.5,29892.0,Fuel station
+fuel,36524.8,29908.9,Fuel station
+fuel,36530.6,29897.6,Fuel station
+fuel,36583.4,-60322.2,Fuel station
+fuel,36609.1,-55966.2,Fuel station
+fuel,36623.1,-38353.2,Fuel station
+fuel,36628.0,56124.6,Fuel station
+fuel,36636.5,56127.7,Fuel station
+fuel,36679.7,56290.2,Fuel station
+fuel,36680.2,53455.9,Fuel station
+fuel,36688.4,56292.2,Fuel station
+fuel,36712.0,53404.6,Fuel station
+fuel,36712.3,57326.6,Fuel station
+fuel,36715.6,53396.3,Fuel station
+fuel,36720.7,-29124.7,Fuel station
+fuel,36721.2,57325.1,Fuel station
+fuel,36740.7,51508.4,Fuel station
+fuel,36765.5,51951.0,Fuel station
+fuel,36778.0,24814.1,Fuel station
+fuel,36803.5,51506.2,Fuel station
+fuel,36833.8,24839.0,Fuel station
+fuel,36883.0,49350.2,Fuel station
+fuel,36926.5,-9578.6,Fuel station
+fuel,36940.7,-66252.9,Fuel station
+fuel,36942.1,-66244.0,Fuel station
+fuel,36946.4,-66324.7,Fuel station
+fuel,36955.2,49295.9,Fuel station
+fuel,36957.5,-66326.0,Fuel station
+fuel,36984.6,16391.0,Fuel station
+fuel,36986.5,-66319.7,Fuel station
+fuel,36994.7,57253.2,Fuel station
+fuel,36995.5,-66319.7,Fuel station
+fuel,37002.3,57250.2,Fuel station
+fuel,37004.5,-66319.7,Fuel station
+fuel,37039.7,-6737.5,Fuel station
+fuel,37102.1,50766.0,Fuel station
+fuel,37178.6,49754.8,Fuel station
+fuel,37193.0,29872.7,Fuel station
+fuel,37203.2,42956.3,Fuel station
+fuel,37207.9,42948.6,Fuel station
+fuel,37226.2,50720.5,Fuel station
+fuel,37228.9,48055.9,Fuel station
+fuel,37237.8,48054.7,Fuel station
+fuel,37249.1,55369.3,Fuel station
+fuel,37263.8,55347.2,Fuel station
+fuel,37264.8,57125.9,Fuel station
+fuel,37270.6,55353.1,Fuel station
+fuel,37272.0,48275.8,Fuel station
+fuel,37272.5,57121.1,Fuel station
+fuel,37279.9,48280.0,Fuel station
+fuel,37309.8,29917.8,Fuel station
+fuel,37316.1,50375.5,Fuel station
+fuel,37318.2,29914.5,Fuel station
+fuel,37326.2,50381.5,Fuel station
+fuel,37336.0,-120385.2,Fuel station
+fuel,37344.1,-120388.9,Fuel station
+fuel,37373.7,49880.7,Fuel station
+fuel,37376.3,49889.3,Fuel station
+fuel,37455.8,57261.0,Fuel station
+fuel,37508.3,-75010.7,Fuel station
+fuel,37510.0,53131.5,Fuel station
+fuel,37514.0,53139.6,Fuel station
+fuel,37521.9,-74996.0,Fuel station
+fuel,37527.9,-74989.4,Fuel station
+fuel,37677.2,-70273.6,Fuel station
+fuel,37683.3,-70241.7,Fuel station
+fuel,37692.0,-70243.9,Fuel station
+fuel,37733.3,-56532.2,Fuel station
+fuel,37782.3,49712.1,Fuel station
+fuel,37782.4,-110487.4,Fuel station
+fuel,37791.3,-110482.7,Fuel station
+fuel,37793.3,37695.2,Fuel station
+fuel,37799.1,-110478.5,Fuel station
+fuel,37812.9,-110400.9,Fuel station
+fuel,37817.8,-110408.4,Fuel station
+fuel,37824.4,-110418.6,Fuel station
+fuel,37825.2,-56366.3,Fuel station
+fuel,37865.9,-74974.9,Fuel station
+fuel,37870.3,-74976.1,Fuel station
+fuel,37906.2,-57803.2,Fuel station
+fuel,37911.4,50717.5,Fuel station
+fuel,38098.4,30770.1,Fuel station
+fuel,38175.9,-22798.0,Fuel station
+fuel,38240.6,-87193.4,Fuel station
+fuel,38249.1,50803.9,Fuel station
+fuel,38258.4,-77409.3,Fuel station
+fuel,38266.8,-77406.2,Fuel station
+fuel,38276.4,50997.5,Fuel station
+fuel,38476.8,50390.6,Fuel station
+fuel,38498.9,-25314.5,Fuel station
+fuel,38560.9,31249.5,Fuel station
+fuel,38579.2,10947.4,Fuel station
+fuel,38663.9,-37965.0,Fuel station
+fuel,38727.4,-78694.5,Fuel station
+fuel,38730.0,-78705.7,Fuel station
+fuel,38732.5,-78716.3,Fuel station
+fuel,38751.7,60844.0,Fuel station
+fuel,38818.7,53076.3,Fuel station
+fuel,38821.2,53085.9,Fuel station
+fuel,38821.5,53193.3,Fuel station
+fuel,38833.9,53197.4,Fuel station
+fuel,38857.4,-34562.4,Fuel station
+fuel,38868.6,53160.8,Fuel station
+fuel,38894.4,-78805.2,Fuel station
+fuel,38896.7,35577.1,Fuel station
+fuel,38903.2,-78803.3,Fuel station
+fuel,38964.7,-62742.4,Fuel station
+fuel,38999.9,-62867.2,Fuel station
+fuel,39027.4,44598.7,Fuel station
+fuel,39028.4,44381.2,Fuel station
+fuel,39110.5,36944.2,Fuel station
+fuel,39118.9,32400.1,Fuel station
+fuel,39119.1,36941.6,Fuel station
+fuel,39127.6,32393.8,Fuel station
+fuel,39128.3,32404.2,Fuel station
+fuel,39133.4,31623.1,Fuel station
+fuel,39138.4,32408.3,Fuel station
+fuel,39142.4,22511.3,Fuel station
+fuel,39344.9,30271.0,Fuel station
+fuel,39353.2,30262.3,Fuel station
+fuel,39361.6,30254.2,Fuel station
+fuel,39396.5,52961.9,Fuel station
+fuel,39456.0,30201.1,Fuel station
+fuel,39482.7,47455.0,Fuel station
+fuel,39493.8,33411.5,Fuel station
+fuel,39502.5,33413.8,Fuel station
+fuel,39539.4,12964.3,Fuel station
+fuel,39573.3,-89976.2,Fuel station
+fuel,39579.1,-89969.4,Fuel station
+fuel,39586.4,-90056.0,Fuel station
+fuel,39641.4,-774.4,Fuel station
+fuel,39682.1,-90473.9,Fuel station
+fuel,39686.8,-90466.2,Fuel station
+fuel,39690.0,10412.5,Fuel station
+fuel,39735.8,19857.2,Fuel station
+fuel,39736.3,-55957.6,Fuel station
+fuel,39774.2,-32176.3,Fuel station
+fuel,39783.4,-13078.9,Fuel station
+fuel,39796.3,-30932.4,Fuel station
+fuel,39863.5,-90687.4,Fuel station
+fuel,39888.9,3023.5,Fuel station
+fuel,39895.9,53697.0,Fuel station
+fuel,39966.6,-62172.7,Fuel station
+fuel,39967.4,62916.1,Fuel station
+fuel,39973.1,46820.5,Fuel station
+fuel,39975.8,46829.4,Fuel station
+fuel,39976.0,62918.9,Fuel station
+fuel,39992.8,60696.7,Fuel station
+fuel,40002.4,60695.3,Fuel station
+fuel,40011.5,60715.1,Fuel station
+fuel,40023.7,-91951.4,Fuel station
+fuel,40107.2,36973.6,Fuel station
+fuel,40112.3,36980.9,Fuel station
+fuel,40117.5,36988.3,Fuel station
+fuel,40199.2,31245.0,Fuel station
+fuel,40213.8,-60075.2,Fuel station
+fuel,40265.6,31200.6,Fuel station
+fuel,40380.7,-68401.6,Fuel station
+fuel,40382.6,-68410.3,Fuel station
+fuel,40391.8,-68399.0,Fuel station
+fuel,40393.5,-68407.4,Fuel station
+fuel,40424.3,-68409.1,Fuel station
+fuel,40503.6,70251.2,Fuel station
+fuel,40556.6,53424.6,Fuel station
+fuel,40557.5,60352.2,Fuel station
+fuel,40558.2,60363.3,Fuel station
+fuel,40560.4,53416.5,Fuel station
+fuel,40596.3,17720.4,Fuel station
+fuel,40719.3,-85385.0,Fuel station
+fuel,40756.8,9122.2,Fuel station
+fuel,40764.1,-23166.2,Fuel station
+fuel,40828.6,-85355.2,Fuel station
+fuel,40837.0,-85358.4,Fuel station
+fuel,40922.0,-85339.2,Fuel station
+fuel,40929.0,-85344.9,Fuel station
+fuel,40974.0,-71232.4,Fuel station
+fuel,40984.0,-71466.8,Fuel station
+fuel,40997.0,36320.2,Fuel station
+fuel,41003.9,36325.9,Fuel station
+fuel,41010.8,36331.7,Fuel station
+fuel,41016.7,-71422.8,Fuel station
+fuel,41024.0,-71429.6,Fuel station
+fuel,41030.9,-71436.0,Fuel station
+fuel,41035.8,-81861.0,Fuel station
+fuel,41043.3,-81870.7,Fuel station
+fuel,41050.3,-81880.1,Fuel station
+fuel,41102.3,6009.9,Fuel station
+fuel,41180.2,-81880.5,Fuel station
+fuel,41205.3,36390.8,Fuel station
+fuel,41206.0,30269.9,Fuel station
+fuel,41279.8,-83269.9,Fuel station
+fuel,41484.7,-91864.0,Fuel station
+fuel,41506.6,26240.3,Fuel station
+fuel,41574.8,-28547.5,Fuel station
+fuel,41587.6,-92501.7,Fuel station
+fuel,41603.4,36257.7,Fuel station
+fuel,41615.3,33701.1,Fuel station
+fuel,41618.6,33731.7,Fuel station
+fuel,41629.5,-27721.1,Fuel station
+fuel,41630.0,-92477.0,Fuel station
+fuel,41639.7,-92481.4,Fuel station
+fuel,41649.1,17891.7,Fuel station
+fuel,41689.6,71502.2,Fuel station
+fuel,41691.5,71497.3,Fuel station
+fuel,41704.3,71474.8,Fuel station
+fuel,41708.4,71476.5,Fuel station
+fuel,41727.8,33997.3,Fuel station
+fuel,41751.0,-27818.2,Fuel station
+fuel,41910.2,-4877.3,Fuel station
+fuel,41940.2,-96998.7,Fuel station
+fuel,41948.9,-96997.7,Fuel station
+fuel,41958.0,-57165.0,Fuel station
+fuel,41993.5,24331.0,Fuel station
+fuel,42006.8,61186.7,Fuel station
+fuel,42015.7,61186.9,Fuel station
+fuel,42024.7,61187.1,Fuel station
+fuel,42080.3,49635.0,Fuel station
+fuel,42086.8,49628.0,Fuel station
+fuel,42101.8,61175.7,Fuel station
+fuel,42111.3,61176.8,Fuel station
+fuel,42163.0,27480.1,Fuel station
+fuel,42212.4,71423.0,Fuel station
+fuel,42215.5,71431.5,Fuel station
+fuel,42269.6,52203.5,Fuel station
+fuel,42323.5,-83956.6,Fuel station
+fuel,42337.9,43645.9,Fuel station
+fuel,42368.9,-83881.7,Fuel station
+fuel,42375.4,-83875.4,Fuel station
+fuel,42430.0,43791.4,Fuel station
+fuel,42461.5,45830.5,Fuel station
+fuel,42462.8,45821.6,Fuel station
+fuel,42465.6,36623.2,Fuel station
+fuel,42467.5,64362.2,Fuel station
+fuel,42475.5,64366.4,Fuel station
+fuel,42519.5,64463.5,Fuel station
+fuel,42527.4,64467.7,Fuel station
+fuel,42616.1,62260.7,Fuel station
+fuel,42625.0,62259.4,Fuel station
+fuel,42633.9,62258.2,Fuel station
+fuel,42677.8,42305.1,Fuel station
+fuel,42745.1,44565.2,Fuel station
+fuel,42749.9,44611.7,Fuel station
+fuel,42863.0,44053.3,Fuel station
+fuel,42930.8,-81998.4,Fuel station
+fuel,42938.0,-81993.0,Fuel station
+fuel,42951.9,-58739.1,Fuel station
+fuel,43023.6,19209.1,Fuel station
+fuel,43023.6,19197.8,Fuel station
+fuel,43049.7,19331.3,Fuel station
+fuel,43062.5,-4189.5,Fuel station
+fuel,43125.9,-76839.1,Fuel station
+fuel,43145.4,44468.1,Fuel station
+fuel,43147.7,-29828.7,Fuel station
+fuel,43160.7,-58834.0,Fuel station
+fuel,43164.2,-21923.4,Fuel station
+fuel,43186.9,-76863.7,Fuel station
+fuel,43188.9,-8780.9,Fuel station
+fuel,43191.8,-76968.9,Fuel station
+fuel,43192.9,-49554.2,Fuel station
+fuel,43194.7,-76860.1,Fuel station
+fuel,43254.1,-801.6,Fuel station
+fuel,43257.5,-104784.1,Fuel station
+fuel,43263.0,-104756.6,Fuel station
+fuel,43266.5,-104785.0,Fuel station
+fuel,43283.9,-30136.8,Fuel station
+fuel,43288.5,-77020.3,Fuel station
+fuel,43353.9,-31412.9,Fuel station
+fuel,43404.9,-56336.2,Fuel station
+fuel,43432.5,-72927.9,Fuel station
+fuel,43433.8,-72936.8,Fuel station
+fuel,43440.2,-60544.6,Fuel station
+fuel,43441.9,52600.6,Fuel station
+fuel,43448.9,52590.4,Fuel station
+fuel,43455.9,52580.1,Fuel station
+fuel,43466.6,-90629.8,Fuel station
+fuel,43474.5,-90625.6,Fuel station
+fuel,43496.1,48817.8,Fuel station
+fuel,43499.4,48832.9,Fuel station
+fuel,43517.1,-56227.6,Fuel station
+fuel,43566.6,36741.9,Fuel station
+fuel,43570.3,-73240.8,Fuel station
+fuel,43572.9,-73248.9,Fuel station
+fuel,43575.6,-73257.2,Fuel station
+fuel,43613.5,37562.8,Fuel station
+fuel,43629.5,-33944.9,Fuel station
+fuel,43664.3,-17210.4,Fuel station
+fuel,43705.7,38029.8,Fuel station
+fuel,43782.8,19298.0,Fuel station
+fuel,43815.4,-15163.9,Fuel station
+fuel,43926.5,-66546.0,Fuel station
+fuel,43935.5,-66545.8,Fuel station
+fuel,43937.7,41231.7,Fuel station
+fuel,43989.5,-66451.5,Fuel station
+fuel,44251.9,-46426.6,Fuel station
+fuel,44324.4,-45493.8,Fuel station
+fuel,44501.7,-66715.2,Fuel station
+fuel,44535.5,-66740.3,Fuel station
+fuel,44549.8,-30547.9,Fuel station
+fuel,44696.2,-50604.5,Fuel station
+fuel,44734.2,72718.7,Fuel station
+fuel,44736.5,72701.6,Fuel station
+fuel,44745.4,72701.9,Fuel station
+fuel,44787.2,43892.7,Fuel station
+fuel,44794.0,43901.9,Fuel station
+fuel,44871.3,-36975.9,Fuel station
+fuel,44938.6,60178.6,Fuel station
+fuel,44948.0,-43583.9,Fuel station
+fuel,44952.8,-45004.9,Fuel station
+fuel,44987.6,-22957.6,Fuel station
+fuel,45040.4,-42143.0,Fuel station
+fuel,45045.6,45827.5,Fuel station
+fuel,45045.7,71946.8,Fuel station
+fuel,45053.3,71951.7,Fuel station
+fuel,45060.0,71926.6,Fuel station
+fuel,45118.5,-59015.4,Fuel station
+fuel,45122.1,45801.7,Fuel station
+fuel,45193.3,51174.6,Fuel station
+fuel,45193.6,-35211.7,Fuel station
+fuel,45200.7,51179.7,Fuel station
+fuel,45211.0,52484.0,Fuel station
+fuel,45217.8,-33982.9,Fuel station
+fuel,45223.3,52576.0,Fuel station
+fuel,45340.1,-60297.7,Fuel station
+fuel,45344.4,36825.6,Fuel station
+fuel,45352.6,-59050.0,Fuel station
+fuel,45376.7,25494.0,Fuel station
+fuel,45406.1,36465.8,Fuel station
+fuel,45425.7,-36768.9,Fuel station
+fuel,45442.8,36436.1,Fuel station
+fuel,45446.6,-67712.9,Fuel station
+fuel,45470.0,-67711.8,Fuel station
+fuel,45505.8,-27725.6,Fuel station
+fuel,45593.0,-73983.5,Fuel station
+fuel,45615.4,-39422.8,Fuel station
+fuel,45639.2,-73981.1,Fuel station
+fuel,45659.0,39336.5,Fuel station
+fuel,45668.0,39336.1,Fuel station
+fuel,45675.9,-86367.1,Fuel station
+fuel,45680.5,-86359.4,Fuel station
+fuel,45701.2,-29192.6,Fuel station
+fuel,45708.0,47315.1,Fuel station
+fuel,45776.2,39671.6,Fuel station
+fuel,45780.7,40236.0,Fuel station
+fuel,45781.5,40227.1,Fuel station
+fuel,45800.9,30877.0,Fuel station
+fuel,45802.5,-60299.8,Fuel station
+fuel,45819.5,57725.0,Fuel station
+fuel,45890.6,-29684.5,Fuel station
+fuel,46037.6,-86766.2,Fuel station
+fuel,46037.7,70864.4,Fuel station
+fuel,46044.1,-24854.2,Fuel station
+fuel,46046.2,-86771.9,Fuel station
+fuel,46054.9,-86777.5,Fuel station
+fuel,46070.3,70900.1,Fuel station
+fuel,46072.6,70908.7,Fuel station
+fuel,46078.0,55355.0,Fuel station
+fuel,46089.6,55350.5,Fuel station
+fuel,46101.6,55345.9,Fuel station
+fuel,46122.0,-36967.1,Fuel station
+fuel,46165.4,-31878.1,Fuel station
+fuel,46200.8,69097.2,Fuel station
+fuel,46206.1,69104.4,Fuel station
+fuel,46207.4,31387.1,Fuel station
+fuel,46211.3,69111.6,Fuel station
+fuel,46221.4,-67716.3,Fuel station
+fuel,46229.2,-67720.7,Fuel station
+fuel,46244.5,18198.5,Fuel station
+fuel,46253.3,-51422.6,Fuel station
+fuel,46283.1,-67444.3,Fuel station
+fuel,46283.2,-67435.1,Fuel station
+fuel,46284.1,-67426.0,Fuel station
+fuel,46327.0,-63949.2,Fuel station
+fuel,46330.2,-21749.7,Fuel station
+fuel,46334.7,-63944.6,Fuel station
+fuel,46345.0,-63928.5,Fuel station
+fuel,46349.1,-25070.5,Fuel station
+fuel,46373.2,-67371.1,Fuel station
+fuel,46416.0,72067.0,Fuel station
+fuel,46448.5,74239.0,Fuel station
+fuel,46453.5,74266.2,Fuel station
+fuel,46460.4,74260.5,Fuel station
+fuel,46534.1,71392.7,Fuel station
+fuel,46541.8,71388.2,Fuel station
+fuel,46592.6,-39397.9,Fuel station
+fuel,46632.3,71794.0,Fuel station
+fuel,46663.1,-57372.5,Fuel station
+fuel,46672.4,49747.5,Fuel station
+fuel,46805.2,-79504.3,Fuel station
+fuel,46865.1,-30999.5,Fuel station
+fuel,46879.7,62494.4,Fuel station
+fuel,46885.5,62485.4,Fuel station
+fuel,46886.3,62494.4,Fuel station
+fuel,46890.5,39626.0,Fuel station
+fuel,46935.4,-35715.1,Fuel station
+fuel,46965.9,-31035.3,Fuel station
+fuel,47004.5,75136.4,Fuel station
+fuel,47015.8,75134.5,Fuel station
+fuel,47039.0,-25158.3,Fuel station
+fuel,47206.8,-25158.1,Fuel station
+fuel,47243.4,-44603.1,Fuel station
+fuel,47268.7,-77087.2,Fuel station
+fuel,47336.9,68847.8,Fuel station
+fuel,47337.0,-61139.7,Fuel station
+fuel,47337.5,68856.8,Fuel station
+fuel,47343.9,-67896.8,Fuel station
+fuel,47362.2,36128.8,Fuel station
+fuel,47597.4,49979.3,Fuel station
+fuel,47615.1,59212.4,Fuel station
+fuel,47621.6,59206.2,Fuel station
+fuel,47632.0,59229.2,Fuel station
+fuel,47641.9,68774.5,Fuel station
+fuel,47642.7,68783.4,Fuel station
+fuel,47914.0,19205.7,Fuel station
+fuel,47928.5,-27577.6,Fuel station
+fuel,47959.3,-79036.1,Fuel station
+fuel,47967.0,-40888.9,Fuel station
+fuel,47967.2,-79040.5,Fuel station
+fuel,47985.2,-40995.5,Fuel station
+fuel,48246.5,25105.9,Fuel station
+fuel,48296.7,-63617.9,Fuel station
+fuel,48414.2,75898.5,Fuel station
+fuel,48421.8,75914.0,Fuel station
+fuel,48423.5,-41374.1,Fuel station
+fuel,48474.0,35769.8,Fuel station
+fuel,48495.4,-40233.6,Fuel station
+fuel,48609.8,-71328.0,Fuel station
+fuel,48648.7,-47397.1,Fuel station
+fuel,48659.1,41093.1,Fuel station
+fuel,48672.0,41087.4,Fuel station
+fuel,48756.7,-71422.7,Fuel station
+fuel,48764.6,-71418.4,Fuel station
+fuel,48817.7,45324.8,Fuel station
+fuel,48824.0,-26284.7,Fuel station
+fuel,48842.4,-43594.5,Fuel station
+fuel,48853.4,-73965.8,Fuel station
+fuel,48861.4,-73969.8,Fuel station
+fuel,48865.3,-70822.4,Fuel station
+fuel,48942.8,55769.2,Fuel station
+fuel,48950.6,55789.6,Fuel station
+fuel,48951.4,55766.0,Fuel station
+fuel,48959.2,55786.4,Fuel station
+fuel,48960.0,55762.8,Fuel station
+fuel,48963.3,-89502.3,Fuel station
+fuel,48967.7,55783.2,Fuel station
+fuel,48995.0,-60372.1,Fuel station
+fuel,49047.3,-64876.0,Fuel station
+fuel,49095.8,55816.8,Fuel station
+fuel,49103.4,55837.1,Fuel station
+fuel,49104.4,55813.6,Fuel station
+fuel,49112.0,55833.9,Fuel station
+fuel,49113.0,55810.4,Fuel station
+fuel,49120.6,55830.7,Fuel station
+fuel,49140.4,-71137.9,Fuel station
+fuel,49146.1,-71144.8,Fuel station
+fuel,49204.4,26306.3,Fuel station
+fuel,49206.0,19158.5,Fuel station
+fuel,49310.8,64134.5,Fuel station
+fuel,49324.3,64115.7,Fuel station
+fuel,49329.4,64108.4,Fuel station
+fuel,49354.5,64047.0,Fuel station
+fuel,49359.7,64039.7,Fuel station
+fuel,49372.9,64021.2,Fuel station
+fuel,49458.0,51191.5,Fuel station
+fuel,49464.8,51184.3,Fuel station
+fuel,49465.6,51102.8,Fuel station
+fuel,49472.3,51095.9,Fuel station
+fuel,49479.0,51088.8,Fuel station
+fuel,49487.8,-42149.9,Fuel station
+fuel,49509.2,-64186.2,Fuel station
+fuel,49517.7,-64188.9,Fuel station
+fuel,49526.1,-64192.0,Fuel station
+fuel,49526.1,-45920.8,Fuel station
+fuel,49572.9,63495.3,Fuel station
+fuel,49584.4,-83484.3,Fuel station
+fuel,49585.1,-83506.5,Fuel station
+fuel,49585.5,-71157.5,Fuel station
+fuel,49587.7,-83516.7,Fuel station
+fuel,49601.1,63684.5,Fuel station
+fuel,49602.2,63675.6,Fuel station
+fuel,49623.5,63670.4,Fuel station
+fuel,49638.1,-83499.5,Fuel station
+fuel,49677.2,-52179.9,Fuel station
+fuel,49681.4,-71336.5,Fuel station
+fuel,49684.1,-71328.0,Fuel station
+fuel,49689.3,-24265.7,Fuel station
+fuel,49808.4,30386.3,Fuel station
+fuel,49929.8,-40026.6,Fuel station
+fuel,49955.9,-46167.2,Fuel station
+fuel,49999.4,65424.0,Fuel station
+fuel,50008.3,65422.6,Fuel station
+fuel,50027.1,65409.4,Fuel station
+fuel,50035.9,65408.0,Fuel station
+fuel,50041.1,73257.6,Fuel station
+fuel,50041.9,73248.7,Fuel station
+fuel,50042.7,73239.8,Fuel station
+fuel,50072.1,-26941.5,Fuel station
+fuel,50114.4,66120.2,Fuel station
+fuel,50128.5,58870.9,Fuel station
+fuel,50136.5,58849.6,Fuel station
+fuel,50138.7,58656.9,Fuel station
+fuel,50139.6,58841.1,Fuel station
+fuel,50139.6,29270.7,Fuel station
+fuel,50141.2,58648.2,Fuel station
+fuel,50147.3,58626.3,Fuel station
+fuel,50159.8,-24883.9,Fuel station
+fuel,50160.2,-59399.0,Fuel station
+fuel,50222.8,-24897.6,Fuel station
+fuel,50255.3,-57841.1,Fuel station
+fuel,50267.3,62465.7,Fuel station
+fuel,50276.2,62464.7,Fuel station
+fuel,50277.0,68453.2,Fuel station
+fuel,50287.5,68454.3,Fuel station
+fuel,50300.3,-65252.1,Fuel station
+fuel,50304.6,-58516.8,Fuel station
+fuel,50308.5,61768.6,Fuel station
+fuel,50312.8,68405.1,Fuel station
+fuel,50317.4,68384.2,Fuel station
+fuel,50327.0,68390.5,Fuel station
+fuel,50437.0,23389.2,Fuel station
+fuel,50441.2,61534.3,Fuel station
+fuel,50451.4,61539.6,Fuel station
+fuel,50526.0,61379.5,Fuel station
+fuel,50527.9,-28959.4,Fuel station
+fuel,50534.0,61383.6,Fuel station
+fuel,50541.4,76814.1,Fuel station
+fuel,50542.0,61387.8,Fuel station
+fuel,50542.5,76802.7,Fuel station
+fuel,50550.4,70410.6,Fuel station
+fuel,50556.3,61366.5,Fuel station
+fuel,50560.4,61358.6,Fuel station
+fuel,50575.6,70393.8,Fuel station
+fuel,50587.2,70310.1,Fuel station
+fuel,50587.9,70301.1,Fuel station
+fuel,50588.5,70292.1,Fuel station
+fuel,50663.3,42176.2,Fuel station
+fuel,50749.4,55733.4,Fuel station
+fuel,50771.0,55749.2,Fuel station
+fuel,50772.4,55740.3,Fuel station
+fuel,50820.4,-46020.9,Fuel station
+fuel,50893.8,38120.9,Fuel station
+fuel,51014.8,-25855.8,Fuel station
+fuel,51021.0,54754.6,Fuel station
+fuel,51037.1,54802.4,Fuel station
+fuel,51042.0,-62230.7,Fuel station
+fuel,51052.2,31900.3,Fuel station
+fuel,51136.0,19150.3,Fuel station
+fuel,51157.2,-48997.9,Fuel station
+fuel,51253.4,-29994.1,Fuel station
+fuel,51285.7,36334.9,Fuel station
+fuel,51340.4,-47272.4,Fuel station
+fuel,51396.3,-39808.5,Fuel station
+fuel,51419.8,76412.3,Fuel station
+fuel,51443.0,44109.7,Fuel station
+fuel,51444.5,-45683.6,Fuel station
+fuel,51465.8,54983.4,Fuel station
+fuel,51484.0,54991.7,Fuel station
+fuel,51487.3,54983.3,Fuel station
+fuel,51502.8,54998.2,Fuel station
+fuel,51528.4,-34578.4,Fuel station
+fuel,51664.7,-44241.9,Fuel station
+fuel,51706.9,55027.5,Fuel station
+fuel,51710.3,55019.2,Fuel station
+fuel,51737.0,49448.0,Fuel station
+fuel,51738.8,49458.8,Fuel station
+fuel,51743.4,53604.2,Fuel station
+fuel,51763.7,53629.2,Fuel station
+fuel,51772.7,53629.4,Fuel station
+fuel,51781.7,53629.6,Fuel station
+fuel,51835.7,55602.9,Fuel station
+fuel,51843.3,55607.7,Fuel station
+fuel,51871.3,55572.3,Fuel station
+fuel,51876.3,55579.8,Fuel station
+fuel,51887.0,64275.1,Fuel station
+fuel,51894.3,64269.8,Fuel station
+fuel,51901.6,64264.6,Fuel station
+fuel,51969.8,64248.0,Fuel station
+fuel,51977.0,64242.7,Fuel station
+fuel,51984.3,64237.4,Fuel station
+fuel,52083.1,55625.0,Fuel station
+fuel,52122.3,55646.4,Fuel station
+fuel,52130.3,55650.8,Fuel station
+fuel,52138.9,18130.5,Fuel station
+fuel,52163.1,55563.2,Fuel station
+fuel,52335.7,32595.0,Fuel station
+fuel,52347.7,70735.0,Fuel station
+fuel,52411.3,-71385.5,Fuel station
+fuel,52411.6,-71376.5,Fuel station
+fuel,52453.0,50725.4,Fuel station
+fuel,52458.4,50718.2,Fuel station
+fuel,52463.8,50711.1,Fuel station
+fuel,52469.2,50703.9,Fuel station
+fuel,52664.0,70432.4,Fuel station
+fuel,52676.3,70515.1,Fuel station
+fuel,52685.7,70519.7,Fuel station
+fuel,52695.2,70524.4,Fuel station
+fuel,52855.6,-74452.0,Fuel station
+fuel,52861.9,-74445.6,Fuel station
+fuel,53063.7,32406.7,Fuel station
+fuel,53198.8,51622.4,Fuel station
+fuel,53261.9,-62419.8,Fuel station
+fuel,53307.5,-60904.9,Fuel station
+fuel,53366.7,-31452.4,Fuel station
+fuel,53375.6,-33208.3,Fuel station
+fuel,53397.2,-36149.6,Fuel station
+fuel,53409.3,52303.0,Fuel station
+fuel,53440.0,-62453.8,Fuel station
+fuel,53448.7,-62451.5,Fuel station
+fuel,53457.4,-62449.2,Fuel station
+fuel,53737.5,20341.7,Fuel station
+fuel,53789.3,-52616.5,Fuel station
+fuel,54111.4,-49930.2,Fuel station
+fuel,54208.1,38639.8,Fuel station
+fuel,54318.3,53510.4,Fuel station
+fuel,54383.1,-59606.0,Fuel station
+fuel,54390.4,42217.2,Fuel station
+fuel,54556.1,21457.0,Fuel station
+fuel,54626.2,-60222.6,Fuel station
+fuel,54678.7,-35089.1,Fuel station
+fuel,54724.7,-47272.0,Fuel station
+fuel,54905.8,53605.5,Fuel station
+fuel,54911.2,-54112.6,Fuel station
+fuel,55131.9,-72973.7,Fuel station
+fuel,55149.9,17646.3,Fuel station
+fuel,55283.9,-71416.5,Fuel station
+fuel,55284.9,-71407.5,Fuel station
+fuel,55299.9,-36360.2,Fuel station
+fuel,55329.2,69161.0,Fuel station
+fuel,55386.2,-35582.1,Fuel station
+fuel,55447.4,-65850.2,Fuel station
+fuel,55461.7,-65841.6,Fuel station
+fuel,55587.8,-37220.8,Fuel station
+fuel,55595.7,-52475.1,Fuel station
+fuel,55788.1,-53134.0,Fuel station
+fuel,55929.6,-44502.3,Fuel station
+fuel,55987.9,-43623.5,Fuel station
+fuel,56022.4,44161.2,Fuel station
+fuel,56080.0,67932.2,Fuel station
+fuel,56080.7,67923.3,Fuel station
+fuel,56082.9,67895.5,Fuel station
+fuel,56096.0,69852.7,Fuel station
+fuel,56096.0,69840.0,Fuel station
+fuel,56097.7,44198.4,Fuel station
+fuel,56098.6,69876.3,Fuel station
+fuel,56118.6,-71520.6,Fuel station
+fuel,56134.9,70040.2,Fuel station
+fuel,56139.0,70056.6,Fuel station
+fuel,56139.6,29688.4,Fuel station
+fuel,56143.5,70042.6,Fuel station
+fuel,56144.1,70005.8,Fuel station
+fuel,56146.2,-38515.6,Fuel station
+fuel,56152.2,70045.0,Fuel station
+fuel,56156.2,-38512.7,Fuel station
+fuel,56161.6,69874.7,Fuel station
+fuel,56174.0,-44469.5,Fuel station
+fuel,56174.1,69900.4,Fuel station
+fuel,56174.3,69874.1,Fuel station
+fuel,56193.8,69888.0,Fuel station
+fuel,56206.6,-38556.2,Fuel station
+fuel,56216.6,-38553.4,Fuel station
+fuel,56259.7,68053.0,Fuel station
+fuel,56261.3,68025.1,Fuel station
+fuel,56262.0,68016.1,Fuel station
+fuel,56276.9,28791.1,Fuel station
+fuel,56284.5,29809.1,Fuel station
+fuel,56314.9,28825.5,Fuel station
+fuel,56326.1,28774.1,Fuel station
+fuel,56599.5,-53670.9,Fuel station
+fuel,57044.4,68303.9,Fuel station
+fuel,57054.2,69903.0,Fuel station
+fuel,57057.1,68292.0,Fuel station
+fuel,57060.8,68300.2,Fuel station
+fuel,57136.1,69907.4,Fuel station
+fuel,57211.7,37123.5,Fuel station
+fuel,57566.5,-44085.3,Fuel station
+fuel,57628.6,-42238.8,Fuel station
+fuel,57659.4,-45224.5,Fuel station
+fuel,57680.4,52443.4,Fuel station
+fuel,57839.7,45573.4,Fuel station
+fuel,58043.0,85099.0,Fuel station
+fuel,58051.6,24864.3,Fuel station
+fuel,58095.1,37315.8,Fuel station
+fuel,58152.2,30379.3,Fuel station
+fuel,58176.1,23600.6,Fuel station
+fuel,58247.1,23559.1,Fuel station
+fuel,58399.5,47088.6,Fuel station
+fuel,58485.5,42101.8,Fuel station
+fuel,58635.0,30358.2,Fuel station
+fuel,58642.4,30327.1,Fuel station
+fuel,59611.8,-47355.9,Fuel station
+fuel,59654.0,43881.4,Fuel station
+fuel,59896.1,-51975.8,Fuel station
+fuel,59942.6,31558.0,Fuel station
+fuel,60110.9,37082.0,Fuel station
+fuel,60429.9,50213.4,Fuel station
+fuel,60432.3,50204.2,Fuel station
+fuel,60530.4,-49894.5,Fuel station
+fuel,60538.3,49948.0,Fuel station
+fuel,60541.5,49939.1,Fuel station
+fuel,60587.0,-45978.2,Fuel station
+fuel,60636.8,-50100.8,Fuel station
+fuel,60734.7,33460.6,Fuel station
+fuel,60744.4,33454.7,Fuel station
+fuel,60861.2,35452.2,Fuel station
+fuel,61159.7,-56642.2,Fuel station
+fuel,61393.3,38790.6,Fuel station
+fuel,61418.1,30078.2,Fuel station
+fuel,61452.9,-57189.1,Fuel station
+fuel,61636.5,50544.8,Fuel station
+fuel,61636.5,50553.8,Fuel station
+fuel,61666.9,-54907.0,Fuel station
+fuel,61947.5,-56433.0,Fuel station
+fuel,62209.6,34889.1,Fuel station
+fuel,62259.7,50919.3,Fuel station
+fuel,62259.7,50910.3,Fuel station
+fuel,62259.8,50901.4,Fuel station
+fuel,62259.8,50892.4,Fuel station
+fuel,62281.9,-51389.5,Fuel station
+fuel,62299.6,30914.1,Fuel station
+fuel,62413.6,-58004.8,Fuel station
+fuel,62449.3,17693.2,Fuel station
+fuel,62551.0,15786.3,Fuel station
+fuel,62605.3,45760.9,Fuel station
+fuel,62628.6,-57287.6,Fuel station
+fuel,62651.8,-57367.4,Fuel station
+fuel,62722.9,-48327.6,Fuel station
+fuel,62818.1,51598.8,Fuel station
+fuel,62824.3,51592.2,Fuel station
+fuel,62935.1,51716.8,Fuel station
+fuel,62941.5,51710.6,Fuel station
+fuel,63066.0,-54519.9,Fuel station
+fuel,63076.9,-54373.2,Fuel station
+fuel,63431.8,41547.9,Fuel station
+fuel,63560.1,-49383.7,Fuel station
+fuel,63642.0,26787.5,Fuel station
+fuel,63761.2,46037.4,Fuel station
+fuel,64274.1,-59443.2,Fuel station
+fuel,64674.5,-59918.2,Fuel station
+fuel,64807.3,46772.7,Fuel station
+fuel,65107.7,44023.8,Fuel station
+fuel,65111.8,44016.4,Fuel station
+fuel,65124.8,44120.9,Fuel station
+fuel,65124.9,46952.4,Fuel station
+fuel,65129.0,44113.5,Fuel station
+fuel,65263.2,-58083.3,Fuel station
+fuel,65625.4,15764.6,Fuel station
+fuel,65745.0,48223.9,Fuel station
+fuel,65759.2,44422.2,Fuel station
+fuel,65762.9,31522.3,Fuel station
+fuel,65769.8,44418.0,Fuel station
+fuel,65772.9,30298.8,Fuel station
+fuel,65780.3,44413.8,Fuel station
+fuel,65783.1,-57194.0,Fuel station
+fuel,65790.8,44409.7,Fuel station
+fuel,65886.0,30126.7,Fuel station
+fuel,66071.3,-56092.9,Fuel station
+fuel,66100.3,36718.2,Fuel station
+fuel,66127.3,67348.5,Fuel station
+fuel,66130.3,86266.9,Fuel station
+fuel,66134.0,67354.3,Fuel station
+fuel,66138.5,86263.0,Fuel station
+fuel,66253.7,36790.1,Fuel station
+fuel,66271.9,66890.0,Fuel station
+fuel,66337.1,60949.4,Fuel station
+fuel,66345.0,60945.1,Fuel station
+fuel,66366.2,61095.6,Fuel station
+fuel,66389.6,47667.9,Fuel station
+fuel,66397.2,42579.9,Fuel station
+fuel,66436.1,31135.2,Fuel station
+fuel,66724.8,51091.5,Fuel station
+fuel,67352.1,24039.4,Fuel station
+fuel,67366.1,51068.8,Fuel station
+fuel,67543.6,-59340.2,Fuel station
+fuel,67746.6,21063.5,Fuel station
+fuel,67773.8,26852.2,Fuel station
+fuel,67929.6,22804.7,Fuel station
+fuel,67930.9,40796.7,Fuel station
+fuel,68166.5,49802.5,Fuel station
+fuel,68262.2,50472.1,Fuel station
+fuel,68729.3,49652.0,Fuel station
+fuel,68737.9,40997.3,Fuel station
+fuel,69179.8,39964.6,Fuel station
+fuel,69221.3,40009.2,Fuel station
+fuel,69334.5,38454.4,Fuel station
+fuel,69396.7,38367.8,Fuel station
+fuel,69529.9,36260.9,Fuel station
+fuel,70084.8,47188.8,Fuel station
+fuel,70123.1,47065.8,Fuel station
+fuel,70255.4,35670.3,Fuel station
+fuel,70921.7,29712.5,Fuel station
+fuel,70964.7,48968.7,Fuel station
+fuel,71588.8,31120.6,Fuel station
+fuel,71662.3,30813.3,Fuel station
+fuel,74000.0,46992.4,Fuel station
+fuel,74075.3,46605.6,Fuel station
+fuel,74082.7,46598.4,Fuel station
+fuel,75640.7,48110.6,Fuel station
+fuel,77666.9,48822.4,Fuel station
+fuel,77698.6,76647.4,Fuel station
+fuel,77700.8,76636.1,Fuel station
+rest,-92133.1,56872.6,Parking
+rest,-92013.9,47869.7,Hotel
+rest,-91718.9,56074.5,Parking
+rest,-91436.8,54236.8,Parking
+rest,-90262.7,52777.9,Hotel
+rest,-90028.3,62334.2,Parking
+rest,-89965.9,58544.7,Parking
+rest,-89816.6,58519.3,Parking
+rest,-89234.0,46351.8,Parking
+rest,-89147.2,46424.6,Parking
+rest,-88566.5,62606.4,Parking
+rest,-87837.3,47908.9,Parking
+rest,-87529.4,48243.6,Parking
+rest,-87309.1,61819.2,Parking
+rest,-87010.9,57640.4,Parking
+rest,-86996.6,55034.2,Parking
+rest,-86908.9,42735.5,Parking
+rest,-86782.1,42803.5,Parking
+rest,-86542.8,44789.7,Parking
+rest,-86241.1,53284.2,Parking
+rest,-86197.6,37748.4,Parking
+rest,-86184.7,53438.4,Parking
+rest,-86125.6,37657.8,Parking
+rest,-85402.1,35881.0,Parking
+rest,-85082.5,35889.2,Parking
+rest,-84340.2,36418.5,Parking
+rest,-84284.8,27366.9,Parking
+rest,-84271.3,63446.9,Parking
+rest,-84202.9,53183.5,Parking
+rest,-84172.0,36487.0,Parking
+rest,-84147.0,52975.5,Parking
+rest,-83942.2,27162.7,Parking
+rest,-83412.2,42815.7,Parking
+rest,-83361.1,42943.9,Parking
+rest,-83198.9,61839.3,Parking
+rest,-83181.9,47743.1,Parking
+rest,-83049.5,47752.5,Parking
+rest,-82948.3,37518.6,Parking
+rest,-82854.6,37661.2,Parking
+rest,-82671.2,33634.1,Parking
+rest,-82644.4,52847.7,Parking
+rest,-82535.1,53210.8,Parking
+rest,-81735.8,29031.1,Parking
+rest,-81476.1,29082.5,Parking
+rest,-80884.3,43271.9,Parking
+rest,-80560.8,69178.8,Parking
+rest,-80295.4,58301.6,Parking
+rest,-79203.8,63289.2,Parking
+rest,-78696.8,69804.4,Parking
+rest,-77650.9,30394.3,Parking
+rest,-77618.6,30530.9,Parking
+rest,-77290.4,68776.8,Parking
+rest,-77260.3,34234.7,Parking
+rest,-77225.7,36395.1,Parking
+rest,-77139.7,68683.1,Parking
+rest,-75126.0,28263.5,Parking
+rest,-74682.4,53959.4,Parking
+rest,-74661.2,50041.3,Parking
+rest,-74571.9,27893.0,Parking
+rest,-74558.9,50017.1,Parking
+rest,-74364.6,67512.0,Parking
+rest,-74204.6,62071.0,Parking
+rest,-73618.1,63759.6,Parking
+rest,-73616.0,63963.6,Parking
+rest,-73357.3,44231.5,Parking
+rest,-72526.3,36390.5,Parking
+rest,-72412.3,68995.6,Parking
+rest,-72383.7,36313.8,Parking
+rest,-72256.2,35483.1,Parking
+rest,-72109.1,35288.3,Parking
+rest,-71930.0,35379.1,Parking
+rest,-71777.0,67709.4,Parking
+rest,-71043.9,38932.3,Parking
+rest,-70994.5,60269.8,Parking
+rest,-70853.4,39265.6,Parking
+rest,-70694.2,29391.6,Parking
+rest,-70629.4,29366.1,Parking
+rest,-70620.3,59357.0,Parking
+rest,-70557.6,28535.8,Parking
+rest,-70469.5,66323.6,Parking
+rest,-70300.9,66050.2,Parking
+rest,-70106.2,49870.6,Parking
+rest,-70013.1,58853.2,Parking
+rest,-69969.1,58632.0,Parking
+rest,-69756.6,55382.4,Parking
+rest,-69729.2,49765.5,Parking
+rest,-68979.8,61372.5,Parking
+rest,-68874.1,61380.5,Parking
+rest,-68824.5,61525.6,Parking
+rest,-68654.8,44877.9,Parking
+rest,-68580.0,44765.5,Parking
+rest,-68578.1,56756.4,Parking
+rest,-68139.1,36582.9,Parking
+rest,-68117.9,36518.9,Parking
+rest,-67539.9,60490.3,Parking
+rest,-67425.4,60427.0,Parking
+rest,-67309.1,30754.5,Parking
+rest,-67303.9,60512.6,Parking
+rest,-67043.5,30686.3,Parking
+rest,-66961.1,40763.2,Parking
+rest,-66898.2,40428.9,Parking
+rest,-66646.5,56581.8,Parking
+rest,-65990.5,50809.9,Parking
+rest,-65883.1,54640.9,Parking
+rest,-65701.3,51339.6,Parking
+rest,-65661.9,31875.6,Parking
+rest,-65647.9,67102.0,Parking
+rest,-65613.9,54846.8,Parking
+rest,-65544.4,51343.3,Parking
+rest,-65241.1,38747.2,Parking
+rest,-64351.1,38905.4,Parking
+rest,-64034.3,44623.1,Parking
+rest,-64032.5,60596.7,Parking
+rest,-63850.8,44645.6,Parking
+rest,-63699.4,56228.5,Parking
+rest,-63629.9,41271.8,Parking
+rest,-63590.9,56358.0,Parking
+rest,-62072.6,50971.5,Parking
+rest,-61925.4,37270.1,Parking
+rest,-61689.0,31793.7,Parking
+rest,-61319.8,68271.9,Parking
+rest,-61254.2,55888.0,Parking
+rest,-61219.0,68335.4,Parking
+rest,-61101.5,55928.4,Parking
+rest,-60553.4,-7348.3,Parking
+rest,-60457.2,53276.0,Parking
+rest,-60352.5,37941.8,Parking
+rest,-60284.6,-7448.9,Parking
+rest,-60254.1,38031.4,Parking
+rest,-60216.5,37913.5,Parking
+rest,-59796.3,-7573.3,Hotel
+rest,-59603.6,-7649.0,Parking
+rest,-59156.0,58155.1,Hotel
+rest,-59011.1,57565.1,Parking
+rest,-58544.8,33134.0,Parking
+rest,-58458.8,65347.6,Parking
+rest,-58451.0,36066.6,Parking
+rest,-58380.0,33157.5,Parking
+rest,-58324.0,36005.1,Parking
+rest,-58322.4,-8276.5,Truck stop
+rest,-58040.9,34885.7,Parking
+rest,-57784.8,36963.0,Parking
+rest,-57625.8,36992.5,Parking
+rest,-57588.4,61320.0,Parking
+rest,-57535.9,55598.9,Parking
+rest,-57504.1,55166.8,Parking
+rest,-57390.9,45224.1,Parking
+rest,-57364.1,45096.3,Parking
+rest,-57277.8,45228.0,Parking
+rest,-56935.7,66470.5,Parking
+rest,-56781.1,-17115.9,Parking
+rest,-56743.0,-16738.0,Hotel
+rest,-56634.9,42516.8,Parking
+rest,-56574.2,3965.5,Truck stop
+rest,-56535.0,5063.8,Hotel
+rest,-56470.3,4469.4,Parking
+rest,-56352.3,63943.9,Parking
+rest,-56294.4,63929.0,Parking
+rest,-56169.1,39731.8,Parking
+rest,-56143.1,39619.9,Parking
+rest,-55391.4,-19165.7,Parking
+rest,-55090.4,-19362.6,Truck stop
+rest,-54698.8,48780.2,Parking
+rest,-54571.5,34224.0,Parking
+rest,-54537.4,34341.0,Parking
+rest,-54190.5,-14807.1,Hotel
+rest,-54035.2,-14786.8,Parking
+rest,-53932.0,3105.8,Hotel
+rest,-53768.9,3309.2,Parking
+rest,-53646.7,-16122.4,Truck stop
+rest,-53596.7,3555.9,Truck stop
+rest,-53348.5,61828.9,Parking
+rest,-53316.3,44325.4,Parking
+rest,-53102.1,-12322.4,Truck stop
+rest,-53050.0,-16890.9,Parking
+rest,-53027.5,37211.0,Parking
+rest,-53025.1,42496.1,Parking
+rest,-52969.4,62799.2,Parking
+rest,-52921.6,62554.0,Parking
+rest,-52911.6,34456.6,Parking
+rest,-52819.7,62569.7,Parking
+rest,-52794.8,53175.3,Parking
+rest,-52774.6,-12364.8,Truck stop
+rest,-52721.8,56564.2,Parking
+rest,-52470.1,-7774.9,Truck stop
+rest,-52303.1,-18541.4,Truck stop
+rest,-52183.0,-17080.5,Truck stop
+rest,-51776.5,59574.6,Parking
+rest,-51223.9,33891.4,Parking
+rest,-51104.6,56762.7,Parking
+rest,-50909.4,33114.8,Parking
+rest,-50669.1,44166.8,Parking
+rest,-50486.8,33988.2,Parking
+rest,-50475.7,60817.3,Parking
+rest,-50462.8,60738.1,Parking
+rest,-50445.9,43591.3,Parking
+rest,-50429.2,55504.5,Parking
+rest,-50282.7,-48533.4,Hotel
+rest,-50161.8,-21352.3,Truck stop
+rest,-50073.9,-48616.9,Parking
+rest,-50017.4,10916.5,Truck stop
+rest,-49998.1,10892.1,Truck stop
+rest,-49794.3,-14704.6,Truck stop
+rest,-49767.8,-26210.8,Truck stop
+rest,-49764.7,-51479.0,Parking
+rest,-49521.5,-48339.4,Truck stop
+rest,-49403.8,31971.6,Parking
+rest,-49398.2,-24499.7,Truck stop
+rest,-49250.8,5341.5,Truck stop
+rest,-49097.5,-15521.0,Truck stop
+rest,-49074.2,5372.6,Truck stop
+rest,-49029.5,-18960.7,Truck stop
+rest,-49016.9,31147.6,Parking
+rest,-48978.7,31032.0,Parking
+rest,-48902.8,30953.3,Parking
+rest,-48891.1,31189.1,Truck stop
+rest,-48768.9,12884.5,Hotel
+rest,-48704.1,-46339.0,Truck stop
+rest,-48691.5,34956.0,Truck stop
+rest,-48644.7,12867.5,Parking
+rest,-48644.6,34866.7,Truck stop
+rest,-48631.9,31355.4,Parking
+rest,-48624.1,28636.4,Truck stop
+rest,-48607.4,31211.3,Truck stop
+rest,-48605.0,-28426.0,Hotel
+rest,-48560.9,31192.7,Parking
+rest,-48417.3,-28622.7,Parking
+rest,-48366.8,30101.8,Parking
+rest,-48044.3,10322.2,Truck stop
+rest,-47905.8,-13428.5,Truck stop
+rest,-47796.1,-8326.0,Truck stop
+rest,-47663.7,28989.4,Truck stop
+rest,-47645.5,-47267.3,Truck stop
+rest,-47619.9,26869.7,Hotel
+rest,-47450.9,52366.8,Parking
+rest,-47379.2,-42858.4,Truck stop
+rest,-47303.5,52326.3,Parking
+rest,-47284.9,14764.7,Truck stop
+rest,-47270.0,18984.9,Parking
+rest,-47247.9,26562.8,Parking
+rest,-47200.3,-29917.2,Truck stop
+rest,-46941.4,19104.7,Truck stop
+rest,-46909.8,36084.7,Parking
+rest,-46628.5,-21389.1,Truck stop
+rest,-46517.9,-26974.5,Truck stop
+rest,-46477.7,-24389.2,Truck stop
+rest,-46422.7,-7633.2,Hotel
+rest,-46307.9,8832.0,Parking
+rest,-46250.4,-7484.3,Parking
+rest,-46189.6,8834.8,Hotel
+rest,-46154.6,-47315.0,Truck stop
+rest,-46146.2,-34398.1,Truck stop
+rest,-46132.8,11631.2,Parking
+rest,-46102.7,15445.3,Parking
+rest,-46088.8,-20465.8,Hotel
+rest,-46085.2,-34066.1,Truck stop
+rest,-46066.3,-39696.2,Parking
+rest,-46008.1,-39835.3,Hotel
+rest,-45978.5,-47198.4,Truck stop
+rest,-45920.8,12579.9,Parking
+rest,-45914.3,-20482.2,Parking
+rest,-45681.3,10250.9,Truck stop
+rest,-45677.8,-27936.4,Parking
+rest,-45572.3,21600.9,Parking
+rest,-45492.2,20583.8,Hotel
+rest,-45489.0,22157.4,Parking
+rest,-45484.8,-28082.9,Hotel
+rest,-45439.6,-51129.5,Truck stop
+rest,-45257.4,-16305.2,Truck stop
+rest,-45176.6,25569.1,Truck stop
+rest,-45091.2,25499.1,Truck stop
+rest,-45061.8,-40679.7,Truck stop
+rest,-45052.9,25363.0,Truck stop
+rest,-45025.7,25307.9,Truck stop
+rest,-45010.4,-7940.9,Truck stop
+rest,-44949.4,-47054.0,Hotel
+rest,-44918.5,-47031.5,Parking
+rest,-44744.7,-29333.4,Truck stop
+rest,-44691.4,-34478.7,Truck stop
+rest,-44632.9,27548.3,Truck stop
+rest,-44617.7,27425.5,Truck stop
+rest,-44609.9,26141.7,Parking
+rest,-44596.9,-22339.0,Truck stop
+rest,-44472.3,-38920.3,Truck stop
+rest,-44419.3,30354.6,Parking
+rest,-44363.5,46312.5,Parking
+rest,-44356.8,-39403.3,Truck stop
+rest,-44328.9,-53283.1,Truck stop
+rest,-44282.1,46554.5,Parking
+rest,-44241.5,10802.3,Truck stop
+rest,-44194.3,-43658.0,Truck stop
+rest,-44122.5,-45794.9,Truck stop
+rest,-44046.8,20302.8,Truck stop
+rest,-43991.8,-20068.3,Truck stop
+rest,-43946.7,18228.3,Truck stop
+rest,-43941.0,18110.8,Truck stop
+rest,-43912.0,27741.9,Parking
+rest,-43895.7,20232.7,Truck stop
+rest,-43846.9,20088.6,Truck stop
+rest,-43781.1,-19729.1,Truck stop
+rest,-43775.0,20466.1,Truck stop
+rest,-43761.5,20430.1,Truck stop
+rest,-43668.2,37519.2,Truck stop
+rest,-43661.8,37566.4,Truck stop
+rest,-43661.7,37477.6,Truck stop
+rest,-43638.1,8946.1,Parking
+rest,-43587.9,37620.1,Truck stop
+rest,-43422.8,-25399.9,Parking
+rest,-43382.5,11711.0,Parking
+rest,-43243.7,31060.4,Truck stop
+rest,-43241.3,31199.1,Truck stop
+rest,-43128.2,-10540.5,Truck stop
+rest,-42920.6,-51161.8,Truck stop
+rest,-42870.5,-10356.3,Truck stop
+rest,-42809.2,48222.2,Parking
+rest,-42747.6,-22007.9,Truck stop
+rest,-42740.6,37925.8,Parking
+rest,-42676.5,-26589.6,Hotel
+rest,-42651.7,-11566.2,Truck stop
+rest,-42616.0,-26680.1,Parking
+rest,-42597.9,-21983.1,Truck stop
+rest,-42260.3,23008.5,Truck stop
+rest,-42260.1,9364.1,Truck stop
+rest,-42144.3,27385.9,Truck stop
+rest,-42120.8,9251.1,Truck stop
+rest,-42083.3,32329.9,Truck stop
+rest,-42023.0,14869.8,Truck stop
+rest,-42010.4,32166.0,Truck stop
+rest,-42004.6,3349.4,Truck stop
+rest,-41940.2,3516.9,Truck stop
+rest,-41915.2,-39162.8,Truck stop
+rest,-41803.9,11363.4,Truck stop
+rest,-41702.3,-26768.1,Truck stop
+rest,-41626.7,11391.3,Truck stop
+rest,-41601.7,-33645.5,Truck stop
+rest,-41429.6,-30127.2,Truck stop
+rest,-41395.7,-19002.2,Truck stop
+rest,-41177.9,-23094.1,Truck stop
+rest,-41137.9,-16522.1,Truck stop
+rest,-41044.0,-37916.6,Truck stop
+rest,-40962.6,-12861.6,Truck stop
+rest,-40949.7,-43410.2,Parking
+rest,-40863.9,-33029.4,Truck stop
+rest,-40684.5,34826.2,Hotel
+rest,-40538.3,37387.2,Parking
+rest,-40240.4,-55200.8,Truck stop
+rest,-40066.0,26677.5,Parking
+rest,-40031.0,-41599.7,Truck stop
+rest,-39976.9,9807.6,Hotel
+rest,-39943.8,46099.4,Parking
+rest,-39940.2,-38517.3,Parking
+rest,-39904.2,-38832.1,Hotel
+rest,-39882.0,9828.4,Parking
+rest,-39827.4,3480.4,Parking
+rest,-39816.0,45955.5,Parking
+rest,-39809.7,46158.5,Parking
+rest,-39730.1,-9643.1,Truck stop
+rest,-39680.3,5737.6,Truck stop
+rest,-39566.6,-53980.5,Truck stop
+rest,-39510.8,-11586.1,Hotel
+rest,-39450.6,-21324.9,Truck stop
+rest,-39417.7,-11739.4,Parking
+rest,-39377.9,5912.2,Parking
+rest,-39241.8,16090.1,Truck stop
+rest,-39079.3,34456.1,Parking
+rest,-39072.2,16148.4,Truck stop
+rest,-39048.4,14025.9,Truck stop
+rest,-39025.7,-55320.5,Hotel
+rest,-38816.8,35825.3,Parking
+rest,-38759.7,20291.9,Truck stop
+rest,-38729.2,-54858.3,Parking
+rest,-38564.8,-39532.6,Parking
+rest,-38477.7,-39435.5,Parking
+rest,-38468.7,-39522.9,Parking
+rest,-38409.1,-39620.7,Parking
+rest,-38364.6,-39612.1,Parking
+rest,-38345.2,48189.5,Parking
+rest,-38322.0,-39427.9,Parking
+rest,-38299.7,48092.1,Parking
+rest,-38049.7,11149.3,Truck stop
+rest,-38013.7,8386.6,Truck stop
+rest,-38012.0,8425.7,Truck stop
+rest,-37999.5,8648.4,Truck stop
+rest,-37957.8,31591.8,Truck stop
+rest,-37951.9,-25156.4,Truck stop
+rest,-37950.9,8682.1,Truck stop
+rest,-37905.4,-16106.0,Truck stop
+rest,-37870.3,11149.2,Truck stop
+rest,-37862.8,37322.5,Parking
+rest,-37833.1,31606.0,Truck stop
+rest,-37791.7,31604.8,Truck stop
+rest,-37785.6,1315.9,Hotel
+rest,-37760.7,-16052.6,Truck stop
+rest,-37664.2,27828.2,Parking
+rest,-37559.1,38019.9,Truck stop
+rest,-37485.5,38020.1,Truck stop
+rest,-37438.5,37734.9,Truck stop
+rest,-37409.2,37775.0,Truck stop
+rest,-37399.5,23748.6,Parking
+rest,-37393.6,23553.6,Hotel
+rest,-37199.9,47796.6,Parking
+rest,-37132.1,-14200.2,Truck stop
+rest,-36982.9,-16441.0,Hotel
+rest,-36935.2,26343.2,Parking
+rest,-36835.2,-16336.9,Parking
+rest,-36815.7,1528.7,Parking
+rest,-36709.9,-6457.8,Truck stop
+rest,-36687.5,4305.5,Parking
+rest,-36667.2,20468.1,Truck stop
+rest,-36661.5,-17209.5,Truck stop
+rest,-36590.6,25851.0,Truck stop
+rest,-36588.9,-26407.9,Hotel
+rest,-36568.3,2471.6,Parking
+rest,-36516.7,20565.7,Truck stop
+rest,-36342.0,-12019.6,Truck stop
+rest,-36317.3,-26850.6,Parking
+rest,-36148.0,12440.8,Truck stop
+rest,-36060.6,12605.8,Truck stop
+rest,-36018.6,-9209.2,Truck stop
+rest,-35949.4,522.2,Parking
+rest,-35816.2,4539.6,Truck stop
+rest,-35745.2,26516.8,Truck stop
+rest,-35745.1,-28847.6,Parking
+rest,-35714.9,4696.4,Truck stop
+rest,-35690.3,-28853.8,Parking
+rest,-35677.7,9984.6,Truck stop
+rest,-35485.1,38344.2,Truck stop
+rest,-35151.7,22767.2,Truck stop
+rest,-34987.4,4840.5,Truck stop
+rest,-34925.0,38725.9,Truck stop
+rest,-34903.7,43860.1,Parking
+rest,-34902.5,885.7,Truck stop
+rest,-34896.8,38705.4,Truck stop
+rest,-34875.3,906.8,Truck stop
+rest,-34832.0,4930.2,Truck stop
+rest,-34772.2,3474.1,Truck stop
+rest,-34762.6,971.3,Truck stop
+rest,-34742.3,1000.0,Truck stop
+rest,-34692.1,43694.3,Parking
+rest,-34345.3,10032.4,Truck stop
+rest,-34274.2,39829.2,Parking
+rest,-34212.1,25311.8,Truck stop
+rest,-34209.4,1997.9,Truck stop
+rest,-34179.6,25146.7,Truck stop
+rest,-33839.7,16575.6,Truck stop
+rest,-33661.7,12297.1,Hotel
+rest,-33640.1,14759.4,Truck stop
+rest,-33631.7,23297.7,Parking
+rest,-33533.6,15887.0,Parking
+rest,-33531.3,12145.3,Parking
+rest,-33503.4,8165.1,Parking
+rest,-33460.9,14750.0,Truck stop
+rest,-33443.7,32831.6,Parking
+rest,-33399.2,-13634.5,Truck stop
+rest,-33361.0,5341.0,Parking
+rest,-33328.7,23421.4,Parking
+rest,-33270.5,-7719.2,Parking
+rest,-33224.8,-15197.9,Truck stop
+rest,-33151.4,-7371.0,Hotel
+rest,-33117.4,38580.7,Truck stop
+rest,-32991.1,-13176.6,Parking
+rest,-32956.9,-13206.4,Parking
+rest,-32931.5,38597.3,Truck stop
+rest,-32902.3,-13274.6,Parking
+rest,-32902.1,-13176.6,Parking
+rest,-32902.0,-13212.6,Parking
+rest,-32839.4,-12817.4,Parking
+rest,-32778.1,-12792.8,Parking
+rest,-32755.5,-13231.2,Parking
+rest,-32565.2,23170.1,Parking
+rest,-32526.3,10795.4,Truck stop
+rest,-32503.1,-7379.8,Parking
+rest,-32429.0,10894.6,Truck stop
+rest,-32359.9,36934.8,Parking
+rest,-32005.6,17046.6,Parking
+rest,-31893.1,33171.7,Parking
+rest,-31724.9,4673.7,Truck stop
+rest,-31611.2,-13344.9,Parking
+rest,-31572.1,-14112.1,Hotel
+rest,-31512.2,-2038.4,Parking
+rest,-31492.8,-1266.8,Truck stop
+rest,-31421.1,20944.8,Truck stop
+rest,-31410.0,-1378.3,Truck stop
+rest,-31274.2,20841.8,Truck stop
+rest,-31169.2,28984.2,Truck stop
+rest,-30922.2,37246.9,Parking
+rest,-30781.2,25119.1,Hotel
+rest,-30631.0,3333.8,Parking
+rest,-30629.1,2734.3,Truck stop
+rest,-30548.4,2761.2,Truck stop
+rest,-30435.2,36548.6,Hotel
+rest,-30300.3,-4779.5,Hotel
+rest,-30257.2,24561.6,Parking
+rest,-30205.6,9861.2,Parking
+rest,-30164.2,35968.4,Truck stop
+rest,-30122.8,23162.6,Parking
+rest,-29980.1,-4705.2,Parking
+rest,-29928.0,10342.3,Truck stop
+rest,-29889.8,10224.7,Truck stop
+rest,-29886.4,11277.5,Truck stop
+rest,-29880.7,35865.1,Parking
+rest,-29706.3,26747.6,Truck stop
+rest,-29648.8,3677.2,Hotel
+rest,-29391.1,753.4,Truck stop
+rest,-29372.2,931.8,Truck stop
+rest,-29339.6,8289.2,Truck stop
+rest,-29323.7,8475.1,Truck stop
+rest,-28859.3,4990.6,Parking
+rest,-28814.2,23737.3,Parking
+rest,-28654.2,4499.5,Truck stop
+rest,-28607.9,26707.5,Truck stop
+rest,-28580.3,-4505.8,Parking
+rest,-28549.2,29790.3,Parking
+rest,-28489.6,-4533.4,Parking
+rest,-28281.8,1531.5,Truck stop
+rest,-28058.2,-3154.1,Truck stop
+rest,-28019.6,-3287.5,Truck stop
+rest,-27891.8,21628.9,Truck stop
+rest,-27870.3,21651.2,Truck stop
+rest,-27848.7,21673.5,Truck stop
+rest,-27777.4,21656.4,Truck stop
+rest,-27747.0,14221.1,Truck stop
+rest,-27733.4,35855.9,Parking
+rest,-27672.1,7024.0,Parking
+rest,-27670.2,36041.6,Truck stop
+rest,-27534.5,24161.8,Truck stop
+rest,-27525.8,35703.2,Truck stop
+rest,-27493.0,35770.6,Truck stop
+rest,-27434.0,35595.4,Truck stop
+rest,-27415.5,35961.5,Truck stop
+rest,-27370.7,35729.7,Truck stop
+rest,-27321.7,35573.3,Truck stop
+rest,-26521.2,34974.6,Parking
+rest,-26472.8,750.4,Truck stop
+rest,-26468.6,-2266.1,Parking
+rest,-26400.7,25296.0,Truck stop
+rest,-26356.5,-2293.7,Hotel
+rest,-26282.5,6087.5,Truck stop
+rest,-26259.4,25185.5,Truck stop
+rest,-26257.0,-311.8,Parking
+rest,-26172.8,6002.2,Truck stop
+rest,-25917.9,26465.1,Parking
+rest,-25791.3,5631.4,Parking
+rest,-25651.3,-3334.6,Parking
+rest,-25625.9,-5618.1,Parking
+rest,-25582.9,-5457.6,Parking
+rest,-25562.7,-3248.5,Parking
+rest,-25273.9,3367.2,Truck stop
+rest,-25212.7,3308.1,Truck stop
+rest,-25128.7,15885.5,Truck stop
+rest,-25075.1,15819.5,Truck stop
+rest,-24998.4,37595.1,Truck stop
+rest,-24881.3,37584.4,Truck stop
+rest,-24806.2,4548.3,Parking
+rest,-24667.5,29728.5,Truck stop
+rest,-24659.3,35217.3,Truck stop
+rest,-24633.3,23966.6,Parking
+rest,-24579.7,35195.8,Truck stop
+rest,-24444.2,-668.3,Parking
+rest,-24383.8,30815.3,Truck stop
+rest,-24316.5,35902.2,Parking
+rest,-24315.7,-819.5,Parking
+rest,-24302.9,13193.5,Truck stop
+rest,-24204.5,30867.0,Truck stop
+rest,-24111.2,23936.0,Truck stop
+rest,-24023.5,28575.4,Parking
+rest,-23987.5,6139.9,Parking
+rest,-23905.5,6131.5,Hotel
+rest,-23814.4,-936.9,Parking
+rest,-23813.6,22780.5,Parking
+rest,-23723.8,-6288.5,Parking
+rest,-23652.3,39179.1,Truck stop
+rest,-23572.9,-895.4,Parking
+rest,-23152.9,38978.1,Parking
+rest,-23070.7,39038.1,Hotel
+rest,-23021.3,20434.3,Truck stop
+rest,-22955.5,8841.4,Truck stop
+rest,-22903.6,25709.7,Hotel
+rest,-22557.7,16740.2,Parking
+rest,-22534.2,16563.1,Hotel
+rest,-22487.9,-9627.1,Parking
+rest,-22486.0,-5981.0,Parking
+rest,-22439.4,33411.7,Truck stop
+rest,-22371.4,-9093.8,Parking
+rest,-22111.5,17512.9,Parking
+rest,-22082.8,12940.5,Parking
+rest,-22071.3,6227.8,Parking
+rest,-22070.9,-2245.4,Parking
+rest,-21992.2,26824.6,Parking
+rest,-21894.3,-9473.2,Parking
+rest,-21680.6,27603.6,Parking
+rest,-21660.4,27481.2,Parking
+rest,-21599.2,2949.0,Parking
+rest,-21544.0,12667.1,Truck stop
+rest,-21292.5,26460.3,Parking
+rest,-21272.3,-6159.6,Parking
+rest,-21231.6,38605.3,Parking
+rest,-21195.6,6885.8,Truck stop
+rest,-21182.3,36599.9,Parking
+rest,-21136.5,-3176.8,Parking
+rest,-21123.9,9216.4,Truck stop
+rest,-21110.7,6967.2,Truck stop
+rest,-20891.0,35897.8,Parking
+rest,-20593.6,-6281.8,Parking
+rest,-20509.8,-13234.1,Parking
+rest,-20280.7,3153.3,Parking
+rest,-20263.8,-6538.1,Parking
+rest,-20144.5,3132.6,Parking
+rest,-20130.7,-5092.7,Parking
+rest,-20125.5,39239.8,Truck stop
+rest,-20122.2,39205.1,Truck stop
+rest,-20119.0,35012.3,Truck stop
+rest,-20045.6,-9020.4,Parking
+rest,-20001.3,35147.7,Truck stop
+rest,-19992.7,-5190.7,Parking
+rest,-19854.0,39509.7,Truck stop
+rest,-19806.1,-2974.6,Parking
+rest,-19732.3,39563.5,Truck stop
+rest,-19665.0,134.7,Parking
+rest,-19654.1,-2934.3,Parking
+rest,-19595.3,-11990.8,Parking
+rest,-19585.6,-6.0,Parking
+rest,-19574.8,34073.4,Parking
+rest,-19546.8,171.8,Parking
+rest,-19494.6,-12203.9,Parking
+rest,-19469.8,36.9,Parking
+rest,-19443.3,-12291.0,Parking
+rest,-19376.2,-950.5,Parking
+rest,-19292.0,-1205.6,Parking
+rest,-19182.5,-12256.7,Parking
+rest,-19107.3,24848.8,Parking
+rest,-19048.0,-5612.2,Parking
+rest,-19046.8,26412.4,Parking
+rest,-19009.3,24927.2,Parking
+rest,-18958.4,25858.7,Parking
+rest,-18956.5,-5548.3,Parking
+rest,-18939.9,26430.3,Parking
+rest,-18915.1,12896.5,Truck stop
+rest,-18776.2,12891.8,Truck stop
+rest,-18643.5,6464.2,Parking
+rest,-18584.5,-11687.5,Parking
+rest,-18552.6,24045.1,Parking
+rest,-18405.3,-13349.9,Parking
+rest,-18331.1,-9744.4,Parking
+rest,-18263.0,18313.7,Truck stop
+rest,-18251.1,21666.2,Parking
+rest,-18195.6,-7696.2,Parking
+rest,-18124.7,18326.7,Truck stop
+rest,-18032.5,-7583.5,Parking
+rest,-17995.1,23503.2,Parking
+rest,-17886.6,-6500.0,Parking
+rest,-17675.8,2682.1,Parking
+rest,-17654.9,10368.5,Parking
+rest,-17486.8,25277.5,Parking
+rest,-17415.8,29293.6,Parking
+rest,-17363.0,39033.6,Parking
+rest,-17341.9,25407.2,Parking
+rest,-17244.8,19767.7,Parking
+rest,-17199.5,-559.2,Parking
+rest,-17143.7,2713.9,Parking
+rest,-17115.0,2846.8,Parking
+rest,-16986.7,26189.3,Parking
+rest,-16979.0,19710.1,Parking
+rest,-16947.8,-11106.0,Parking
+rest,-16943.1,-10945.9,Parking
+rest,-16830.5,23126.8,Parking
+rest,-16788.0,-2951.3,Parking
+rest,-16785.7,3807.2,Parking
+rest,-16774.6,-6087.4,Parking
+rest,-16758.3,-2789.9,Parking
+rest,-16673.9,-2855.6,Parking
+rest,-16615.6,-3129.1,Parking
+rest,-16551.0,33891.5,Parking
+rest,-16491.7,-3158.0,Parking
+rest,-16477.9,7656.6,Hotel
+rest,-16405.9,5184.3,Parking
+rest,-16392.0,26480.4,Parking
+rest,-16322.4,-8944.8,Parking
+rest,-16244.0,-6121.3,Parking
+rest,-16231.8,-8777.2,Parking
+rest,-16190.6,30871.7,Parking
+rest,-16185.2,24396.7,Parking
+rest,-16177.7,26365.8,Parking
+rest,-16168.6,7348.2,Parking
+rest,-16093.3,5473.1,Truck stop
+rest,-16071.5,37082.7,Parking
+rest,-16057.0,5600.5,Truck stop
+rest,-16056.7,37421.1,Hotel
+rest,-15928.3,30920.1,Parking
+rest,-15532.7,-1816.0,Parking
+rest,-15488.8,-7233.9,Parking
+rest,-15404.3,20690.3,Parking
+rest,-15386.7,-1734.6,Parking
+rest,-15333.5,-7324.5,Parking
+rest,-15298.2,17074.8,Parking
+rest,-15053.5,26319.0,Parking
+rest,-14998.5,-6318.8,Parking
+rest,-14927.6,-4563.0,Parking
+rest,-14867.4,-4673.6,Parking
+rest,-14716.5,24302.3,Parking
+rest,-14648.6,22902.2,Parking
+rest,-14624.0,13335.9,Parking
+rest,-14396.5,6992.3,Parking
+rest,-14214.5,-6949.4,Parking
+rest,-14156.2,37136.0,Parking
+rest,-14113.1,-3859.6,Parking
+rest,-14030.6,21640.1,Parking
+rest,-13992.6,34676.6,Truck stop
+rest,-13991.0,-3659.2,Parking
+rest,-13985.9,-6266.5,Parking
+rest,-13974.0,21534.8,Parking
+rest,-13966.9,-12339.7,Parking
+rest,-13959.9,-5497.4,Parking
+rest,-13672.4,19541.8,Parking
+rest,-13632.9,-4030.9,Parking
+rest,-13089.8,31207.7,Hotel
+rest,-13089.0,-4232.5,Parking
+rest,-12937.5,9352.9,Truck stop
+rest,-12928.2,-8242.2,Parking
+rest,-12924.8,7043.5,Truck stop
+rest,-12854.1,9435.8,Truck stop
+rest,-12805.6,31424.8,Parking
+rest,-12786.8,20262.6,Parking
+rest,-12486.1,-10490.8,Parking
+rest,-12473.7,-10321.2,Parking
+rest,-12451.6,-4750.3,Parking
+rest,-12339.9,-10336.3,Parking
+rest,-12322.7,14043.5,Truck stop
+rest,-12304.9,16106.1,Truck stop
+rest,-12238.0,14036.1,Truck stop
+rest,-12164.7,9463.0,Parking
+rest,-12162.0,-15489.2,Parking
+rest,-12050.9,18285.9,Parking
+rest,-11944.6,16468.1,Parking
+rest,-11879.1,29307.0,Truck stop
+rest,-11865.8,20996.5,Parking
+rest,-11822.3,-1296.7,Parking
+rest,-11797.7,18133.4,Parking
+rest,-11726.4,16507.0,Parking
+rest,-11693.1,18114.4,Parking
+rest,-11469.2,-48713.7,Parking
+rest,-11439.1,14406.4,Parking
+rest,-11348.5,14197.7,Truck stop
+rest,-11343.5,-10419.9,Parking
+rest,-11336.8,23350.3,Parking
+rest,-11320.2,11014.4,Parking
+rest,-11180.6,11069.8,Hotel
+rest,-11155.5,55166.6,Truck stop
+rest,-11122.7,-10555.3,Parking
+rest,-10973.1,55601.7,Hotel
+rest,-10863.2,31775.1,Truck stop
+rest,-10860.9,31690.6,Truck stop
+rest,-10809.2,35957.3,Truck stop
+rest,-10777.2,56677.5,Truck stop
+rest,-10765.2,35833.3,Truck stop
+rest,-10749.1,18620.3,Parking
+rest,-10708.5,-6427.9,Parking
+rest,-10697.9,-47859.1,Parking
+rest,-10682.7,-48289.7,Parking
+rest,-10666.2,18679.8,Parking
+rest,-10545.6,-5977.6,Parking
+rest,-10516.7,-46933.2,Parking
+rest,-10443.0,-6726.8,Parking
+rest,-10417.0,-56055.0,Parking
+rest,-10386.2,-56305.5,Parking
+rest,-10347.2,-55918.4,Parking
+rest,-10341.4,-7145.0,Parking
+rest,-10216.8,46368.1,Parking
+rest,-10097.7,-15258.4,Parking
+rest,-10072.6,45904.3,Truck stop
+rest,-10060.3,-15141.4,Parking
+rest,-10048.7,48480.1,Truck stop
+rest,-9924.5,75.4,Parking
+rest,-9788.6,2850.3,Truck stop
+rest,-9751.9,18434.3,Parking
+rest,-9747.3,-48905.3,Parking
+rest,-9714.0,48393.5,Parking
+rest,-9635.3,18459.1,Parking
+rest,-9371.5,50817.9,Truck stop
+rest,-9368.8,11833.0,Truck stop
+rest,-9279.5,-12594.3,Parking
+rest,-9208.7,-8363.8,Truck stop
+rest,-9192.0,18279.4,Parking
+rest,-9188.1,63172.6,Hotel
+rest,-9169.6,8445.7,Truck stop
+rest,-9116.5,62778.9,Parking
+rest,-9028.7,49092.4,Hotel
+rest,-9023.7,63016.2,Truck stop
+rest,-9022.2,-2440.4,Parking
+rest,-8983.2,-12928.3,Parking
+rest,-8949.8,-44746.4,Parking
+rest,-8859.9,35126.2,Hotel
+rest,-8801.2,35213.2,Parking
+rest,-8799.0,-67293.0,Parking
+rest,-8789.9,-49795.0,Parking
+rest,-8760.7,3215.9,Parking
+rest,-8744.1,-6018.4,Truck stop
+rest,-8735.4,55039.4,Truck stop
+rest,-8673.6,-67147.0,Parking
+rest,-8605.0,-65235.7,Parking
+rest,-8593.6,20726.3,Parking
+rest,-8508.4,35094.1,Truck stop
+rest,-8438.8,47968.7,Hotel
+rest,-8345.9,-61817.5,Parking
+rest,-8343.6,47681.8,Truck stop
+rest,-8294.7,52321.5,Parking
+rest,-8282.7,-9494.4,Parking
+rest,-8151.8,-10289.3,Parking
+rest,-8122.6,51131.2,Truck stop
+rest,-8115.3,5393.5,Parking
+rest,-8071.8,27052.4,Truck stop
+rest,-8017.3,45793.6,Truck stop
+rest,-7990.6,23536.3,Parking
+rest,-7990.1,27208.6,Truck stop
+rest,-7958.6,3360.8,Parking
+rest,-7958.2,-357.8,Truck stop
+rest,-7931.4,-67270.5,Parking
+rest,-7799.4,23796.5,Parking
+rest,-7780.6,29655.1,Hotel
+rest,-7672.9,-7164.4,Truck stop
+rest,-7638.5,31212.0,Truck stop
+rest,-7614.2,-67379.0,Parking
+rest,-7610.1,56946.5,Truck stop
+rest,-7598.3,26646.0,Parking
+rest,-7593.9,57077.0,Truck stop
+rest,-7587.7,-7053.1,Truck stop
+rest,-7551.4,31365.3,Truck stop
+rest,-7468.0,15992.5,Parking
+rest,-7447.3,62747.9,Truck stop
+rest,-7343.6,55165.8,Hotel
+rest,-7322.8,48528.4,Truck stop
+rest,-7315.3,15659.8,Truck stop
+rest,-7310.7,59931.7,Truck stop
+rest,-7309.3,16160.8,Parking
+rest,-7265.9,44178.8,Parking
+rest,-7228.3,-54998.6,Parking
+rest,-7199.0,-66886.9,Parking
+rest,-7153.1,15587.5,Truck stop
+rest,-7040.3,-67226.7,Parking
+rest,-7008.3,-66779.2,Parking
+rest,-6972.3,5198.7,Truck stop
+rest,-6962.5,44253.9,Hotel
+rest,-6879.7,5089.7,Truck stop
+rest,-6862.4,55335.9,Truck stop
+rest,-6781.1,46699.7,Truck stop
+rest,-6749.6,54958.9,Parking
+rest,-6732.0,6885.0,Parking
+rest,-6661.3,-67184.7,Parking
+rest,-6543.9,24516.7,Parking
+rest,-6533.6,29071.8,Truck stop
+rest,-6402.8,24352.2,Parking
+rest,-6359.9,2663.2,Parking
+rest,-6353.8,9686.6,Truck stop
+rest,-6266.1,9570.9,Truck stop
+rest,-6160.2,2148.5,Parking
+rest,-6126.5,-13709.8,Truck stop
+rest,-6106.8,-13847.3,Truck stop
+rest,-6012.1,-52800.3,Parking
+rest,-5902.3,7357.2,Parking
+rest,-5865.0,21779.8,Parking
+rest,-5815.5,7268.3,Parking
+rest,-5621.8,-42816.7,Parking
+rest,-5605.7,-68125.6,Parking
+rest,-5602.0,-42874.4,Parking
+rest,-5594.8,-14521.8,Parking
+rest,-5573.2,36176.2,Truck stop
+rest,-5419.6,36089.6,Truck stop
+rest,-5409.8,-17132.6,Parking
+rest,-5402.8,-43164.4,Parking
+rest,-5364.3,-16924.1,Parking
+rest,-5333.3,18127.5,Parking
+rest,-5333.1,-17121.7,Parking
+rest,-5260.5,-14577.8,Parking
+rest,-5247.9,10610.4,Parking
+rest,-5218.3,3591.3,Truck stop
+rest,-5215.0,-14737.2,Parking
+rest,-5211.4,-236.7,Truck stop
+rest,-5200.5,3624.4,Truck stop
+rest,-5167.1,18279.0,Parking
+rest,-5092.9,-43169.1,Parking
+rest,-5091.8,3724.8,Truck stop
+rest,-5075.7,3761.7,Truck stop
+rest,-5025.4,-27625.1,Parking
+rest,-5022.2,-70163.4,Parking
+rest,-4958.4,-68542.6,Parking
+rest,-4878.1,11566.8,Truck stop
+rest,-4877.9,-27720.1,Parking
+rest,-4876.4,-17025.7,Parking
+rest,-4866.2,18567.4,Parking
+rest,-4767.0,-33575.8,Parking
+rest,-4498.9,23592.8,Parking
+rest,-4491.1,23468.6,Parking
+rest,-4421.3,-55845.1,Parking
+rest,-4290.8,-27312.8,Parking
+rest,-3975.2,-51177.5,Parking
+rest,-3877.4,-35282.8,Parking
+rest,-3855.7,-9976.1,Truck stop
+rest,-3799.3,9939.6,Parking
+rest,-3711.4,-9954.4,Truck stop
+rest,-3620.3,17282.5,Parking
+rest,-3553.8,17369.4,Parking
+rest,-3524.9,-70602.9,Parking
+rest,-3508.1,-56381.8,Parking
+rest,-3491.5,-4166.4,Parking
+rest,-3482.0,-68735.8,Parking
+rest,-3435.8,16673.5,Truck stop
+rest,-3416.3,32462.0,Truck stop
+rest,-3303.7,16630.4,Truck stop
+rest,-3269.9,32351.3,Truck stop
+rest,-2990.1,19973.2,Parking
+rest,-2984.6,33488.8,Hotel
+rest,-2983.6,-14378.3,Truck stop
+rest,-2889.2,33864.4,Parking
+rest,-2877.6,-14291.9,Truck stop
+rest,-2802.2,-70132.2,Parking
+rest,-2783.0,-10036.3,Parking
+rest,-2727.8,9255.2,Truck stop
+rest,-2695.4,35229.4,Truck stop
+rest,-2657.6,34111.1,Truck stop
+rest,-2624.9,781.2,Truck stop
+rest,-2575.2,-67408.0,Parking
+rest,-2534.1,-16430.4,Parking
+rest,-2527.0,690.7,Truck stop
+rest,-2517.3,36864.6,Truck stop
+rest,-2462.1,-69425.2,Parking
+rest,-2351.4,-44218.7,Parking
+rest,-2345.2,-24003.1,Parking
+rest,-2336.4,20259.1,Parking
+rest,-2312.1,-24114.9,Parking
+rest,-2275.7,40052.0,Hotel
+rest,-2263.0,40150.3,Truck stop
+rest,-2154.0,-3418.5,Parking
+rest,-2137.5,40215.1,Parking
+rest,-2128.9,-10141.5,Parking
+rest,-2122.9,30553.3,Truck stop
+rest,-2120.6,-22321.9,Parking
+rest,-2102.8,-32376.4,Parking
+rest,-2096.2,-3514.2,Parking
+rest,-2033.7,-16117.8,Parking
+rest,-2029.2,30395.4,Truck stop
+rest,-1933.8,-8516.3,Parking
+rest,-1834.7,-55358.7,Parking
+rest,-1725.1,-26354.1,Parking
+rest,-1621.5,-26452.5,Parking
+rest,-1450.9,-37029.8,Parking
+rest,-1436.1,-3421.6,Parking
+rest,-1243.8,-69601.6,Parking
+rest,-1228.7,43584.5,Truck stop
+rest,-1201.8,-10328.3,Parking
+rest,-1137.8,43489.4,Truck stop
+rest,-1045.7,-5895.1,Truck stop
+rest,-1030.5,39058.5,Truck stop
+rest,-1016.8,-16618.8,Parking
+rest,-1016.1,-15878.5,Parking
+rest,-900.7,-5893.0,Truck stop
+rest,-891.1,-9255.6,Parking
+rest,-814.7,-57024.8,Parking
+rest,-744.2,32193.9,Parking
+rest,-640.2,32180.5,Parking
+rest,-605.3,-11278.2,Parking
+rest,-602.9,-11134.2,Parking
+rest,-546.3,31608.2,Truck stop
+rest,-539.6,12264.8,Truck stop
+rest,-508.4,12401.5,Truck stop
+rest,-451.6,32056.9,Hotel
+rest,-416.8,31478.1,Truck stop
+rest,-400.4,-70839.5,Parking
+rest,-366.1,-1960.0,Truck stop
+rest,-346.1,32486.3,Truck stop
+rest,-250.8,-1994.6,Truck stop
+rest,-225.5,-64571.7,Parking
+rest,-136.8,29761.1,Parking
+rest,-15.5,29744.7,Hotel
+rest,237.6,-33591.0,Parking
+rest,273.4,-33702.1,Parking
+rest,337.2,-4522.0,Truck stop
+rest,391.2,-4393.9,Truck stop
+rest,391.7,16199.6,Parking
+rest,406.6,35879.2,Truck stop
+rest,411.9,-64796.9,Parking
+rest,419.5,-50330.7,Parking
+rest,542.2,5830.9,Parking
+rest,545.9,-52342.3,Parking
+rest,562.4,35976.2,Truck stop
+rest,569.6,-21606.2,Parking
+rest,632.0,-47014.8,Parking
+rest,730.3,18926.9,Parking
+rest,910.2,38897.7,Truck stop
+rest,929.0,-36017.9,Parking
+rest,965.4,-30929.0,Parking
+rest,979.3,8128.0,Parking
+rest,1029.5,43496.2,Truck stop
+rest,1051.2,-15015.2,Parking
+rest,1080.5,-36003.9,Parking
+rest,1086.0,8308.5,Parking
+rest,1117.2,-38872.5,Parking
+rest,1139.3,-65170.4,Parking
+rest,1142.0,-25891.9,Parking
+rest,1182.8,43583.3,Truck stop
+rest,1233.8,39100.4,Hotel
+rest,1335.6,39105.2,Parking
+rest,1418.4,-26259.2,Parking
+rest,1489.2,-26107.9,Parking
+rest,1512.2,12864.3,Truck stop
+rest,1590.5,-20678.4,Parking
+rest,1701.1,-8956.1,Truck stop
+rest,1748.6,-9052.7,Truck stop
+rest,1760.0,-9010.9,Truck stop
+rest,1777.9,30634.6,Truck stop
+rest,1792.2,1737.2,Truck stop
+rest,1853.6,30519.9,Truck stop
+rest,1854.3,-9148.8,Truck stop
+rest,1856.7,-38721.4,Parking
+rest,1935.0,39926.5,Truck stop
+rest,2008.8,-53582.3,Parking
+rest,2103.3,39873.7,Truck stop
+rest,2472.1,-38208.0,Parking
+rest,2527.5,-37948.7,Parking
+rest,2529.1,13239.7,Parking
+rest,2529.9,-18951.5,Parking
+rest,2543.9,-2648.2,Parking
+rest,2572.8,32048.6,Truck stop
+rest,2588.4,-38173.9,Parking
+rest,2606.3,-2490.0,Parking
+rest,2645.2,19797.6,Parking
+rest,2738.1,13875.8,Parking
+rest,2739.1,31990.0,Truck stop
+rest,2802.6,-19437.9,Parking
+rest,2816.2,48028.6,Truck stop
+rest,2832.9,-67038.4,Parking
+rest,2978.2,48053.9,Truck stop
+rest,2994.2,22485.2,Parking
+rest,3092.0,22958.0,Parking
+rest,3116.3,35013.0,Parking
+rest,3125.0,19597.2,Parking
+rest,3215.7,23008.6,Parking
+rest,3277.1,-4112.8,Truck stop
+rest,3336.0,35077.0,Hotel
+rest,3337.9,8309.2,Truck stop
+rest,3391.2,34876.2,Truck stop
+rest,3418.9,42729.3,Truck stop
+rest,3443.6,-70919.7,Parking
+rest,3476.7,8289.6,Truck stop
+rest,3489.4,-55980.6,Parking
+rest,3502.4,13612.6,Parking
+rest,3591.6,42764.7,Truck stop
+rest,3806.3,-71427.7,Parking
+rest,3909.6,-58946.6,Parking
+rest,4014.1,19327.8,Parking
+rest,4029.0,-71421.2,Parking
+rest,4087.6,36007.0,Truck stop
+rest,4159.6,19311.5,Parking
+rest,4248.0,35917.7,Truck stop
+rest,4266.8,-59450.3,Parking
+rest,4387.2,-8475.7,Parking
+rest,4467.5,-8576.7,Parking
+rest,4563.3,-53454.4,Parking
+rest,4599.0,6274.6,Truck stop
+rest,4635.4,-17629.0,Truck stop
+rest,4642.1,6224.4,Truck stop
+rest,4690.1,14975.9,Parking
+rest,4695.3,-17509.9,Truck stop
+rest,4865.2,-51743.0,Parking
+rest,4913.2,-51773.3,Parking
+rest,4976.1,-14902.2,Truck stop
+rest,4990.1,29970.9,Hotel
+rest,5025.4,-14778.3,Truck stop
+rest,5086.1,-57256.7,Parking
+rest,5111.3,30004.8,Parking
+rest,5174.4,-57658.4,Parking
+rest,5273.7,14205.6,Truck stop
+rest,5289.6,-12114.6,Truck stop
+rest,5309.6,-57502.0,Parking
+rest,5335.5,14074.4,Truck stop
+rest,5350.5,1509.3,Truck stop
+rest,5433.6,15939.8,Parking
+rest,5436.2,-19609.4,Parking
+rest,5530.3,15974.7,Parking
+rest,5698.6,-47892.3,Parking
+rest,6126.7,-3795.5,Parking
+rest,6146.6,9121.6,Truck stop
+rest,6176.5,9257.2,Truck stop
+rest,6187.0,-22295.8,Parking
+rest,6203.2,-20218.8,Parking
+rest,6262.5,-57930.9,Parking
+rest,6289.6,-75358.6,Parking
+rest,6326.8,-22097.6,Parking
+rest,6335.7,49581.0,Truck stop
+rest,6339.7,46581.2,Parking
+rest,6396.3,-22155.3,Parking
+rest,6472.0,51025.5,Truck stop
+rest,6473.2,-54494.7,Parking
+rest,6524.8,50897.0,Truck stop
+rest,6534.0,-75284.6,Parking
+rest,6537.6,3172.4,Truck stop
+rest,6612.9,-54764.7,Parking
+rest,6639.0,46073.1,Hotel
+rest,6722.6,18899.4,Parking
+rest,6738.7,-50052.9,Parking
+rest,6847.6,49766.0,Hotel
+rest,6903.7,15517.7,Parking
+rest,6978.6,-8827.5,Truck stop
+rest,6985.8,-3661.9,Parking
+rest,7012.2,-50079.7,Parking
+rest,7059.1,-8712.8,Truck stop
+rest,7071.2,-3974.7,Parking
+rest,7073.5,18619.4,Parking
+rest,7104.7,45088.8,Parking
+rest,7134.5,6044.0,Parking
+rest,7177.8,-43582.0,Parking
+rest,7279.9,-731.9,Truck stop
+rest,7294.6,-592.5,Truck stop
+rest,7323.7,-18700.0,Parking
+rest,7376.7,16107.3,Parking
+rest,7423.4,-40383.2,Parking
+rest,7469.3,45279.7,Truck stop
+rest,7485.0,16040.2,Parking
+rest,7609.8,21612.7,Parking
+rest,7640.8,5592.6,Truck stop
+rest,7673.9,-26753.5,Parking
+rest,7731.7,5748.6,Truck stop
+rest,7742.8,-12391.1,Parking
+rest,7779.0,19163.1,Parking
+rest,7841.6,39087.5,Truck stop
+rest,7862.2,27814.2,Truck stop
+rest,7879.6,27683.8,Truck stop
+rest,7907.4,-7082.5,Truck stop
+rest,7929.7,11645.2,Truck stop
+rest,7940.2,-12479.3,Parking
+rest,8018.8,39039.7,Truck stop
+rest,8036.4,-7027.8,Truck stop
+rest,8166.9,-37772.0,Parking
+rest,8288.2,-37706.5,Parking
+rest,8307.6,-28068.8,Parking
+rest,8319.6,-39904.6,Parking
+rest,8548.1,-39501.2,Parking
+rest,8609.7,48665.9,Truck stop
+rest,8747.5,48775.9,Truck stop
+rest,8755.9,45631.4,Parking
+rest,8850.0,-43685.5,Parking
+rest,8953.6,39626.0,Truck stop
+rest,8997.4,45628.9,Parking
+rest,9215.4,-9353.1,Parking
+rest,9284.6,-35017.4,Parking
+rest,9354.2,45463.8,Parking
+rest,9358.2,-30044.8,Parking
+rest,9421.6,-30172.1,Parking
+rest,9476.8,71304.7,Truck stop
+rest,9494.4,-34983.1,Parking
+rest,9499.7,71565.6,Hotel
+rest,9531.4,71380.7,Parking
+rest,9540.5,-29343.1,Parking
+rest,9694.9,14618.8,Parking
+rest,9705.9,-38730.3,Parking
+rest,9726.9,-38633.1,Parking
+rest,9773.8,-38808.4,Parking
+rest,9833.8,9438.3,Truck stop
+rest,9877.5,-47911.0,Parking
+rest,9886.3,15200.4,Parking
+rest,9918.8,15029.4,Parking
+rest,9923.1,-40915.9,Parking
+rest,10013.8,23236.6,Parking
+rest,10018.0,-33779.9,Parking
+rest,10069.5,52110.2,Truck stop
+rest,10200.5,12521.2,Truck stop
+rest,10203.3,12382.3,Truck stop
+rest,10223.3,52009.9,Truck stop
+rest,10297.0,-10776.8,Parking
+rest,10401.0,13250.1,Parking
+rest,10417.2,-28636.9,Parking
+rest,10460.8,-28749.3,Parking
+rest,10481.8,41064.8,Parking
+rest,10508.9,13280.7,Parking
+rest,10542.3,41149.4,Hotel
+rest,10632.2,39664.9,Parking
+rest,10635.7,72350.3,Truck stop
+rest,10741.5,-26002.6,Parking
+rest,10752.8,-25847.1,Parking
+rest,10762.9,72246.9,Truck stop
+rest,10800.7,-26098.5,Parking
+rest,10868.1,29652.2,Parking
+rest,10901.6,27314.9,Parking
+rest,10936.9,39599.7,Parking
+rest,10969.4,-11250.2,Parking
+rest,10975.8,-27779.1,Parking
+rest,10994.4,-27217.6,Parking
+rest,11052.6,-1607.3,Parking
+rest,11106.6,2308.0,Parking
+rest,11131.3,-1641.0,Parking
+rest,11224.6,-27197.4,Parking
+rest,11442.6,-48945.4,Parking
+rest,11495.6,-2478.5,Parking
+rest,11519.9,52272.4,Parking
+rest,11532.5,-48873.2,Parking
+rest,11534.2,22960.0,Parking
+rest,11674.0,-54805.2,Parking
+rest,11703.2,-32262.1,Parking
+rest,11733.1,-6808.7,Parking
+rest,11736.8,44557.2,Truck stop
+rest,11753.8,-6902.8,Parking
+rest,11779.5,-7085.4,Parking
+rest,11830.2,44649.8,Truck stop
+rest,11902.3,-42375.6,Parking
+rest,11942.9,48152.3,Truck stop
+rest,11998.0,24247.5,Parking
+rest,12108.1,-80340.2,Parking
+rest,12165.2,4728.9,Rest area
+rest,12252.9,-365.6,Truck stop
+rest,12270.3,-503.4,Truck stop
+rest,12480.9,-145.0,Parking
+rest,12530.8,55698.4,Truck stop
+rest,12548.3,52630.5,Truck stop
+rest,12556.8,47140.0,Parking
+rest,12577.3,-80803.1,Parking
+rest,12585.0,22510.7,Parking
+rest,12613.4,-82644.1,Parking
+rest,12622.6,52853.5,Hotel
+rest,12728.2,24194.1,Parking
+rest,12814.5,47016.3,Hotel
+rest,13118.6,-100643.5,Parking
+rest,13158.7,-27139.9,Parking
+rest,13176.0,56872.9,Parking
+rest,13196.6,-45062.8,Parking
+rest,13323.8,-99716.6,Parking
+rest,13395.2,15928.7,Parking
+rest,13436.7,15803.3,Parking
+rest,13574.9,26964.4,Parking
+rest,13649.3,2308.3,Rest area
+rest,13675.1,-100768.8,Parking
+rest,13675.4,26899.5,Parking
+rest,13732.3,28507.1,Parking
+rest,13753.8,-49216.9,Parking
+rest,13764.5,-14306.2,Parking
+rest,13839.0,13756.5,Parking
+rest,13844.2,-37479.6,Parking
+rest,13903.1,56165.2,Truck stop
+rest,13941.7,28493.8,Parking
+rest,13967.3,55779.5,Hotel
+rest,13985.7,-8773.3,Truck stop
+rest,13993.8,-14313.7,Truck stop
+rest,14068.4,-39508.0,Parking
+rest,14111.5,-8714.3,Truck stop
+rest,14319.7,29622.0,Parking
+rest,14346.4,29768.6,Parking
+rest,14365.5,23115.3,Parking
+rest,14390.0,-39511.8,Parking
+rest,14416.8,-93697.7,Parking
+rest,14509.1,18755.1,Parking
+rest,14511.4,-29910.4,Parking
+rest,14522.7,74719.8,Truck stop
+rest,14590.9,-87698.0,Parking
+rest,14665.7,3667.0,Hotel
+rest,14675.7,74632.2,Truck stop
+rest,14693.9,26696.8,Parking
+rest,14722.0,-2672.7,Truck stop
+rest,14775.0,-94226.6,Parking
+rest,14786.8,-2549.9,Truck stop
+rest,14817.2,14707.9,Parking
+rest,14824.4,3873.4,Parking
+rest,14901.8,48995.5,Truck stop
+rest,14908.7,-14852.0,Hotel
+rest,14912.5,13655.7,Parking
+rest,14938.8,-94303.9,Parking
+rest,15030.3,-71259.8,Parking
+rest,15034.6,-55038.8,Parking
+rest,15052.7,-8840.1,Parking
+rest,15053.9,48906.2,Truck stop
+rest,15106.5,2803.7,Truck stop
+rest,15177.3,26139.3,Parking
+rest,15199.9,-15032.9,Parking
+rest,15210.1,-93523.4,Parking
+rest,15363.7,26051.4,Parking
+rest,15409.1,-34830.1,Parking
+rest,15485.9,29149.7,Parking
+rest,15487.1,-69823.4,Parking
+rest,15544.8,6362.0,Truck stop
+rest,15570.6,-42163.1,Parking
+rest,15610.9,-93667.9,Parking
+rest,15629.7,-93735.0,Parking
+rest,15693.2,-42170.6,Parking
+rest,15725.2,-8733.0,Parking
+rest,15735.5,-35020.0,Parking
+rest,15807.5,-98004.7,Parking
+rest,15812.6,1565.4,Parking
+rest,15835.7,1592.9,Parking
+rest,15841.8,1662.2,Parking
+rest,15868.9,19001.2,Parking
+rest,15896.6,18384.6,Parking
+rest,15896.6,-34991.5,Parking
+rest,15945.6,29676.3,Parking
+rest,15952.3,1693.7,Parking
+rest,15980.5,30190.7,Parking
+rest,15995.0,25937.1,Parking
+rest,16193.7,-106634.2,Parking
+rest,16207.0,75049.9,Truck stop
+rest,16233.6,71285.4,Truck stop
+rest,16252.8,-46526.5,Parking
+rest,16284.0,71163.9,Truck stop
+rest,16289.1,27725.2,Parking
+rest,16372.2,-33097.0,Parking
+rest,16432.9,-32753.7,Parking
+rest,16489.0,5649.8,Truck stop
+rest,16493.5,-47299.9,Parking
+rest,16542.7,75792.3,Hotel
+rest,16592.1,-2502.5,Parking
+rest,16610.1,-15587.7,Truck stop
+rest,16611.6,-47288.9,Parking
+rest,16712.7,57362.1,Truck stop
+rest,16733.7,57552.0,Truck stop
+rest,16748.0,-71794.1,Parking
+rest,16778.4,21434.8,Parking
+rest,16780.4,57373.1,Truck stop
+rest,16842.3,-64915.9,Parking
+rest,16880.4,31899.7,Parking
+rest,16884.0,32455.9,Parking
+rest,16964.4,-48489.5,Parking
+rest,17015.2,36614.4,Parking
+rest,17152.1,3522.6,Truck stop
+rest,17181.1,-34400.3,Parking
+rest,17248.9,-30969.7,Parking
+rest,17250.9,-53934.3,Parking
+rest,17273.4,-89207.5,Parking
+rest,17314.2,-30896.8,Parking
+rest,17383.5,-48526.6,Parking
+rest,17388.7,-91220.0,Parking
+rest,17417.3,3744.5,Truck stop
+rest,17567.6,-29648.8,Parking
+rest,17588.9,-103253.6,Parking
+rest,17614.9,-55665.9,Parking
+rest,17624.1,37221.6,Parking
+rest,17658.3,21430.1,Parking
+rest,17683.6,-56680.9,Parking
+rest,17695.2,21593.7,Parking
+rest,17790.5,-33909.4,Parking
+rest,17804.9,-93530.6,Parking
+rest,17806.7,-17508.5,Parking
+rest,17810.6,31739.9,Parking
+rest,17849.9,26853.7,Parking
+rest,17884.6,71318.3,Hotel
+rest,18014.5,-98223.7,Parking
+rest,18036.4,-389.0,Parking
+rest,18043.4,71422.3,Truck stop
+rest,18297.0,-10104.5,Parking
+rest,18301.1,-54399.3,Parking
+rest,18333.1,-43428.8,Parking
+rest,18460.5,-43537.5,Parking
+rest,18505.1,-49112.9,Parking
+rest,18534.5,-100822.2,Parking
+rest,18557.1,-49010.9,Parking
+rest,18564.4,-31650.9,Parking
+rest,18584.2,26698.9,Parking
+rest,18594.5,-67197.8,Parking
+rest,18638.4,70794.4,Parking
+rest,18664.5,34151.1,Parking
+rest,18687.3,26771.6,Parking
+rest,18689.2,26539.1,Parking
+rest,18738.8,34272.4,Parking
+rest,18895.5,28964.7,Parking
+rest,18954.9,-8845.3,Truck stop
+rest,19061.8,59040.7,Truck stop
+rest,19062.3,23169.1,Parking
+rest,19071.8,36313.0,Parking
+rest,19095.3,26908.9,Parking
+rest,19173.7,36428.8,Parking
+rest,19228.9,59096.9,Truck stop
+rest,19230.4,22469.6,Parking
+rest,19248.1,-100341.6,Parking
+rest,19258.1,30506.6,Parking
+rest,19265.4,70775.8,Parking
+rest,19276.5,31915.8,Parking
+rest,19345.7,22383.3,Parking
+rest,19357.7,54296.9,Truck stop
+rest,19377.3,7636.8,Rest area
+rest,19381.0,54122.2,Truck stop
+rest,19388.4,70964.3,Hotel
+rest,19436.1,32983.9,Parking
+rest,19460.2,-108899.3,Parking
+rest,19493.1,37590.9,Parking
+rest,19551.1,37715.3,Parking
+rest,19563.7,-89947.8,Parking
+rest,19740.9,1498.8,Truck stop
+rest,19780.2,32599.4,Parking
+rest,19794.5,32436.6,Parking
+rest,19832.0,-89882.6,Parking
+rest,19841.4,-103363.2,Parking
+rest,19859.2,-2986.8,Truck stop
+rest,19921.7,70805.7,Truck stop
+rest,19940.4,35000.7,Parking
+rest,20022.0,70135.7,Truck stop
+rest,20140.2,15137.0,Parking
+rest,20189.6,-33854.4,Parking
+rest,20193.5,15009.8,Parking
+rest,20215.7,35817.6,Parking
+rest,20219.2,-33733.4,Parking
+rest,20228.4,27768.0,Parking
+rest,20248.6,20672.0,Parking
+rest,20262.1,-19345.2,Parking
+rest,20293.6,-55648.4,Parking
+rest,20334.1,-55766.8,Parking
+rest,20336.4,27737.4,Parking
+rest,20391.9,-78582.4,Parking
+rest,20527.1,27704.2,Hotel
+rest,20597.9,1899.2,Parking
+rest,20601.8,38549.8,Parking
+rest,20692.9,-19596.2,Truck stop
+rest,20698.7,38471.7,Parking
+rest,20709.5,25293.4,Parking
+rest,20807.6,24954.0,Parking
+rest,20821.5,33174.2,Parking
+rest,20863.2,-19517.8,Parking
+rest,20912.8,-19531.7,Parking
+rest,20988.7,-19823.5,Parking
+rest,20991.3,-1952.1,Rest area
+rest,21006.1,17800.7,Parking
+rest,21012.9,-8726.7,Parking
+rest,21023.8,-38148.0,Parking
+rest,21066.2,-50394.2,Parking
+rest,21080.9,-41325.1,Parking
+rest,21143.4,17041.8,Parking
+rest,21157.5,-99948.6,Parking
+rest,21163.8,-50432.6,Parking
+rest,21242.5,33012.0,Parking
+rest,21321.1,-48707.5,Parking
+rest,21363.0,-45178.7,Parking
+rest,21375.4,-48821.4,Parking
+rest,21394.2,19863.3,Parking
+rest,21405.7,-45438.6,Parking
+rest,21455.9,17067.4,Parking
+rest,21471.3,39808.2,Parking
+rest,21476.3,32616.7,Parking
+rest,21484.7,57406.7,Truck stop
+rest,21505.2,19791.4,Parking
+rest,21517.1,16943.8,Parking
+rest,21527.9,53777.6,Truck stop
+rest,21577.2,57313.2,Truck stop
+rest,21672.5,53700.3,Truck stop
+rest,21697.9,-67269.4,Parking
+rest,21721.7,-55802.8,Parking
+rest,21755.6,41196.4,Parking
+rest,21793.8,-61067.5,Parking
+rest,21797.8,34127.8,Parking
+rest,21827.0,5011.1,Truck stop
+rest,21868.8,-55872.2,Parking
+rest,21983.0,8884.5,Hotel
+rest,22021.8,67548.5,Truck stop
+rest,22035.5,1288.5,Parking
+rest,22091.4,-57393.3,Parking
+rest,22102.5,-57584.0,Parking
+rest,22164.8,67651.7,Truck stop
+rest,22171.9,-103685.2,Parking
+rest,22216.5,11355.6,Truck stop
+rest,22311.1,34289.9,Parking
+rest,22316.2,8926.8,Parking
+rest,22472.1,-46239.7,Parking
+rest,22502.4,26017.2,Parking
+rest,22579.1,-104512.1,Parking
+rest,22582.7,-83580.1,Parking
+rest,22587.5,25900.4,Parking
+rest,22652.8,13609.8,Parking
+rest,22661.1,-63343.0,Parking
+rest,22682.7,20775.8,Parking
+rest,22752.9,214.9,Truck stop
+rest,22831.9,23021.6,Parking
+rest,22837.6,-65028.3,Parking
+rest,22837.8,-66586.1,Parking
+rest,22842.2,-56766.0,Parking
+rest,22875.6,-65018.9,Parking
+rest,22908.2,23113.9,Parking
+rest,23005.3,-105343.4,Parking
+rest,23035.3,-9280.1,Parking
+rest,23049.9,23708.6,Parking
+rest,23081.1,39484.8,Parking
+rest,23103.7,-11572.9,Truck stop
+rest,23120.5,-9297.7,Hotel
+rest,23160.6,23843.4,Parking
+rest,23177.6,-8083.2,Parking
+rest,23185.4,20794.5,Parking
+rest,23232.3,10595.1,Truck stop
+rest,23255.4,23795.8,Parking
+rest,23349.5,10490.2,Truck stop
+rest,23378.7,59191.6,Truck stop
+rest,23430.8,-3937.4,Truck stop
+rest,23475.6,17594.1,Parking
+rest,23476.2,-1895.0,Parking
+rest,23617.2,23479.9,Parking
+rest,23674.8,67114.1,Truck stop
+rest,23718.9,5864.1,Truck stop
+rest,23720.2,-1567.1,Hotel
+rest,23722.1,16057.9,Parking
+rest,23726.1,67190.0,Hotel
+rest,23732.6,55009.2,Hotel
+rest,23744.5,23605.3,Parking
+rest,23753.1,11507.8,Parking
+rest,23881.2,-51654.9,Parking
+rest,23882.4,67284.0,Parking
+rest,23901.7,-56525.0,Parking
+rest,23906.5,-86467.8,Parking
+rest,23965.8,-51735.5,Parking
+rest,24018.2,29009.2,Parking
+rest,24042.1,29179.8,Parking
+rest,24086.8,-494.3,Parking
+rest,24111.2,-55643.2,Parking
+rest,24116.3,20627.0,Truck stop
+rest,24145.0,-68291.8,Parking
+rest,24161.4,35022.5,Parking
+rest,24166.3,54977.1,Parking
+rest,24178.1,7615.5,Truck stop
+rest,24218.3,-69802.0,Parking
+rest,24257.3,16337.9,Parking
+rest,24342.3,54338.1,Parking
+rest,24458.0,54392.8,Truck stop
+rest,24519.6,56247.8,Truck stop
+rest,24521.9,-47999.2,Parking
+rest,24523.1,-48125.0,Parking
+rest,24562.4,-107335.0,Parking
+rest,24617.6,40868.3,Parking
+rest,24690.3,56292.2,Truck stop
+rest,24780.7,14825.5,Parking
+rest,24784.7,18306.9,Truck stop
+rest,24871.4,-111300.5,Parking
+rest,24914.7,-70086.8,Parking
+rest,24923.7,-110398.6,Parking
+rest,24933.7,-46286.3,Parking
+rest,24945.5,-70201.8,Parking
+rest,24951.5,32504.4,Parking
+rest,24967.0,-46202.9,Parking
+rest,25004.4,11666.4,Truck stop
+rest,25020.0,-46533.2,Parking
+rest,25050.0,14725.6,Hotel
+rest,25060.1,-101858.1,Parking
+rest,25134.9,57058.4,Hotel
+rest,25224.8,30520.0,Parking
+rest,25275.3,-13850.0,Truck stop
+rest,25277.2,17346.4,Parking
+rest,25284.3,11513.9,Parking
+rest,25295.5,31287.1,Parking
+rest,25402.7,34327.5,Parking
+rest,25519.9,121.7,Truck stop
+rest,25627.5,32619.5,Parking
+rest,25633.2,34303.3,Parking
+rest,25729.6,24339.4,Truck stop
+rest,25750.8,-10473.9,Truck stop
+rest,25800.6,35354.4,Parking
+rest,25861.2,-71594.4,Parking
+rest,25931.7,57944.3,Truck stop
+rest,25973.3,33419.8,Parking
+rest,25981.1,32980.8,Parking
+rest,26010.4,-8494.7,Truck stop
+rest,26065.7,-71329.5,Parking
+rest,26081.3,57911.4,Parking
+rest,26173.3,34402.1,Parking
+rest,26205.6,36930.6,Parking
+rest,26222.4,35122.1,Parking
+rest,26254.6,34545.9,Parking
+rest,26348.8,-83536.8,Parking
+rest,26425.4,-21761.3,Truck stop
+rest,26602.7,-12796.8,Parking
+rest,26621.5,33715.1,Parking
+rest,26679.5,33531.4,Parking
+rest,26784.5,-3190.5,Truck stop
+rest,26836.9,43476.3,Parking
+rest,26850.9,-109145.1,Parking
+rest,26947.1,41802.4,Parking
+rest,27034.1,42498.3,Parking
+rest,27230.2,-14715.7,Parking
+rest,27271.9,-89580.5,Parking
+rest,27309.4,20487.6,Truck stop
+rest,27316.0,11030.2,Truck stop
+rest,27386.2,41777.8,Parking
+rest,27463.6,22220.6,Truck stop
+rest,27650.9,-88464.1,Parking
+rest,27674.2,-18630.9,Parking
+rest,27701.7,36576.7,Parking
+rest,27856.9,-98290.5,Parking
+rest,27977.1,38739.9,Parking
+rest,27984.7,30414.0,Parking
+rest,28001.4,36638.5,Parking
+rest,28002.8,40993.6,Parking
+rest,28041.0,-50807.8,Parking
+rest,28048.7,6869.9,Truck stop
+rest,28058.0,-112050.4,Parking
+rest,28063.7,-81882.3,Parking
+rest,28065.2,5132.8,Parking
+rest,28095.6,-17329.4,Truck stop
+rest,28136.8,-22057.2,Parking
+rest,28151.9,30468.0,Parking
+rest,28165.1,5313.5,Hotel
+rest,28176.2,-107997.4,Parking
+rest,28295.9,-107250.3,Parking
+rest,28314.4,31717.2,Parking
+rest,28322.8,25981.8,Truck stop
+rest,28352.1,-20384.1,Parking
+rest,28416.4,-20775.5,Hotel
+rest,28417.0,41520.4,Parking
+rest,28432.5,-73426.9,Parking
+rest,28523.1,-73658.5,Parking
+rest,28548.5,-8114.8,Rest area
+rest,28583.6,13187.3,Truck stop
+rest,28636.0,-92877.6,Parking
+rest,28647.1,42402.8,Parking
+rest,28785.5,35366.8,Parking
+rest,28791.1,5912.6,Truck stop
+rest,28845.2,-20577.8,Parking
+rest,28853.5,35446.4,Parking
+rest,28871.4,4012.8,Parking
+rest,28884.8,-106207.6,Parking
+rest,28895.9,2274.4,Parking
+rest,28912.3,40605.0,Parking
+rest,28921.3,40456.0,Parking
+rest,29023.3,7573.3,Parking
+rest,29073.9,17220.4,Truck stop
+rest,29077.9,44107.9,Parking
+rest,29110.9,26559.6,Hotel
+rest,29132.9,3695.3,Truck stop
+rest,29209.5,34038.0,Parking
+rest,29276.2,26247.8,Parking
+rest,29301.9,-105405.8,Parking
+rest,29380.7,-14460.3,Parking
+rest,29420.1,34324.4,Parking
+rest,29453.6,39114.1,Parking
+rest,29468.1,7712.6,Parking
+rest,29563.7,39200.0,Parking
+rest,29674.5,7629.2,Parking
+rest,29702.8,-96084.2,Parking
+rest,29762.5,31587.4,Parking
+rest,29793.7,5476.1,Parking
+rest,29876.1,38782.6,Parking
+rest,29891.1,33222.5,Parking
+rest,29987.6,-80329.7,Parking
+rest,30058.1,37756.6,Parking
+rest,30099.0,37642.5,Parking
+rest,30122.0,27699.8,Parking
+rest,30151.2,27810.9,Parking
+rest,30176.7,38361.0,Parking
+rest,30226.5,33740.2,Parking
+rest,30254.1,-11134.9,Parking
+rest,30270.2,-74968.4,Parking
+rest,30283.5,44458.2,Parking
+rest,30334.8,-73510.4,Parking
+rest,30357.2,30908.5,Parking
+rest,30416.4,-77197.1,Parking
+rest,30473.8,-77948.8,Parking
+rest,30535.4,-113085.3,Parking
+rest,30536.6,-97117.5,Parking
+rest,30572.2,8686.2,Truck stop
+rest,30637.0,-10379.5,Truck stop
+rest,30642.3,-9241.4,Parking
+rest,30715.5,-104117.7,Parking
+rest,30770.0,-7454.5,Parking
+rest,30808.4,38256.5,Parking
+rest,30823.5,2310.9,Hotel
+rest,30829.1,2206.8,Parking
+rest,30837.8,29524.2,Parking
+rest,30855.6,34387.7,Parking
+rest,30954.7,29739.4,Parking
+rest,31022.0,26111.1,Truck stop
+rest,31067.8,19859.0,Truck stop
+rest,31098.1,44112.8,Parking
+rest,31203.3,-101318.9,Parking
+rest,31263.3,28761.1,Parking
+rest,31323.7,409.0,Truck stop
+rest,31391.5,-82206.4,Parking
+rest,31407.0,-6028.1,Hotel
+rest,31428.2,43834.2,Parking
+rest,31549.9,-16924.4,Truck stop
+rest,31559.7,-82072.2,Parking
+rest,31779.7,12336.5,Truck stop
+rest,31793.5,3011.9,Parking
+rest,32000.4,-20443.4,Parking
+rest,32058.2,15336.0,Truck stop
+rest,32088.9,30822.3,Parking
+rest,32128.3,-103090.3,Parking
+rest,32160.0,-20361.6,Parking
+rest,32162.3,-102538.6,Parking
+rest,32208.2,-17044.6,Parking
+rest,32246.4,-6030.9,Parking
+rest,32321.1,1390.5,Parking
+rest,32374.0,-90992.6,Parking
+rest,32418.3,-18450.2,Truck stop
+rest,32423.9,-21115.2,Parking
+rest,32425.9,-2829.3,Rest area
+rest,32427.3,10605.0,Hotel
+rest,32436.8,-113764.5,Parking
+rest,32442.6,17677.7,Parking
+rest,32485.7,-90835.5,Parking
+rest,32541.5,17513.8,Hotel
+rest,32581.9,10474.3,Parking
+rest,32629.7,-21212.0,Parking
+rest,32737.9,-12571.0,Truck stop
+rest,32857.2,3010.1,Truck stop
+rest,32865.0,33924.6,Parking
+rest,32866.4,29350.2,Parking
+rest,32902.7,43164.4,Parking
+rest,32981.6,-21660.0,Truck stop
+rest,33042.2,38666.6,Parking
+rest,33198.5,4874.2,Truck stop
+rest,33217.1,-21835.0,Hotel
+rest,33235.9,29410.8,Parking
+rest,33258.3,-90072.8,Parking
+rest,33309.0,30922.5,Parking
+rest,33312.3,-22753.2,Parking
+rest,33336.0,-22960.0,Truck stop
+rest,33372.2,47182.6,Parking
+rest,33388.0,-7645.3,Parking
+rest,33392.1,17942.5,Truck stop
+rest,33446.2,-66167.8,Parking
+rest,33465.7,-71439.8,Parking
+rest,33466.8,38327.3,Parking
+rest,33488.5,44769.0,Parking
+rest,33490.8,25267.2,Truck stop
+rest,33514.9,6812.5,Parking
+rest,33532.2,-22621.6,Parking
+rest,33572.0,3528.0,Parking
+rest,33625.2,-22592.8,Parking
+rest,33643.1,-101844.9,Parking
+rest,33658.8,46318.3,Parking
+rest,33670.4,-71563.1,Parking
+rest,33674.7,6694.5,Truck stop
+rest,33695.3,32979.8,Parking
+rest,33718.8,-112950.2,Parking
+rest,33723.7,30909.1,Parking
+rest,33799.9,41825.8,Parking
+rest,33831.2,30765.2,Parking
+rest,33887.5,30902.6,Parking
+rest,34014.6,33684.5,Parking
+rest,34088.7,43468.7,Parking
+rest,34090.5,46191.4,Parking
+rest,34100.4,-85131.6,Parking
+rest,34112.6,-22056.0,Parking
+rest,34167.1,17072.8,Rest area
+rest,34187.0,34005.8,Parking
+rest,34216.4,-94552.1,Parking
+rest,34226.6,-86977.4,Parking
+rest,34308.7,20725.3,Truck stop
+rest,34336.4,33929.8,Parking
+rest,34341.1,-60938.8,Parking
+rest,34372.4,-115568.5,Parking
+rest,34470.2,-6026.9,Truck stop
+rest,34493.8,-12555.4,Truck stop
+rest,34505.0,3070.8,Parking
+rest,34509.6,-8554.4,Truck stop
+rest,34537.4,-17694.4,Hotel
+rest,34544.7,-102306.8,Parking
+rest,34634.0,-17784.2,Parking
+rest,34657.2,32734.3,Parking
+rest,34678.5,-70151.4,Parking
+rest,34737.1,-114079.5,Parking
+rest,34738.8,3013.9,Hotel
+rest,34769.6,-61128.1,Hotel
+rest,34777.8,-22296.0,Parking
+rest,34826.8,-22183.2,Truck stop
+rest,34859.1,-14084.7,Parking
+rest,34884.9,-22300.0,Hotel
+rest,34899.3,24868.2,Truck stop
+rest,34903.5,-100190.1,Parking
+rest,34962.8,45974.5,Parking
+rest,34995.0,-99547.9,Parking
+rest,35033.0,-60112.6,Truck stop
+rest,35041.0,3362.0,Truck stop
+rest,35064.4,-19693.6,Truck stop
+rest,35101.0,27514.0,Parking
+rest,35178.8,-116350.1,Parking
+rest,35195.2,-86585.6,Parking
+rest,35245.0,-20997.9,Truck stop
+rest,35264.4,-96579.4,Parking
+rest,35265.4,-20950.9,Truck stop
+rest,35359.6,23075.5,Rest area
+rest,35374.9,-116732.9,Parking
+rest,35508.1,29844.5,Parking
+rest,35509.5,-33697.2,Truck stop
+rest,35526.9,42787.2,Parking
+rest,35754.5,45631.1,Parking
+rest,35767.5,26916.3,Parking
+rest,35771.9,25584.7,Parking
+rest,35779.5,26736.3,Parking
+rest,35937.4,-73220.2,Parking
+rest,35938.0,29017.5,Parking
+rest,35954.5,-33919.7,Parking
+rest,35961.9,-4363.4,Truck stop
+rest,35969.6,25549.3,Parking
+rest,35970.3,25718.7,Parking
+rest,35992.9,51589.5,Parking
+rest,35999.8,26292.6,Parking
+rest,36026.8,-94970.2,Parking
+rest,36033.9,-18313.2,Truck stop
+rest,36073.2,190.3,Truck stop
+rest,36079.2,-56187.1,Hotel
+rest,36089.5,28897.8,Parking
+rest,36090.9,42596.3,Parking
+rest,36100.6,26181.3,Parking
+rest,36139.2,-9235.9,Parking
+rest,36196.9,31375.0,Parking
+rest,36197.8,-90331.6,Parking
+rest,36199.4,-28747.3,Truck stop
+rest,36206.7,-115093.5,Parking
+rest,36212.0,-32299.9,Truck stop
+rest,36212.1,45542.0,Parking
+rest,36236.1,28622.2,Parking
+rest,36240.0,-32639.6,Hotel
+rest,36246.1,-116666.5,Parking
+rest,36288.0,-28849.6,Hotel
+rest,36310.8,42078.2,Parking
+rest,36314.6,45625.6,Parking
+rest,36341.4,-33983.0,Parking
+rest,36424.7,40650.1,Parking
+rest,36428.7,-56002.6,Parking
+rest,36440.0,28754.6,Parking
+rest,36446.0,28519.1,Parking
+rest,36449.2,-36626.6,Truck stop
+rest,36461.4,-75068.2,Parking
+rest,36470.4,30367.7,Parking
+rest,36472.4,-61714.9,Truck stop
+rest,36474.3,41777.8,Parking
+rest,36514.3,-90899.9,Parking
+rest,36525.9,39092.0,Parking
+rest,36560.2,41870.2,Parking
+rest,36576.4,-60325.3,Truck stop
+rest,36610.1,24517.3,Parking
+rest,36612.6,57432.2,Parking
+rest,36616.8,-55965.2,Truck stop
+rest,36618.2,-38359.1,Truck stop
+rest,36632.7,56092.5,Parking
+rest,36653.3,-74173.2,Parking
+rest,36666.4,56306.0,Parking
+rest,36668.6,51455.3,Parking
+rest,36679.9,29795.2,Parking
+rest,36681.6,41779.1,Parking
+rest,36688.3,-38789.3,Parking
+rest,36713.7,53432.4,Parking
+rest,36724.1,-28647.9,Parking
+rest,36777.0,24780.3,Truck stop
+rest,36843.2,49314.6,Parking
+rest,36843.3,24327.4,Hotel
+rest,36944.4,-66397.0,Parking
+rest,36983.7,49325.4,Parking
+rest,36995.5,-9739.9,Hotel
+rest,36996.0,55700.1,Parking
+rest,37007.1,-118602.4,Parking
+rest,37011.3,11964.0,Parking
+rest,37015.5,16382.1,Truck stop
+rest,37022.1,-6764.5,Truck stop
+rest,37133.4,50694.4,Parking
+rest,37174.4,42884.1,Parking
+rest,37186.7,29921.5,Parking
+rest,37198.3,-119539.8,Parking
+rest,37222.3,53355.2,Parking
+rest,37248.3,58978.0,Parking
+rest,37258.1,-121823.7,Parking
+rest,37265.2,48215.7,Parking
+rest,37289.4,29828.9,Parking
+rest,37295.4,57056.9,Parking
+rest,37321.1,-9278.2,Parking
+rest,37365.0,-120310.4,Parking
+rest,37372.9,49850.1,Parking
+rest,37394.7,-111001.8,Parking
+rest,37403.8,-38734.9,Parking
+rest,37425.5,50848.7,Parking
+rest,37474.5,12076.7,Parking
+rest,37482.3,-75000.8,Parking
+rest,37587.6,-39350.8,Parking
+rest,37656.5,-119720.5,Parking
+rest,37775.2,32270.3,Parking
+rest,37789.1,37702.4,Parking
+rest,37817.9,-56368.8,Truck stop
+rest,37821.3,-110376.5,Parking
+rest,37831.1,-24255.1,Parking
+rest,37864.2,32006.6,Parking
+rest,37869.0,32143.8,Parking
+rest,37901.8,-57809.6,Truck stop
+rest,37958.5,57968.4,Parking
+rest,38003.0,30681.5,Parking
+rest,38102.4,32146.9,Parking
+rest,38117.4,31999.3,Parking
+rest,38125.6,30712.2,Parking
+rest,38159.1,-56451.4,Parking
+rest,38179.8,-86388.3,Parking
+rest,38195.4,30742.6,Parking
+rest,38195.7,-22804.3,Truck stop
+rest,38219.0,-87167.7,Parking
+rest,38253.9,34595.3,Parking
+rest,38326.3,41898.6,Parking
+rest,38385.4,-62344.7,Parking
+rest,38513.9,-25328.9,Truck stop
+rest,38545.4,10948.5,Truck stop
+rest,38565.4,-4512.3,Parking
+rest,38617.8,50208.8,Parking
+rest,38618.7,-37958.0,Truck stop
+rest,38657.1,-34572.6,Parking
+rest,38690.1,-78669.0,Parking
+rest,38717.6,42495.6,Parking
+rest,38799.1,31464.6,Parking
+rest,38828.6,42818.5,Parking
+rest,38838.8,53040.2,Parking
+rest,38845.8,43252.7,Parking
+rest,38873.0,-34548.7,Truck stop
+rest,38890.2,-110160.6,Parking
+rest,38909.1,35624.0,Parking
+rest,38971.0,-62746.9,Truck stop
+rest,38981.9,44542.8,Parking
+rest,39060.9,31741.5,Parking
+rest,39082.1,36878.1,Parking
+rest,39169.9,22491.5,Truck stop
+rest,39193.0,43654.0,Parking
+rest,39271.0,30300.5,Parking
+rest,39292.7,43416.3,Parking
+rest,39320.4,-73181.1,Parking
+rest,39323.1,13029.4,Parking
+rest,39363.6,30144.3,Parking
+rest,39396.5,-89538.7,Parking
+rest,39431.7,-7975.9,Parking
+rest,39454.9,33224.2,Parking
+rest,39479.7,33337.0,Parking
+rest,39566.4,12944.0,Truck stop
+rest,39640.6,10070.0,Parking
+rest,39651.1,10476.3,Hotel
+rest,39655.1,-743.5,Truck stop
+rest,39682.5,62836.7,Parking
+rest,39707.5,12427.5,Parking
+rest,39713.9,-55969.3,Truck stop
+rest,39746.9,-55917.1,Truck stop
+rest,39749.5,19888.1,Truck stop
+rest,39763.2,-32158.7,Truck stop
+rest,39767.3,23828.6,Parking
+rest,39797.3,-13109.7,Truck stop
+rest,39813.4,-30920.6,Truck stop
+rest,39857.5,3036.1,Truck stop
+rest,39905.0,46829.2,Parking
+rest,39918.3,23650.1,Parking
+rest,39919.4,-86606.6,Parking
+rest,39919.8,53639.9,Parking
+rest,39957.5,-62149.2,Truck stop
+rest,39966.1,23830.4,Parking
+rest,40044.1,23645.5,Parking
+rest,40046.3,32099.7,Parking
+rest,40075.8,-62188.6,Truck stop
+rest,40079.8,60527.2,Parking
+rest,40087.9,36947.5,Parking
+rest,40193.1,-60073.4,Truck stop
+rest,40194.4,23778.3,Parking
+rest,40209.0,31211.1,Parking
+rest,40230.5,60524.8,Parking
+rest,40299.3,26622.7,Parking
+rest,40323.6,37281.1,Parking
+rest,40337.0,-68431.6,Parking
+rest,40418.4,52411.7,Parking
+rest,40423.3,46381.8,Parking
+rest,40423.8,33048.7,Parking
+rest,40489.5,53440.4,Parking
+rest,40573.1,52480.8,Parking
+rest,40584.7,-9136.5,Parking
+rest,40596.1,17721.2,Truck stop
+rest,40627.1,37134.1,Parking
+rest,40642.4,-18777.2,Parking
+rest,40656.4,70591.6,Parking
+rest,40695.1,-72119.2,Parking
+rest,40735.3,-85423.4,Parking
+rest,40756.8,9123.1,Truck stop
+rest,40789.3,-23166.7,Truck stop
+rest,40790.8,60255.3,Parking
+rest,40793.2,-34774.6,Parking
+rest,40814.9,28959.9,Parking
+rest,40826.5,-23179.6,Truck stop
+rest,40872.2,52198.9,Parking
+rest,40894.8,60282.3,Parking
+rest,40912.5,36276.8,Parking
+rest,40950.9,-71501.8,Parking
+rest,40980.7,-81919.4,Parking
+rest,41028.7,36307.9,Parking
+rest,41063.5,-76270.6,Parking
+rest,41095.4,5976.7,Truck stop
+rest,41229.6,30235.3,Parking
+rest,41232.2,6850.3,Parking
+rest,41312.3,70172.4,Parking
+rest,41388.3,62808.9,Parking
+rest,41443.7,17974.2,Parking
+rest,41481.2,-23555.5,Truck stop
+rest,41496.8,48978.9,Parking
+rest,41514.7,26201.1,Truck stop
+rest,41519.5,-23521.5,Truck stop
+rest,41535.5,36347.7,Parking
+rest,41594.1,-28506.0,Truck stop
+rest,41600.5,33784.4,Parking
+rest,41661.9,-27688.3,Truck stop
+rest,41670.0,-92543.3,Parking
+rest,41710.7,17230.0,Parking
+rest,41713.4,33889.4,Parking
+rest,41743.2,-27837.4,Truck stop
+rest,41757.6,17810.0,Hotel
+rest,41876.7,-4882.1,Truck stop
+rest,41884.1,-97025.5,Parking
+rest,41891.9,70934.7,Parking
+rest,41898.7,29040.9,Parking
+rest,41915.1,29294.9,Parking
+rest,41933.4,-57204.1,Truck stop
+rest,41966.9,24301.0,Truck stop
+rest,41985.0,-14697.5,Parking
+rest,42007.3,71174.5,Parking
+rest,42131.7,62164.9,Parking
+rest,42160.1,-30223.0,Hotel
+rest,42163.2,1830.0,Parking
+rest,42335.2,-83863.7,Parking
+rest,42368.6,43822.3,Parking
+rest,42419.8,64386.6,Parking
+rest,42472.5,19347.7,Parking
+rest,42503.3,36544.3,Parking
+rest,42525.1,32962.9,Parking
+rest,42537.1,27332.1,Parking
+rest,42541.1,64382.9,Parking
+rest,42567.2,19122.5,Parking
+rest,42609.0,62205.6,Parking
+rest,42610.2,46048.0,Parking
+rest,42650.0,-72094.9,Parking
+rest,42723.2,46001.9,Parking
+rest,42726.3,44574.2,Parking
+rest,42815.7,42118.7,Parking
+rest,42941.9,-58687.1,Truck stop
+rest,42944.5,45951.0,Parking
+rest,42949.6,-58759.7,Truck stop
+rest,42961.9,41919.4,Parking
+rest,42986.6,19341.5,Parking
+rest,42992.6,-82018.8,Parking
+rest,43000.6,-4037.6,Parking
+rest,43026.5,46108.1,Parking
+rest,43047.1,-21835.8,Parking
+rest,43050.3,-72735.6,Parking
+rest,43125.0,52833.4,Parking
+rest,43128.6,-76817.5,Parking
+rest,43155.3,-21968.2,Truck stop
+rest,43155.9,-29847.8,Truck stop
+rest,43156.2,45953.7,Parking
+rest,43161.6,-58813.3,Truck stop
+rest,43163.7,-8758.4,Truck stop
+rest,43168.5,-31506.3,Parking
+rest,43174.3,-58885.1,Truck stop
+rest,43210.4,-4120.0,Hotel
+rest,43215.3,-49514.4,Truck stop
+rest,43236.6,47275.8,Parking
+rest,43251.0,-64551.7,Parking
+rest,43253.0,-835.5,Truck stop
+rest,43286.5,-104768.3,Parking
+rest,43346.1,-31432.2,Truck stop
+rest,43419.8,-67748.4,Parking
+rest,43446.2,-60549.5,Truck stop
+rest,43509.9,-56247.0,Truck stop
+rest,43537.5,36750.8,Parking
+rest,43567.0,-73405.1,Parking
+rest,43577.2,37484.1,Parking
+rest,43586.7,-77286.7,Parking
+rest,43610.0,-66097.2,Parking
+rest,43630.3,-33952.6,Truck stop
+rest,43631.5,-74719.0,Parking
+rest,43671.3,-17177.3,Truck stop
+rest,43703.1,-77323.4,Parking
+rest,43724.4,-75182.9,Parking
+rest,43731.3,-64934.8,Parking
+rest,43756.4,38051.0,Parking
+rest,43780.0,-10072.8,Parking
+rest,43908.3,-15067.6,Hotel
+rest,43951.6,48656.5,Parking
+rest,43971.8,66799.8,Parking
+rest,44055.2,36712.5,Parking
+rest,44067.3,41194.2,Parking
+rest,44095.5,-15017.6,Parking
+rest,44117.4,-57773.4,Hotel
+rest,44146.3,29585.9,Parking
+rest,44161.4,-36965.4,Parking
+rest,44177.6,-46016.1,Parking
+rest,44242.8,-23747.9,Hotel
+rest,44243.5,-46428.8,Truck stop
+rest,44386.4,-51279.8,Hotel
+rest,44434.6,47901.9,Parking
+rest,44551.5,-78051.6,Parking
+rest,44554.4,-30541.7,Truck stop
+rest,44591.2,-20627.8,Truck stop
+rest,44620.7,-71207.3,Parking
+rest,44680.8,-70949.9,Parking
+rest,44688.8,-50602.1,Truck stop
+rest,44729.7,-41269.1,Parking
+rest,44827.6,60183.0,Parking
+rest,44898.3,-44881.6,Hotel
+rest,44940.3,-43583.0,Truck stop
+rest,44950.1,-44997.6,Truck stop
+rest,44979.2,-44394.2,Parking
+rest,44989.9,45784.3,Parking
+rest,45008.2,-22960.1,Truck stop
+rest,45023.3,39844.6,Parking
+rest,45033.8,71968.0,Parking
+rest,45048.0,-42141.9,Truck stop
+rest,45099.1,51197.9,Parking
+rest,45099.8,-55515.7,Parking
+rest,45107.4,-40007.2,Parking
+rest,45116.8,45752.5,Parking
+rest,45118.0,-59024.0,Truck stop
+rest,45137.1,45106.4,Parking
+rest,45206.1,-35233.7,Truck stop
+rest,45225.8,-33979.9,Truck stop
+rest,45269.3,43884.6,Parking
+rest,45302.4,-60324.3,Truck stop
+rest,45340.6,25476.6,Truck stop
+rest,45346.5,-59045.2,Truck stop
+rest,45384.4,-39585.6,Parking
+rest,45385.7,52390.2,Parking
+rest,45390.4,36407.8,Parking
+rest,45420.3,44341.6,Parking
+rest,45426.3,-36776.6,Truck stop
+rest,45448.9,44506.1,Parking
+rest,45464.8,36149.2,Parking
+rest,45485.9,-27731.4,Truck stop
+rest,45541.5,39496.5,Parking
+rest,45564.0,-78370.3,Parking
+rest,45615.4,-39469.0,Truck stop
+rest,45643.1,52290.6,Parking
+rest,45672.7,58023.1,Parking
+rest,45684.7,-86374.0,Parking
+rest,45684.9,39335.8,Parking
+rest,45685.5,-29212.4,Truck stop
+rest,45710.6,39649.0,Parking
+rest,45751.8,40213.5,Parking
+rest,45783.9,57736.8,Parking
+rest,45824.3,-60158.6,Parking
+rest,45851.6,30860.1,Truck stop
+rest,45870.7,-29203.6,Hotel
+rest,45882.5,54501.8,Parking
+rest,45932.0,-29664.1,Truck stop
+rest,45970.5,47206.4,Parking
+rest,45998.9,54883.2,Parking
+rest,46005.4,55025.1,Parking
+rest,46036.3,-24850.6,Truck stop
+rest,46117.7,55287.4,Parking
+rest,46121.8,-36901.8,Hotel
+rest,46123.2,-36959.5,Truck stop
+rest,46168.7,-31870.2,Truck stop
+rest,46179.6,69058.0,Parking
+rest,46269.5,-63992.1,Parking
+rest,46313.1,-67383.5,Parking
+rest,46324.6,70757.3,Parking
+rest,46327.1,-21756.8,Truck stop
+rest,46356.5,71205.6,Parking
+rest,46502.9,40418.1,Parking
+rest,46557.4,45571.0,Parking
+rest,46559.4,-25358.7,Parking
+rest,46597.0,-39391.6,Truck stop
+rest,46648.3,49720.0,Parking
+rest,46659.2,-78552.6,Parking
+rest,46669.4,-57377.1,Truck stop
+rest,46718.9,51128.6,Parking
+rest,46748.4,45241.2,Parking
+rest,46777.8,-31037.5,Parking
+rest,46801.7,36425.6,Parking
+rest,46825.1,-79539.8,Parking
+rest,46896.9,62535.4,Parking
+rest,46910.1,39636.3,Parking
+rest,46954.3,-35673.0,Truck stop
+rest,46958.2,-31036.0,Truck stop
+rest,46974.9,-87711.8,Parking
+rest,46986.6,75058.0,Parking
+rest,47034.1,-25138.1,Truck stop
+rest,47038.7,36413.7,Parking
+rest,47209.7,-25178.6,Truck stop
+rest,47242.4,-28714.1,Parking
+rest,47242.7,-44594.5,Truck stop
+rest,47274.2,-41564.3,Parking
+rest,47293.5,-77139.6,Parking
+rest,47336.1,-67977.1,Parking
+rest,47350.6,51181.8,Parking
+rest,47357.9,68849.3,Parking
+rest,47359.6,-61099.9,Truck stop
+rest,47369.0,36117.5,Parking
+rest,47597.5,50863.9,Parking
+rest,47611.3,49975.4,Parking
+rest,47634.5,59176.0,Parking
+rest,47657.1,40002.6,Parking
+rest,47664.3,68752.2,Parking
+rest,47899.3,-40741.8,Hotel
+rest,47923.3,19119.3,Parking
+rest,47933.8,-27572.0,Truck stop
+rest,47987.0,-40974.9,Truck stop
+rest,48122.6,-68910.7,Parking
+rest,48225.0,-68990.4,Parking
+rest,48298.7,-63615.1,Parking
+rest,48334.8,25020.6,Parking
+rest,48415.3,-41419.5,Truck stop
+rest,48420.1,-79279.7,Parking
+rest,48443.4,35795.7,Truck stop
+rest,48478.0,40472.3,Parking
+rest,48500.9,-40240.2,Truck stop
+rest,48507.5,-60669.2,Parking
+rest,48657.1,-47395.6,Truck stop
+rest,48666.0,41390.4,Parking
+rest,48791.3,-73960.3,Parking
+rest,48799.9,45288.0,Parking
+rest,48817.0,-26288.1,Truck stop
+rest,48829.3,-70793.6,Parking
+rest,48849.9,-43598.7,Truck stop
+rest,48945.3,-64909.7,Parking
+rest,48987.0,55853.8,Parking
+rest,49002.3,55720.3,Parking
+rest,49045.8,-64870.6,Parking
+rest,49053.5,-90056.7,Parking
+rest,49137.3,-89928.3,Parking
+rest,49208.9,41992.4,Parking
+rest,49220.1,-74110.8,Parking
+rest,49339.1,64139.2,Parking
+rest,49350.6,51182.4,Parking
+rest,49390.2,64038.5,Parking
+rest,49401.6,-72975.1,Parking
+rest,49424.1,60930.4,Parking
+rest,49431.8,63288.0,Parking
+rest,49451.4,31962.8,Parking
+rest,49465.9,61627.9,Parking
+rest,49485.4,-45900.0,Truck stop
+rest,49485.8,-42158.3,Truck stop
+rest,49518.6,-52119.6,Parking
+rest,49586.9,51063.0,Parking
+rest,49596.9,54084.7,Parking
+rest,49617.7,-52171.3,Hotel
+rest,49622.6,-42507.4,Parking
+rest,49623.2,31941.2,Parking
+rest,49631.1,-83530.6,Parking
+rest,49669.7,-52177.8,Truck stop
+rest,49721.1,-70847.9,Parking
+rest,49746.1,30376.3,Parking
+rest,49779.7,51629.3,Parking
+rest,49793.8,65258.0,Parking
+rest,49818.6,52051.8,Parking
+rest,49845.5,-77814.7,Parking
+rest,49852.9,-68192.3,Parking
+rest,49860.5,65165.7,Parking
+rest,49873.0,-60571.0,Hotel
+rest,49914.0,67550.1,Parking
+rest,49920.1,51495.7,Parking
+rest,49952.3,-40038.1,Truck stop
+rest,49961.7,-46160.9,Truck stop
+rest,49994.1,73231.3,Parking
+rest,50039.2,58813.2,Parking
+rest,50061.3,51670.2,Parking
+rest,50072.5,65368.1,Parking
+rest,50089.5,-26952.7,Truck stop
+rest,50093.7,29298.0,Truck stop
+rest,50114.5,-59401.6,Truck stop
+rest,50138.3,26413.8,Parking
+rest,50139.0,76883.2,Parking
+rest,50141.5,-24866.5,Truck stop
+rest,50151.8,-43486.4,Parking
+rest,50163.2,-46436.1,Parking
+rest,50197.4,-58453.5,Parking
+rest,50197.6,58643.7,Parking
+rest,50207.5,29056.0,Parking
+rest,50241.3,-24914.9,Truck stop
+rest,50244.9,62454.7,Parking
+rest,50247.6,-57841.7,Truck stop
+rest,50313.5,68333.6,Parking
+rest,50330.5,23390.5,Parking
+rest,50384.1,-29305.4,Parking
+rest,50418.6,62761.0,Parking
+rest,50473.9,76754.7,Parking
+rest,50507.7,70194.5,Parking
+rest,50545.3,-29002.1,Truck stop
+rest,50546.9,61387.5,Parking
+rest,50605.2,62225.1,Parking
+rest,50613.6,61764.6,Parking
+rest,50627.5,70401.0,Parking
+rest,50684.0,55692.2,Parking
+rest,50720.3,62481.0,Parking
+rest,50821.5,-46013.2,Truck stop
+rest,50928.1,41703.8,Parking
+rest,50938.6,38150.1,Truck stop
+rest,50956.8,62571.9,Parking
+rest,50991.6,-62192.5,Parking
+rest,51018.9,65504.6,Parking
+rest,51020.1,31857.6,Truck stop
+rest,51035.5,-25854.4,Truck stop
+rest,51057.1,64066.1,Parking
+rest,51135.6,-48957.1,Truck stop
+rest,51173.9,19078.2,Parking
+rest,51180.7,61410.8,Parking
+rest,51184.9,-58823.5,Parking
+rest,51199.5,72376.9,Parking
+rest,51218.7,-58890.7,Parking
+rest,51246.2,-29991.3,Truck stop
+rest,51252.0,-29456.9,Hotel
+rest,51263.4,36301.6,Truck stop
+rest,51310.0,54907.9,Parking
+rest,51319.2,-47231.4,Truck stop
+rest,51333.1,72068.1,Parking
+rest,51343.1,-45771.3,Parking
+rest,51351.0,-39815.1,Truck stop
+rest,51356.3,-52300.8,Parking
+rest,51392.3,-24620.7,Hotel
+rest,51418.7,-45837.8,Hotel
+rest,51451.5,54899.5,Parking
+rest,51522.4,-34584.6,Truck stop
+rest,51584.6,-44572.6,Parking
+rest,51668.7,-44235.3,Truck stop
+rest,51669.8,-32045.8,Hotel
+rest,51785.7,-76014.9,Parking
+rest,51803.0,49525.6,Parking
+rest,51872.9,64281.2,Parking
+rest,51977.2,64195.7,Parking
+rest,52019.9,66733.6,Parking
+rest,52028.8,-41444.4,Parking
+rest,52037.4,53638.0,Parking
+rest,52138.6,18138.2,Truck stop
+rest,52300.5,-59200.1,Parking
+rest,52347.5,32526.9,Parking
+rest,52351.4,70670.5,Parking
+rest,52362.1,-71401.5,Parking
+rest,52738.4,-74597.9,Parking
+rest,52772.6,33323.1,Parking
+rest,52776.8,50837.0,Parking
+rest,52967.0,-63620.0,Parking
+rest,52984.7,51388.4,Parking
+rest,53056.5,32369.1,Parking
+rest,53095.7,51359.9,Parking
+rest,53272.1,-62384.9,Parking
+rest,53282.1,-60866.4,Truck stop
+rest,53390.6,-36144.2,Truck stop
+rest,53396.1,-33211.5,Truck stop
+rest,53440.7,52276.3,Parking
+rest,53568.7,-59083.1,Parking
+rest,53640.2,-32253.5,Parking
+rest,53726.6,-59038.8,Parking
+rest,53734.8,20302.4,Parking
+rest,53742.5,20594.3,Parking
+rest,53745.2,-52630.2,Truck stop
+rest,53845.2,36681.5,Parking
+rest,53903.4,-52349.8,Hotel
+rest,54001.4,-62328.3,Parking
+rest,54084.1,70628.3,Parking
+rest,54105.4,-52269.5,Parking
+rest,54106.8,-49937.5,Truck stop
+rest,54260.8,38648.5,Truck stop
+rest,54287.0,53498.4,Parking
+rest,54295.5,-42613.4,Parking
+rest,54368.6,68198.4,Parking
+rest,54385.7,-42769.4,Parking
+rest,54424.3,42238.6,Truck stop
+rest,54427.7,-73703.7,Parking
+rest,54432.6,-60874.3,Hotel
+rest,54550.9,21388.5,Parking
+rest,54619.1,-60225.7,Truck stop
+rest,54681.6,-60561.3,Parking
+rest,54682.7,-47253.8,Truck stop
+rest,54700.0,-35102.8,Truck stop
+rest,54801.0,-43005.2,Parking
+rest,54881.7,53605.6,Parking
+rest,54900.4,-54130.3,Truck stop
+rest,55096.9,-72943.1,Parking
+rest,55189.9,17643.8,Truck stop
+rest,55303.9,-36353.6,Truck stop
+rest,55305.3,-35394.6,Hotel
+rest,55372.9,21953.1,Parking
+rest,55396.6,69079.0,Parking
+rest,55456.8,-65887.4,Parking
+rest,55502.0,-35509.2,Parking
+rest,55594.4,-52521.2,Truck stop
+rest,55607.2,-37228.2,Truck stop
+rest,55651.4,-66599.8,Parking
+rest,55794.9,-53137.7,Truck stop
+rest,55833.8,-37742.1,Parking
+rest,55867.0,-37643.8,Parking
+rest,55884.2,-44497.4,Truck stop
+rest,55951.7,-38308.4,Parking
+rest,55990.7,44060.6,Parking
+rest,55997.1,68066.0,Parking
+rest,56000.6,-44637.5,Parking
+rest,56008.7,-43623.5,Truck stop
+rest,56051.6,29795.6,Parking
+rest,56070.3,44271.8,Parking
+rest,56075.8,29640.3,Parking
+rest,56099.3,69713.7,Parking
+rest,56150.3,69996.5,Parking
+rest,56204.9,29608.1,Hotel
+rest,56231.2,-38601.4,Parking
+rest,56238.5,28761.7,Parking
+rest,56276.8,67868.3,Parking
+rest,56343.8,31999.5,Parking
+rest,56347.7,28786.8,Parking
+rest,56398.3,51926.4,Parking
+rest,56416.3,-54718.6,Parking
+rest,56472.7,52096.8,Parking
+rest,56581.1,-53680.6,Truck stop
+rest,56585.2,-54647.5,Parking
+rest,56604.1,17764.0,Parking
+rest,56659.0,-36583.8,Parking
+rest,56756.8,-36536.6,Parking
+rest,56813.0,26316.3,Parking
+rest,56930.7,70986.3,Parking
+rest,56959.0,71045.3,Parking
+rest,57019.3,70942.6,Parking
+rest,57143.7,37137.8,Parking
+rest,57191.2,37126.5,Truck stop
+rest,57292.4,-36431.5,Parking
+rest,57341.8,71303.4,Parking
+rest,57360.8,68621.8,Parking
+rest,57380.0,52831.4,Parking
+rest,57386.2,-36476.9,Parking
+rest,57391.5,68526.2,Parking
+rest,57458.4,71079.1,Parking
+rest,57525.9,-44107.1,Truck stop
+rest,57559.7,-44974.4,Hotel
+rest,57599.9,70949.4,Parking
+rest,57612.0,-42226.4,Truck stop
+rest,57641.9,-45235.6,Truck stop
+rest,57702.8,70765.7,Parking
+rest,57898.8,37433.8,Parking
+rest,57999.7,85046.3,Parking
+rest,58038.6,30308.5,Parking
+rest,58069.6,23259.0,Parking
+rest,58199.9,68268.1,Parking
+rest,58206.4,37366.1,Parking
+rest,58518.5,16748.2,Parking
+rest,58614.4,30238.0,Parking
+rest,59056.8,84675.8,Parking
+rest,59571.2,-47334.1,Truck stop
+rest,59595.3,43775.1,Parking
+rest,59753.3,51917.4,Parking
+rest,59885.1,-51931.0,Truck stop
+rest,59972.5,31531.3,Truck stop
+rest,59981.2,-36688.5,Parking
+rest,60066.3,37052.5,Truck stop
+rest,60080.1,48664.0,Parking
+rest,60372.2,50224.9,Parking
+rest,60554.7,35859.0,Parking
+rest,60592.5,-45971.6,Truck stop
+rest,60616.2,-50103.1,Truck stop
+rest,60641.5,-50202.8,Parking
+rest,60830.4,44743.6,Parking
+rest,61297.6,33344.8,Parking
+rest,61330.9,50556.2,Parking
+rest,61386.1,38792.5,Parking
+rest,61460.6,-57189.4,Truck stop
+rest,61493.9,-55175.8,Hotel
+rest,61683.7,-54919.2,Truck stop
+rest,61935.8,-56388.4,Truck stop
+rest,61939.6,42779.1,Parking
+rest,61984.7,45938.8,Parking
+rest,61985.2,31957.2,Hotel
+rest,62018.7,-56414.3,Parking
+rest,62205.7,50833.4,Parking
+rest,62225.2,34377.4,Parking
+rest,62280.9,-51398.0,Truck stop
+rest,62308.3,30868.8,Truck stop
+rest,62354.6,50994.5,Parking
+rest,62368.9,34252.0,Parking
+rest,62436.1,-57993.3,Truck stop
+rest,62454.7,51104.0,Parking
+rest,62489.1,17698.2,Truck stop
+rest,62513.4,15800.2,Truck stop
+rest,62515.8,45842.0,Parking
+rest,62589.8,84802.2,Parking
+rest,62640.3,-57270.5,Truck stop
+rest,62640.6,-57384.9,Truck stop
+rest,62646.3,51214.5,Parking
+rest,62702.6,-48331.9,Truck stop
+rest,62782.0,38397.6,Parking
+rest,63013.0,-54513.9,Parking
+rest,63018.6,-54346.0,Parking
+rest,63337.8,45850.3,Parking
+rest,63384.4,41616.2,Parking
+rest,63540.9,-49376.0,Truck stop
+rest,63644.4,46041.1,Parking
+rest,63664.3,-51425.4,Parking
+rest,63738.5,14602.4,Parking
+rest,63791.8,14768.3,Parking
+rest,64175.1,85373.3,Parking
+rest,64256.0,-59433.0,Truck stop
+rest,64699.7,-59920.7,Truck stop
+rest,65143.2,44027.2,Parking
+rest,65314.7,46854.5,Parking
+rest,65332.7,44125.0,Parking
+rest,65460.9,-56494.7,Parking
+rest,65569.0,31637.5,Parking
+rest,65594.0,46627.9,Parking
+rest,65774.9,-57191.4,Truck stop
+rest,65803.4,30281.7,Parking
+rest,65809.6,30116.1,Parking
+rest,65831.7,44626.3,Parking
+rest,65983.2,85078.4,Parking
+rest,66030.0,36720.8,Parking
+rest,66046.0,-58599.0,Parking
+rest,66077.2,-56087.9,Truck stop
+rest,66168.5,86324.0,Parking
+rest,66283.3,36753.0,Parking
+rest,66301.8,66764.9,Parking
+rest,66361.4,42561.8,Truck stop
+rest,66366.6,66655.8,Parking
+rest,66508.1,61163.9,Parking
+rest,66509.4,67548.5,Parking
+rest,66764.5,51055.8,Truck stop
+rest,66966.6,62180.9,Parking
+rest,67035.5,42986.0,Parking
+rest,67216.6,23868.1,Parking
+rest,67425.3,42988.1,Parking
+rest,67503.3,-59317.7,Truck stop
+rest,67544.2,61963.6,Parking
+rest,67751.2,21057.3,Truck stop
+rest,67776.4,26844.9,Truck stop
+rest,68214.4,40932.6,Parking
+rest,68219.7,50291.2,Parking
+rest,68236.4,50518.9,Truck stop
+rest,68248.7,40411.2,Parking
+rest,68308.7,40604.4,Parking
+rest,68583.0,49363.3,Parking
+rest,69131.1,41334.8,Parking
+rest,69475.9,36077.6,Parking
+rest,69554.2,36663.1,Parking
+rest,69994.8,47221.0,Parking
+rest,69995.2,47030.4,Parking
+rest,70143.4,47199.0,Parking
+rest,70173.5,47025.3,Parking
+rest,70920.0,29705.0,Truck stop
+rest,70958.3,49008.3,Truck stop
+rest,71175.8,34924.2,Parking
+rest,71573.4,31134.4,Truck stop
+rest,72282.0,32063.3,Hotel
+rest,74049.9,46493.2,Parking
+rest,75306.6,48027.0,Parking
+rest,77495.5,77760.5,Parking
