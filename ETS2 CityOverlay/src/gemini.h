@@ -30,9 +30,9 @@ struct GeminiReply
 GeminiReply gemini_post(const std::wstring& path, const std::string& body, const std::string& key);
 
 // Plain HTTPS POST (also used for the fish.audio voice). `headers` are "Name: value\r\n" lines.
-// Returns the HTTP status, or -1 if the request couldn't be made.
+// Returns the HTTP status, or -1 if the request couldn't be made (or took longer than timeout_ms).
 int https_post(const wchar_t* host, const std::wstring& path, const std::string& headers, const std::string& body,
-               std::string& response);
+               std::string& response, int timeout_ms = 45000);
 
 // First line of <dir>\<file>, or the environment variable when it's set. Keys are never logged.
 std::string read_secret(const std::wstring& dir, const wchar_t* file, const char* env);

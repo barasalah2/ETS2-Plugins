@@ -21,9 +21,13 @@ struct Config
     bool        speak          = false;  // announce the city with the Windows text-to-speech voice
     std::string voice_text     = "Welcome to {city}";  // {city} and {country} are replaced
     std::wstring voice_name;             // part of an installed voice's name, e.g. "Zira"; empty = default
-    int         voice_volume   = 100;    // 0-100
+    int         voice_volume   = 100;    // 0-100, fish.audio
+    int         local_volume   = 45;     // 0-100, the local voice (Piper is ~2x louder than fish.audio)
     int         voice_rate     = 0;      // -10 (slow) to 10 (fast)
-    std::wstring voice_engine  = L"piper";                     // piper (natural) or windows
+    std::wstring voice_engine  = L"fish";                      // fish (then the local voice), piper, or windows
+    std::wstring fish_voice;                                   // fish.audio voice (reference_id), e.g. your clone
+    std::wstring fish_model    = L"s2.1-pro-free";
+    double      fish_temperature = 0.7, fish_top_p = 0.7, fish_speed = 1.0;
     std::wstring voice_model   = L"en_GB-jenny_dioco-medium";  // Piper voice file in voice\
 
     // [announce] spoken alerts
@@ -69,12 +73,9 @@ struct Config
     std::wstring guide_fallback_models = L"gemma-4-31b-it"; // comma-separated, when it's used up or busy (14,400 a day)
     bool        guide_speak    = true;
     bool        guide_show     = true;
-    std::wstring guide_voice_engine = L"fish";             // fish (fish.audio), google or local (Piper)
+    std::wstring guide_voice_engine = L"same";             // same = the [voice] voice (fish.audio), or google
     std::wstring guide_voice   = L"Sulafat";               // Google voice for its replies
     std::wstring guide_tts_model = L"gemini-3.8-flash-tts";
-    std::wstring fish_voice;                               // fish.audio voice (reference_id), e.g. your clone
-    std::wstring fish_model    = L"s2.1-pro-free";
-    double      fish_temperature = 0.7, fish_top_p = 0.7, fish_speed = 1.0;
     bool        guide_screenshots = true;  // let it see the game picture (sent to Google)
     bool        guide_listen   = true;    // hold the key to talk to it (microphone, sent to Google)
     double      guide_look_minutes = 2;   // real minutes between camera looks while driving (0 = never)

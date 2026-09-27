@@ -46,8 +46,14 @@ Config load_config(const std::wstring& dir)
     c.speak          = read_num(f, v, L"speak", c.speak) != 0;
     c.voice_name     = read_str(f, v, L"voice", c.voice_name);
     c.voice_volume   = (int)read_num(f, v, L"volume", c.voice_volume);
+    c.local_volume   = (int)read_num(f, v, L"local_volume", c.local_volume);
     c.voice_rate     = (int)read_num(f, v, L"rate", c.voice_rate);
     c.voice_engine   = read_str(f, v, L"engine", c.voice_engine);
+    c.fish_voice     = read_str(f, v, L"fish_voice", c.fish_voice);
+    c.fish_model     = read_str(f, v, L"fish_model", c.fish_model);
+    c.fish_temperature = read_num(f, v, L"fish_temperature", c.fish_temperature);
+    c.fish_top_p     = read_num(f, v, L"fish_top_p", c.fish_top_p);
+    c.fish_speed     = read_num(f, v, L"fish_speed", c.fish_speed);
     c.voice_model    = read_str(f, v, L"voice_model", c.voice_model);
 
     const wchar_t* an = L"announce";
@@ -105,11 +111,6 @@ Config load_config(const std::wstring& dir)
     c.guide_voice_engine = read_str(f, g, L"voice_engine", c.guide_voice_engine);
     c.guide_voice    = read_str(f, g, L"google_voice", c.guide_voice);
     c.guide_tts_model = read_str(f, g, L"google_voice_model", c.guide_tts_model);
-    c.fish_voice     = read_str(f, g, L"fish_voice", c.fish_voice);
-    c.fish_model     = read_str(f, g, L"fish_model", c.fish_model);
-    c.fish_temperature = read_num(f, g, L"fish_temperature", c.fish_temperature);
-    c.fish_top_p     = read_num(f, g, L"fish_top_p", c.fish_top_p);
-    c.fish_speed     = read_num(f, g, L"fish_speed", c.fish_speed);
     c.guide_screenshots = read_num(f, g, L"screenshots", c.guide_screenshots) != 0;
     c.guide_listen   = read_num(f, g, L"listen", c.guide_listen) != 0;
     c.guide_look_minutes = read_num(f, g, L"look_minutes", c.guide_look_minutes);

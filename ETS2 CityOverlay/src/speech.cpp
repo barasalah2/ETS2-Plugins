@@ -1,4 +1,5 @@
 #include "speech.h"
+#include "fish.h"
 #include "log.h"
 
 #include <windows.h>
@@ -24,6 +25,7 @@ struct Message
     std::string key;
     ULONGLONG expires;
     std::shared_ptr<std::vector<char>> wav;  // ready-made audio instead of text to synthesize
+    bool local_only = false;                 // fish.audio already failed for it: the local voice
 };
 
 static std::thread             g_thread;
@@ -214,6 +216,35 @@ static bool pop_next(Message& out)
     return true;
 }
 
+// fish.audio answers for short lines that come up again and again ("Speed limit 60", turn calls)
+// are kept on disk, so they play at once and cost no request the next time.
+static const size_t kCacheText = 90;   // lines up to this long are kept
+static const size_t kCacheFiles = 600;
+
+static void prune_cache(const std::wstring& dir)
+{
+    struct Entry { FILETIME t; std::wstring name; };
+    std::vector<Entry> files;
+    WIN32_FIND_DATAW fd;
+    HANDLE h = FindFirstFileW((dir + L"\\*.wav").c_str(), &fd);
+    if (h == INVALID_HANDLE_VALUE) return;
+    do files.push_back({fd.ftLastWriteTime, fd.cFileName});
+    while (FindNextFileW(h, &fd));
+    FindClose(h);
+    if (files.size() <= kCacheFiles) return;
+    std::sort(files.begin(), files.end(), [](const Entry& a, const Entry& b) { return CompareFileTime(&a.t, &b.t) < 0; });
+    for (size_t i = 0; i + kCacheFiles * 9 / 10 < files.size(); ++i) DeleteFileW((dir + L"\\" + files[i].name).c_str());
+}
+
+static bool write_file(const std::wstring& path, const std::vector<char>& data)
+{
+    FILE* f = _wfopen(path.c_str(), L"wb");
+    if (!f) return false;
+    const bool ok = fwrite(data.data(), 1, data.size(), f) == data.size();
+    fclose(f);
+    return ok;
+}
+
 static void worker()
 {
     CoInitializeEx(nullptr, COINIT_MULTITHREADED);
@@ -226,6 +257,18 @@ static void worker()
     const std::wstring exe = voice_dir + L"\\piper\\piper.exe";
     const std::wstring model = voice_dir + L"\\" + g_cfg.voice_model + L".onnx";
 
+    // fish.audio first (engine=fish), the local voice when it fails.
+    const FishVoice fish = fish_voice(g_cfg, g_dir);
+    bool use_fish = g_cfg.voice_engine == L"fish" && fish.usable();
+    if (g_cfg.voice_engine == L"fish" && !fish.usable())
+        log_warn("speech: fish.audio isn't set up (key in fish_audio_key.txt, [voice] fish_voice=); using the local voice");
+    const std::wstring fish_dir = voice_dir + L"\\fish_cache";
+    if (use_fish) {
+        CreateDirectoryW(voice_dir.c_str(), nullptr);
+        CreateDirectoryW(fish_dir.c_str(), nullptr);
+        prune_cache(fish_dir);
+    }
+
     Piper piper;
     ISpVoice* sapi = nullptr;
     auto start_sapi = [&] {
@@ -234,7 +277,7 @@ static void worker()
             sapi = nullptr;
             return;
         }
-        sapi->SetVolume((USHORT)std::clamp(g_cfg.voice_volume, 0, 100));
+        sapi->SetVolume((USHORT)std::clamp(g_cfg.local_volume, 0, 100));
         sapi->SetRate(std::clamp(g_cfg.voice_rate, -10, 10));
     };
     bool use_piper = g_cfg.voice_engine != L"windows";
@@ -242,17 +285,23 @@ static void worker()
         const bool have = GetFileAttributesW(exe.c_str()) != INVALID_FILE_ATTRIBUTES &&
                           GetFileAttributesW(model.c_str()) != INVALID_FILE_ATTRIBUTES;
         if (have && piper.start(exe, model, voice_dir + L"\\cache", 1.0 + g_cfg.voice_rate * 0.05)) {
-            log_info("speech: natural voice '%s' (Piper)", narrow(g_cfg.voice_model).c_str());
+            if (use_fish)
+                log_info("speech: fish.audio voice (%s) first, then the local voice '%s' (Piper)", fish.model.c_str(),
+                         narrow(g_cfg.voice_model).c_str());
+            else
+                log_info("speech: natural voice '%s' (Piper)", narrow(g_cfg.voice_model).c_str());
         } else {
-            log_warn("speech: Piper voice '%s' not found in %s; using the Windows voice",
+            log_warn("speech: Piper voice '%s' not found in %s; the Windows voice stands in for it",
                      narrow(g_cfg.voice_model).c_str(), narrow(voice_dir).c_str());
             use_piper = false;
         }
     }
     if (!use_piper) start_sapi();
-    g_available = use_piper || sapi;
+    g_available = use_fish || use_piper || sapi;
 
-    std::unordered_map<std::string, std::vector<char>> cache;  // repeated phrases, volume applied
+    std::unordered_map<std::string, std::vector<char>> cache;       // local voice phrases, volume applied
+    std::unordered_map<std::string, std::vector<char>> fish_cache;  // fish.audio phrases, volume applied
+    size_t fish_saved = 0;
     std::unique_lock<std::mutex> lock(g_mutex);
     for (;;) {
         Message msg;
@@ -263,16 +312,61 @@ static void worker()
 
         g_playing = (int)msg.priority;
         const ULONGLONG t0 = GetTickCount64();
-        bool said = false;
-        if (msg.wav) {
-            apply_volume(*msg.wav, g_cfg.voice_volume);
-            log_info("speech (assistant voice): \"%s\"", msg.text.c_str());
-            if (!mute) PlaySoundW((LPCWSTR)msg.wav->data(), nullptr, SND_MEMORY | SND_SYNC | SND_NODEFAULT);
-            said = true;
+        std::vector<char> wav;
+        const char* how = "local voice";
+        if (msg.wav) {  // made elsewhere (the assistant's Google voice or its own fish.audio answer)
+            wav = std::move(*msg.wav);
+            apply_volume(wav, g_cfg.voice_volume);
+            how = "assistant voice";
         }
-        if (!said && use_piper) {
+
+        if (wav.empty() && use_fish && !msg.local_only) {
+            const bool keep = msg.text.size() <= kCacheText;
+            const std::string ck = fish.cache_key(msg.text);
+            const std::wstring file = fish_dir + L"\\" + widen(ck) + L".wav";
+            auto hit = fish_cache.find(ck);
+            if (hit != fish_cache.end()) {
+                wav = hit->second;
+            } else if (keep) {
+                wav = read_file(file);
+                if (!wav.empty()) {
+                    apply_volume(wav, g_cfg.voice_volume);
+                    fish_cache[ck] = wav;
+                }
+            }
+            if (!wav.empty()) how = "fish.audio, saved";
+            // Asked once, and again if that failed and there's still time. A turn call can't wait:
+            // a short try and then straight to the local voice.
+            const bool urgent = msg.priority == SpeechPriority::High;
+            for (int attempt = 0; attempt < 2 && wav.empty() && use_fish; ++attempt) {
+                const long long left = (long long)msg.expires - (long long)GetTickCount64();
+                const long long timeout = std::min<long long>(urgent ? 2500 : 6000, left - 800);
+                if (timeout < 1000 || (urgent && attempt > 0)) break;
+                std::vector<char> got;
+                std::string why;
+                const FishResult r = fish_speak(fish, msg.text, (int)timeout, got, why);
+                if (r == FishResult::Ok) {
+                    if (keep && write_file(file, got) && ++fish_saved % 50 == 0) prune_cache(fish_dir);
+                    apply_volume(got, g_cfg.voice_volume);
+                    if (keep) {
+                        if (fish_cache.size() > 200) fish_cache.clear();
+                        fish_cache[ck] = got;
+                    }
+                    wav = std::move(got);
+                    how = "fish.audio";
+                } else if (r == FishResult::Refused) {
+                    log_warn("speech: fish.audio refused the request (%s); the local voice speaks from now on",
+                             why.c_str());
+                    use_fish = false;
+                } else {
+                    log_info("speech: fish.audio didn't answer (%s)%s", why.c_str(),
+                             attempt == 0 && !urgent ? "; trying again" : "; the local voice says it");
+                }
+            }
+        }
+
+        if (wav.empty() && use_piper) {
             auto hit = cache.find(msg.text);
-            std::vector<char> wav;
             if (hit != cache.end()) {
                 wav = hit->second;
             } else {
@@ -280,7 +374,7 @@ static void worker()
                 if (!path.empty()) {
                     wav = read_file(path);
                     DeleteFileW(path.c_str());
-                    apply_volume(wav, g_cfg.voice_volume);
+                    apply_volume(wav, g_cfg.local_volume);  // Piper comes out about twice as loud
                     if (cache.size() > 48) cache.clear();
                     if (!wav.empty()) cache[msg.text] = wav;
                 } else if (!piper.running()) {
@@ -290,16 +384,22 @@ static void worker()
                     start_sapi();
                 }
             }
-            if (!wav.empty()) {
-                const ULONGLONG synth_ms = GetTickCount64() - t0;
-                log_info("speech: \"%s\" (%llu ms to prepare)", msg.text.c_str(), synth_ms);
-                if (!mute) PlaySoundW((LPCWSTR)wav.data(), nullptr, SND_MEMORY | SND_SYNC | SND_NODEFAULT);
-                said = true;
-            }
+            if (!wav.empty()) how = "local voice";
         }
-        if (!said && sapi) {
-            log_info("speech (Windows voice): \"%s\"", msg.text.c_str());
-            if (!mute) sapi->Speak(widen(msg.text).c_str(), SPF_IS_NOT_XML, nullptr);  // blocking, like PlaySound
+
+        if (!wav.empty()) {
+            const ULONGLONG synth_ms = GetTickCount64() - t0;
+            if (strcmp(how, "local voice") == 0)
+                log_info("speech: \"%s\" (%llu ms to prepare)", msg.text.c_str(), synth_ms);
+            else
+                log_info("speech (%s, %llu ms): \"%s\"", how, synth_ms, msg.text.c_str());
+            if (!mute) PlaySoundW((LPCWSTR)wav.data(), nullptr, SND_MEMORY | SND_SYNC | SND_NODEFAULT);
+        } else {
+            start_sapi();
+            if (sapi) {
+                log_info("speech (Windows voice): \"%s\"", msg.text.c_str());
+                if (!mute) sapi->Speak(widen(msg.text).c_str(), SPF_IS_NOT_XML, nullptr);  // blocking, like PlaySound
+            }
         }
         g_playing = -1;
         lock.lock();
@@ -338,10 +438,11 @@ void speech_stop()
 
 static void enqueue(Message m);
 
-void speech_say(const std::string& text, SpeechPriority priority, const std::string& key, int expire_s)
+void speech_say(const std::string& text, SpeechPriority priority, const std::string& key, int expire_s,
+                bool local_only)
 {
     if (!g_thread.joinable() || text.empty()) return;
-    enqueue({text, priority, key, GetTickCount64() + (ULONGLONG)std::max(1, expire_s) * 1000, nullptr});
+    enqueue({text, priority, key, GetTickCount64() + (ULONGLONG)std::max(1, expire_s) * 1000, nullptr, local_only});
 }
 
 // Streamed WAVs (fish.audio) carry placeholder sizes (~4 GB); PlaySound needs the real ones.

@@ -35,6 +35,7 @@ add_library(ets2_city_overlay SHARED
   src/capture.cpp
   src/mic.cpp
   src/rules.cpp
+  src/fish.cpp
   src/announce.cpp
   src/exports.def
   ${imgui_SOURCE_DIR}/imgui.cpp

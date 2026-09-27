@@ -1,6 +1,7 @@
 #include "codriver.h"
 #include "capture.h"
 #include "csv.h"
+#include "fish.h"
 #include "gemini.h"
 #include "json.h"
 #include "log.h"
@@ -53,7 +54,7 @@ static int         g_usage = 0;
 static std::string g_blocked_day;     // Gemini's own daily limit was reached on this day
 static std::string g_voice_off_day;   // the Google voice's daily limit was reached on this day
 static bool        g_voice_broken = false;
-static std::string g_fish_key;                // fish.audio API key (never logged)
+static FishVoice   g_fish;                    // [voice] fish.audio settings and key (never logged)
 static bool        g_fish_off = false;        // fish.audio refused us for good this session
 static bool        g_debug = false;           // ETS2_CITY_OVERLAY_DEBUG: log reports, keep the last picture and clip
 
@@ -499,58 +500,45 @@ static std::string card_title(const MomentInfo& m, const Reply& r)
     }
 }
 
-// Reads `text` with fish.audio (e.g. the driver's own cloned voice). Only the voice: the words
-// are still Gemini's. False if that didn't work.
-static bool fish_voice(const std::string& text, std::vector<char>& wav)
-{
-    if (g_fish_key.empty() || g_fish_off || g_cfg.fish_voice.empty()) return false;
-    char tuning[160];
-    snprintf(tuning, sizeof(tuning), ",\"temperature\":%.2f,\"top_p\":%.2f", g_cfg.fish_temperature, g_cfg.fish_top_p);
-    std::string body = "{\"text\":" + json_quote(text) + ",\"reference_id\":" + json_quote(narrow(g_cfg.fish_voice)) +
-                       ",\"format\":\"wav\",\"latency\":\"balanced\",\"normalize\":true" + tuning;
-    if (std::fabs(g_cfg.fish_speed - 1.0) > 0.01) {
-        char speed[64];
-        snprintf(speed, sizeof(speed), ",\"prosody\":{\"speed\":%.2f}", std::clamp(g_cfg.fish_speed, 0.5, 2.0));
-        body += speed;
-    }
-    body += "}";
-    const std::string headers = "Authorization: Bearer " + g_fish_key + "\r\nContent-Type: application/json\r\nmodel: " +
-                                narrow(g_cfg.fish_model) + "\r\n";
-    const ULONGLONG t0 = GetTickCount64();
-    std::string audio;
-    const int status = https_post(L"api.fish.audio", L"/v1/tts", headers, body, audio);
-    if (status == 200 && audio.size() > 44 && memcmp(audio.data(), "RIFF", 4) == 0) {
-        wav.assign(audio.begin(), audio.end());
-        log_info("assistant: fish.audio voice ready in %llu ms", GetTickCount64() - t0);
-        save_debug(L"codriver_last.wav", wav);
-        return true;
-    }
-    std::string why = audio.substr(0, 200);
-    for (char& c : why)
-        if (c == '\r' || c == '\n' || (unsigned char)c < 32) c = ' ';
-    if (status == 401 || status == 402 || status == 400 || status == 404) {
-        g_fish_off = true;  // bad key, no credit, or a wrong voice/model: don't keep trying
-        log_warn("assistant: fish.audio refused the request (%d%s%s); check fish_audio_key.txt and [guide] fish_voice= / "
-                 "fish_model=. Using the local voice.", status, why.empty() ? "" : ": ", why.c_str());
-    } else {
-        log_info("assistant: fish.audio unavailable (%d); using the local voice for this one", status);
-    }
-    return false;
-}
-
-// Reads the reply out with the chosen voice (fish or google); if that fails, the local one.
+// Reads the reply out. [guide] voice_engine=google: the Google voice. Otherwise the plugin's own
+// voice: fish.audio (made here, on the assistant's thread, so a long reply never holds up a turn
+// call in the speech queue), tried twice, and then the local voice.
 static void speak(const std::string& key, const Reply& r, const MomentInfo& m)
 {
     if (!g_cfg.guide_speak) return;
-    const std::wstring& engine = g_cfg.guide_voice_engine;
-    const bool google = engine == L"google" && !g_cfg.guide_voice.empty() && !g_voice_broken &&
-                        g_voice_off_day != quota_day() && requests_left() > 0;
+    const int expire = asked(m.kind) ? 120 : 90;
     std::vector<char> wav;
-    if ((engine == L"fish" && fish_voice(r.say, wav)) || (google && google_voice(key, r.say, r.style, wav))) {
-        speech_play(std::move(wav), r.say, SpeechPriority::Low, "codriver", asked(m.kind) ? 120 : 90);
-    } else {
-        speech_say(r.say, SpeechPriority::Low, "codriver", 90);
+    if (g_cfg.guide_voice_engine == L"google") {
+        const bool google = !g_cfg.guide_voice.empty() && !g_voice_broken && g_voice_off_day != quota_day() &&
+                            requests_left() > 0;
+        if (google && google_voice(key, r.say, r.style, wav))
+            speech_play(std::move(wav), r.say, SpeechPriority::Low, "codriver", expire);
+        else
+            speech_say(r.say, SpeechPriority::Low, "codriver", expire, true);
+        return;
     }
+    if (g_cfg.voice_engine == L"fish" && g_fish.usable() && !g_fish_off) {
+        for (int attempt = 0; attempt < 2; ++attempt) {
+            const ULONGLONG t0 = GetTickCount64();
+            std::string why;
+            const FishResult res = fish_speak(g_fish, r.say, 10000, wav, why);
+            if (res == FishResult::Ok) {
+                log_info("assistant: fish.audio voice ready in %llu ms", GetTickCount64() - t0);
+                save_debug(L"codriver_last.wav", wav);
+                speech_play(std::move(wav), r.say, SpeechPriority::Low, "codriver", expire);
+                return;
+            }
+            if (res == FishResult::Refused) {
+                g_fish_off = true;  // bad key, no credit, or a wrong voice/model: don't keep trying
+                log_warn("assistant: fish.audio refused the request (%s); check fish_audio_key.txt and [voice] "
+                         "fish_voice= / fish_model=. The local voice reads the replies.", why.c_str());
+                break;
+            }
+            log_info("assistant: fish.audio didn't answer (%s)%s", why.c_str(),
+                     attempt == 0 ? "; trying again" : "; the local voice reads it");
+        }
+    }
+    speech_say(r.say, SpeechPriority::Low, "codriver", expire, true);
 }
 
 static bool pick(Pending& out)
@@ -584,13 +572,11 @@ static void worker()
     }
     load_files();
     g_debug = GetEnvironmentVariableW(L"ETS2_CITY_OVERLAY_DEBUG", nullptr, 0) > 0;
-    std::string voice = narrow(g_cfg.guide_voice_engine);
-    if (g_cfg.guide_voice_engine == L"google") voice += " (" + narrow(g_cfg.guide_voice) + ")";
-    if (g_cfg.guide_voice_engine == L"fish") {
-        g_fish_key = read_secret(g_dir, L"fish_audio_key.txt", "FISH_AUDIO_API_KEY");
-        voice += g_fish_key.empty() ? " - no key in fish_audio_key.txt, using the local voice"
-                                    : " (" + narrow(g_cfg.fish_model) + ")";
-    }
+    g_fish = fish_voice(g_cfg, g_dir);
+    std::string voice;
+    if (g_cfg.guide_voice_engine == L"google") voice = "Google (" + narrow(g_cfg.guide_voice) + ")";
+    else if (g_cfg.voice_engine == L"fish" && g_fish.usable()) voice = "fish.audio (" + g_fish.model + "), then local";
+    else voice = "local";
     log_info("assistant: Gemini %s, voice %s, %zu places known, %zu notes, %d of %d requests left today",
              narrow(g_cfg.guide_model).c_str(), voice.c_str(), g_told.size(), g_notes.size(),
              std::max(0, requests_left()), g_cfg.guide_daily_limit);

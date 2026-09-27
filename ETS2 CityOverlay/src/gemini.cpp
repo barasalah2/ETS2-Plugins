@@ -77,14 +77,15 @@ int GeminiReply::retry_seconds() const
 }
 
 int https_post(const wchar_t* host, const std::wstring& path, const std::string& headers, const std::string& body,
-               std::string& response)
+               std::string& response, int timeout_ms)
 {
     response.clear();
     int status = -1;
     HINTERNET session = WinHttpOpen(L"ETS2CityOverlay/1.0", WINHTTP_ACCESS_TYPE_AUTOMATIC_PROXY,
                                     WINHTTP_NO_PROXY_NAME, WINHTTP_NO_PROXY_BYPASS, 0);
     if (!session) return status;
-    WinHttpSetTimeouts(session, 10000, 10000, 15000, 45000);
+    const int t = std::max(1000, timeout_ms);
+    WinHttpSetTimeouts(session, std::min(t, 10000), std::min(t, 10000), std::min(t, 15000), t);
     HINTERNET connect = WinHttpConnect(session, host, INTERNET_DEFAULT_HTTPS_PORT, 0);
     HINTERNET request = connect ? WinHttpOpenRequest(connect, L"POST", path.c_str(), nullptr, WINHTTP_NO_REFERER,
                                                      WINHTTP_DEFAULT_ACCEPT_TYPES, WINHTTP_FLAG_SECURE)

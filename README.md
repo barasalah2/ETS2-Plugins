@@ -83,7 +83,16 @@ If the name is wrong somewhere, the `entered` / `left` lines give the exact posi
 
 ## Voice
 
-The natural voice is [Piper](https://github.com/rhasspy/piper) (MIT licence) with a voice from [rhasspy/piper-voices](https://huggingface.co/rhasspy/piper-voices). It runs as a small helper program next to the game at low priority, so the game stays smooth. `install.ps1` downloads it (about 85 MB) into `plugins\ets2_city_overlay\voice\` the first time. To get another voice:
+**fish.audio first** (`[voice] engine=fish`, the default): everything the plugin says uses your fish.audio voice, for example your own clone. That covers alerts, turn calls, speed limits and the assistant.
+- If a request fails, it's tried once more. After that the local voice says the line.
+- Turn calls can't wait, so they get one short try (2.5 s) and then go straight to the local voice.
+- Short lines that come up again ("Speed limit 60", turn calls, reminders) are saved in `voice\fish_cache`. The next time they play at once, with no request (up to 600 files).
+- A wrong key or no credit (HTTP 401 or 402) switches to the local voice for the rest of the session.
+- Set it up with `fish_voice=` (the voice's id), `fish_model=`, and your API key on the first line of `fish_audio_key.txt` in `plugins\ets2_city_overlay\`. `engine=piper` uses only the local voice.
+
+**Volume:** `volume=` is for fish.audio and `local_volume=` for the local voice. The local voice comes out about twice as loud (about −12 against −18 dBFS), so it defaults to 45.
+
+**The local voice** is [Piper](https://github.com/rhasspy/piper) (MIT licence) with a voice from [rhasspy/piper-voices](https://huggingface.co/rhasspy/piper-voices). It runs as a small helper program next to the game at low priority, so the game stays smooth. `install.ps1` downloads it (about 85 MB) into `plugins\ets2_city_overlay\voice\` the first time. To get another voice:
 
 ```
 pwsh -File tools\get_voice.ps1 -Target "<ETS2>\bin\win_x64\plugins\ets2_city_overlay" -Voice en_US-lessac-high
@@ -114,12 +123,11 @@ After its last words, it waits 15 seconds before reacting to an event and 30 sec
 
 **Talking to it:** hold Ctrl+F11, speak, and let go. The recording (16 kHz, from your default microphone) goes to Gemini, which hears it directly. "Listening…" and "Thinking…" show on the left. A reply takes about 5 to 10 seconds: first the words, then the voice. A quick tap asks about where you are instead. `listen=0` turns the microphone off, so every press becomes a tap.
 
-**Voices for its replies** (`voice_engine=`):
-- `fish` (default): [fish.audio](https://fish.audio), for example your own cloned voice. Put the voice's id in `fish_voice=` and the model in `fish_model=`. Put your fish.audio API key on the first line of `fish_audio_key.txt` in `plugins\ets2_city_overlay\`, or set `FISH_AUDIO_API_KEY`. fish.audio only reads the reply out; Gemini still writes it. Each reply takes about 3 to 8 seconds.
+**Voices for its replies** (`[guide] voice_engine=`):
+- `same` (default): the plugin's voice from `[voice]`, which is fish.audio first. The assistant makes its fish.audio request on its own thread, so a long reply never delays a turn call. It tries twice, then the local voice reads it.
 - `google`: a Google voice with the same Gemini key, such as `google_voice=Sulafat` (warm), Achird, Puck, Charon, Kore or Aoede. The free tier allows only 10 of these a day.
-- `local`: the navigation voice.
 
-If the chosen voice fails, that reply is read by the local voice.
+If that voice fails, the reply is read by the local voice.
 
 **What gets sent to Google:**
 - the situation report;
@@ -151,7 +159,7 @@ Edit `plugins\ets2_city_overlay\ets2_city_overlay.ini`, then restart the game. T
 | overlay | `banner_seconds`, `always_show`, `idle_opacity` | 6, 1, 0.70 | How long the banner stays bright, whether a dimmed label stays after it, and how dim |
 | voice | `speak` | 0 | Turn the spoken announcement on or off |
 | voice | `text` | `Welcome to {city}` | What to say; `{city}` and `{country}` are filled in |
-| voice | `voice`, `volume`, `rate` | default, 100, 0 | Voice name to use (e.g. `Zira`), volume, and speed |
+| voice | `voice`, `volume`, `local_volume`, `rate` | default, 100, 45, 0 | Windows voice name (e.g. `Zira`); volume of fish.audio and of the local voice; speed |
 | alerts | `enabled` | 1 | Turn the fuel and sleep warnings on or off |
 | alerts | `fuel_warn_liters`, `fuel_critical_liters` | 100, 40 | Warn below this; turn red below that |
 | alerts | `rest_warn_minutes` | 120 | Warn when sleep is due within this many in-game minutes |
@@ -164,7 +172,8 @@ Edit `plugins\ets2_city_overlay\ets2_city_overlay.ini`, then restart the game. T
 | route | `strip_items` | 7 | Rows in the strip |
 | route | `strip_x`, `strip_y` | 0.985, 0.26 | Right edge and top of the strip, as fractions of the screen |
 | route | `max_detour_km` | 8 | A stop counts as on your route if visiting it adds at most this many km |
-| voice | `engine`, `voice_model` | piper, en_GB-jenny_dioco-medium | Natural voice (Piper) or `windows`; which Piper voice |
+| voice | `engine`, `voice_model` | fish, en_GB-jenny_dioco-medium | `fish` (fish.audio, then the local voice), `piper` (local only) or `windows`; which local Piper voice |
+| voice | `fish_voice`, `fish_model`, `fish_temperature`, `fish_top_p`, `fish_speed` | (your voice id), s2.1-pro-free, 0.7, 0.7, 1.0 | The fish.audio voice (key in `fish_audio_key.txt`) |
 | announce | `enabled`, `fuel`, `sleep`, `ferry`, `border`, `destination`, `lanes` | all 1 | What the voice announces |
 | announce | `border_km`, `destination_km` | 10, 5 | How far ahead (game km) to announce a border and the destination |
 | announce | `speed_limit`, `speeding` | 1, 0 | "Speed limit 60" when it drops and you're above it; also warn while you stay 5 km/h or more over |
@@ -172,8 +181,7 @@ Edit `plugins\ets2_city_overlay\ets2_city_overlay.ini`, then restart the game. T
 | hud | `enabled`, `position_y` | 1, 0.02 | The slim bar in the top-right corner, and its top as a fraction of screen height |
 | route | `guidance` | 1 | Panel with the next exit/turn and its lanes |
 | guide | `enabled`, `auto`, `key`, `model`, `fallback_models`, `speak`, `show` | 1, 1, `0x7A`, gemini-3.5-flash-lite, gemma-4-31b-it, 1, 1 | AI assistant; Ctrl+F11: tap = about here, hold = talk |
-| guide | `voice_engine`, `google_voice`, `google_voice_model` | fish, Sulafat, gemini-3.8-flash-tts | Voice for its replies: fish, google or local |
-| guide | `fish_voice`, `fish_model`, `fish_temperature`, `fish_top_p`, `fish_speed` | (your voice id), s2.1-pro-free, 0.7, 0.7, 1.0 | fish.audio voice (key in `fish_audio_key.txt`) |
+| guide | `voice_engine`, `google_voice`, `google_voice_model` | same, Sulafat, gemini-3.8-flash-tts | Voice for its replies: `same` (the `[voice]` voice) or `google` |
 | guide | `screenshots`, `listen`, `look_minutes`, `daily_limit` | 1, 1, 2, 450 | Let it see the picture, hear you, look through the camera while driving; request cap a day |
 | detection | `near_km` | 250 | How far away (in game km) the "Near X" label still shows |
 | detection | `learn_from_deliveries` | 1 | Record city positions when you deliver jobs |
@@ -253,6 +261,7 @@ src/gemini.cpp     HTTPS (WinHTTP), Gemini errors and limits, base64, key files
 src/capture.cpp    the assistant's screenshot: back buffer copy, read back, JPEG (WIC)
 src/mic.cpp        push-to-talk: tap vs hold, microphone recording (waveIn)
 src/rules.cpp      speed limit calls, headlight reminder, fuel prices across the next border
+src/fish.cpp       fish.audio text to speech (shared by the voice and the assistant)
 src/spoken.h       wording for distances, times, turns and lanes
 tools/get_voice.ps1        downloads Piper and a voice
 C:\tmmaps\export-maneuvers.ts   (in the parser folder) junction turns and lanes for maneuvers.bin
