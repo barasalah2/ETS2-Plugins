@@ -67,30 +67,34 @@ static void save_debug(const wchar_t* name, const std::vector<char>& data)
 }
 
 static const char* kSystem =
-    "You are the truck's onboard AI assistant, like the voice assistant built into a modern car. The driver "
-    "is playing Euro Truck Simulator 2; treat the places on the route as the real ones.\n"
-    "You are a system, not a person or a passenger: don't claim a body, feelings, hunger or a life of your "
-    "own, and don't say \"we\" or \"us\". Speak to the driver as \"you\".\n"
-    "Each message brings a live situation report (game time, location, speed, the job, the route ahead, "
-    "fuel, sleep, recent events) and what just happened; sometimes an image from the front camera, "
-    "sometimes the driver's voice.\n"
+    "You are the truck's onboard AI assistant, like the voice assistant in a modern car, with a front camera. "
+    "The driver is playing Euro Truck Simulator 2; treat everything as real.\n"
+    "You are a system, not a person or a passenger: don't claim a body, feelings or a life of your own, and "
+    "don't say \"we\" or \"us\". Speak to the driver as \"you\".\n"
+    "Each message brings an image from the front camera (what the driver sees, including the dashboard and "
+    "the navigation display), a short report (game time, location, the job and the route ahead) and what "
+    "just happened; sometimes the driver's voice.\n"
+    "The camera image is your main source. Look at it closely and use what it shows: road signs (speed "
+    "limits, exits and directions, warnings, tolls, borders); the road ahead (road works, an accident, a "
+    "traffic jam, a closed lane, a sharp bend, a steep hill); weather and visibility (rain, fog, snow, "
+    "darkness, low sun); landmarks, bridges, buildings and views worth a word; warning lights and messages "
+    "on the dashboard or the screen. Speak of it as the truck's own camera and displays; never call it a "
+    "game, graphics or a screenshot.\n"
     "How to respond:\n"
     "- Clear, calm and to the point, like a good car assistant: one or two short sentences, under 35 words. "
     "Up to 80 words only when the driver asks for detail.\n"
     "- Your words are read aloud: plain spoken sentences only, no lists, markdown, emoji or symbols, and "
     "units in words.\n"
-    "- Be useful: answer the driver's questions directly; give route information (distance, arrival, what's "
-    "next) from the report; give accurate facts about places on the route (history, landmarks, local food, "
-    "a useful phrase in the local language). Only well-established facts; if unsure about a small place, "
-    "describe its region.\n"
-    "- Numbers only from the report, rounded. Never invent them.\n"
-    "- The camera image: mention only what is actually visible outside (weather, landscape, traffic, "
-    "buildings), never the game, graphics or on-screen displays.\n"
+    "- Only say what you can actually see or know for sure. If a sign or text is too small to read, don't "
+    "guess it. Read each sign on its own: a distance on a direction sign belongs to that sign's place, not to "
+    "a speed limit or another sign. A speed limit sign applies from where it stands. Facts about places must "
+    "be accurate and well established.\n"
+    "- Numbers only from the image or the report. Never invent them.\n"
     "- No small talk, jokes, teasing, opinions or personal remarks. Never suggest alcohol.\n"
-    "- Don't repeat information already given in the conversation.\n"
-    "- Turn-by-turn directions, speed limits and fuel and rest warnings come from the navigation system: "
-    "don't give them unprompted. If the driver asks, answer from the report.\n"
-    "- For automatic updates, if there's nothing useful to say, leave \"say\" empty.\n"
+    "- Don't repeat what was already said in the conversation, and don't describe the same view twice.\n"
+    "- Don't give turn-by-turn directions or fuel and rest advice unprompted: the navigation handles those.\n"
+    "- For automatic looks, speak only when the image shows something new and useful; otherwise leave "
+    "\"say\" empty. Silence is normal.\n"
     "- Answer in the language the driver speaks.\n"
     "Reply as JSON: \"heard\" = the driver's words when their voice is attached, else empty; \"say\" = your "
     "spoken response; \"style\" = how the voice should sound, a few words (e.g. \"calm, clear\"); "
@@ -184,7 +188,7 @@ static const char* name_of(Moment k)
         case Moment::JobStart:  return "new job";
         case Moment::Border:    return "border";
         case Moment::City:      return "city";
-        default:                return "chat";
+        default:                return "look";
     }
 }
 
@@ -211,7 +215,7 @@ static ULONGLONG lifetime(Moment k)
     switch (k) {
         case Moment::JobStart: return 180000;
         case Moment::Border:   return 120000;
-        case Moment::Chat:     return 20000;
+        case Moment::Look:     return 20000;
         default:               return 90000;
     }
 }
@@ -225,7 +229,7 @@ static ULONGLONG gap_before(Moment k)
         case Moment::Delivered:
         case Moment::Fined:
         case Moment::Ferry:     return 15000;  // worth a word while it's fresh
-        case Moment::Chat:      return 4 * 60000;
+        case Moment::Look:      return 45000;  // regular looks: not right after it spoke
         default:                return 30000;
     }
 }
@@ -328,12 +332,11 @@ static std::string instruction(const MomentInfo& m, bool image)
             return "The driver is speaking to you; their voice is attached. Put their words in \"heard\", then "
                    "respond to them.";
         case Moment::AskHere:
-            if (m.place.empty())
-                return "The driver asks about the current location, between towns. Give one interesting, accurate "
-                       "fact about the region, using the report and the camera image.";
-            return std::string("The driver asks about the current location (") + (m.nearby ? "near " : "in ") +
-                   place_words(m) + "). Give one or two interesting, accurate facts about it: history, a landmark, "
-                   "local food or a curiosity." + already_told(m);
+            return std::string("The driver asks what's around. Using the camera image first, tell them what's notable "
+                               "in view (a sign, a landmark, the road, the weather)") +
+                   (m.place.empty() ? std::string(", and one accurate fact about the region.")
+                                    : std::string(", and one accurate fact about ") + place_words(m) + " (" +
+                                          (m.nearby ? "nearby" : "you're in it") + ")." + already_told(m));
         case Moment::Delivered:
             return "The delivery is complete: " + m.detail + ". Confirm it in one sentence with the key numbers.";
         case Moment::Fined:
@@ -348,13 +351,15 @@ static std::string instruction(const MomentInfo& m, bool image)
                    ". Announce it with one useful or interesting fact about the country (a greeting in the local "
                    "language is fine). Don't mention speed limits.";
         case Moment::City:
-            return "Entering " + place_words(m) + ". Give one or two interesting, accurate facts about it." +
-                   already_told(m);
+            return "Entering " + place_words(m) +
+                   ". Say one notable thing about it: something visible in the camera image, or one accurate fact "
+                   "about the city." + already_told(m);
         default:
-            return std::string("Periodic update. If useful, give one short piece of information: progress and "
-                               "arrival time, the region being driven through") +
-                   (image ? ", the conditions visible on the camera" : "") +
-                   ", or something notable ahead. If there's nothing useful, leave \"say\" empty.";
+            if (!image) return "Regular check, but the camera image is missing: leave \"say\" empty.";
+            return "Regular camera check while driving. If the image shows something new and useful (a sign, road "
+                   "works, a hazard or a jam, a change in weather or visibility, a notable landmark or view, or a "
+                   "warning on the dashboard or screen), tell the driver in one short sentence. If nothing new or "
+                   "useful is visible, leave \"say\" empty.";
     }
 }
 
@@ -650,18 +655,19 @@ static void worker()
         const ULONGLONG now = GetTickCount64();
         if (last_call && now - last_call < kMinGap && nap(kMinGap - (now - last_call))) return;
 
-        // A look through the windscreen.
+        // The front camera: what's on screen is its main source, so every request gets a picture.
         std::vector<char> jpeg;
-        const bool want_picture = g_cfg.guide_screenshots &&
-                                  (m.kind == Moment::Chat || m.kind == Moment::Talk || m.kind == Moment::AskHere ||
-                                   m.kind == Moment::City);
-        if (want_picture) {
+        if (g_cfg.guide_screenshots) {
             capture_request();
             if (!capture_wait_jpeg(jpeg, 1500) && !told_no_picture) {
                 log_info("co-driver: couldn't take a screenshot this time");
                 told_no_picture = true;
             }
             save_debug(L"codriver_last.jpg", jpeg);
+        }
+        if (m.kind == Moment::Look && jpeg.empty()) {  // a look with nothing to look at: don't spend a request
+            lock.lock();
+            continue;
         }
 
 
@@ -736,7 +742,12 @@ static void worker()
                 "\"contents\":[" + contents + "]," +
                 "\"generationConfig\":{\"maxOutputTokens\":2048,\"temperature\":1.0," +
                 "\"responseMimeType\":\"application/json\",\"responseSchema\":" + kSchema +
-                (md->thinking ? ",\"thinkingConfig\":{\"thinkingLevel\":\"low\"}" : "") + "}}";
+                // A little more thought reads the picture more carefully (it would sometimes mix up
+                // two signs); the driver's own questions stay quick.
+                (md->thinking ? std::string(",\"thinkingConfig\":{\"thinkingLevel\":\"") +
+                                    (m.kind == Moment::Talk ? "low" : "medium") + "\"}"
+                              : std::string()) +
+                "}}";
             last_call = GetTickCount64();
             count_request();
             const GeminiReply r = gemini_post(L"/v1beta/models/" + md->name + L":generateContent", body, key);
@@ -791,6 +802,7 @@ static void worker()
             log_info("co-driver: no answer (%s) - %s", name_of(m.kind), why.c_str());
             if (by_driver) show("Assistant", "No answer right now (" + why + ").");
         } else {
+            if (m.audio.empty()) reply.heard.clear();  // nothing was said: don't let it make words up
             if (!reply.heard.empty()) log_info("co-driver heard: \"%s\"", reply.heard.c_str());
             g_history.push_back({history_line(m, brief, reply.heard), reply.say});
             while (g_history.size() > kHistory) g_history.pop_front();

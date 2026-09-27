@@ -87,7 +87,7 @@ static bool      g_have_game_time = false;
 static float     g_speed_limit = 0;     // navigation speed limit, m/s (0 = none)
 static ULONGLONG g_brief_due = 0;       // a new job: brief once its route is known
 static std::set<std::string> g_border_said;
-static ULONGLONG g_last_chat = 0;
+static ULONGLONG g_last_look = 0;
 struct Happened { ULONGLONG at; std::string text; };
 static std::deque<Happened> g_happened;  // recent events for the situation report
 static AlertState g_alert_state;         // the last warnings, for the report
@@ -492,13 +492,15 @@ static void update_codriver(const RouteView& v, const AlertState& a, bool turn_c
                 }
                 break;
             }
-    // Now and then on a quiet stretch: not near a turn, not in the middle of a warning.
-    const double every_s = g_cfg.guide_chat_minutes * 60.0;
-    if (!g_last_chat) g_last_chat = now;
-    if (every_s > 0 && std::fabs(g_alerts.in.speed_kmh) > 30 && !turn_coming && !a.fuel.critical &&
-        !a.rest.critical && (now - g_last_chat) / 1000.0 > every_s && codriver_quiet_seconds() > every_s * 0.6) {
-        g_last_chat = now;
-        moment(Moment::Chat);
+    // A regular look through the front camera while driving: not right at a junction, not in the
+    // middle of an urgent warning, and not right after it spoke.
+    const double every_s = g_cfg.guide_look_minutes * 60.0;
+    if (!g_last_look) g_last_look = now;
+    if (every_s > 0 && g_cfg.guide_screenshots && std::fabs(g_alerts.in.speed_kmh) > 10 && !turn_coming &&
+        !a.fuel.critical && !a.rest.critical && (now - g_last_look) / 1000.0 > every_s &&
+        codriver_quiet_seconds() > 45.0) {  // the assistant waits that long after its last words anyway
+        g_last_look = now;
+        moment(Moment::Look);
     }
 }
 

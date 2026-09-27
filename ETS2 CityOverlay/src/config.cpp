@@ -107,7 +107,7 @@ Config load_config(const std::wstring& dir)
     c.fish_speed     = read_num(f, g, L"fish_speed", c.fish_speed);
     c.guide_screenshots = read_num(f, g, L"screenshots", c.guide_screenshots) != 0;
     c.guide_listen   = read_num(f, g, L"listen", c.guide_listen) != 0;
-    c.guide_chat_minutes = read_num(f, g, L"chat_minutes", c.guide_chat_minutes);
+    c.guide_look_minutes = read_num(f, g, L"look_minutes", c.guide_look_minutes);
     c.guide_daily_limit = (int)read_num(f, g, L"daily_limit", c.guide_daily_limit);
 
     c.in_city_radius = read_num(f, d, L"in_city_radius", c.in_city_radius);

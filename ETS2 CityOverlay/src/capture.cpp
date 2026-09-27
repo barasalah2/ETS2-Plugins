@@ -13,7 +13,7 @@
 #include <cstring>
 #include <mutex>
 
-static const unsigned kWidth = 768;  // plenty for "what's in the picture"; ~1100 image tokens
+static const unsigned kWidth = 1280;  // wide enough to read road signs and the displays
 
 // Request -> copy (render thread) -> read back a frame or two later -> pixels for the worker.
 static std::atomic<bool>       g_wanted{false};

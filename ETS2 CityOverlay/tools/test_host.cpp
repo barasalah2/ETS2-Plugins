@@ -228,6 +228,28 @@ static ID3D11DeviceContext* g_ctx;
 static ID3D11RenderTargetView* g_rtv;
 static HWND g_hwnd;
 static bool g_landscape = false;  // draw sky / fields / road instead of a flat colour
+static ID3D11Texture2D* g_scene = nullptr;  // a picture to show as the game's frame (same size as the swapchain)
+
+// Loads a raw 8-bit RGBA picture (w x h) to show instead of the drawn landscape.
+static void load_scene(ID3D11Device* dev, const char* path, UINT w, UINT h)
+{
+    FILE* f = fopen(path, "rb");
+    if (!f) { printf("scene %s not found\n", path); return; }
+    std::vector<unsigned char> px((size_t)w * h * 4);
+    const size_t got = fread(px.data(), 1, px.size(), f);
+    fclose(f);
+    if (got != px.size()) { printf("scene %s: wrong size\n", path); return; }
+    D3D11_TEXTURE2D_DESC td = {};
+    td.Width = w;
+    td.Height = h;
+    td.MipLevels = 1;
+    td.ArraySize = 1;
+    td.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+    td.SampleDesc.Count = 1;
+    td.Usage = D3D11_USAGE_DEFAULT;
+    D3D11_SUBRESOURCE_DATA init = {px.data(), w * 4, 0};
+    if (FAILED(dev->CreateTexture2D(&td, &init, &g_scene))) printf("scene texture failed\n");
+}
 
 static void frames(int n)
 {
@@ -238,7 +260,11 @@ static void frames(int n)
         g_ctx->OMSetRenderTargets(1, &g_rtv, nullptr);
         g_ctx->ClearRenderTargetView(g_rtv, c);
         ID3D11DeviceContext1* ctx1 = nullptr;
-        if (g_landscape && SUCCEEDED(g_ctx->QueryInterface(IID_PPV_ARGS(&ctx1)))) {
+        ID3D11Texture2D* bb = nullptr;
+        if (g_scene && SUCCEEDED(g_sc->GetBuffer(0, IID_PPV_ARGS(&bb)))) {
+            g_ctx->CopyResource(bb, g_scene);
+            bb->Release();
+        } else if (g_landscape && SUCCEEDED(g_ctx->QueryInterface(IID_PPV_ARGS(&ctx1)))) {
             DXGI_SWAP_CHAIN_DESC1 d;
             g_sc->GetDesc1(&d);
             const LONG w = (LONG)d.Width, h = (LONG)d.Height;
@@ -383,8 +409,9 @@ int main(int argc, char** argv)
 
     send_event(SCS_TELEMETRY_EVENT_started);
 
-    // "test_host.exe <dll> <outdir> codriver <question.wav>": the AI co-driver with the real Gemini API
-    // (needs GEMINI_API_KEY). A job with cargo, the driver talking (the WAV stands in for the
+    // "test_host.exe <dll> <outdir> codriver <question.wav> [scene.rgba]": the AI assistant with the real
+    // Gemini API (needs GEMINI_API_KEY); scene.rgba (1280x720 RGBA) is shown as the game picture.
+    // A job with cargo, the driver talking (the WAV stands in for the
     // microphone), a tap for "about here", and a fine.
     if (argc > 3 && std::string(argv[3]) == "codriver") {
         std::string dir = argv[1];
@@ -393,6 +420,7 @@ int main(int argc, char** argv)
         remove((dir + "\\codriver_requests.txt").c_str());
         if (argc > 4) SetEnvironmentVariableA("ETS2_CITY_OVERLAY_FAKE_MIC", argv[4]);
         g_landscape = true;
+        if (argc > 5) load_scene(dev, argv[5], 1280, 720);
         const uint32_t t0 = 1 * 1440 + 14 * 60 + 5;  // Tuesday 14:05
         send_u32("game.time", t0);
         send_float("local.scale", 19.0f);
@@ -437,6 +465,8 @@ int main(int argc, char** argv)
             send_fined(250, "speeding");
             run_for(50.0);
             screenshot(out + "\\cd5_fined.bmp");
+            printf("CODRIVER TEST: quiet driving -> expect regular camera looks\n");
+            run_for(80.0);
         }
         shutdown();
         frames(5);

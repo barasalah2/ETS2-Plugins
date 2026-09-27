@@ -12,7 +12,7 @@ An in-game plugin for Euro Truck Simulator 2 that shows the name of the city you
 - **Upcoming-stops strip:** a panel on the right lists what's coming on your route: cities, truck stops, fuel stations, places to sleep, ferries/trains and the destination, each with road km and driving time. The stop a warning names is highlighted. **Ctrl+F10** shows or hides it.
 - **Spoken alerts in a natural voice:** a neural voice (Piper, running on your PC, free and offline) announces fuel and sleep warnings, reminders before the stop they name, ferries, border crossings ("Welcome to the Czech Republic. The truck speed limit is 80 kilometres per hour."), and "your destination is 5 kilometres ahead". The game's own navigation voice only has fixed phrases like "turn left", with no city names, so it can't be used for this.
 - **Early exit and lane warnings:** on your job route, motorway exits and forks are announced about 15 seconds ahead ("In 6 kilometres, take the exit on the right. Use the right lane.") and again about 6 seconds ahead. Turns and roundabouts get the close call ("at the roundabout, take the second exit"). A panel under the city name shows the next maneuver with its distance and a lane diagram. This only runs while the plugin's route matches your GPS.
-- **AI assistant (Gemini, free):** an onboard assistant, like a car's built-in voice assistant, that knows the time, where you are, your cargo and job, what's ahead on the route, and your fuel and sleep. It remembers the conversation. It speaks up by itself for a route briefing when a job starts, facts about towns you drive into and countries you're about to enter, a delivery summary, a note after a fine or a ferry, and a progress update now and then. **Tap Ctrl+F11** to ask about where you are. **Hold Ctrl+F11 and talk** to ask it anything, and let go to send. Its replies are read out in a fish.audio voice (your own clone, for example), a Google voice or the local voice. Needs your Gemini API key (see below).
+- **AI assistant (Gemini, free):** an onboard assistant with a front camera, like a car's built-in voice assistant. Every request carries a screenshot of the game picture, and that's its main source: road signs, road works and hazards, weather and visibility, landmarks, and messages on the dashboard or navigation screen. It also knows the time, where you are, your job and what's ahead on the route, and it remembers the conversation. It looks through the camera every couple of minutes while you drive and speaks only when it sees something new and useful. It also speaks up for a route briefing, city and border facts, deliveries, fines and ferries. **Tap Ctrl+F11** for what's around you. **Hold Ctrl+F11 and talk** to ask it anything ("what does that sign say?"), and let go to send. Its replies are read out in a fish.audio voice (your own clone, for example), a Google voice or the local voice. Needs your Gemini API key (see below).
 - **Hidden while paused:** the label disappears in the menu, the world map and other paused screens.
 - **Ctrl+F9:** shows or hides the overlay. **Ctrl+F10:** the stops strip. **Ctrl+F11:** the assistant (tap = about here, hold = talk).
 
@@ -96,9 +96,9 @@ Then set `voice_model=en_US-lessac-high` in the settings. `voice_samples\` has s
 - facts about a city when you drive into it;
 - about 25 km before a border, a note about the country;
 - after a fine, a ferry or train, or a delivery;
-- a progress update every `chat_minutes` (10) of real time, when there's something useful to say. Not near a junction, and not during an urgent warning.
+- a look through the camera every `look_minutes` (2) of real time while driving. It speaks only if the picture shows something new and useful, such as a sign, road works, a hazard, a change in weather, a landmark or a warning on the displays. Not near a junction, and not during an urgent warning.
 
-After its last words, it waits 15 seconds before reacting to an event and 30 seconds before a city, border or job briefing. A progress update waits four minutes.
+After its last words, it waits 15 seconds before reacting to an event and 30 seconds before a city, border or job briefing. A camera look waits 45 seconds.
 
 **Talking to it:** hold Ctrl+F11, speak, and let go. The recording (16 kHz, from your default microphone) goes to Gemini, which hears it directly. "Listening…" and "Thinking…" show on the left. A reply takes about 5 to 10 seconds: first the words, then the voice. A quick tap asks about where you are instead. `listen=0` turns the microphone off, so every press becomes a tap.
 
@@ -112,12 +112,12 @@ If the chosen voice fails, that reply is read by the local voice.
 **What gets sent to Google:**
 - the situation report;
 - the conversation so far;
-- screenshots of the game picture (`screenshots=1`), without this plugin's panels;
+- a screenshot of the game picture with every request (`screenshots=1`), 1280 pixels wide and without this plugin's panels;
 - your voice while you hold the key (`listen=1`).
 
 fish.audio receives only the text of each reply. On Google's free tier, prompts and answers may be used by Google to improve its products. Nothing is sent when `enabled=0`.
 
-**Limits:** at most one text request every 4 seconds. `daily_limit=300` caps the Google requests a day, counted in `codriver_usage.txt`. Automatic remarks stop at the cap, but you can still ask. If a model hits its per-minute limit, the fallback answers for a while. If every model's free daily limit runs out, it says so and stays quiet until tomorrow.
+**Limits:** at most one text request every 4 seconds. `daily_limit=450` caps the Google requests a day, counted in `codriver_usage.txt`. Automatic remarks stop at the cap, but you can still ask. If a model hits its per-minute limit, the fallback answers for a while. If every model's free daily limit runs out, it says so and stays quiet until tomorrow.
 
 **If it doesn't work, check the log line:**
 - `rejected the API key`: the Gemini key is wrong.
@@ -158,7 +158,7 @@ Edit `plugins\ets2_city_overlay\ets2_city_overlay.ini`, then restart the game. T
 | guide | `enabled`, `auto`, `key`, `model`, `fallback_models`, `speak`, `show` | 1, 1, `0x7A`, gemini-3.5-flash-lite, gemma-4-31b-it, 1, 1 | AI assistant; Ctrl+F11: tap = about here, hold = talk |
 | guide | `voice_engine`, `google_voice`, `google_voice_model` | fish, Sulafat, gemini-3.8-flash-tts | Voice for its replies: fish, google or local |
 | guide | `fish_voice`, `fish_model`, `fish_temperature`, `fish_top_p`, `fish_speed` | (your voice id), s2.1-pro-free, 0.7, 0.7, 1.0 | fish.audio voice (key in `fish_audio_key.txt`) |
-| guide | `screenshots`, `listen`, `chat_minutes`, `daily_limit` | 1, 1, 10, 300 | Let it see the picture, hear you, chat on quiet stretches; request cap a day |
+| guide | `screenshots`, `listen`, `look_minutes`, `daily_limit` | 1, 1, 2, 450 | Let it see the picture, hear you, look through the camera while driving; request cap a day |
 | detection | `near_km` | 250 | How far away (in game km) the "Near X" label still shows |
 | detection | `learn_from_deliveries` | 1 | Record city positions when you deliver jobs |
 

@@ -72,8 +72,8 @@ struct Config
     double      fish_temperature = 0.7, fish_top_p = 0.7, fish_speed = 1.0;
     bool        guide_screenshots = true;  // let it see the game picture (sent to Google)
     bool        guide_listen   = true;    // hold the key to talk to it (microphone, sent to Google)
-    double      guide_chat_minutes = 10;  // real minutes between remarks when nothing happens (0 = never)
-    int         guide_daily_limit = 300;  // requests a day at most (the free tier has its own limit too)
+    double      guide_look_minutes = 2;   // real minutes between camera looks while driving (0 = never)
+    int         guide_daily_limit = 450;  // requests a day at most (Flash Lite's free tier allows 500)
 
     // [detection]
     double      in_city_radius = 1800.0;  // world units (m) from a city point that count as "in" it

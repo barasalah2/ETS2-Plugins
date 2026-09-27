@@ -31,12 +31,12 @@ enum class Moment
     JobStart,   // a new job: a short briefing
     Border,     // about to enter a country (place = the country)
     City,       // entered a city
-    Chat,       // nothing special: a remark if there's something worth saying
+    Look,       // a regular look through the front camera: a word if the picture shows something useful
 };
 
 struct MomentInfo
 {
-    Moment kind = Moment::Chat;
+    Moment kind = Moment::Look;
     std::string place_id, place, country;  // City / AskHere: the city (place_id for its fact cache)
     bool nearby = false;                   // AskHere: close to the place, not in it
     std::string detail;                    // what happened, in words
