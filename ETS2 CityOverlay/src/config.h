@@ -23,6 +23,9 @@ struct Config
     std::wstring voice_name;             // part of an installed voice's name, e.g. "Zira"; empty = default
     int         voice_volume   = 100;    // 0-100, fish.audio
     int         local_volume   = 45;     // 0-100, the local voice (Piper is ~2x louder than fish.audio)
+    int         voice_level    = 60;     // 0-100, on top of both: Ctrl+F6 / Ctrl+F7 change it (and save it)
+    int         volume_down_key = 0x75;  // Ctrl + this key: quieter (F6)
+    int         volume_up_key  = 0x76;   // Ctrl + this key: louder (F7)
     int         voice_rate     = 0;      // -10 (slow) to 10 (fast)
     std::wstring voice_engine  = L"fish";                      // fish (then the local voice), piper, or windows
     std::wstring fish_voice;                                   // fish.audio voice (reference_id), e.g. your clone

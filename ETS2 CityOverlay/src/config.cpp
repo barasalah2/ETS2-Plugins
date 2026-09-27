@@ -47,6 +47,9 @@ Config load_config(const std::wstring& dir)
     c.voice_name     = read_str(f, v, L"voice", c.voice_name);
     c.voice_volume   = (int)read_num(f, v, L"volume", c.voice_volume);
     c.local_volume   = (int)read_num(f, v, L"local_volume", c.local_volume);
+    c.voice_level    = (int)read_num(f, v, L"level", c.voice_level);
+    c.volume_down_key = (int)read_num(f, v, L"quieter_key", c.volume_down_key);
+    c.volume_up_key  = (int)read_num(f, v, L"louder_key", c.volume_up_key);
     c.voice_rate     = (int)read_num(f, v, L"rate", c.voice_rate);
     c.voice_engine   = read_str(f, v, L"engine", c.voice_engine);
     c.fish_voice     = read_str(f, v, L"fish_voice", c.fish_voice);

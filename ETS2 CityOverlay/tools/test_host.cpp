@@ -541,6 +541,11 @@ int main(int argc, char** argv)
                 run_for(2.0);
                 send_float("truck.navigation.speed.limit", 50.0f / 3.6f);
                 run_for(3.0);
+                printf("RULES TEST: Ctrl+F6 (quieter) -> expect \"Volume 50 percent.\", then Ctrl+F7 -> 60\n");
+                press_ctrl_key(VK_F6, 120);
+                run_for(2.0);
+                press_ctrl_key(VK_F7, 120);
+                run_for(2.0);
             }
         }
         shutdown();

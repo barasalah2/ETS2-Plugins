@@ -34,6 +34,8 @@ static std::condition_variable g_cv;
 static std::vector<Message>    g_queue;
 static bool                    g_quit = false, g_paused = false;
 static std::atomic<bool>       g_muted{false};
+static std::atomic<int>        g_level{60};      // overall voice level, 0-100
+static std::atomic<int>        g_level_gen{0};   // changes when it does (the caches hold scaled audio)
 static std::atomic<int>        g_playing{-1};  // priority of the message playing now, -1 = none
 static std::atomic<bool>       g_available{false};
 static Config                  g_cfg;
@@ -175,6 +177,7 @@ static std::vector<char> read_file(const std::wstring& path)
 // Scales 16-bit PCM samples in a WAV image in place (PlaySound has no volume control).
 static void apply_volume(std::vector<char>& wav, int volume)
 {
+    volume = volume * std::clamp(g_level.load(), 0, 100) / 100;
     if (volume >= 100 || wav.size() < 12 || memcmp(wav.data(), "RIFF", 4) != 0) return;
     size_t pos = 12;
     int bits = 16;
@@ -277,7 +280,7 @@ static void worker()
             sapi = nullptr;
             return;
         }
-        sapi->SetVolume((USHORT)std::clamp(g_cfg.local_volume, 0, 100));
+        sapi->SetVolume((USHORT)(std::clamp(g_cfg.local_volume, 0, 100) * std::clamp(g_level.load(), 0, 100) / 100));
         sapi->SetRate(std::clamp(g_cfg.voice_rate, -10, 10));
     };
     bool use_piper = g_cfg.voice_engine != L"windows";
@@ -302,9 +305,16 @@ static void worker()
     std::unordered_map<std::string, std::vector<char>> cache;       // local voice phrases, volume applied
     std::unordered_map<std::string, std::vector<char>> fish_cache;  // fish.audio phrases, volume applied
     size_t fish_saved = 0;
+    int level_gen = g_level_gen;
     std::unique_lock<std::mutex> lock(g_mutex);
     for (;;) {
         Message msg;
+        if (level_gen != g_level_gen) {  // the voice level changed: the saved audio is scaled for the old one
+            level_gen = g_level_gen;
+            cache.clear();
+            fish_cache.clear();
+            if (sapi) sapi->SetVolume((USHORT)(std::clamp(g_cfg.local_volume, 0, 100) * g_level / 100));
+        }
         g_cv.wait_for(lock, std::chrono::milliseconds(500), [&] { return g_quit || (!g_paused && !g_queue.empty()); });
         if (g_quit) break;
         if (!pop_next(msg)) continue;
@@ -413,12 +423,28 @@ static void worker()
 
 // --- API ------------------------------------------------------------------------------------
 
+int speech_level() { return g_level; }
+
+int speech_change_level(int delta)
+{
+    const int level = std::clamp(g_level + delta, 0, 100);
+    g_level = level;
+    ++g_level_gen;
+    wchar_t b[16];
+    swprintf(b, 16, L"%d", level);
+    WritePrivateProfileStringW(L"voice", L"level", b, (g_dir + L"\\ets2_city_overlay.ini").c_str());
+    log_info("speech: voice level %d%%", level);
+    speech_say("Volume " + std::to_string(level) + " percent.", SpeechPriority::High, "volume", 4);
+    return level;
+}
+
 void speech_start(const Config& cfg, const std::wstring& dir)
 {
     if (g_thread.joinable()) return;
     g_cfg = cfg;
     g_dir = dir;
     g_quit = false;
+    g_level = std::clamp(cfg.voice_level, 0, 100);
     g_thread = std::thread(worker);
 }
 

@@ -2,6 +2,7 @@
 #include "capture.h"
 #include "log.h"
 #include "mic.h"
+#include "speech.h"
 #include "route.h"
 
 #include <windows.h>
@@ -118,6 +119,8 @@ static bool                    g_strip_visible = true;
 static bool                    g_strip_key_was_down = false;
 static bool                    g_guide_key_was_down = false;
 static bool                    g_master_key_was_down = false;
+static bool                    g_quieter_was_down = false, g_louder_was_down = false;
+static std::string             g_note;              // a short note in the middle ("Voice volume 50%")
 static std::atomic<bool>       g_master{true};   // the whole plugin on / off
 static double                  g_master_at = -1e9;  // when it last changed (for the note)
 
@@ -226,7 +229,7 @@ static void draw_master_note(double age)
 {
     const float alpha = age < 2.5 ? 1.0f : (float)std::max(0.0, 3.0 - age) * 2.0f;
     if (alpha <= 0.0f) return;
-    const char* text = g_master ? "City Overlay on" : "City Overlay off  (Ctrl+F8 turns it back on)";
+    const char* text = g_note.c_str();
     const float scale = g_bb_height / 1080.0f;
     const float size = g_cfg.font_size * scale * 0.6f;
     const ImVec2 ts = g_font->CalcTextSizeA(size, FLT_MAX, 0.0f, text);
@@ -256,9 +259,20 @@ static void poll_hotkey()
     if (master_down && !g_master_key_was_down) {
         g_master = !g_master;
         g_master_at = now_seconds();
+        g_note = g_master ? "City Overlay on" : "City Overlay off  (Ctrl+F8 turns it back on)";
         log_info("switched %s (Ctrl+F8)", g_master ? "on" : "off");
     }
     g_master_key_was_down = master_down;
+    // Voice level: quieter / louder, 10 at a time.
+    const bool quieter = g_master && focused && ctrl && (GetAsyncKeyState(g_cfg.volume_down_key) & 0x8000);
+    const bool louder = g_master && focused && ctrl && (GetAsyncKeyState(g_cfg.volume_up_key) & 0x8000);
+    if ((quieter && !g_quieter_was_down) || (louder && !g_louder_was_down)) {
+        const int level = speech_change_level(quieter ? -10 : 10);
+        g_note = "Voice volume " + std::to_string(level) + "%";
+        g_master_at = now_seconds();
+    }
+    g_quieter_was_down = quieter;
+    g_louder_was_down = louder;
     // Co-driver key: the mic module tells a tap ("about here") from holding it to talk.
     const bool guide_down = g_master && g_cfg.guide && focused && ctrl && (GetAsyncKeyState(g_cfg.guide_key) & 0x8000);
     if (guide_down != g_guide_key_was_down) mic_hold(guide_down);

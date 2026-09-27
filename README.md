@@ -21,7 +21,7 @@ An in-game plugin for Euro Truck Simulator 2 that shows the name of the city you
 - **Mini HUD:** a slim bar in the top-right corner with fuel range, time until you must sleep, the current speed limit and your arrival time on the game clock. The arrival time turns red when you'd be late.
 - **Rest stops you can reach:** in the strip, places to sleep you can't reach before your rest time runs out are dimmed.
 - **Hidden while paused:** the label disappears in the menu, the world map and other paused screens.
-- **Ctrl+F8:** turns the whole plugin off or on: overlay, voice and AI assistant. **Ctrl+F9:** shows or hides the overlay. **Ctrl+F10:** the stops strip. **Ctrl+F11:** the assistant (tap = about here, hold = talk).
+- **Ctrl+F6 / Ctrl+F7:** the voice quieter or louder, 10% at a time. It says the new level, and the level is saved. **Ctrl+F8:** turns the whole plugin off or on: overlay, voice and AI assistant. **Ctrl+F9:** shows or hides the overlay. **Ctrl+F10:** the stops strip. **Ctrl+F11:** the assistant (tap = about here, hold = talk).
 
 ## How it works
 
@@ -90,7 +90,7 @@ If the name is wrong somewhere, the `entered` / `left` lines give the exact posi
 - A wrong key or no credit (HTTP 401 or 402) switches to the local voice for the rest of the session.
 - Set it up with `fish_voice=` (the voice's id), `fish_model=`, and your API key on the first line of `fish_audio_key.txt` in `plugins\ets2_city_overlay\`. `engine=piper` uses only the local voice.
 
-**Volume:** `volume=` is for fish.audio and `local_volume=` for the local voice. The local voice comes out about twice as loud (about −12 against −18 dBFS), so it defaults to 45.
+**Volume:** `volume=` is for fish.audio and `local_volume=` for the local voice. The local voice comes out about twice as loud (about −12 against −18 dBFS), so it defaults to 45. `level=` (60) sits on top of both. **Ctrl+F6 / Ctrl+F7** change it in the game, and the new level is saved.
 
 **The local voice** is [Piper](https://github.com/rhasspy/piper) (MIT licence) with a voice from [rhasspy/piper-voices](https://huggingface.co/rhasspy/piper-voices). It runs as a small helper program next to the game at low priority, so the game stays smooth. `install.ps1` downloads it (about 85 MB) into `plugins\ets2_city_overlay\voice\` the first time. To get another voice:
 
@@ -160,6 +160,7 @@ Edit `plugins\ets2_city_overlay\ets2_city_overlay.ini`, then restart the game. T
 | voice | `speak` | 0 | Turn the spoken announcement on or off |
 | voice | `text` | `Welcome to {city}` | What to say; `{city}` and `{country}` are filled in |
 | voice | `voice`, `volume`, `local_volume`, `rate` | default, 100, 45, 0 | Windows voice name (e.g. `Zira`); volume of fish.audio and of the local voice; speed |
+| voice | `level`, `quieter_key`, `louder_key` | 60, `0x75`, `0x76` | Overall voice level; Ctrl + these keys (F6 / F7) change it |
 | alerts | `enabled` | 1 | Turn the fuel and sleep warnings on or off |
 | alerts | `fuel_warn_liters`, `fuel_critical_liters` | 100, 40 | Warn below this; turn red below that |
 | alerts | `rest_warn_minutes` | 120 | Warn when sleep is due within this many in-game minutes |

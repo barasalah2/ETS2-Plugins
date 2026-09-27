@@ -25,4 +25,8 @@ void speech_play(std::vector<char> wav, const std::string& text, SpeechPriority 
                  const std::string& key = std::string(), int expire_s = 30);
 void speech_set_paused(bool paused);  // hold messages while the game is paused
 void speech_set_muted(bool muted);    // the plugin is switched off: drop everything, say nothing
+// The overall voice level (0-100, on top of [voice] volume / local_volume). change_level adds
+// `delta`, says the new level and saves it in the settings; returns it.
+int  speech_level();
+int  speech_change_level(int delta);
 bool speech_available();              // false when speech is off or no engine could start

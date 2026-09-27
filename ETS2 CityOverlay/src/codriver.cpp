@@ -72,11 +72,11 @@ static const char* kSystem =
     "The driver is playing Euro Truck Simulator 2; treat everything as real.\n"
     "You are a system, not a person or a passenger: don't claim a body, feelings or a life of your own, and "
     "don't say \"we\" or \"us\". Speak to the driver as \"you\".\n"
-    "Each message brings an image from the front camera (what the driver sees, including the dashboard and "
-    "the navigation display), a short report (game time, location, the job and the route ahead) and what "
-    "just happened; sometimes the driver's voice.\n"
-    "The camera image is your main source. Look at it closely and use what it shows: road signs (speed "
-    "limits, exits and directions, warnings, tolls, borders); the road ahead (road works, an accident, a "
+    "Each message brings a short report (game time, location, the job and the route ahead) and what just "
+    "happened; sometimes an image from the front camera (what the driver sees, including the dashboard and "
+    "the navigation display) and sometimes the driver's voice.\n"
+    "When a camera image is attached, it is your main source. Look at it closely and use what it shows: road "
+    "signs (speed limits, exits and directions, warnings, tolls, borders); the road ahead (road works, an accident, a "
     "traffic jam, a closed lane, a sharp bend, a steep hill); weather and visibility (rain, fog, snow, "
     "darkness, low sun); landmarks, bridges, buildings and views worth a word; warning lights and messages "
     "on the dashboard or the screen. Speak of it as the truck's own camera and displays; never call it a "
@@ -88,12 +88,15 @@ static const char* kSystem =
     "units in words.\n"
     "- Only say what you can actually see or know for sure. If a sign or text is too small to read, don't "
     "guess it. Read each sign on its own: a distance on a direction sign belongs to that sign's place, not to "
-    "a speed limit or another sign. A speed limit sign applies from where it stands. Facts about places must "
-    "be accurate and well established.\n"
+    "a speed limit or another sign. A speed limit sign applies from where it stands.\n"
+    "- Facts about places: specific and true, the kind a local would tell a visitor (a story with a date, a "
+    "name or a number; a landmark, a famous person, a local dish or tradition). Never generic filler like being "
+    "a capital, a large city or known for its history. Don't invent reasons or links between facts.\n"
     "- Numbers only from the image or the report. Never invent them.\n"
     "- No small talk, jokes, teasing, opinions or personal remarks. Never suggest alcohol.\n"
     "- Don't repeat what was already said in the conversation, and don't describe the same view twice.\n"
-    "- Don't give turn-by-turn directions or fuel and rest advice unprompted: the navigation handles those.\n"
+    "- Don't mention fuel, rest, speed limits, turns or the route unless the driver asks: the navigation "
+    "handles those.\n"
     "- For automatic looks, speak only when the image shows something new and useful; otherwise leave "
     "\"say\" empty. Silence is normal.\n"
     "- Answer in the language the driver speaks.\n"
@@ -333,11 +336,14 @@ static std::string instruction(const MomentInfo& m, bool image)
             return "The driver is speaking to you; their voice is attached. Put their words in \"heard\", then "
                    "respond to them.";
         case Moment::AskHere:
-            return std::string("The driver asks what's around. Using the camera image first, tell them what's notable "
-                               "in view (a sign, a landmark, the road, the weather)") +
-                   (m.place.empty() ? std::string(", and one accurate fact about the region.")
-                                    : std::string(", and one accurate fact about ") + place_words(m) + " (" +
-                                          (m.nearby ? "nearby" : "you're in it") + ")." + already_told(m));
+            if (m.place.empty())
+                return "The driver asks about where they are, between towns. Give one specific, surprising, true fact "
+                       "about the region from the report. Not the weather, the road or the traffic.";
+            return std::string("The driver asks about ") + place_words(m) + (m.nearby ? " (nearby)" : " (they're in it)") +
+                   ". Give one specific, surprising, true fact about it that a local would tell a visitor: a story "
+                   "with a date, a name or a number, naming the place in it. Not the weather, the road, the traffic "
+                   "or the route." +
+                   already_told(m);
         case Moment::Delivered:
             return "The delivery is complete: " + m.detail + ". Confirm it in one sentence with the key numbers.";
         case Moment::Fined:
@@ -353,14 +359,17 @@ static std::string instruction(const MomentInfo& m, bool image)
                    "language is fine). Don't mention speed limits.";
         case Moment::City:
             return "Entering " + place_words(m) +
-                   ". Say one notable thing about it: something visible in the camera image, or one accurate fact "
-                   "about the city." + already_told(m);
+                   ". Give one specific, surprising, true fact about it that a local would tell a visitor: a story "
+                   "with a date, a name or a number (history, a landmark, a famous person, a local dish or "
+                   "tradition), naming the city in it. Not the weather, the road, fuel or the route." + already_told(m);
         default:
             if (!image) return "Regular check, but the camera image is missing: leave \"say\" empty.";
-            return "Regular camera check while driving. If the image shows something new and useful (a sign, road "
-                   "works, a hazard or a jam, a change in weather or visibility, a notable landmark or view, or a "
-                   "warning on the dashboard or screen), tell the driver in one short sentence. If nothing new or "
-                   "useful is visible, leave \"say\" empty.";
+            return "Regular camera check while driving. Speak only for something the driver would want to know now "
+                   "that the navigation doesn't already tell them: an accident, road works, a jam or a closed lane "
+                   "ahead; a big change in weather or visibility (fog, heavy rain, snow); a famous landmark in view; "
+                   "a warning light or message on the dashboard. Never traffic lights, speed limits, bends, turns, "
+                   "the navigation display, ordinary traffic or ordinary scenery. Most of the time the right answer "
+                   "is to leave \"say\" empty.";
     }
 }
 
@@ -643,7 +652,7 @@ static void worker()
 
         // The front camera: what's on screen is its main source, so every request gets a picture.
         std::vector<char> jpeg;
-        if (g_cfg.guide_screenshots) {
+        if (g_cfg.guide_screenshots && (m.kind == Moment::Look || m.kind == Moment::Talk)) {
             capture_request();
             if (!capture_wait_jpeg(jpeg, 1500) && !told_no_picture) {
                 log_info("assistant: couldn't take a screenshot this time");
@@ -669,7 +678,20 @@ static void worker()
                         "}]},";
         // The task first, then the report it refers to (small models follow it better that way).
         const std::string task = instruction(m, !jpeg.empty());
-        std::string parts = "{\"text\":" + json_quote("Task: " + task + "\n\nSituation report:\n" + report) + "}";
+        std::string facts = report;
+        if (m.kind != Moment::Talk) {  // the model echoes fuel/sleep into city facts; only the driver asks for them
+            std::string kept;
+            size_t pos = 0;
+            while (pos < report.size()) {
+                size_t end = report.find('\n', pos);
+                if (end == std::string::npos) end = report.size();
+                const std::string line = report.substr(pos, end - pos);
+                if (line.rfind("Fuel:", 0) != 0 && line.rfind("Sleep needed", 0) != 0) kept += line + "\n";
+                pos = end + 1;
+            }
+            facts = kept;
+        }
+        std::string parts = "{\"text\":" + json_quote("Task: " + task + "\n\nSituation report:\n" + facts) + "}";
         if (!jpeg.empty())
             parts += ",{\"inlineData\":{\"mimeType\":\"image/jpeg\",\"data\":\"" + base64_encode(jpeg.data(), jpeg.size()) + "\"}}";
         if (!m.audio.empty())
@@ -678,7 +700,7 @@ static void worker()
         if (g_debug) {  // what the model is told this time, for checking
             std::string dump = "--- " + std::string(name_of(m.kind)) + "\n";
             for (const auto& ex : g_history) dump += "user: " + ex.user + "\nmodel: " + ex.model + "\n";
-            dump += "now:\nTask: " + task + "\n\nSituation report:\n" + report + "\n\n";
+            dump += "now:\nTask: " + task + "\n\nSituation report:\n" + facts + "\n\n";
             if (FILE* f = _wfopen((g_dir + L"\\codriver_requests.txt").c_str(), L"ab")) {
                 fputs(dump.c_str(), f);
                 fclose(f);
@@ -731,7 +753,11 @@ static void worker()
                 // A little more thought reads the picture more carefully (it would sometimes mix up
                 // two signs); the driver's own questions stay quick.
                 (md->thinking ? std::string(",\"thinkingConfig\":{\"thinkingLevel\":\"") +
-                                    (m.kind == Moment::Talk ? "low" : "medium") + "\"}"
+                                    (m.kind == Moment::Talk ? "low"
+                                     : (m.kind == Moment::City || m.kind == Moment::AskHere || m.kind == Moment::Border)
+                                         ? "high"
+                                         : "medium") +
+                                    "\"}"
                               : std::string()) +
                 "}}";
             last_call = GetTickCount64();
