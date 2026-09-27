@@ -420,7 +420,17 @@ int main(int argc, char** argv)
         remove((dir + "\\codriver_requests.txt").c_str());
         if (argc > 4) SetEnvironmentVariableA("ETS2_CITY_OVERLAY_FAKE_MIC", argv[4]);
         g_landscape = true;
-        if (argc > 5) load_scene(dev, argv[5], 1280, 720);
+        if (argc > 5 && std::string(argv[5]) == "big") {  // 1440p: the screenshot is shrunk on the GPU
+            g_ctx->OMSetRenderTargets(0, nullptr, nullptr);
+            g_rtv->Release();
+            g_sc->ResizeBuffers(0, 2560, 1440, DXGI_FORMAT_UNKNOWN, 0);
+            ID3D11Texture2D* big = nullptr;
+            g_sc->GetBuffer(0, IID_PPV_ARGS(&big));
+            dev->CreateRenderTargetView(big, nullptr, &g_rtv);
+            big->Release();
+        } else if (argc > 5) {
+            load_scene(dev, argv[5], 1280, 720);
+        }
         const uint32_t t0 = 1 * 1440 + 14 * 60 + 5;  // Tuesday 14:05
         send_u32("game.time", t0);
         send_float("local.scale", 19.0f);
@@ -526,7 +536,19 @@ int main(int argc, char** argv)
             run_for(20.0);
             printf("RULES TEST: wipers on -> expect the rain reminder\n");
             send_bool("truck.wipers", true);
-            run_for(8.0);
+            run_for(6.2);  // the reminder starts ~5 s after the wipers: pause in the middle of it
+            {
+                LARGE_INTEGER f, a, b;
+                QueryPerformanceFrequency(&f);
+                QueryPerformanceCounter(&a);
+                send_event(SCS_TELEMETRY_EVENT_paused);
+                QueryPerformanceCounter(&b);
+                printf("PAUSE TEST: the pause event took %.1f ms while the voice was speaking\n",
+                       (b.QuadPart - a.QuadPart) * 1000.0 / f.QuadPart);
+                run_for(1.0);
+                send_event(SCS_TELEMETRY_EVENT_started);
+            }
+            run_for(2.0);
             printf("RULES TEST: Ctrl+F8 (switch off), then the limit drops 60 -> 40 -> expect silence\n");
             if (press_ctrl_key(VK_F8, 120)) {
                 run_for(0.8);

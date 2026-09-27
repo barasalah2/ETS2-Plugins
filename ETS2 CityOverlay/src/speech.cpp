@@ -33,6 +33,7 @@ static std::mutex              g_mutex;
 static std::condition_variable g_cv;
 static std::vector<Message>    g_queue;
 static bool                    g_quit = false, g_paused = false;
+static bool                    g_stop = false;   // cut off what's playing (an urgent line came in)
 static std::atomic<bool>       g_muted{false};
 static std::atomic<int>        g_level{60};      // overall voice level, 0-100
 static std::atomic<int>        g_level_gen{0};   // changes when it does (the caches hold scaled audio)
@@ -248,6 +249,52 @@ static bool write_file(const std::wstring& path, const std::vector<char>& data)
     return ok;
 }
 
+// Length of a WAV image's audio, ms.
+static ULONGLONG wav_ms(const std::vector<char>& wav)
+{
+    uint32_t byte_rate = 0;
+    size_t pos = 12;
+    while (pos + 8 <= wav.size()) {
+        uint32_t len;
+        memcpy(&len, &wav[pos + 4], 4);
+        if (memcmp(&wav[pos], "fmt ", 4) == 0 && pos + 20 <= wav.size()) memcpy(&byte_rate, &wav[pos + 16], 4);
+        if (memcmp(&wav[pos], "data", 4) == 0) {
+            const size_t bytes = std::min<size_t>(len, wav.size() - pos - 8);
+            return byte_rate ? (ULONGLONG)bytes * 1000 / byte_rate : 0;
+        }
+        pos += 8 + len + (len & 1);
+    }
+    return 0;
+}
+
+// Something asked the voice to stop: the game paused, the plugin was switched off, an urgent line.
+static bool interrupted() { return g_quit || g_paused || g_stop || g_muted; }
+
+// Plays a WAV image on this (the speech) thread without blocking in PlaySound: other threads only
+// raise a flag and wake us, and we stop the sound ourselves. PlaySound(NULL) from another thread
+// waits until a synchronous sound ends, which froze the game when it paused mid-sentence.
+static void play_wav(const std::vector<char>& wav)
+{
+    if (!PlaySoundW((LPCWSTR)wav.data(), nullptr, SND_MEMORY | SND_ASYNC | SND_NODEFAULT)) return;
+    {
+        std::unique_lock<std::mutex> lock(g_mutex);
+        g_cv.wait_for(lock, std::chrono::milliseconds(wav_ms(wav) + 120), [] { return interrupted(); });
+    }
+    PlaySoundW(nullptr, nullptr, 0);  // done or cut off; the buffer can go after this
+}
+
+static void speak_sapi(ISpVoice* sapi, const std::wstring& text)
+{
+    if (FAILED(sapi->Speak(text.c_str(), SPF_IS_NOT_XML | SPF_ASYNC, nullptr))) return;
+    while (sapi->WaitUntilDone(50) == S_FALSE) {
+        std::lock_guard<std::mutex> lock(g_mutex);
+        if (interrupted()) {
+            sapi->Speak(nullptr, SPF_PURGEBEFORESPEAK, nullptr);
+            break;
+        }
+    }
+}
+
 static void worker()
 {
     CoInitializeEx(nullptr, COINIT_MULTITHREADED);
@@ -318,6 +365,7 @@ static void worker()
         g_cv.wait_for(lock, std::chrono::milliseconds(500), [&] { return g_quit || (!g_paused && !g_queue.empty()); });
         if (g_quit) break;
         if (!pop_next(msg)) continue;
+        g_stop = false;
         lock.unlock();
 
         g_playing = (int)msg.priority;
@@ -403,12 +451,12 @@ static void worker()
                 log_info("speech: \"%s\" (%llu ms to prepare)", msg.text.c_str(), synth_ms);
             else
                 log_info("speech (%s, %llu ms): \"%s\"", how, synth_ms, msg.text.c_str());
-            if (!mute) PlaySoundW((LPCWSTR)wav.data(), nullptr, SND_MEMORY | SND_SYNC | SND_NODEFAULT);
+            if (!mute) play_wav(wav);
         } else {
             start_sapi();
             if (sapi) {
                 log_info("speech (Windows voice): \"%s\"", msg.text.c_str());
-                if (!mute) sapi->Speak(widen(msg.text).c_str(), SPF_IS_NOT_XML, nullptr);  // blocking, like PlaySound
+                if (!mute) speak_sapi(sapi, widen(msg.text));
             }
         }
         g_playing = -1;
@@ -456,8 +504,7 @@ void speech_stop()
         g_quit = true;
         g_queue.clear();
     }
-    PlaySoundW(nullptr, nullptr, 0);  // cut off anything playing so the worker can finish
-    g_cv.notify_one();
+    g_cv.notify_all();  // the worker cuts off what's playing and finishes
     g_thread.join();
     g_available = false;
 }
@@ -514,31 +561,29 @@ static void enqueue(Message m)
             if (g_queue.size() >= 16) g_queue.erase(g_queue.begin());
             g_queue.push_back(std::move(m));
         }
+        // An urgent line cuts off the assistant mid-sentence (the worker stops the sound).
+        if (priority == SpeechPriority::High && g_playing == (int)SpeechPriority::Low) g_stop = true;
     }
-    // An alert cuts off the tour guide mid-sentence.
-    if (priority == SpeechPriority::High && g_playing == (int)SpeechPriority::Low) PlaySoundW(nullptr, nullptr, 0);
-    g_cv.notify_one();
+    g_cv.notify_all();
 }
 
 void speech_set_paused(bool paused)
 {
     {
         std::lock_guard<std::mutex> lock(g_mutex);
-        g_paused = paused;
+        g_paused = paused;  // the worker stops talking when the menu opens
     }
-    if (paused) PlaySoundW(nullptr, nullptr, 0);  // stop talking when the menu opens
-    g_cv.notify_one();
+    g_cv.notify_all();
 }
 
 void speech_set_muted(bool muted)
 {
-    g_muted = muted;
-    if (!muted) return;
     {
         std::lock_guard<std::mutex> lock(g_mutex);
-        g_queue.clear();
+        g_muted = muted;
+        if (muted) g_queue.clear();
     }
-    PlaySoundW(nullptr, nullptr, 0);
+    g_cv.notify_all();  // the worker cuts off what's playing
 }
 
 bool speech_available() { return g_available; }
