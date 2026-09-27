@@ -27,6 +27,7 @@ static bool       g_paused = true;
 static AlertState g_alerts;
 static StripState g_strip;
 static Guidance   g_guidance;
+static HudState   g_hud;
 static GuideCard  g_guide;
 static double     g_guide_at = -1e9;
 
@@ -57,6 +58,12 @@ void overlay_set_strip(const StripState& strip)
 {
     std::lock_guard<std::mutex> lock(g_state_mutex);
     g_strip = strip;
+}
+
+void overlay_set_hud(const HudState& hud)
+{
+    std::lock_guard<std::mutex> lock(g_state_mutex);
+    g_hud = hud;
 }
 
 void overlay_set_guidance(const Guidance& g)
@@ -594,7 +601,7 @@ static void draw_strip(const StripState& st)
     for (size_t i = 0; i < st.items.size(); ++i) {
         const StripItem& it = st.items[i];
         const float cy = y + row_h * 0.5f;
-        if (it.tone) {  // recommended / urgent stop
+        if (it.tone == 1 || it.tone == 2) {  // recommended / urgent stop
             const ImU32 bg = it.tone == 2 ? IM_COL32(170, 40, 30, 120) : IM_COL32(200, 130, 20, 90);
             dl->AddRectFilled(ImVec2(p0.x + 6.0f * scale, y + 1), ImVec2(p1.x - 4.0f * scale, y + row_h - 1), bg,
                               body * 0.3f);
@@ -624,17 +631,73 @@ static void draw_strip(const StripState& st)
 
         const ImU32 km_col = it.tone == 2   ? IM_COL32(255, 120, 100, 255)
                              : it.tone == 1 ? IM_COL32(255, 196, 80, 255)
+                             : it.tone == 3 ? IM_COL32(130, 135, 142, 255)   // can't make it there in time
                                             : IM_COL32(235, 238, 242, 255);
         const ImVec2 ks = g_font->CalcTextSizeA(body, FLT_MAX, 0.0f, kms[i].c_str());
         draw_text_shadowed(dl, body, ImVec2(x + km_w - ks.x, cy - ks.y * 0.5f), km_col, 1.0f, kms[i].c_str());
         x += km_w + gap;
         const ImVec2 ls = g_font->CalcTextSizeA(body, FLT_MAX, 0.0f, it.label.c_str());
-        draw_text_shadowed(dl, body, ImVec2(x, cy - ls.y * 0.5f), IM_COL32(235, 238, 242, 255), 1.0f,
+        draw_text_shadowed(dl, body, ImVec2(x, cy - ls.y * 0.5f),
+                           it.tone == 3 ? IM_COL32(130, 135, 142, 255) : IM_COL32(235, 238, 242, 255), 1.0f,
                            it.label.c_str());
         const ImVec2 tsz = g_font->CalcTextSizeA(body * 0.85f, FLT_MAX, 0.0f, times[i].c_str());
         draw_text_shadowed(dl, body * 0.85f, ImVec2(p1.x - pad - tsz.x, cy - tsz.y * 0.5f),
                            IM_COL32(170, 176, 184, 255), 1.0f, times[i].c_str());
         y += row_h;
+    }
+}
+
+// The slim bar in the top-right corner: fuel range, time until sleep, speed limit, arrival.
+static void draw_hud(const HudState& h)
+{
+    const float scale = g_bb_height / 1080.0f;
+    const float body = g_cfg.font_size * scale * 0.5f;
+    const float icon = body * 1.2f;
+    const float pad = body * 0.7f, gap = body * 0.55f, sep = body * 1.1f;
+    struct Cell { int kind; std::string text; ImU32 col; };  // kind: 0 fuel, 1 rest, 2 limit, 3 arrival
+    std::vector<Cell> cells;
+    const ImU32 normal = IM_COL32(235, 238, 242, 255), amber = IM_COL32(255, 196, 80, 255),
+                red = IM_COL32(255, 120, 100, 255);
+    if (h.range_km >= 0) cells.push_back({0, format_km(h.range_km), h.fuel_low ? amber : normal});
+    if (h.rest_min >= 0) cells.push_back({1, format_hm((float)h.rest_min), h.rest_low ? amber : normal});
+    if (h.limit_kmh > 0) cells.push_back({2, std::to_string(h.limit_kmh), h.speeding ? red : IM_COL32(20, 22, 26, 255)});
+    if (!h.eta.empty()) cells.push_back({3, h.eta, h.late ? red : normal});
+    if (cells.empty()) return;
+
+    float w = pad * 2.0f;
+    std::vector<float> widths;
+    for (const auto& c : cells) {
+        const float tw = c.kind == 2 ? 0.0f : g_font->CalcTextSizeA(body, FLT_MAX, 0.0f, c.text.c_str()).x;
+        widths.push_back(c.kind == 2 ? icon * 1.15f : icon + gap + tw);
+        w += widths.back();
+    }
+    w += sep * (cells.size() - 1);
+    const float hgt = body * 1.9f;
+    const float right = g_bb_width * g_cfg.strip_x;
+    const ImVec2 p0(right - w, g_bb_height * g_cfg.hud_y), p1(right, p0.y + hgt);
+    ImDrawList* dl = ImGui::GetForegroundDrawList();
+    dl->AddRectFilled(p0, p1, IM_COL32(12, 14, 18, 175), hgt * 0.5f);
+    const float cy = p0.y + hgt * 0.5f;
+    float x = p0.x + pad;
+    for (size_t i = 0; i < cells.size(); ++i) {
+        const Cell& c = cells[i];
+        const ImVec2 ic(x + icon * 0.5f, cy);
+        if (c.kind == 0) icon_fuel(dl, ic, icon, IM_COL32(255, 176, 32, 255));
+        else if (c.kind == 1) icon_parking(dl, ic, icon);
+        else if (c.kind == 3) icon_flag(dl, ic, icon);
+        if (c.kind == 2) {  // a speed limit sign: red ring, white disc, the number
+            const float r = icon * 0.56f;
+            const ImVec2 sc(x + widths[i] * 0.5f, cy);
+            dl->AddCircleFilled(sc, r, IM_COL32(210, 30, 30, 255));
+            dl->AddCircleFilled(sc, r * 0.78f, IM_COL32(255, 255, 255, 255));
+            const float fs = body * (c.text.size() > 2 ? 0.72f : 0.86f);
+            const ImVec2 ts = g_font->CalcTextSizeA(fs, FLT_MAX, 0.0f, c.text.c_str());
+            dl->AddText(g_font, fs, ImVec2(sc.x - ts.x * 0.5f, sc.y - ts.y * 0.5f), c.col, c.text.c_str());
+        } else {
+            const ImVec2 ts = g_font->CalcTextSizeA(body, FLT_MAX, 0.0f, c.text.c_str());
+            draw_text_shadowed(dl, body, ImVec2(x + icon + gap, cy - ts.y * 0.5f), c.col, 1.0f, c.text.c_str());
+        }
+        x += widths[i] + sep;
     }
 }
 
@@ -653,11 +716,13 @@ static void on_present(IDXGISwapChain* sc, const char* via)
     AlertState alerts;
     StripState strip;
     Guidance guidance;
+    HudState hud;
     GuideCard guide;
     double guide_at;
     {
         std::lock_guard<std::mutex> lock(g_state_mutex);
         guidance = g_guidance;
+        hud = g_hud;
         guide = g_guide;
         guide_at = g_guide_at;
         loc = g_loc;
@@ -678,7 +743,8 @@ static void on_present(IDXGISwapChain* sc, const char* via)
         guide_at = now;
     }
     const bool show_guide = g_visible && !paused && g_cfg.guide_show && guide.active && now - guide_at < 60.0;
-    if (alpha <= 0.01f && !show_alerts && !show_strip && !show_guidance && !show_guide) return;
+    const bool show_hud = g_visible && !paused && g_cfg.hud && hud.visible;
+    if (alpha <= 0.01f && !show_alerts && !show_strip && !show_guidance && !show_guide && !show_hud) return;
 
     ImGuiIO& io = ImGui::GetIO();
     io.DisplaySize = ImVec2(g_bb_width, g_bb_height);
@@ -691,6 +757,7 @@ static void on_present(IDXGISwapChain* sc, const char* via)
     if (show_guidance) bottom = draw_guidance(guidance, bottom + g_bb_height * 0.008f);
     if (show_alerts) draw_alerts(alerts, bottom, now);
     if (show_strip) draw_strip(strip);
+    if (show_hud) draw_hud(hud);
     if (show_guide) draw_guide(guide, now - guide_at);
     ImGui::Render();
 

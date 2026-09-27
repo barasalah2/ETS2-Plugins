@@ -42,7 +42,7 @@ struct StripItem
     uint8_t     kinds = 0;  // RouteStop kinds
     std::string label;
     float       km = 0, minutes = 0;
-    uint8_t     tone = 0;   // 0 normal, 1 recommended (amber), 2 urgent (red)
+    uint8_t     tone = 0;   // 0 normal, 1 recommended (amber), 2 urgent (red), 3 out of reach (dimmed)
 };
 
 struct StripState
@@ -54,6 +54,20 @@ struct StripState
     std::vector<StripItem> items;
 };
 void overlay_set_strip(const StripState& strip);
+
+// The slim always-on bar in the top-right corner.
+struct HudState
+{
+    bool        visible = false;
+    float       range_km = -1;      // fuel range, game km (< 0 = unknown)
+    int         rest_min = -1;      // in-game minutes until sleep (< 0 = fatigue off)
+    int         limit_kmh = 0;      // current speed limit (0 = none known)
+    bool        speeding = false;   // 5 km/h or more over it
+    std::string eta;                // arrival, game clock "18:45" ("" = no route)
+    bool        late = false;       // arrival after the delivery deadline
+    bool        fuel_low = false, rest_low = false;  // a warning is up for it
+};
+void overlay_set_hud(const HudState& hud);
 
 // The next exit or turn on the route, with its lanes (drawn under the city name).
 struct Guidance

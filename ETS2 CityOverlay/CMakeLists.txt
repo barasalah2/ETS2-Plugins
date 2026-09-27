@@ -34,6 +34,7 @@ add_library(ets2_city_overlay SHARED
   src/gemini.cpp
   src/capture.cpp
   src/mic.cpp
+  src/rules.cpp
   src/announce.cpp
   src/exports.def
   ${imgui_SOURCE_DIR}/imgui.cpp
@@ -71,6 +72,7 @@ add_custom_command(TARGET ets2_city_overlay POST_BUILD
           "${CMAKE_SOURCE_DIR}/data/cities.csv"
           "${CMAKE_SOURCE_DIR}/data/city_areas.csv"
           "${CMAKE_SOURCE_DIR}/data/pois.csv"
+          "${CMAKE_SOURCE_DIR}/data/countries.csv"
           "${CMAKE_SOURCE_DIR}/data/route_graph.bin"
           "${CMAKE_SOURCE_DIR}/data/maneuvers.bin"
           "${CMAKE_SOURCE_DIR}/data/ets2_city_overlay.ini"

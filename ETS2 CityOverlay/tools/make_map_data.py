@@ -146,6 +146,15 @@ def main():
     fuel = sum(1 for p in pois if p[0] == "fuel")
     print(f"wrote {len(cities)} cities, {len(areas)} boundary areas, "
           f"{fuel} fuel stations, {len(pois) - fuel} rest places to {DATA}")
+    if args.parser_out:
+        # Each country's diesel price in the game's economy (for "cheaper fuel across the border").
+        countries = json.loads((pathlib.Path(args.parser_out) / "europe-countries.json").read_text(encoding="utf-8"))
+        with (DATA / "countries.csv").open("w", encoding="utf-8", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(["name", "code", "fuel_price"])
+            for c in sorted(countries, key=lambda c: c["name"]):
+                w.writerow([c["name"], c.get("code", ""), f"{c.get('fuelPrice', 0):.3f}"])
+        print(f"wrote {len(countries)} countries (fuel prices) to {DATA}")
 
 
 if __name__ == "__main__":

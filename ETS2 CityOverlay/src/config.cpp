@@ -57,6 +57,10 @@ Config load_config(const std::wstring& dir)
     c.say_border      = read_num(f, an, L"border", c.say_border) != 0;
     c.say_destination = read_num(f, an, L"destination", c.say_destination) != 0;
     c.say_lanes       = read_num(f, an, L"lanes", c.say_lanes) != 0;
+    c.say_speed_limit = read_num(f, an, L"speed_limit", c.say_speed_limit) != 0;
+    c.speeding_warning = read_num(f, an, L"speeding", c.speeding_warning) != 0;
+    c.lights_reminder = read_num(f, an, L"headlights", c.lights_reminder) != 0;
+    c.say_fuel_prices = read_num(f, an, L"fuel_prices", c.say_fuel_prices) != 0;
     c.border_km       = read_num(f, an, L"border_km", c.border_km);
     c.destination_km  = read_num(f, an, L"destination_km", c.destination_km);
     const std::wstring text = read_str(f, v, L"text", L"");
@@ -109,6 +113,10 @@ Config load_config(const std::wstring& dir)
     c.guide_listen   = read_num(f, g, L"listen", c.guide_listen) != 0;
     c.guide_look_minutes = read_num(f, g, L"look_minutes", c.guide_look_minutes);
     c.guide_daily_limit = (int)read_num(f, g, L"daily_limit", c.guide_daily_limit);
+
+    const wchar_t* h = L"hud";
+    c.hud            = read_num(f, h, L"enabled", c.hud) != 0;
+    c.hud_y          = (float)read_num(f, h, L"position_y", c.hud_y);
 
     c.in_city_radius = read_num(f, d, L"in_city_radius", c.in_city_radius);
     c.near_km        = read_num(f, d, L"near_km", c.near_km);

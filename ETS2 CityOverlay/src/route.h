@@ -90,6 +90,7 @@ struct Route
     std::vector<double> cum_dur;        // seconds at truck speed limits, per point
     std::vector<double> cum_city_dur;
     std::vector<RouteStop> stops;       // sorted by at_m
+    std::string start_country;          // the country the route starts in
     double length_m() const { return cum_m.empty() ? 0.0 : cum_m.back(); }
 };
 
@@ -171,6 +172,7 @@ struct RouteView
     bool gps_checked = false, matches_gps = false;  // compared with the game's own GPS distance
     double gps_ratio = 0;                           // GPS distance / ours (1 = identical)
     std::string dest_label;
+    std::string country;  // the country the truck is in (the last border crossed on the route)
     double remaining_km = 0, remaining_min = 0;
     double progress_m = 0;
     struct Item

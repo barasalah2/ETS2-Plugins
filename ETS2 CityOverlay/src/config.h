@@ -29,6 +29,10 @@ struct Config
     bool        announce       = true;
     bool        say_fuel       = true, say_sleep = true, say_ferry = true, say_border = true, say_destination = true;
     bool        say_lanes      = true;   // exits, turns and lanes ahead (only when our route matches the GPS)
+    bool        say_speed_limit = true;  // "Speed limit 60" when the limit drops and you're above it
+    bool        speeding_warning = false; // also warn while you stay 5 km/h or more over the limit
+    bool        lights_reminder = true;  // headlights off while driving (a fine in the dark, rain, tunnels)
+    bool        say_fuel_prices = true;  // cheaper or dearer diesel across the next border on the route
     double      border_km      = 10.0;   // game km before a border
     double      destination_km = 5.0;    // game km before the destination
 
@@ -74,6 +78,10 @@ struct Config
     bool        guide_listen   = true;    // hold the key to talk to it (microphone, sent to Google)
     double      guide_look_minutes = 2;   // real minutes between camera looks while driving (0 = never)
     int         guide_daily_limit = 450;  // requests a day at most (Flash Lite's free tier allows 500)
+
+    // [hud] a slim always-on bar: fuel range, time until sleep, speed limit, arrival time
+    bool        hud            = true;
+    float       hud_y          = 0.02f;   // top of the bar, fraction of screen height (right edge = strip_x)
 
     // [detection]
     double      in_city_radius = 1800.0;  // world units (m) from a city point that count as "in" it

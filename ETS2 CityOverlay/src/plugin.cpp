@@ -13,6 +13,7 @@
 #include "overlay.h"
 #include "pois.h"
 #include "route.h"
+#include "rules.h"
 #include "announce.h"
 #include "speech.h"
 #include "spoken.h"
@@ -79,6 +80,9 @@ static JobState g_jobstate;
 static ULONGLONG    g_last_route_request = 0;
 static uint64_t     g_gps_logged_route = 0;
 static RouteView    g_view;  // last route view, for "Near X" distances along the route
+static RulesMonitor g_rules;   // speed limit, headlights, fuel prices across borders
+static std::string  g_country; // the country the truck is in, as best we know
+static bool         g_have_lights = false, g_low_beam = false, g_high_beam = false, g_wipers = false;
 static Location     g_loc;   // where we are, for the co-driver
 
 // Co-driver
@@ -164,6 +168,7 @@ static void update_location(bool force)
         g_current_city = city;
     }
     g_loc = loc;
+    if (loc.kind == Location::InCity && !loc.country.empty()) g_country = loc.country;
     overlay_set_location(loc);
 }
 
@@ -235,17 +240,29 @@ static StripState build_strip(const RouteView& v, const AlertState& a)
             ++taken;
         }
     }
+    std::string country = g_country;  // for "diesel -15%" on each border: the one before it
     for (size_t i = 0; i < v.ahead.size(); ++i) {
-        if (!take[i]) continue;
         const auto& it = v.ahead[i];
+        const std::string from = country;
+        if (it.kinds & RouteStop::Border) country = it.label;
+        if (!take[i]) continue;
         StripItem row;
         row.kinds = it.kinds;
         row.label = it.label;
+        if ((it.kinds & RouteStop::Border) && g_cfg.say_fuel_prices) {
+            const std::string tag = g_rules.border_tag(from, it.label);
+            if (!tag.empty()) row.label += " (" + tag + ")";
+        }
         if (it.detour_km >= 3.0) row.label += " (+" + std::to_string((int)std::lround(it.detour_km)) + " km)";
         row.km = (float)it.km;
         row.minutes = (float)it.minutes;
         if (is_named(it, a.fuel_stop_at_m, RouteStop::Fuel)) row.tone = a.fuel.critical ? 2 : 1;
         if (is_named(it, a.rest_stop_at_m, RouteStop::Rest)) row.tone = std::max<uint8_t>(row.tone, a.rest.critical ? 2 : 1);
+        // A place to sleep you can't reach before you must sleep: dimmed.
+        const int rest = g_alerts.in.rest_min;
+        if (row.tone == 0 && (it.kinds & RouteStop::Rest) && !(it.kinds & RouteStop::Fuel) && rest >= 0 &&
+            it.minutes > rest)
+            row.tone = 3;
         s.items.push_back(row);
     }
     return s;
@@ -534,6 +551,7 @@ static void update_alerts(bool force)
                  g_alerts.in.nav_distance_m / 1000.0, view.matches_gps ? "same route" : "different route");
     }
     g_view = view;
+    if (view.valid && !view.country.empty()) g_country = view.country;
     // [alerts] enabled=0 turns off the warnings only; the route and the strip keep working.
     AlertState st;
     // While fuel is getting low, keep a fresh "nearest fuel by road, any direction" answer.
@@ -557,6 +575,41 @@ static void update_alerts(bool force)
     const Guidance guidance = build_guidance(view, time_scale);
     overlay_set_guidance(guidance);
     update_codriver(view, st, guidance.active);
+
+    const float limit_kmh = g_speed_limit > 0.5f ? g_speed_limit * 3.6f : 0.0f;
+    if (!g_paused) {
+        RulesInputs ri;
+        ri.speed_kmh = std::fabs(g_alerts.in.speed_kmh);
+        ri.limit_kmh = limit_kmh;
+        ri.have_lights = g_have_lights;
+        ri.low_beam = g_low_beam;
+        ri.high_beam = g_high_beam;
+        ri.wipers = g_wipers;
+        ri.game_hour = g_have_game_time ? (int)((g_game_time / 60) % 24) : -1;
+        ri.country = g_country;
+        ri.fuel_l = g_alerts.in.fuel_l;
+        ri.range_km = g_alerts.in.have_fuel ? g_alerts.range_km() : 0.0f;
+        ri.fuel_warning = st.fuel.active;
+        g_rules.update(g_cfg, ri, view.valid ? &view : nullptr, g_route_target);
+    }
+
+    // The slim bar: fuel range, time until sleep, speed limit, arrival (game clock).
+    HudState hud;
+    hud.visible = g_cfg.hud;
+    if (g_alerts.in.have_fuel) hud.range_km = g_alerts.range_km();
+    hud.rest_min = g_alerts.in.rest_min;
+    hud.limit_kmh = (int)std::lround(limit_kmh);
+    hud.speeding = hud.limit_kmh > 0 && std::fabs(g_alerts.in.speed_kmh) >= hud.limit_kmh + 5;
+    if (view.valid && g_have_game_time) {
+        const uint32_t arrive = g_game_time + (uint32_t)std::lround(std::max(0.0, view.remaining_min));
+        char b[16];
+        snprintf(b, sizeof(b), "%02u:%02u", (arrive / 60) % 24, arrive % 60);
+        hud.eta = b;
+        hud.late = g_jobstate.picked_up && g_jobstate.due && arrive > g_jobstate.due;
+    }
+    hud.fuel_low = st.fuel.active;
+    hud.rest_low = st.rest.active;
+    overlay_set_hud(hud);
 }
 
 // --- telemetry callbacks (game thread) -------------------------------------------------------
@@ -596,6 +649,19 @@ static SCSAPI_VOID on_float(const scs_string_t name, const scs_u32_t, const scs_
         case 7: in.nav_time_s = v; break;
         case 8: g_speed_limit = v; break;
     }
+}
+
+// Headlights and wipers, for the headlight reminder.
+static SCSAPI_VOID on_light(const scs_string_t, const scs_u32_t, const scs_value_t* const value,
+                            const scs_context_t context)
+{
+    const bool on = value && value->type == SCS_VALUE_TYPE_bool && value->value_bool.value;
+    switch ((intptr_t)context) {
+        case 0: g_low_beam = on; break;
+        case 1: g_high_beam = on; break;
+        case 2: g_wipers = on; break;
+    }
+    g_have_lights = true;
 }
 
 static SCSAPI_VOID on_game_time(const scs_string_t, const scs_u32_t, const scs_value_t* const value,
@@ -860,6 +926,8 @@ SCSAPI_RESULT scs_telemetry_init(const scs_u32_t version, const scs_telemetry_in
         g_route.set_cities(g_db.all(), g_cfg.in_city_radius);
         g_route.set_fuel_points(g_pois.positions(PoiKind::Fuel));
     }
+    g_rules.load_prices(dir);
+    log_info("fuel prices: %zu countries", g_rules.price_count());
     log_info("city table: %zu cities, %zu boundary areas, %zu learned", g_db.size(), g_db.area_count(),
              g_db.learned_count());
     log_info("places: %zu fuel stations, %zu rest areas", g_pois.count(PoiKind::Fuel), g_pois.count(PoiKind::Rest));
@@ -893,6 +961,11 @@ SCSAPI_RESULT scs_telemetry_init(const scs_u32_t version, const scs_telemetry_in
                                 nullptr);
     p->register_for_channel(SCS_TELEMETRY_CHANNEL_next_rest_stop, SCS_U32_NIL, SCS_VALUE_TYPE_s32,
                             SCS_TELEMETRY_CHANNEL_FLAG_none, on_rest, nullptr);
+    const char* lights[] = {SCS_TELEMETRY_TRUCK_CHANNEL_light_low_beam, SCS_TELEMETRY_TRUCK_CHANNEL_light_high_beam,
+                            SCS_TELEMETRY_TRUCK_CHANNEL_wipers};
+    for (intptr_t i = 0; i < 3; ++i)
+        p->register_for_channel(lights[i], SCS_U32_NIL, SCS_VALUE_TYPE_bool, SCS_TELEMETRY_CHANNEL_FLAG_none, on_light,
+                                (scs_context_t)i);
     p->register_for_channel(SCS_TELEMETRY_CHANNEL_game_time, SCS_U32_NIL, SCS_VALUE_TYPE_u32,
                             SCS_TELEMETRY_CHANNEL_FLAG_none, on_game_time, nullptr);
 

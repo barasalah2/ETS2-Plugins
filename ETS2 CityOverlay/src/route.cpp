@@ -583,6 +583,7 @@ std::shared_ptr<Route> RouteEngine::build(const RouteRequest& rq, const CitySnap
     {
         uint8_t current = 0;
         for (size_t i = 1; i < pstate.size() && !current; ++i) current = g.country_after(pstate[i]);
+        if (auto start = g.countries.find(current); start != g.countries.end()) r->start_country = start->second.name;
         for (size_t i = 1; i < pstate.size(); ++i) {
             const uint8_t c = g.country_after(pstate[i]);
             if (!c || c == current) continue;
@@ -855,6 +856,11 @@ RouteView RouteTracker::view(const Scales& s, float nav_distance_m, float nav_ti
     v.route_id = r.id;
     v.progress_m = m0;
     v.dest_label = r.dest_label;
+    v.country = r.start_country;
+    for (const auto& st : r.stops) {
+        if (st.at_m > m0) break;
+        if (st.kinds & RouteStop::Border) v.country = st.label;
+    }
     v.remaining_km = km(r.cum_m.back(), r.cum_city_m.back());
     v.remaining_min = minutes(r.cum_dur.back(), r.cum_city_dur.back());
 
