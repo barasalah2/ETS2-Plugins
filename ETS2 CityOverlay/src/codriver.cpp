@@ -282,7 +282,7 @@ static void remember_note(const std::string& note)
         for (const auto& n : g_notes) fprintf(f, "%s\n", n.c_str());
         fclose(f);
     }
-    log_info("co-driver: will remember \"%s\"", s.c_str());
+    log_info("assistant: will remember \"%s\"", s.c_str());
 }
 
 static int requests_left()
@@ -428,13 +428,13 @@ static bool google_voice(const std::string& key, const std::string& text, const 
     if (!r.ok()) {
         if (r.status == 429 && r.daily_limit()) {
             g_voice_off_day = quota_day();
-            log_info("co-driver: the Google voice's free daily limit is used up; the local voice reads the replies until tomorrow");
+            log_info("assistant: the Google voice's free daily limit is used up; the local voice reads the replies until tomorrow");
         } else if (r.status == 400 || r.status == 404) {
             g_voice_broken = true;
-            log_warn("co-driver: the Google voice refused the request (%d: %s); check [guide] google_voice= and google_voice_model=. "
+            log_warn("assistant: the Google voice refused the request (%d: %s); check [guide] google_voice= and google_voice_model=. "
                      "Using the local voice.", r.status, r.message.c_str());
         } else {
-            log_info("co-driver: Google voice unavailable (%d%s%s); using the local voice for this one", r.status,
+            log_info("assistant: Google voice unavailable (%d%s%s); using the local voice for this one", r.status,
                      r.message.empty() ? "" : ": ", r.message.c_str());
         }
         return false;
@@ -467,11 +467,11 @@ static bool google_voice(const std::string& key, const std::string& text, const 
                 put32(40, (uint32_t)data.size());
                 wav.insert(wav.end(), data.begin(), data.end());
             }
-            log_info("co-driver: Google voice ready in %llu ms", GetTickCount64() - t0);
+            log_info("assistant: Google voice ready in %llu ms", GetTickCount64() - t0);
             save_debug(L"codriver_last.wav", wav);
             return true;
         }
-    log_info("co-driver: the Google voice sent no audio; using the local voice for this one");
+    log_info("assistant: the Google voice sent no audio; using the local voice for this one");
     return false;
 }
 
@@ -521,7 +521,7 @@ static bool fish_voice(const std::string& text, std::vector<char>& wav)
     const int status = https_post(L"api.fish.audio", L"/v1/tts", headers, body, audio);
     if (status == 200 && audio.size() > 44 && memcmp(audio.data(), "RIFF", 4) == 0) {
         wav.assign(audio.begin(), audio.end());
-        log_info("co-driver: fish.audio voice ready in %llu ms", GetTickCount64() - t0);
+        log_info("assistant: fish.audio voice ready in %llu ms", GetTickCount64() - t0);
         save_debug(L"codriver_last.wav", wav);
         return true;
     }
@@ -530,10 +530,10 @@ static bool fish_voice(const std::string& text, std::vector<char>& wav)
         if (c == '\r' || c == '\n' || (unsigned char)c < 32) c = ' ';
     if (status == 401 || status == 402 || status == 400 || status == 404) {
         g_fish_off = true;  // bad key, no credit, or a wrong voice/model: don't keep trying
-        log_warn("co-driver: fish.audio refused the request (%d%s%s); check fish_audio_key.txt and [guide] fish_voice= / "
+        log_warn("assistant: fish.audio refused the request (%d%s%s); check fish_audio_key.txt and [guide] fish_voice= / "
                  "fish_model=. Using the local voice.", status, why.empty() ? "" : ": ", why.c_str());
     } else {
-        log_info("co-driver: fish.audio unavailable (%d); using the local voice for this one", status);
+        log_info("assistant: fish.audio unavailable (%d); using the local voice for this one", status);
     }
     return false;
 }
@@ -579,7 +579,7 @@ static void worker()
     struct Com { ~Com() { CoUninitialize(); } } com;
     const std::string key = gemini_load_key(g_dir);
     if (key.empty()) {
-        log_info("co-driver: no Gemini API key (set GEMINI_API_KEY or put it in gemini_api_key.txt); co-driver off");
+        log_info("assistant: no Gemini API key (set GEMINI_API_KEY or put it in gemini_api_key.txt); assistant off");
         return;
     }
     load_files();
@@ -591,7 +591,7 @@ static void worker()
         voice += g_fish_key.empty() ? " - no key in fish_audio_key.txt, using the local voice"
                                     : " (" + narrow(g_cfg.fish_model) + ")";
     }
-    log_info("co-driver: Gemini %s, voice %s, %zu places known, %zu notes, %d of %d requests left today",
+    log_info("assistant: Gemini %s, voice %s, %zu places known, %zu notes, %d of %d requests left today",
              narrow(g_cfg.guide_model).c_str(), voice.c_str(), g_told.size(), g_notes.size(),
              std::max(0, requests_left()), g_cfg.guide_daily_limit);
     // The model, then any fallbacks from the settings (none by default).
@@ -613,7 +613,7 @@ static void worker()
             }
             pos = end + 1;
         }
-        if (models.size() > 1) log_info("co-driver: models in order: %s", chain.c_str());
+        if (models.size() > 1) log_info("assistant: models in order: %s", chain.c_str());
     }
     ULONGLONG last_call = 0;
     bool told_no_picture = false;
@@ -660,7 +660,7 @@ static void worker()
         if (g_cfg.guide_screenshots) {
             capture_request();
             if (!capture_wait_jpeg(jpeg, 1500) && !told_no_picture) {
-                log_info("co-driver: couldn't take a screenshot this time");
+                log_info("assistant: couldn't take a screenshot this time");
                 told_no_picture = true;
             }
             save_debug(L"codriver_last.jpg", jpeg);
@@ -722,7 +722,7 @@ static void worker()
                 if (!soonest) {  // every model is used up (or can't be used) for today
                     g_blocked_day = quota_day();
                     why = "every model's free daily limit is used up";
-                    log_info("co-driver: %s; back tomorrow", why.c_str());
+                    log_info("assistant: %s; back tomorrow", why.c_str());
                     break;
                 }
                 // All busy for a moment: the driver asking is worth a short wait, a remark isn't.
@@ -754,7 +754,7 @@ static void worker()
             if (r.ok()) {
                 got = parse_reply(r.json, reply, why);
                 if (got)
-                    log_info("co-driver: %s answer from %s in %llu ms", name_of(m.kind), name.c_str(),
+                    log_info("assistant: %s answer from %s in %llu ms", name_of(m.kind), name.c_str(),
                              GetTickCount64() - last_call);
                 break;
             }
@@ -763,7 +763,7 @@ static void worker()
                 continue;
             }
             if (r.key_rejected()) {
-                log_warn("co-driver: Gemini rejected the API key (%d); co-driver off until the key is fixed", r.status);
+                log_warn("assistant: Gemini rejected the API key (%d); assistant off until the key is fixed", r.status);
                 show("Assistant", "Google rejected the Gemini API key. Check gemini_api_key.txt.");
                 off = true;
                 break;
@@ -771,21 +771,21 @@ static void worker()
             if (r.status == 429 && r.daily_limit()) {
                 md->spent_day = quota_day();
                 const std::string limit = r.quota_limit();
-                log_info("co-driver: %s's free daily limit%s%s%s is used up; switching to %s", name.c_str(),
+                log_info("assistant: %s's free daily limit%s%s%s is used up; switching to %s", name.c_str(),
                          limit.empty() ? "" : " (", limit.c_str(), limit.empty() ? "" : " requests)",
                          next_name().c_str());
                 continue;
             }
             if (r.status == 429 || r.status == 503) {  // per-minute limit or "high demand": another one for now
                 md->busy_until = GetTickCount64() + (ULONGLONG)std::max(20, r.retry_seconds()) * 1000;
-                log_info("co-driver: %s is busy (%d); trying %s", name.c_str(), r.status, next_name().c_str());
+                log_info("assistant: %s is busy (%d); trying %s", name.c_str(), r.status, next_name().c_str());
                 continue;
             }
             if (r.status == 404 || r.status == 400) {
                 // Gone or renamed, or it can't take this request: the next one.
                 if (r.status == 400 && with_audio) md->no_audio = true;
                 else md->broken = true;
-                log_warn("co-driver: %s can't be used%s (%d: %s); switching to %s", name.c_str(),
+                log_warn("assistant: %s can't be used%s (%d: %s); switching to %s", name.c_str(),
                          md->no_audio && !md->broken ? " for voice questions" : "", r.status,
                          r.message.substr(0, 160).c_str(), next_name().c_str());
                 continue;
@@ -793,22 +793,22 @@ static void worker()
             // No connection, or a server hiccup.
             why = r.status < 0 ? "no connection" : "server error " + std::to_string(r.status);
             if (waits++ >= 2) break;
-            log_info("co-driver: Gemini %s after %llu ms; trying again", why.c_str(), GetTickCount64() - last_call);
+            log_info("assistant: Gemini %s after %llu ms; trying again", why.c_str(), GetTickCount64() - last_call);
             if (nap(5000)) return;
         }
         if (off) return;
 
         if (!got) {
-            log_info("co-driver: no answer (%s) - %s", name_of(m.kind), why.c_str());
+            log_info("assistant: no answer (%s) - %s", name_of(m.kind), why.c_str());
             if (by_driver) show("Assistant", "No answer right now (" + why + ").");
         } else {
             if (m.audio.empty()) reply.heard.clear();  // nothing was said: don't let it make words up
-            if (!reply.heard.empty()) log_info("co-driver heard: \"%s\"", reply.heard.c_str());
+            if (!reply.heard.empty()) log_info("assistant heard: \"%s\"", reply.heard.c_str());
             g_history.push_back({history_line(m, brief, reply.heard), reply.say});
             while (g_history.size() > kHistory) g_history.pop_front();
             if (!reply.remember.empty()) remember_note(reply.remember);
             if (reply.say.empty()) {
-                log_info("co-driver: nothing to say (%s)", name_of(m.kind));
+                log_info("assistant: nothing to say (%s)", name_of(m.kind));
                 if (by_driver) show(card_title(m, reply), "...");
             } else {
                 if (m.kind == Moment::City || m.kind == Moment::AskHere) remember_place(m.place_id, reply.say);

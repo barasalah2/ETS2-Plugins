@@ -31,6 +31,7 @@ static std::mutex              g_mutex;
 static std::condition_variable g_cv;
 static std::vector<Message>    g_queue;
 static bool                    g_quit = false, g_paused = false;
+static std::atomic<bool>       g_muted{false};
 static std::atomic<int>        g_playing{-1};  // priority of the message playing now, -1 = none
 static std::atomic<bool>       g_available{false};
 static Config                  g_cfg;
@@ -265,7 +266,7 @@ static void worker()
         bool said = false;
         if (msg.wav) {
             apply_volume(*msg.wav, g_cfg.voice_volume);
-            log_info("speech (co-driver voice): \"%s\"", msg.text.c_str());
+            log_info("speech (assistant voice): \"%s\"", msg.text.c_str());
             if (!mute) PlaySoundW((LPCWSTR)msg.wav->data(), nullptr, SND_MEMORY | SND_SYNC | SND_NODEFAULT);
             said = true;
         }
@@ -374,6 +375,7 @@ void speech_play(std::vector<char> wav, const std::string& text, SpeechPriority 
 
 static void enqueue(Message m)
 {
+    if (g_muted) return;
     const SpeechPriority priority = m.priority;
     {
         std::lock_guard<std::mutex> lock(g_mutex);
@@ -399,6 +401,17 @@ void speech_set_paused(bool paused)
     }
     if (paused) PlaySoundW(nullptr, nullptr, 0);  // stop talking when the menu opens
     g_cv.notify_one();
+}
+
+void speech_set_muted(bool muted)
+{
+    g_muted = muted;
+    if (!muted) return;
+    {
+        std::lock_guard<std::mutex> lock(g_mutex);
+        g_queue.clear();
+    }
+    PlaySoundW(nullptr, nullptr, 0);
 }
 
 bool speech_available() { return g_available; }

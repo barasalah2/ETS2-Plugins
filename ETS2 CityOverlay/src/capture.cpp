@@ -141,7 +141,7 @@ void capture_frame(ID3D11Device* dev, ID3D11DeviceContext* ctx, IDXGISwapChain* 
         D3D11_TEXTURE2D_DESC td;
         bb->GetDesc(&td);
         if (layout_of(td.Format) == Layout::Unsupported) {
-            if (!g_format_warned) log_info("co-driver: screenshots need an 8-bit picture (back buffer format %d)", (int)td.Format);
+            if (!g_format_warned) log_info("assistant: screenshots need an 8-bit picture (back buffer format %d)", (int)td.Format);
             g_format_warned = true;
             bb->Release();
             deliver({}, 0, 0);

@@ -117,7 +117,7 @@ static void replace_all(std::string& s, const std::string& from, const std::stri
 
 static void announce(const Location& loc)
 {
-    if (!g_cfg.speak || g_paused) return;
+    if (!g_cfg.speak || g_paused || !overlay_master_on()) return;
     // Don't repeat a city when the route clips its edge again a moment later.
     const ULONGLONG now = GetTickCount64();
     if (loc.id == g_last_spoken && now - g_last_spoken_at < 3 * 60 * 1000) return;
@@ -445,6 +445,7 @@ static std::string brief() { return game_clock(true) + (g_have_game_time ? ", " 
 // talked about with a report from before it. So each moment brings a fresh one.
 static void tell_codriver(MomentInfo m)
 {
+    if (!overlay_master_on()) return;  // switched off (Ctrl+F8): the AI gets nothing
     codriver_set_situation(situation(g_view, g_alert_state), brief());
     codriver_moment(std::move(m));
 }
@@ -461,7 +462,7 @@ static void moment(Moment kind, const std::string& detail = {})
 // Situation report, key presses and the things that make it speak up by itself.
 static void update_codriver(const RouteView& v, const AlertState& a, bool turn_coming)
 {
-    if (!g_cfg.guide) return;
+    if (!g_cfg.guide || !overlay_master_on()) return;
     const ULONGLONG now = GetTickCount64();
     static ULONGLONG last_report = 0;
     if (now - last_report >= 1000) {
@@ -571,13 +572,22 @@ static void update_alerts(bool force)
     overlay_set_strip(build_strip(view, st));
     const Scales scales = g_alerts.scales();
     const double time_scale = g_current_city.empty() ? scales.time_road : scales.time_city;
-    announce_update(g_cfg, view, st, g_route_target, g_alerts.in.speed_kmh, time_scale);
+    // The master switch (Ctrl+F8): off = no voice, no AI; the route and warnings keep being worked
+    // out quietly so switching back on is instant.
+    static bool was_on = true;
+    const bool on = overlay_master_on();
+    if (on != was_on) {
+        speech_set_muted(!on);
+        if (on) g_rules.reset();
+        was_on = on;
+    }
+    if (on) announce_update(g_cfg, view, st, g_route_target, g_alerts.in.speed_kmh, time_scale);
     const Guidance guidance = build_guidance(view, time_scale);
     overlay_set_guidance(guidance);
     update_codriver(view, st, guidance.active);
 
     const float limit_kmh = g_speed_limit > 0.5f ? g_speed_limit * 3.6f : 0.0f;
-    if (!g_paused) {
+    if (!g_paused && on) {
         RulesInputs ri;
         ri.speed_kmh = std::fabs(g_alerts.in.speed_kmh);
         ri.limit_kmh = limit_kmh;

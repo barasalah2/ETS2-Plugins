@@ -117,6 +117,9 @@ static bool                    g_key_was_down = false;
 static bool                    g_strip_visible = true;
 static bool                    g_strip_key_was_down = false;
 static bool                    g_guide_key_was_down = false;
+static bool                    g_master_key_was_down = false;
+static std::atomic<bool>       g_master{true};   // the whole plugin on / off
+static double                  g_master_at = -1e9;  // when it last changed (for the note)
 
 template <class T> static void safe_release(T*& p) { if (p) { p->Release(); p = nullptr; } }
 
@@ -214,6 +217,28 @@ static bool ensure_renderer(IDXGISwapChain* sc, const char* via)
     return g_imgui_dx11;
 }
 
+static void draw_text_shadowed(ImDrawList* dl, float size, ImVec2 pos, ImU32 col, float alpha, const char* text);
+
+bool overlay_master_on() { return g_master; }
+
+// "City Overlay off / on" for a few seconds after the master switch changes.
+static void draw_master_note(double age)
+{
+    const float alpha = age < 2.5 ? 1.0f : (float)std::max(0.0, 3.0 - age) * 2.0f;
+    if (alpha <= 0.0f) return;
+    const char* text = g_master ? "City Overlay on" : "City Overlay off  (Ctrl+F8 turns it back on)";
+    const float scale = g_bb_height / 1080.0f;
+    const float size = g_cfg.font_size * scale * 0.6f;
+    const ImVec2 ts = g_font->CalcTextSizeA(size, FLT_MAX, 0.0f, text);
+    const float pad = size * 0.6f;
+    const ImVec2 p0(g_bb_width * 0.5f - ts.x * 0.5f - pad, g_bb_height * 0.12f),
+        p1(g_bb_width * 0.5f + ts.x * 0.5f + pad, g_bb_height * 0.12f + ts.y + pad * 1.2f);
+    ImDrawList* dl = ImGui::GetForegroundDrawList();
+    dl->AddRectFilled(p0, p1, IM_COL32(12, 14, 18, (int)(200 * alpha)), size * 0.4f);
+    draw_text_shadowed(dl, size, ImVec2(p0.x + pad, p0.y + pad * 0.6f), IM_COL32(255, 255, 255, (int)(255 * alpha)),
+                       alpha, text);
+}
+
 static void poll_hotkey()
 {
     DWORD pid = 0;
@@ -226,8 +251,16 @@ static void poll_hotkey()
     const bool strip_down = focused && ctrl && (GetAsyncKeyState(g_cfg.strip_key) & 0x8000);
     if (strip_down && !g_strip_key_was_down) g_strip_visible = !g_strip_visible;
     g_strip_key_was_down = strip_down;
+    // Master switch: everything off / on.
+    const bool master_down = focused && ctrl && (GetAsyncKeyState(g_cfg.master_key) & 0x8000);
+    if (master_down && !g_master_key_was_down) {
+        g_master = !g_master;
+        g_master_at = now_seconds();
+        log_info("switched %s (Ctrl+F8)", g_master ? "on" : "off");
+    }
+    g_master_key_was_down = master_down;
     // Co-driver key: the mic module tells a tap ("about here") from holding it to talk.
-    const bool guide_down = g_cfg.guide && focused && ctrl && (GetAsyncKeyState(g_cfg.guide_key) & 0x8000);
+    const bool guide_down = g_master && g_cfg.guide && focused && ctrl && (GetAsyncKeyState(g_cfg.guide_key) & 0x8000);
     if (guide_down != g_guide_key_was_down) mic_hold(guide_down);
     g_guide_key_was_down = guide_down;
 }
@@ -744,7 +777,11 @@ static void on_present(IDXGISwapChain* sc, const char* via)
     }
     const bool show_guide = g_visible && !paused && g_cfg.guide_show && guide.active && now - guide_at < 60.0;
     const bool show_hud = g_visible && !paused && g_cfg.hud && hud.visible;
-    if (alpha <= 0.01f && !show_alerts && !show_strip && !show_guidance && !show_guide && !show_hud) return;
+    const double master_age = now - g_master_at;
+    const bool show_note = master_age < 3.0;
+    if (!g_master && !show_note) return;  // switched off: nothing on screen
+    if (alpha <= 0.01f && !show_alerts && !show_strip && !show_guidance && !show_guide && !show_hud && !show_note)
+        return;
 
     ImGuiIO& io = ImGui::GetIO();
     io.DisplaySize = ImVec2(g_bb_width, g_bb_height);
@@ -752,13 +789,16 @@ static void on_present(IDXGISwapChain* sc, const char* via)
 
     ImGui_ImplDX11_NewFrame();
     ImGui::NewFrame();
-    float bottom = g_bb_height * g_cfg.position_y;
-    if (alpha > 0.01f) bottom = draw_panel(loc, alpha);
-    if (show_guidance) bottom = draw_guidance(guidance, bottom + g_bb_height * 0.008f);
-    if (show_alerts) draw_alerts(alerts, bottom, now);
-    if (show_strip) draw_strip(strip);
-    if (show_hud) draw_hud(hud);
-    if (show_guide) draw_guide(guide, now - guide_at);
+    if (g_master) {
+        float bottom = g_bb_height * g_cfg.position_y;
+        if (alpha > 0.01f) bottom = draw_panel(loc, alpha);
+        if (show_guidance) bottom = draw_guidance(guidance, bottom + g_bb_height * 0.008f);
+        if (show_alerts) draw_alerts(alerts, bottom, now);
+        if (show_strip) draw_strip(strip);
+        if (show_hud) draw_hud(hud);
+        if (show_guide) draw_guide(guide, now - guide_at);
+    }
+    if (show_note) draw_master_note(master_age);
     ImGui::Render();
 
     // ImGui's backend saves/restores pipeline state, but not the bound render targets.

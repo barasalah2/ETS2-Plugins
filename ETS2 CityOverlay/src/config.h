@@ -8,6 +8,7 @@ struct Config
     bool        enabled        = true;
     int         toggle_key     = 0x78;   // virtual-key code, default F9
     bool        toggle_ctrl    = true;   // require Ctrl with the toggle key
+    int         master_key     = 0x77;   // Ctrl + this key turns the whole plugin off / on (default F8)
     std::wstring font_path     = L"C:\\Windows\\Fonts\\segoeuib.ttf";
     float       font_size      = 34.0f;  // city name size in pixels at 1080p; scales with resolution
     float       position_y     = 0.035f; // top of the panel, as a fraction of screen height

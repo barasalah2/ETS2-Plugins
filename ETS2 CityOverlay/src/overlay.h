@@ -69,6 +69,9 @@ struct HudState
 };
 void overlay_set_hud(const HudState& hud);
 
+// The master switch (Ctrl + [overlay] master_key): false = the whole plugin is off.
+bool overlay_master_on();
+
 // The next exit or turn on the route, with its lanes (drawn under the city name).
 struct Guidance
 {

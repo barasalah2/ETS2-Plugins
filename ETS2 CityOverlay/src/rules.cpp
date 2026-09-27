@@ -46,9 +46,15 @@ void RulesMonitor::speed(const Config& cfg, const RulesInputs& in, unsigned long
         over_since_ = 0;
         return;
     }
+    // A new limit counts once it has held for a moment: it flickers at junctions and slip roads.
+    if (std::fabs(limit - pending_limit_) > 0.5f) {
+        pending_limit_ = limit;
+        pending_since_ = now;
+    }
+    if (now - pending_since_ < 1500) return;
     const bool dropped = last_limit_ > 0 && limit < last_limit_ - 4;
     last_limit_ = limit;
-    if (cfg.say_speed_limit && dropped && in.speed_kmh > limit + 4 && now - last_limit_call_ > 8000) {
+    if (cfg.say_speed_limit && dropped && in.speed_kmh > limit + 4 && now - last_limit_call_ > 4000) {
         last_limit_call_ = now;
         speech_say("Speed limit " + std::to_string((int)std::lround(limit)) + ".", SpeechPriority::Normal, "limit", 5);
     }
@@ -85,9 +91,11 @@ void RulesMonitor::lights(const Config& cfg, const RulesInputs& in, unsigned lon
                    SpeechPriority::Normal, "lights", 20);
         return;
     }
-    const unsigned long long every = night ? 10 * 60000ULL : 30 * 60000ULL;
-    if (off_for > 20000 && (!last_lights_call_ || now - last_lights_call_ > every)) {
+    // By day it's said once a session (lights off can be fine then); at night every 10 minutes.
+    const bool due = night ? (!last_lights_call_ || now - last_lights_call_ > 10 * 60000ULL) : !lights_day_said_;
+    if (off_for > 20000 && due) {
         last_lights_call_ = now;
+        if (!night) lights_day_said_ = true;
         speech_say(night ? "Your headlights are off, and it's dark. Switch on the low beams to avoid a fine."
                          : "Your headlights are off. Keeping the low beams on avoids a fine in rain, in tunnels "
                            "and after dark.",

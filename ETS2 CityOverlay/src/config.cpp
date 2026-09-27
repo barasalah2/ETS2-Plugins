@@ -33,6 +33,7 @@ Config load_config(const std::wstring& dir)
     c.enabled        = read_num(f, o, L"enabled", c.enabled) != 0;
     c.toggle_key     = (int)read_num(f, o, L"toggle_key", c.toggle_key);
     c.toggle_ctrl    = read_num(f, o, L"toggle_ctrl", c.toggle_ctrl) != 0;
+    c.master_key     = (int)read_num(f, o, L"master_key", c.master_key);
     c.font_path      = read_str(f, o, L"font", c.font_path);
     c.font_size      = (float)read_num(f, o, L"font_size", c.font_size);
     c.position_y     = (float)read_num(f, o, L"position_y", c.position_y);

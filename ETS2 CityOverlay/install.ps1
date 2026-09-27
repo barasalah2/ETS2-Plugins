@@ -22,6 +22,9 @@ $data = Join-Path $plugins 'ets2_city_overlay'
 New-Item -ItemType Directory -Force $data | Out-Null
 
 Copy-Item "$build\ets2_city_overlay.dll" $plugins -Force
+# A fresh install is an enabled one (disable_plugin.cmd renames the DLL to .dll.off).
+Remove-Item (Join-Path $plugins "ets2_city_overlay.dll.off") -ErrorAction SilentlyContinue
+Copy-Item (Join-Path $PSScriptRoot "tools\disable_plugin.cmd"), (Join-Path $PSScriptRoot "tools\enable_plugin.cmd") $data -Force
 Copy-Item "$build\ets2_city_overlay\cities.csv", "$build\ets2_city_overlay\city_areas.csv", "$build\ets2_city_overlay\pois.csv", "$build\ets2_city_overlay\countries.csv", "$build\ets2_city_overlay\route_graph.bin", "$build\ets2_city_overlay\maneuvers.bin" $data -Force
 # Keep the user's settings; learned.csv is never touched.
 $template = "$build\ets2_city_overlay\ets2_city_overlay.ini"

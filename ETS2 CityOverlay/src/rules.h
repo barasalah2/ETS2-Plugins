@@ -36,6 +36,9 @@ public:
     // a new one forgets which borders were already talked about.
     void update(const Config& cfg, const RulesInputs& in, const RouteView* route, const std::string& target);
 
+    // Forget the last speed limit and light state (after being switched off: no stale calls).
+    void reset() { last_limit_ = 0; pending_limit_ = 0; over_since_ = 0; lights_off_since_ = 0; }
+
     // For the stops strip: "diesel -15%" on a border row when it's worth knowing, else "".
     std::string border_tag(const std::string& from, const std::string& to) const;
 
@@ -46,10 +49,11 @@ private:
 
     std::unordered_map<std::string, double> prices_;
 
-    float last_limit_ = 0;
+    float last_limit_ = 0, pending_limit_ = 0;
+    unsigned long long pending_since_ = 0;  // when the current reading first appeared
     unsigned long long last_limit_call_ = 0, over_since_ = 0, last_speeding_call_ = 0;
     unsigned long long lights_off_since_ = 0, last_lights_call_ = 0;
-    bool lights_rain_said_ = false;
+    bool lights_rain_said_ = false, lights_day_said_ = false;
     std::string target_;
     std::set<std::string> borders_said_;
     float fuel_max_ = 0;  // the most fuel seen: a stand-in for the tank size

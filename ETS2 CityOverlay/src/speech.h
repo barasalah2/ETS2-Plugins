@@ -22,4 +22,5 @@ void speech_say(const std::string& text, SpeechPriority priority = SpeechPriorit
 void speech_play(std::vector<char> wav, const std::string& text, SpeechPriority priority = SpeechPriority::Low,
                  const std::string& key = std::string(), int expire_s = 30);
 void speech_set_paused(bool paused);  // hold messages while the game is paused
+void speech_set_muted(bool muted);    // the plugin is switched off: drop everything, say nothing
 bool speech_available();              // false when speech is off or no engine could start

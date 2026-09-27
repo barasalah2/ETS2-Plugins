@@ -474,6 +474,81 @@ int main(int argc, char** argv)
         return 0;
     }
 
+    // "test_host.exe <dll> <outdir> rules": speed limit calls, the headlight reminder, fuel prices
+    // across the German-Czech border, the HUD bar and dimmed rest stops (no AI needed).
+    if (argc > 3 && std::string(argv[3]) == "rules") {
+        std::string dir = argv[1];
+        dir = dir.substr(0, dir.find_last_of("\\/")) + "\\ets2_city_overlay";
+        remove((dir + "\\route_debug.csv").c_str());
+        const uint32_t t0 = 2 * 1440 + 21 * 60 + 30;  // Wednesday 21:30: dark
+        send_u32("game.time", t0);
+        send_float("local.scale", 19.0f);
+        send_float("truck.speed", 22.0f);  // ~79 km/h
+        send_float("truck.navigation.speed.limit", 90.0f / 3.6f);
+        send_float("truck.fuel.amount", 500.0f);
+        send_float("truck.fuel.range", 1300.0f);
+        send_float("truck.fuel.consumption.average", 0.36f);
+        send_float("truck.odometer", 30000.0f);
+        send_rest(150);  // must sleep in 2.5 h of game time: later parking stops are out of reach
+        send_bool("truck.light.beam.low", false);
+        send_bool("truck.light.beam.high", false);
+        send_bool("truck.wipers", false);
+        send_bool("trailer.connected", true);
+        send_position(10055.44, -10584.99, 0.8385f);
+        send_job_cargo("Canned beef", 18200.0f, 14350, t0 + 11 * 60);
+        run_for(3.0);
+        std::vector<RoutePt> pts;
+        std::vector<RouteSt> stops;
+        if (!read_route(dir + "\\route_debug.csv", pts, stops)) {
+            printf("RULES TEST: no route\n");
+        } else {
+            double border_at = -1;
+            for (const auto& st : stops)
+                if (st.kinds & 32) { border_at = st.at; break; }
+            // About 100 game km before the border.
+            size_t i = 0;
+            while (i + 1 < pts.size() && (border_at - pts[i + 1].at) * 0.019 > 100) ++i;
+            send_float("truck.navigation.distance", (float)((pts.back().at - pts[i].at) * 19.0));
+            printf("RULES TEST: %.0f km before the border -> expect cheaper diesel in the Czech Republic\n",
+                   (border_at - pts[i].at) * 0.019);
+            // Like the game, keep reporting the position: the plugin notices the jump and re-routes.
+            const ULONGLONG until = GetTickCount64() + 12000;
+            while (GetTickCount64() < until) {
+                send_position(pts[i].x, pts[i].z, heading_of(pts[i + 1].x - pts[i].x, pts[i + 1].z - pts[i].z));
+                frames(1);
+            }
+            screenshot(out + "\\r1_hud.bmp");
+            printf("RULES TEST: limit 90 -> 60 at 79 km/h -> expect \"Speed limit 60.\"\n");
+            send_float("truck.navigation.speed.limit", 60.0f / 3.6f);
+            run_for(3.0);
+            screenshot(out + "\\r2_limit.bmp");
+            printf("RULES TEST: lights off at night -> expect a headlight reminder after ~20 s\n");
+            run_for(20.0);
+            printf("RULES TEST: wipers on -> expect the rain reminder\n");
+            send_bool("truck.wipers", true);
+            run_for(8.0);
+            printf("RULES TEST: Ctrl+F8 (switch off), then the limit drops 60 -> 40 -> expect silence\n");
+            if (press_ctrl_key(VK_F8, 120)) {
+                run_for(0.8);
+                screenshot(out + "\\r3_switched_off.bmp");
+                send_float("truck.navigation.speed.limit", 90.0f / 3.6f);
+                run_for(2.0);  // a new limit counts after 1.5 s
+                send_float("truck.navigation.speed.limit", 40.0f / 3.6f);
+                run_for(3.0);
+                printf("RULES TEST: Ctrl+F8 (switch on), then the limit drops 90 -> 50 -> expect \"Speed limit 50.\"\n");
+                press_ctrl_key(VK_F8, 120);
+                send_float("truck.navigation.speed.limit", 90.0f / 3.6f);
+                run_for(2.0);
+                send_float("truck.navigation.speed.limit", 50.0f / 3.6f);
+                run_for(3.0);
+            }
+        }
+        shutdown();
+        frames(5);
+        FreeLibrary(dll);
+        return 0;
+    }
+
     if (argc > 3 && std::string(argv[3]) == "fuel") {
         std::string dir = argv[1];
         dir = dir.substr(0, dir.find_last_of("\\/")) + "\\ets2_city_overlay";

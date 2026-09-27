@@ -101,7 +101,7 @@ static void worker()
                             waveInStart(in) == MMSYSERR_NOERROR;
             }
             if (!recording && !warned) {
-                log_warn("co-driver: no microphone could be opened (error %u); the key only asks about where you are",
+                log_warn("assistant: no microphone could be opened (error %u); the key only asks about where you are",
                          (unsigned)res);
                 warned = true;
             }
@@ -130,8 +130,8 @@ static void worker()
         }
         r.tap = r.wav.empty();
         if (!quit) {
-            if (r.tap) log_info("co-driver: key tapped");
-            else log_info("co-driver: recorded %.1f s of speech", (r.wav.size() - 44) / (2.0 * kRate));
+            if (r.tap) log_info("assistant: key tapped");
+            else log_info("assistant: recorded %.1f s of speech", (r.wav.size() - 44) / (2.0 * kRate));
             push(std::move(r));
         }
         lock.lock();

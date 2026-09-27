@@ -13,8 +13,15 @@ An in-game plugin for Euro Truck Simulator 2 that shows the name of the city you
 - **Spoken alerts in a natural voice:** a neural voice (Piper, running on your PC, free and offline) announces fuel and sleep warnings, reminders before the stop they name, ferries, border crossings ("Welcome to the Czech Republic. The truck speed limit is 80 kilometres per hour."), and "your destination is 5 kilometres ahead". The game's own navigation voice only has fixed phrases like "turn left", with no city names, so it can't be used for this.
 - **Early exit and lane warnings:** on your job route, motorway exits and forks are announced about 15 seconds ahead ("In 6 kilometres, take the exit on the right. Use the right lane.") and again about 6 seconds ahead. Turns and roundabouts get the close call ("at the roundabout, take the second exit"). A panel under the city name shows the next maneuver with its distance and a lane diagram. This only runs while the plugin's route matches your GPS.
 - **AI assistant (Gemini, free):** an onboard assistant with a front camera, like a car's built-in voice assistant. Every request carries a screenshot of the game picture, and that's its main source: road signs, road works and hazards, weather and visibility, landmarks, and messages on the dashboard or navigation screen. It also knows the time, where you are, your job and what's ahead on the route, and it remembers the conversation. It looks through the camera every couple of minutes while you drive and speaks only when it sees something new and useful. It also speaks up for a route briefing, city and border facts, deliveries, fines and ferries. **Tap Ctrl+F11** for what's around you. **Hold Ctrl+F11 and talk** to ask it anything ("what does that sign say?"), and let go to send. Its replies are read out in a fish.audio voice (your own clone, for example), a Google voice or the local voice. Needs your Gemini API key (see below).
+- **Avoiding fines:**
+  - the voice says "Speed limit 60" when the limit drops and you're above it (speed cameras fine you from 5 km/h over);
+  - an optional warning while you stay over the limit;
+  - a reminder when the headlights are off while driving. The game fines you for no low beams in the dark, in rain, in tunnels, and in daytime in some countries.
+- **Fuel prices across borders:** from the game's own prices per country, for example "Diesel is about 16 percent cheaper in the Czech Republic. Your fuel will last to the first station after the border". It also warns when fuel across the next border is dearer, and names the last station before it. The strip tags each border with the difference, such as "(diesel -16%)".
+- **Mini HUD:** a slim bar in the top-right corner with fuel range, time until you must sleep, the current speed limit and your arrival time on the game clock. The arrival time turns red when you'd be late.
+- **Rest stops you can reach:** in the strip, places to sleep you can't reach before your rest time runs out are dimmed.
 - **Hidden while paused:** the label disappears in the menu, the world map and other paused screens.
-- **Ctrl+F9:** shows or hides the overlay. **Ctrl+F10:** the stops strip. **Ctrl+F11:** the assistant (tap = about here, hold = talk).
+- **Ctrl+F8:** turns the whole plugin off or on: overlay, voice and AI assistant. **Ctrl+F9:** shows or hides the overlay. **Ctrl+F10:** the stops strip. **Ctrl+F11:** the assistant (tap = about here, hold = talk).
 
 ## How it works
 
@@ -54,6 +61,11 @@ Euro Truck Simulator 2\bin\win_x64\plugins\
 
 To install by hand, copy the same files there. Each time you start the game it shows an "Advanced SDK features" notice. Click OK so the plugin can load.
 
+**Why it isn't in the Mod Manager:** the Mod Manager lists `.scs` mods, which change game content and are switched per profile. This is a telemetry SDK plugin, a `.dll` the game loads at start-up, before any profile, so the Mod Manager can't see it. To switch it:
+- **Ctrl+F8** in the game turns everything off or on;
+- `enabled=0` in a section of the settings switches that part off;
+- `plugins\ets2_city_overlay\disable_plugin.cmd` stops the game loading it at all (it renames the DLL), and `enable_plugin.cmd` undoes that. Close the game first.
+
 The overlay works only with the **DirectX 11** renderer (the default). Check `Documents\Euro Truck Simulator 2\game.log.txt` for `Selected rendering device 'dx11'`.
 
 ## Checking that it loaded
@@ -85,7 +97,7 @@ Then set `voice_model=en_US-lessac-high` in the settings. `voice_samples\` has s
 
 1. Get a free API key at [Google AI Studio](https://aistudio.google.com/apikey).
 2. Create `gemini_api_key.txt` in `plugins\ets2_city_overlay\` and paste the key on the first line. Alternatively, set the `GEMINI_API_KEY` environment variable. Keys are never written to the log.
-3. Start the game. `game.log.txt` shows `co-driver: Gemini gemini-3.5-flash-lite, voice fish (...), N of 300 requests left today`.
+3. Start the game. `game.log.txt` shows `assistant: Gemini gemini-3.5-flash-lite, voice fish (...), N of 450 requests left today`.
 
 **Models:** `model=gemini-3.5-flash-lite` writes every reply. On the free tier it allows 500 requests a day and 15 a minute, and it answers in about a second. `fallback_models=gemma-4-31b-it` (14,400 a day) is used only when that one is used up for the day or busy. The larger Flash models allow only 20 requests a day, so they aren't used. Google's limits reset at midnight Pacific time; AI Studio shows them under *Rate limits by model*.
 
@@ -133,6 +145,7 @@ Edit `plugins\ets2_city_overlay\ets2_city_overlay.ini`, then restart the game. T
 | Section | Key | Default | Meaning |
 |---|---|---|---|
 | overlay | `toggle_key` / `toggle_ctrl` | `0x78` / `1` | Ctrl+F9 toggles the overlay |
+| overlay | `master_key` | `0x77` | Ctrl + this key (F8) turns the whole plugin off / on |
 | overlay | `font`, `font_size` | Segoe UI Bold, 34 | Font for the label; the size is at 1080p |
 | overlay | `position_y` | 0.035 | Top of the label, as a fraction of screen height |
 | overlay | `banner_seconds`, `always_show`, `idle_opacity` | 6, 1, 0.70 | How long the banner stays bright, whether a dimmed label stays after it, and how dim |
@@ -154,6 +167,9 @@ Edit `plugins\ets2_city_overlay\ets2_city_overlay.ini`, then restart the game. T
 | voice | `engine`, `voice_model` | piper, en_GB-jenny_dioco-medium | Natural voice (Piper) or `windows`; which Piper voice |
 | announce | `enabled`, `fuel`, `sleep`, `ferry`, `border`, `destination`, `lanes` | all 1 | What the voice announces |
 | announce | `border_km`, `destination_km` | 10, 5 | How far ahead (game km) to announce a border and the destination |
+| announce | `speed_limit`, `speeding` | 1, 0 | "Speed limit 60" when it drops and you're above it; also warn while you stay 5 km/h or more over |
+| announce | `headlights`, `fuel_prices` | 1, 1 | Headlights-off reminder; cheaper or dearer diesel across the next border |
+| hud | `enabled`, `position_y` | 1, 0.02 | The slim bar in the top-right corner, and its top as a fraction of screen height |
 | route | `guidance` | 1 | Panel with the next exit/turn and its lanes |
 | guide | `enabled`, `auto`, `key`, `model`, `fallback_models`, `speak`, `show` | 1, 1, `0x7A`, gemini-3.5-flash-lite, gemma-4-31b-it, 1, 1 | AI assistant; Ctrl+F11: tap = about here, hold = talk |
 | guide | `voice_engine`, `google_voice`, `google_voice_model` | fish, Sulafat, gemini-3.8-flash-tts | Voice for its replies: fish, google or local |
@@ -236,6 +252,7 @@ src/codriver.cpp   AI assistant: moments, conversation, situation, Gemini reques
 src/gemini.cpp     HTTPS (WinHTTP), Gemini errors and limits, base64, key files
 src/capture.cpp    the assistant's screenshot: back buffer copy, read back, JPEG (WIC)
 src/mic.cpp        push-to-talk: tap vs hold, microphone recording (waveIn)
+src/rules.cpp      speed limit calls, headlight reminder, fuel prices across the next border
 src/spoken.h       wording for distances, times, turns and lanes
 tools/get_voice.ps1        downloads Piper and a voice
 C:\tmmaps\export-maneuvers.ts   (in the parser folder) junction turns and lanes for maneuvers.bin
